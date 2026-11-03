@@ -5,6 +5,9 @@ enum LiftrStore {
     static let appGroup = "group.nl.lrvdlinden.liftr"
     static let cloudContainer = "iCloud.nl.lrvdlinden.liftr"
 
+    /// True when the app's store was opened with iCloud sync (false = local fallback).
+    static var usesCloudKit = false
+
     /// The app's container: synced through the private iCloud database, stored in the app group so
     /// widgets can read it. Falls back to a local store when iCloud is not available.
     static func makeContainer(sync: Bool = true, readOnly: Bool = false) -> ModelContainer {
@@ -14,6 +17,7 @@ enum LiftrStore {
                                             groupContainer: .identifier(appGroup),
                                             cloudKitDatabase: .private(cloudContainer))
             if let container = try? ModelContainer(for: schema, configurations: [config]) {
+                usesCloudKit = true
                 return container
             }
         }

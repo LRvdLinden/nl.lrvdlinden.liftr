@@ -47,12 +47,14 @@ struct RootView: View {
         .task {
             ExerciseLibrary.prepare(context)
             controller.restore(context)
+            await CloudSyncStatus.shared.refresh()
             await HealthKitManager.shared.refresh()
         }
         .onChange(of: scenePhase) { _, phase in
             if phase == .active {
                 ExerciseLibrary.mergeDuplicates(context)
                 try? context.save()
+                Task { await CloudSyncStatus.shared.refresh() }
             }
         }
         .onChange(of: router.pendingStart) { _, start in

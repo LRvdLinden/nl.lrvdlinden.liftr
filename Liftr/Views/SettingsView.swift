@@ -10,6 +10,7 @@ struct SettingsView: View {
     @AppStorage("health.saveWorkouts") private var saveWorkouts = true
     @AppStorage("health.saveBody") private var saveBody = true
     @State private var health = HealthKitManager.shared
+    @State private var cloud = CloudSyncStatus.shared
     @State private var showImport = false
     @State private var showBody = false
     @Environment(\.openURL) private var openURL
@@ -63,6 +64,30 @@ struct SettingsView: View {
                 .listRowBackground(Theme.card)
 
                 Section {
+                    HStack(alignment: .top, spacing: 12) {
+                        Image(systemName: cloud.symbol)
+                            .font(.title3)
+                            .foregroundStyle(cloud.isHealthy ? Theme.success : .orange)
+                            .symbolEffect(.pulse, isActive: cloud.state == .syncing || cloud.state == .checking)
+                            .frame(width: 28)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(cloud.title)
+                                .font(.body.weight(.semibold))
+                            if !cloud.detail.isEmpty {
+                                Text(cloud.detail)
+                                    .font(.caption)
+                                    .foregroundStyle(Theme.muted)
+                            }
+                        }
+                    }
+                    .padding(.vertical, 2)
+                    .accessibilityElement(children: .combine)
+                    if cloud.state == .noAccount {
+                        Button(tr("Open Settings", "Open Instellingen")) {
+                            if let url = URL(string: UIApplication.openSettingsURLString) { openURL(url) }
+                        }
+                        .foregroundStyle(Theme.accent)
+                    }
                     Button {
                         showImport = true
                     } label: {
@@ -98,6 +123,8 @@ struct SettingsView: View {
             .background(Theme.background.ignoresSafeArea())
             .navigationTitle(tr("Settings", "Instellingen"))
             .sheet(isPresented: $showImport) { ImportView() }
+            .task { await cloud.refresh() }
+            .refreshable { await cloud.refresh() }
             .sheet(isPresented: $showBody) { BodyMeasurementView() }
         }
     }

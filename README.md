@@ -5,7 +5,7 @@ Sportschool-logboek voor iPhone, iPad en Apple Watch. Houd per training bij welk
 | | |
 |---|---|
 | Bundle ID | `nl.lrvdlinden.liftr` (Watch: `.watchkitapp`, widgets: `.widgets`) |
-| Versie | 1.0.0 (build 1) |
+| Versie | 1.0.0 (build 2) |
 | Platforms | iOS/iPadOS 17+, watchOS 10+ |
 | Talen | Nederlands, Engels |
 | Team | EU3UY476T6 |
@@ -37,7 +37,7 @@ Sportschool-logboek voor iPhone, iPad en Apple Watch. Houd per training bij welk
 - Leest: gewicht, vetpercentage, vetvrije massa, lengte, rusthartslag.
 - Sets, herhalingen en volume gaan als metadata mee met de workout.
 
-**Synchronisatie** – SwiftData + CloudKit (privé iCloud-database `iCloud.nl.lrvdlinden.liftr`) tussen iPhone, iPad en Watch. Widgets lezen via App Group `group.nl.lrvdlinden.liftr`.
+**Synchronisatie** – Instellingen toont de iCloud-status (gesynchroniseerd + tijdstip, iCloud uit, probleem). SwiftData + CloudKit (privé iCloud-database `iCloud.nl.lrvdlinden.liftr`) tussen iPhone, iPad en Watch. Widgets lezen via App Group `group.nl.lrvdlinden.liftr`.
 
 ## Project
 
