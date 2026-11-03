@@ -1,6 +1,10 @@
 // Liftr – liftr.nu
 const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+// Remember the language a visitor picks (localStorage only, no cookie).
+document.querySelectorAll("[data-setlang]").forEach((a) =>
+  a.addEventListener("click", () => { try { localStorage.setItem("liftr-lang", a.dataset.setlang); } catch (e) {} }));
+
 // Nav turns solid after scrolling.
 const nav = document.getElementById("nav");
 const onScroll = () => nav && nav.classList.toggle("is-solid", scrollY > 30);

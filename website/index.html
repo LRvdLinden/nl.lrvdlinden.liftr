@@ -34,13 +34,19 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/overpass-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css">
+<script>(function(){try{
+if(localStorage.getItem("liftr-lang")==="nl")return;
+if(/bot|crawl|spider|slurp|lighthouse|preview|facebookexternalhit|whatsapp|linkedin|twitter|telegram|slack|discord|skype/i.test(navigator.userAgent))return;
+var l=((navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||""]).join(",").toLowerCase();
+if(!/(^|,)nl/.test(l))location.replace("/en/"+location.pathname.replace(/^\/+/,"")+location.search+location.hash);
+}catch(e){}})();</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://liftr.nu/#website", "url": "https://liftr.nu/", "name": "Liftr", "inLanguage": ["nl", "en"], "publisher": {"@id": "https://liftr.nu/#publisher"}}, {"@type": "Organization", "@id": "https://liftr.nu/#publisher", "name": "LRvdLinden", "url": "https://lrvdlinden.app", "logo": "https://liftr.nu/assets/img/appicon-512.png"}, {"@type": "MobileApplication", "@id": "https://liftr.nu/#app", "name": "Liftr", "url": "https://liftr.nu/", "operatingSystem": "iOS 17, iPadOS 17, watchOS 10", "applicationCategory": "HealthApplication", "description": "Houd elke training bij: oefeningen, sets, herhalingen en gewicht. Met rusttimer, voortgangsgrafieken, sportschoolpas en Apple Gezondheid.", "image": "https://liftr.nu/assets/img/appicon-512.png", "inLanguage": ["en", "nl", "de", "fr", "es", "it", "pt-PT", "ca", "ro", "el", "sv", "da", "nb", "is", "fi", "pl", "cs", "sk", "sl", "hr", "sr", "mk", "bg", "hu", "et", "lv", "lt", "ru", "uk", "tr", "ga", "mt", "sq"], "publisher": {"@id": "https://liftr.nu/#publisher"}}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Naar inhoud</a>
 <header class="nav" id="nav">
   <a class="brand" href="./" aria-label="Liftr"><img src="/assets/img/appicon-180.png" alt="" width="36" height="36"><b>LIFTR</b></a>
-  <nav class="links" aria-label="Menu"><a href="#functies">Functies</a><a href="#apparaten">Apparaten</a><a href="#gezondheid">Gezondheid</a><a href="#privacy">Privacy</a><a class="lang" href="/en/" hreflang="en" lang="en">EN</a></nav>
+  <nav class="links" aria-label="Menu"><a href="#functies">Functies</a><a href="#apparaten">Apparaten</a><a href="#gezondheid">Gezondheid</a><a href="#privacy">Privacy</a><a class="lang" data-setlang="en" href="/en/" hreflang="en" lang="en">EN</a></nav>
   <a class="btn btn-orange btn-sm" href="#download">Binnenkort in de App Store</a>
 </header>
 <main id="main">
@@ -181,7 +187,7 @@ Loopband 20 min 2,5 km</div>
 </main>
 <footer class="footer"><div class="footer-inner">
   <span>© <span data-year>2026</span> Liftr</span>
-  <nav><a href="/">Liftr</a><a href="/privacy/">Privacy</a><a href="https://lrvdlinden.app">Meer apps</a><a href="/en/">English</a></nav>
+  <nav><a href="/">Liftr</a><a href="/privacy/">Privacy</a><a href="https://lrvdlinden.app">Meer apps</a><a data-setlang="en" href="/en/">English</a></nav>
 </div></footer>
 <script>window.LIFTR_NOTES = [{"icon": "/assets/img/appicon-180.png", "title": "Rust voorbij", "body": "Tijd voor je volgende set 💪"}, {"icon": "/assets/img/appicon-180.png", "title": "🏆 Nieuw record", "body": "Chest press · 47,5 kg × 10"}, {"icon": "/assets/img/appicon-180.png", "title": "Opgeslagen in Gezondheid", "body": "Krachttraining · 52 min · 318 kcal"}, {"icon": "/assets/img/appicon-180.png", "title": "Tijd voor je training", "body": "Houd je reeks van 6 weken vast 🔥"}];</script>
 <script src="/assets/js/site.js" defer></script>

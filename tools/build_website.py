@@ -272,6 +272,17 @@ def screens(s, unit_dec):
     return dict(today=today, workout=workout, rest=rest, progress=progress, history=history, pass_=passs, imp=imp, pad=pad, watch=watch)
 
 
+# Dutch is the default. A browser without Dutch in its languages goes to the English page, unless the
+# visitor picked Dutch themselves (stored in localStorage, no cookie) or it's a crawler / link preview.
+LANG_REDIRECT = """<script>(function(){try{
+if(localStorage.getItem("liftr-lang")==="nl")return;
+if(/bot|crawl|spider|slurp|lighthouse|preview|facebookexternalhit|whatsapp|linkedin|twitter|telegram|slack|discord|skype/i.test(navigator.userAgent))return;
+var l=((navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||""]).join(",").toLowerCase();
+if(!/(^|,)nl/.test(l))location.replace("/en/"+location.pathname.replace(/^\\/+/,"")+location.search+location.hash);
+}catch(e){}})();</script>
+"""
+
+
 def page_head(lang, t, path, title, desc, og_slug, jsonld):
     url = f"{DOMAIN}/{path}"
     nl_url = f"{DOMAIN}/{path[3:] if path.startswith('en/') else path}"
@@ -315,25 +326,27 @@ def page_head(lang, t, path, title, desc, og_slug, jsonld):
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/overpass-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css">
-<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>
+{LANG_REDIRECT if lang == "nl" else ""}<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>
 </head>'''
 
 
-def nav_html(t, lang, home_rel):
+def nav_html(t, lang, home_rel, other=None):
+    other = other or t["other"]
     links = "".join(f'<a href="{home_rel}{h}">{e(l)}</a>' for h, l in t["nav"])
     return f'''<header class="nav" id="nav">
   <a class="brand" href="{home_rel or './'}" aria-label="Liftr"><img src="/assets/img/appicon-180.png" alt="" width="36" height="36"><b>LIFTR</b></a>
-  <nav class="links" aria-label="Menu">{links}<a class="lang" href="{t["other"]}" hreflang="{"en" if lang == "nl" else "nl"}" lang="{"en" if lang == "nl" else "nl"}">{t["other_label"]}</a></nav>
+  <nav class="links" aria-label="Menu">{links}<a class="lang" data-setlang="{"en" if lang == "nl" else "nl"}" href="{other}" hreflang="{"en" if lang == "nl" else "nl"}" lang="{"en" if lang == "nl" else "nl"}">{t["other_label"]}</a></nav>
   <a class="btn btn-orange btn-sm" href="{APP_STORE_URL or home_rel + '#download'}">{e(t["soon"] if APP_STORE_URL else t["soon_pre"])}</a>
 </header>'''
 
 
-def footer_html(t, lang):
+def footer_html(t, lang, other=None):
+    other = other or t["other"]
     pr = "/privacy/" if lang == "nl" else "/en/privacy/"
     home = "/" if lang == "nl" else "/en/"
     return f'''<footer class="footer"><div class="footer-inner">
   <span>© <span data-year>2026</span> Liftr</span>
-  <nav><a href="{home}">Liftr</a><a href="{pr}">{e(t["footer_privacy"])}</a><a href="https://lrvdlinden.app">{e(t["footer_more"])}</a><a href="{t["other"]}">{"English" if lang == "nl" else "Nederlands"}</a></nav>
+  <nav><a href="{home}">Liftr</a><a href="{pr}">{e(t["footer_privacy"])}</a><a href="https://lrvdlinden.app">{e(t["footer_more"])}</a><a data-setlang="{"en" if lang == "nl" else "nl"}" href="{other}">{"English" if lang == "nl" else "Nederlands"}</a></nav>
 </div></footer>'''
 
 
@@ -496,11 +509,12 @@ def build_privacy(lang):
     head = page_head(lang, t, path, p["title"], p["desc"], "home", ld)
     secs = "".join(f"<section><h2>{e(h)}</h2><p>{body}</p></section>" for h, body in p["sections"])
     home = "/" if lang == "nl" else "/en/"
+    other = "/en/privacy/" if lang == "nl" else "/privacy/"
     body = f'''
 <body>
-{nav_html(t, lang, home)}
+{nav_html(t, lang, home, other)}
 <main class="legal" id="main"><h1>{e(p["h1"])}</h1><p class="lead">{e(p["lead"])}</p>{secs}</main>
-{footer_html(t, lang)}
+{footer_html(t, lang, other)}
 <script src="/assets/js/site.js" defer></script>
 </body>
 </html>

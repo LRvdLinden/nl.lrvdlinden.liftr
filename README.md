@@ -56,7 +56,7 @@ tools/               gen_xcodeproj.py, make_icon.py
 
 ### Website (liftr.nu)
 
-Statische site in `website/` (Nederlands op `/`, Engels op `/en/`, privacy op `/privacy/` en `/en/privacy/`), met sitemap, robots.txt, manifest, 404 en `.htaccess` (https + zonder www). Upload de inhoud van `website/` naar de webroot.
+Statische site in `website/` (Nederlands op `/`, Engels op `/en/`, privacy op `/privacy/` en `/en/privacy/`). Nederlands is standaard; een browser zonder Nederlands als taal gaat automatisch naar de Engelse pagina (kiest iemand zelf NL, dan blijft dat zo – opgeslagen in localStorage, geen cookie; zoekmachines worden niet doorgestuurd), met sitemap, robots.txt, manifest, 404 en `.htaccess` (https + zonder www). Upload de inhoud van `website/` naar de webroot.
 
 - Teksten en opbouw: `tools/build_website.py` → `python3 tools/build_website.py`
 - App Store-knoppen: vul `APP_STORE_URL` bovenin `tools/build_website.py` zodra Liftr live staat; leeg = "Binnenkort in de App Store" (alleen op de site, nooit op de og:images)
