@@ -13,6 +13,7 @@ const fs = require('fs'), path = require('path');
     const p = pages[key];
     await p.goto('file://' + j.html, { waitUntil: 'load' });
     await p.evaluate(() => document.fonts.ready);
+    await p.waitForFunction(() => document.body.dataset.fit === '1', null, { timeout: 5000 }).catch(() => {});
     fs.mkdirSync(path.dirname(j.out), { recursive: true });
     await p.screenshot({ path: j.out });
   }

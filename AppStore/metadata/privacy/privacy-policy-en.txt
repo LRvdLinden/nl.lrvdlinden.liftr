@@ -1,0 +1,32 @@
+Privacy
+Liftr is built to keep your training private. Last updated: 3 November 2026.
+
+What data
+Liftr stores what you enter yourself: workouts, exercises, sets, reps, weights, routines, body measurements, notes and the code of your gym pass. There is no account and Liftr has no server of its own.
+
+Storage and iCloud
+Your data is stored on your device. With iCloud turned on, it syncs between your iPhone, iPad and Apple Watch through your own private iCloud database. The developer cannot see this data. The code of your gym pass is stored end-to-end encrypted.
+
+Apple Health
+Only with your permission, Liftr reads your weight, body fat, lean body mass, height, heart rate and resting heart rate, and saves workouts, active energy, distance, weight and body fat to Apple Health. Health data is never shared with third parties, never used for advertising and never leaves your devices through Liftr. You can change access at any time in the Health app.
+
+Camera and photos
+The camera and your photo library are only used to read the QR code or barcode of your gym pass. Images are not saved or sent anywhere.
+
+Importing
+An Excel or CSV file you import is only read on your device and is not saved or sent anywhere. Imported workouts are not written to Apple Health.
+
+Gym logos
+For the logo on your pass, the app fetches the official icon from your gym chain's website. That is an ordinary web request: nothing about you or your pass is sent along.
+
+Notifications
+Reminders and the rest timer are local notifications planned on your device. There is no push server.
+
+No tracking
+Liftr contains no analytics, no advertising, no third-party code and no tracking of any kind. This website uses no cookies and no trackers.
+
+Deleting your data
+Delete workouts in the app. To remove everything, delete Liftr from your devices and remove its data in Settings → your name → iCloud → Manage Storage → Liftr.
+
+Contact
+Questions about privacy? Get in touch via lrvdlinden.app.

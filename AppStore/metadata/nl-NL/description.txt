@@ -1,0 +1,45 @@
+Weg met de notities-app. Liftr is het logboek voor de sportschool: per training zie je precies wat je deed – oefening, sets, herhalingen en gewicht – en hoe je sterker wordt.
+
+LOGGEN IN SECONDEN
+• Start een training en voeg oefeningen toe uit een bibliotheek met 127 apparaten, vrije gewichten, kabels en cardio
+• Wat je vorige keer deed staat al ingevuld – pas aan met −/+ en vink de set af
+• Werksets, warming-up, dropsets en sets tot falen
+• Eigen schema's voor je vaste trainingen
+
+RUSTTIMER
+• Na elke set start de rusttimer automatisch
+• Live Activity op je toegangsscherm en in het Dynamic Island: oefening, sets en resterende rust, ook met je telefoon in je zak
+
+ZIE JE GROEI
+• Grafieken van je zwaarste set, geschat maximum (1RM) en volume
+• Schuif over de lijn voor elke training; kies 1 maand tot alles, met min, gemiddelde en max
+• Persoonlijke records, weekreeks en een kalender met al je trainingsdagen
+
+APPLE WATCH
+• Start en log je training vanaf je pols, met hartslag en calorieën
+• Je sportschoolpas en je schema's ook op je Watch
+• Complicaties en widgets voor je week
+
+SPORTSCHOOLPAS
+• Rechtsboven op Vandaag: al je passen onder één knop
+• Kies je sportschool met logo en huiskleur, of voeg een andere toe
+• De kaart draait om naar je QR- of barcode, schermvullend en met maximale helderheid
+• Scan je pas met de camera of lees de code uit een screenshot
+
+APPLE GEZONDHEID
+• Je trainingen worden opgeslagen als krachttraining, met calorieën en hartslag
+• Gewicht en vetpercentage uit Gezondheid voor je voortgang
+
+IMPORTEREN
+• Plak je oude notities: “Leg press 3x12 40 kg” wordt netjes een oefening met sets
+• Of kies je Excel- of CSV-overzicht – download de importsheet op liftr.nu
+• Geïmporteerde trainingen komen in je geschiedenis, niet in Apple Gezondheid
+
+PRIVÉ
+• Geen account, geen advertenties, geen tracking
+• Je gegevens staan op je apparaat en synchroniseren via je eigen iCloud tussen iPhone, iPad en Apple Watch
+• De code van je sportschoolpas wordt end-to-end versleuteld
+
+Liftr is beschikbaar in 33 Europese talen, waaronder Nederlands en Engels.
+
+Meer apps van de ontwikkelaar vind je op lrvdlinden.app.

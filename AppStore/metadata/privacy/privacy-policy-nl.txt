@@ -1,0 +1,32 @@
+Privacy
+Liftr is gemaakt om je training privé te houden. Laatst bijgewerkt: 3 november 2026.
+
+Welke gegevens
+Liftr bewaart wat je zelf invoert: trainingen, oefeningen, sets, herhalingen, gewichten, schema's, lichaamsmetingen, notities en de code van je sportschoolpas. Er is geen account en Liftr heeft geen eigen server.
+
+Opslag en iCloud
+Je gegevens staan op je apparaat. Als iCloud aan staat, synchroniseren ze via je eigen privé-iCloud-database tussen je iPhone, iPad en Apple Watch. De ontwikkelaar kan deze gegevens niet inzien. De code van je sportschoolpas wordt end-to-end versleuteld opgeslagen.
+
+Apple Gezondheid
+Alleen met jouw toestemming leest Liftr je gewicht, vetpercentage, vetvrije massa, lengte, hartslag en rusthartslag, en bewaart het trainingen, actieve energie, afstand, gewicht en vetpercentage in Apple Gezondheid. Gezondheidsgegevens worden niet gedeeld met derden, niet voor advertenties gebruikt en verlaten je apparaten niet via Liftr. Je wijzigt de toegang altijd in de Gezondheid-app.
+
+Camera en foto's
+De camera en je fotobibliotheek worden alleen gebruikt om de QR- of barcode van je sportschoolpas te lezen. Afbeeldingen worden niet bewaard of verstuurd.
+
+Importeren
+Een Excel- of CSV-bestand dat je importeert wordt alleen op je apparaat gelezen en niet bewaard of verstuurd. Geïmporteerde trainingen worden niet naar Apple Gezondheid geschreven.
+
+Logo's van sportscholen
+Voor het logo op je pas haalt de app het officiële icoon op van de website van je sportschoolketen. Dat is een gewoon webverzoek: er wordt niets over jou of je pas meegestuurd.
+
+Meldingen
+Herinneringen en de rusttimer zijn lokale meldingen die op je apparaat worden ingepland. Er is geen pushserver.
+
+Geen tracking
+Liftr bevat geen analytics, geen advertenties, geen code van derden en geen enkele vorm van tracking. Deze website gebruikt geen cookies en geen trackers.
+
+Je gegevens verwijderen
+Verwijder trainingen in de app. Om alles te wissen verwijder je Liftr van je apparaten en haal je de gegevens weg via Instellingen → je naam → iCloud → Beheer opslag → Liftr.
+
+Contact
+Vragen over privacy? Neem contact op via lrvdlinden.app.

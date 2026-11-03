@@ -28,14 +28,14 @@ HEAD = {
     "nl": dict(
         iphone=[("today", "Elke herhaling", "telt.", "Je sportschool-logboek voor iPhone, iPad en Apple Watch"),
                 ("workout", "Log in", "seconden.", "Wat je vorige keer deed staat al klaar"),
-                ("rest", "Rust op je", "vergrendelscherm.", "Rusttimer met Live Activity en Dynamic Island"),
+                ("rest", "Rust op", "je scherm.", "Rusttimer met Live Activity en Dynamic Island"),
                 ("progress", "Zie je", "groei.", "Zwaarste set, geschat maximum en volume"),
                 ("history", "Elke training", "terug.", "Tik een datum en zie wat je deed"),
-                ("pass", "Je pas bij", "de deur.", "QR- of barcode voor de toegang, ook op je Watch"),
-                ("import", "Weg met", "notities.", "Plak je oude notities, Liftr maakt er trainingen van")],
+                ("pass", "Al je passen,", "één tik.", "Kies je sportschool en de pas draait om naar je code"),
+                ("import", "Je logboek", "gaat mee.", "Uit notities of Excel – je grafieken lopen meteen terug")],
         ipad=[(("today", "workout"), "Groot op", "je iPad.", "Vandaag en je training naast elkaar"),
               (("progress", "history"), "Al je", "voortgang.", "Grafieken en je trainingskalender"),
-              (("pass", "import"), "Alles bij", "de hand.", "Je sportschoolpas en importeren uit notities")],
+              (("pass", "import"), "Alles bij", "de hand.", "Je sportschoolpassen en importeren uit notities of Excel")],
         mk_title="Elke herhaling", mk_outline="telt.", mk_sub="Sportschool-logboek voor iPhone, iPad en Apple Watch",
         mk_chips=["Sets & gewicht", "Rusttimer", "Voortgang", "Gezondheid", "33 talen"],
         watch=dict(start="START", routines="Schema's", r1="Benen", r2="Push", r3="Rug & armen", ex="oefeningen",
@@ -45,14 +45,14 @@ HEAD = {
     "en": dict(
         iphone=[("today", "Every rep", "counts.", "Your gym logbook for iPhone, iPad and Apple Watch"),
                 ("workout", "Log in", "seconds.", "What you did last time is already filled in"),
-                ("rest", "Rest on your", "Lock Screen.", "Rest timer with Live Activity and Dynamic Island"),
+                ("rest", "Rest on", "your screen.", "Rest timer with Live Activity and Dynamic Island"),
                 ("progress", "Watch yourself", "grow.", "Heaviest set, estimated max and volume"),
                 ("history", "Every workout,", "by date.", "Tap a day and see what you did"),
-                ("pass", "Your pass at", "the door.", "Access QR code or barcode, on your Watch too"),
-                ("import", "No more", "notes.", "Paste your old notes, Liftr turns them into workouts")],
+                ("pass", "All your passes,", "one tap.", "Pick your gym and the card flips to your code"),
+                ("import", "Bring your", "log along.", "From notes or Excel – your charts go back to day one")],
         ipad=[(("today", "workout"), "Big on", "your iPad.", "Today and your workout side by side"),
               (("progress", "history"), "All your", "progress.", "Charts and your training calendar"),
-              (("pass", "import"), "Everything", "at hand.", "Your gym pass and importing from notes")],
+              (("pass", "import"), "Everything", "at hand.", "Your gym passes and importing from notes or Excel")],
         mk_title="Every rep", mk_outline="counts.", mk_sub="Gym logbook for iPhone, iPad and Apple Watch",
         mk_chips=["Sets & weight", "Rest timer", "Progress", "Apple Health", "33 languages"],
         watch=dict(start="START", routines="Routines", r1="Legs", r2="Push", r3="Back & arms", ex="exercises",
@@ -87,9 +87,30 @@ html,body{margin:0;width:100vw;height:100vh;overflow:hidden;background:#0a0a0c}
 """
 
 
+# Shrinks a headline until no word sticks out and the text block stays clear of the device.
+FIT_JS = """<script>
+document.fonts.ready.then(() => {
+  const dev = document.querySelector('.phone2, .ipad2');
+  const hit = (a, b) => a.right > b.left - 24 && a.left < b.right + 24 && a.bottom > b.top - 24 && a.top < b.bottom + 24;
+  for (const h of document.querySelectorAll('.txt h1')) {
+    const box = h.closest('.txt');
+    let size = parseFloat(getComputedStyle(h).fontSize);
+    for (let i = 0; i < 40; i++) {
+      const wide = h.scrollWidth > h.clientWidth + 1 || box.scrollWidth > box.clientWidth + 1;
+      const over = dev && hit(box.getBoundingClientRect(), dev.getBoundingClientRect());
+      if (!wide && !over) break;
+      size *= 0.95;
+      h.style.fontSize = size + 'px';
+    }
+  }
+  document.body.dataset.fit = '1';
+});
+</script>"""
+
+
 def page(body, extra_css=""):
     return f"""<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="{CSS}">
-<style>{BASE_CSS}{extra_css}</style></head><body>{body}</body></html>"""
+<style>{BASE_CSS}{extra_css}</style></head><body>{body}{FIT_JS}</body></html>"""
 
 
 def bg():
@@ -154,10 +175,10 @@ def marketing_html(lang, scr, wide):
     # wide = 3840x1646 banner; otherwise 16:9 / 3:2 canvas. Sizes in vh so every canvas scales.
     phone_h = 86 if wide else 74
     body = f"""{bg()}
-<div class="txt" style="top:50%;transform:translateY(-50%);left:6vw;right:auto;width:{46 if wide else 50}vw">
+<div class="txt" style="top:50%;transform:translateY(-50%);left:6vw;right:auto;width:{44 if wide else 40}vw">
 <div style="display:flex;align-items:center;gap:1.6vh;margin-bottom:3vh"><img src="{ICON}" style="width:9vh;height:9vh;border-radius:2.1vh"><b style="font-family:var(--display);font-weight:900;font-size:6vh">LIFTR</b></div>
-<h1 style="font-size:{15 if wide else 12}vh">{e(h["mk_title"])}<span class="outline" style="-webkit-text-stroke-width:.5vh">{e(h["mk_outline"])}</span></h1>
-<p style="font-size:3.4vh;margin-top:3vh">{e(h["mk_sub"])}</p>
+<h1 style="font-size:{"15vh" if wide else "min(12vh, 6vw)"}">{e(h["mk_title"])}<span class="outline" style="-webkit-text-stroke-width:.5vh">{e(h["mk_outline"])}</span></h1>
+<p style="font-size:min(3.4vh, 1.9vw);margin-top:3vh">{e(h["mk_sub"])}</p>
 <div style="display:flex;flex-wrap:wrap;gap:1.2vh;margin-top:3vh">{"".join(f'<span style="font-family:var(--font);font-weight:700;font-size:2.4vh;padding:1vh 2vh;border-radius:99px;background:rgba(0,0,0,.28);box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)">{e(c)}</span>' for c in h["mk_chips"])}</div></div>
 <div style="position:absolute;right:{6 if wide else 5}vw;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:3vh;perspective:2000px">
   <div class="phone2" style="position:relative;left:auto;height:{phone_h}vh;width:auto;padding:1.4vh;border-radius:7.6vh;box-shadow:0 0 0 .4vh #4a4a50,0 0 0 .8vh #141416,0 5vh 10vh rgba(0,0,0,.55);transform:rotateY(-10deg) rotateZ(2deg)"><div class="glass" style="border-radius:6.4vh">{scr["workout"]}</div><div class="island" style="top:2.6vh;height:2.6vh;border-radius:2vh"></div></div>

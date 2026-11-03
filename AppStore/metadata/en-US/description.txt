@@ -1,0 +1,45 @@
+Ditch the notes app. Liftr is your gym logbook: for every workout you see exactly what you did – exercise, sets, reps and weight – and how you're getting stronger.
+
+LOG IN SECONDS
+• Start a workout and add exercises from a library of 127 machines, free weights, cables and cardio
+• What you did last time is already filled in – adjust with −/+ and tick off the set
+• Working sets, warm-ups, drop sets and sets to failure
+• Your own routines for the workouts you repeat
+
+REST TIMER
+• The rest timer starts automatically after every set
+• Live Activity on your Lock Screen and in the Dynamic Island: exercise, sets and rest left, even with your phone in your pocket
+
+WATCH YOURSELF GROW
+• Charts of your heaviest set, estimated max (1RM) and volume
+• Scrub the line for every workout; pick 1 month to all time, with min, average and max
+• Personal records, week streak and a calendar of all your training days
+
+APPLE WATCH
+• Start and log your workout from your wrist, with heart rate and calories
+• Your gym pass and routines on your Watch too
+• Complications and widgets for your week
+
+GYM PASS
+• Top right on Today: all your passes behind one button
+• Pick your gym with its logo and colours, or add any other
+• The card flips over to your QR code or barcode, full screen at maximum brightness
+• Scan your pass with the camera or read the code from a screenshot
+
+APPLE HEALTH
+• Workouts are saved as strength training, with calories and heart rate
+• Weight and body fat from Health for your progress
+
+IMPORT
+• Paste your old notes: “Leg press 3x12 40 kg” becomes a proper exercise with sets
+• Or pick your Excel or CSV log – download the import sheet at liftr.nu
+• Imported workouts go into your history, not into Apple Health
+
+PRIVATE
+• No account, no ads, no tracking
+• Your data stays on your device and syncs through your own iCloud between iPhone, iPad and Apple Watch
+• Your gym pass code is end-to-end encrypted
+
+Liftr is available in 33 European languages, including English and Dutch.
+
+More apps from the developer at lrvdlinden.app.
