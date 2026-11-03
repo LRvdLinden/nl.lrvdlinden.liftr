@@ -492,5 +492,6 @@
  "Liftr couldn't find a date column with exercises in this file.": "Liftr fann ekki dagsetningardálk með æfingum í þessari skrá.",
  "{1} workouts from {2} to {3}": "{1} æfingar frá {2} til {3}",
  "Other file": "Önnur skrá",
- "{1} were already imported and were skipped.": "{1} var þegar flutt inn og sleppt."
+ "{1} were already imported and were skipped.": "{1} var þegar flutt inn og sleppt.",
+ "Download the import sheet": "Sækja innflutningsskjal"
 }

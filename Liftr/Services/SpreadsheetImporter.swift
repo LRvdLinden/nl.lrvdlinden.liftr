@@ -354,7 +354,8 @@ enum SpreadsheetImporter {
             return valid(DayMonth(day: d, month: mo, year: y, hour: Int(m[3]) ?? 18, minute: Int(m[4]) ?? 0))
         }
         if let m = matches(#"^(?:[a-z]+\.?,?\s+)?(\d{1,2})[-/.](\d{1,2})(?:[-/.](\d{2,4}))?$"#, in: s).first,
-           let d = Int(m[0]), let mo = Int(m[1]) {
+           let d = Int(m[0]), let mo = Int(m[1]),
+           !(m[2].isEmpty && s.range(of: #"\d\.\d"#, options: .regularExpression) != nil) {  // "27.5" is a weight, "27.5.2025" a date
             return valid(DayMonth(day: d, month: mo, year: Int(m[2]).map { $0 < 100 ? $0 + 2000 : $0 }))
         }
         if let m = matches(#"^(?:[a-z]+\.?,?\s+)?(\d{1,2})\s+([a-z]+)\.?(?:\s+(\d{4}))?$"#, in: s).first,

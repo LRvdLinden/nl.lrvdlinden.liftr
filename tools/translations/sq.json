@@ -492,5 +492,6 @@
  "Liftr couldn't find a date column with exercises in this file.": "Liftr nuk gjeti në këtë skedar një kolonë date me ushtrime.",
  "{1} workouts from {2} to {3}": "{1} stërvitje nga {2} deri më {3}",
  "Other file": "Skedar tjetër",
- "{1} were already imported and were skipped.": "{1} ishin importuar tashmë dhe u kapërcyen."
+ "{1} were already imported and were skipped.": "{1} ishin importuar tashmë dhe u kapërcyen.",
+ "Download the import sheet": "Shkarko fletën e importit"
 }

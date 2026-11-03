@@ -804,6 +804,12 @@
   "context": "ImportView.swift"
  },
  {
+  "key": "Download the import sheet",
+  "en": "Download the import sheet",
+  "nl": "Download de importsheet",
+  "context": "ImportView.swift"
+ },
+ {
   "key": "Excel or CSV",
   "en": "Excel or CSV",
   "nl": "Excel of CSV",

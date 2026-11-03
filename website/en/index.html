@@ -33,7 +33,7 @@
 <link rel="apple-touch-icon" href="/assets/img/appicon-180.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/overpass-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=13">
+<link rel="stylesheet" href="/assets/css/site.css?v=14">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://liftr.nu/#website", "url": "https://liftr.nu/", "name": "Liftr", "inLanguage": ["nl", "en"], "publisher": {"@id": "https://liftr.nu/#publisher"}}, {"@type": "Organization", "@id": "https://liftr.nu/#publisher", "name": "LRvdLinden", "url": "https://lrvdlinden.app", "logo": "https://liftr.nu/assets/img/appicon-512.png"}, {"@type": "MobileApplication", "@id": "https://liftr.nu/#app", "name": "Liftr", "url": "https://liftr.nu/en/", "operatingSystem": "iOS 17, iPadOS 17, watchOS 10", "applicationCategory": "HealthApplication", "description": "Track every workout: exercises, sets, reps and weight. Rest timer, progress charts, gym pass and Apple Health. For iPhone, iPad and Apple Watch.", "image": "https://liftr.nu/assets/img/appicon-512.png", "inLanguage": ["en", "nl", "de", "fr", "es", "it", "pt-PT", "ca", "ro", "el", "sv", "da", "nb", "is", "fi", "pl", "cs", "sk", "sl", "hr", "sr", "mk", "bg", "hu", "et", "lv", "lt", "ru", "uk", "tr", "ga", "mt", "sq"], "publisher": {"@id": "https://liftr.nu/#publisher"}}]}</script>
 </head>
 <body>
@@ -184,6 +184,23 @@ Treadmill 20 min 2.5 km</div>
     <div class="langs" data-reveal><span>English</span><span>Nederlands</span><span>Deutsch</span><span>Français</span><span>Español</span><span>Italiano</span><span>Português</span><span>Català</span><span>Română</span><span>Ελληνικά</span><span>Svenska</span><span>Dansk</span><span>Norsk</span><span>Íslenska</span><span>Suomi</span><span>Polski</span><span>Čeština</span><span>Slovenčina</span><span>Slovenščina</span><span>Hrvatski</span><span>Српски</span><span>Македонски</span><span>Български</span><span>Magyar</span><span>Eesti</span><span>Latviešu</span><span>Lietuvių</span><span>Русский</span><span>Українська</span><span>Türkçe</span><span>Gaeilge</span><span>Malti</span><span>Shqip</span></div>
   </section>
 
+  <section class="sheet" id="import-sheet">
+    <div class="sheet-inner" data-reveal>
+      <div class="sheet-copy">
+        <p class="kicker">Switching</p><h2>Bring your old<br><span class="grad">log along</span>.</h2><p class="sub">Kept your workouts in Excel, Numbers or Google Sheets? Download the import sheet, fill it in (or put your own log in this layout) and import it into Liftr.</p>
+        <ul class="sheet-points"><li><i>✓</i>One row per training day, one column per exercise</li><li><i>✓</i>Just type 45, 27 (3×10) or 25 / 18 – Liftr turns it into sets</li><li><i>✓</i>You see what will be imported first, and it isn’t written to Apple Health</li></ul>
+        <a class="btn btn-orange" href="/downloads/liftr-import-sheet.xlsx" download><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg><span>Download import sheet</span></a>
+        <p class="sheet-fine">Excel file (.xlsx) · also works in Numbers and Google Sheets · in the app: Settings → Import → Spreadsheet</p>
+      </div>
+      <div class="sheet-grid" aria-hidden="true">
+        <div class="sg-bar"><i></i><i></i><i></i><span>liftr-import-sheet.xlsx</span></div>
+        <table><thead><tr><th></th><th>Date</th><th>Leg press</th><th>Chest press</th><th>Lat pulldown</th></tr></thead>
+        <tbody><tr><td>2</td><td>2026-11-03</td><td>45</td><td>27 (3×10)</td><td>25 / 18</td></tr><tr><td>3</td><td>2026-11-05</td><td>47.5</td><td></td><td>27</td></tr><tr><td>4</td><td>2026-11-07</td><td></td><td>30 (4×8)</td><td>27 / 32</td></tr>
+        <tr><td>5</td><td></td><td></td><td></td><td></td></tr><tr><td>6</td><td></td><td></td><td></td><td></td></tr><tr><td>7</td><td></td><td></td><td></td><td></td></tr></tbody></table>
+      </div>
+    </div>
+  </section>
+
   <section class="final" id="download">
     <img src="/assets/img/appicon-512.png" alt="Liftr app icon" width="128" height="128" loading="lazy">
     <h2>Ready for<br>your next set?</h2><p>Liftr is coming soon to the App Store for iPhone, iPad and Apple Watch – in 33 languages.</p>
@@ -192,7 +209,7 @@ Treadmill 20 min 2.5 km</div>
 </main>
 <footer class="footer"><div class="footer-inner">
   <span>© <span data-year>2026</span> Liftr</span>
-  <nav><a href="/en/">Liftr</a><a href="/en/privacy/">Privacy</a><a href="https://lrvdlinden.app">More apps</a><a data-setlang="nl" href="/">Nederlands</a></nav>
+  <nav><a href="/en/">Liftr</a><a href="/en/privacy/">Privacy</a><a href="/en/#import-sheet">Import sheet</a><a href="https://lrvdlinden.app">More apps</a><a data-setlang="nl" href="/">Nederlands</a></nav>
 </div></footer>
 <script>window.LIFTR_NOTES = [{"icon": "/assets/img/appicon-180.png", "title": "Rest is over", "body": "Time for your next set 💪"}, {"icon": "/assets/img/appicon-180.png", "title": "🏆 New record", "body": "Chest press · 47.5 kg × 10"}, {"icon": "/assets/img/appicon-180.png", "title": "Saved in Health", "body": "Strength training · 52 min · 318 kcal"}, {"icon": "/assets/img/appicon-180.png", "title": "Time to train", "body": "Keep your 6-week streak going 🔥"}];</script>
 <script src="/assets/js/site.js" defer></script>

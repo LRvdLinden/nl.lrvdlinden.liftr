@@ -492,5 +492,6 @@
  "Liftr couldn't find a date column with exercises in this file.": "Το Liftr δεν βρήκε στήλη ημερομηνίας με ασκήσεις σε αυτό το αρχείο.",
  "{1} workouts from {2} to {3}": "{1} προπονήσεις από {2} έως {3}",
  "Other file": "Άλλο αρχείο",
- "{1} were already imported and were skipped.": "{1} είχαν ήδη εισαχθεί και παραλείφθηκαν."
+ "{1} were already imported and were skipped.": "{1} είχαν ήδη εισαχθεί και παραλείφθηκαν.",
+ "Download the import sheet": "Λήψη φύλλου εισαγωγής"
 }

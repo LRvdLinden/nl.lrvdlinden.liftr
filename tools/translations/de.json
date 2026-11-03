@@ -492,5 +492,6 @@
  "Liftr couldn't find a date column with exercises in this file.": "Liftr hat in dieser Datei keine Datumsspalte mit Übungen gefunden.",
  "{1} workouts from {2} to {3}": "{1} Workouts vom {2} bis {3}",
  "Other file": "Andere Datei",
- "{1} were already imported and were skipped.": "{1} wurden bereits importiert und übersprungen."
+ "{1} were already imported and were skipped.": "{1} wurden bereits importiert und übersprungen.",
+ "Download the import sheet": "Import-Tabelle laden"
 }

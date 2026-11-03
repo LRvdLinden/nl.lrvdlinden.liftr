@@ -77,7 +77,13 @@ T = {
         privacy_link="Lees de privacyverklaring",
         l_kicker="Talen", l_h2=f'{N_LANGS} talen.<br>Heel <span class="grad">Europa</span>.',
         final_h2='Klaar voor<br>je volgende set?', final_p="Liftr komt binnenkort naar de App Store voor iPhone, iPad en Apple Watch – in 33 talen.",
-        footer_privacy="Privacy", footer_more="Meer apps",
+        footer_privacy="Privacy", footer_more="Meer apps", footer_sheet="Importsheet",
+        sh_kicker="Overstappen", sh_h2='Je oude logboek<br><span class="grad">gaat mee</span>.',
+        sh_sub="Hield je je trainingen bij in Excel, Numbers of Google Sheets? Download de importsheet, vul hem in (of zet je eigen overzicht in deze vorm) en importeer hem in Liftr.",
+        sh_points=["Eén rij per trainingsdag, één kolom per oefening", "Typ gewoon 45, 27 (3×10) of 25 / 18 – Liftr maakt er sets van", "Je ziet eerst wat er geïmporteerd wordt, en het gaat niet naar Apple Gezondheid"],
+        sh_btn="Download importsheet", sh_file="/downloads/liftr-importsheet.xlsx", sh_fine="Excel-bestand (.xlsx) · werkt ook in Numbers en Google Sheets · in de app: Instellingen → Importeren → Spreadsheet",
+        sh_head=["Datum", "Leg press", "Chest press", "Lat pulldown"],
+        sh_rows=[["3-11-2026", "45", "27 (3×10)", "25 / 18"], ["5-11-2026", "47,5", "", "27"], ["7-11-2026", "", "30 (4×8)", "27 / 32"]],
         screens=dict(today="Vandaag", date="dinsdag 3 november", ready="Klaar om te trainen?", start="▶ START TRAINING",
                      week="Deze week", streak="6 wk op rij", w_label="Trainingen", m_label="Deze maand", v_label="Getild",
                      tabs=["Vandaag", "Historie", "Voortgang", "Bibliotheek", "Instellingen"],
@@ -135,7 +141,13 @@ T = {
         privacy_link="Read the privacy policy",
         l_kicker="Languages", l_h2=f'{N_LANGS} languages.<br>All of <span class="grad">Europe</span>.',
         final_h2='Ready for<br>your next set?', final_p="Liftr is coming soon to the App Store for iPhone, iPad and Apple Watch – in 33 languages.",
-        footer_privacy="Privacy", footer_more="More apps",
+        footer_privacy="Privacy", footer_more="More apps", footer_sheet="Import sheet",
+        sh_kicker="Switching", sh_h2='Bring your old<br><span class="grad">log along</span>.',
+        sh_sub="Kept your workouts in Excel, Numbers or Google Sheets? Download the import sheet, fill it in (or put your own log in this layout) and import it into Liftr.",
+        sh_points=["One row per training day, one column per exercise", "Just type 45, 27 (3×10) or 25 / 18 – Liftr turns it into sets", "You see what will be imported first, and it isn’t written to Apple Health"],
+        sh_btn="Download import sheet", sh_file="/downloads/liftr-import-sheet.xlsx", sh_fine="Excel file (.xlsx) · also works in Numbers and Google Sheets · in the app: Settings → Import → Spreadsheet",
+        sh_head=["Date", "Leg press", "Chest press", "Lat pulldown"],
+        sh_rows=[["2026-11-03", "45", "27 (3×10)", "25 / 18"], ["2026-11-05", "47.5", "", "27"], ["2026-11-07", "", "30 (4×8)", "27 / 32"]],
         screens=dict(today="Today", date="Tuesday 3 November", ready="Ready to train?", start="▶ START WORKOUT",
                      week="This week", streak="6 wk streak", w_label="Workouts", m_label="This month", v_label="Lifted",
                      tabs=["Today", "History", "Progress", "Library", "Settings"],
@@ -341,7 +353,7 @@ def page_head(lang, t, path, title, desc, og_slug, jsonld):
 <link rel="apple-touch-icon" href="/assets/img/appicon-180.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/overpass-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=13">
+<link rel="stylesheet" href="/assets/css/site.css?v=14">
 {LANG_REDIRECT if lang == "nl" else ""}<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>
 </head>'''
 
@@ -362,7 +374,7 @@ def footer_html(t, lang, other=None):
     home = "/" if lang == "nl" else "/en/"
     return f'''<footer class="footer"><div class="footer-inner">
   <span>© <span data-year>2026</span> Liftr</span>
-  <nav><a href="{home}">Liftr</a><a href="{pr}">{e(t["footer_privacy"])}</a><a href="https://lrvdlinden.app">{e(t["footer_more"])}</a><a data-setlang="{"en" if lang == "nl" else "nl"}" href="{other}">{"English" if lang == "nl" else "Nederlands"}</a></nav>
+  <nav><a href="{home}">Liftr</a><a href="{pr}">{e(t["footer_privacy"])}</a><a href="{home}#{"importsheet" if lang == "nl" else "import-sheet"}">{e(t["footer_sheet"])}</a><a href="https://lrvdlinden.app">{e(t["footer_more"])}</a><a data-setlang="{"en" if lang == "nl" else "nl"}" href="{other}">{"English" if lang == "nl" else "Nederlands"}</a></nav>
 </div></footer>'''
 
 
@@ -474,6 +486,23 @@ def build_home(lang):
     <div class="langs" data-reveal>{langs}</div>
   </section>
 
+  <section class="sheet" id="{"importsheet" if lang == "nl" else "import-sheet"}">
+    <div class="sheet-inner" data-reveal>
+      <div class="sheet-copy">
+        <p class="kicker">{e(t["sh_kicker"])}</p><h2>{t["sh_h2"]}</h2><p class="sub">{e(t["sh_sub"])}</p>
+        <ul class="sheet-points">{"".join(f"<li><i>✓</i>{e(x)}</li>" for x in t["sh_points"])}</ul>
+        <a class="btn btn-orange" href="{t["sh_file"]}" download><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg><span>{e(t["sh_btn"])}</span></a>
+        <p class="sheet-fine">{e(t["sh_fine"])}</p>
+      </div>
+      <div class="sheet-grid" aria-hidden="true">
+        <div class="sg-bar"><i></i><i></i><i></i><span>{e(t["sh_file"].rsplit("/", 1)[-1])}</span></div>
+        <table><thead><tr><th></th>{"".join(f"<th>{e(h)}</th>" for h in t["sh_head"])}</tr></thead>
+        <tbody>{"".join("<tr><td>" + str(i + 2) + "</td>" + "".join(f"<td>{e(c)}</td>" for c in row) + "</tr>" for i, row in enumerate(t["sh_rows"]))}
+        {"".join("<tr><td>" + str(i) + "</td>" + "<td></td>" * 4 + "</tr>" for i in range(5, 8))}</tbody></table>
+      </div>
+    </div>
+  </section>
+
   <section class="final" id="download">
     <img src="/assets/img/appicon-512.png" alt="Liftr app icon" width="128" height="128" loading="lazy">
     <h2>{t["final_h2"]}</h2><p>{e(t["final_p"])}</p>
@@ -571,7 +600,7 @@ def build_meta():
     write("404.html", '''<!doctype html>
 <html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Niet gevonden | Liftr</title><meta name="robots" content="noindex"><link rel="icon" href="/favicon.ico">
-<link rel="stylesheet" href="/assets/css/site.css?v=13"></head>
+<link rel="stylesheet" href="/assets/css/site.css?v=14"></head>
 <body><main class="legal" style="text-align:center"><h1>404</h1><p class="lead">Deze pagina bestaat niet. · This page doesn't exist.</p>
 <p><a class="btn btn-orange" href="/">liftr.nu</a></p></main></body></html>
 ''')
@@ -589,6 +618,7 @@ RewriteRule ^ https://liftr.nu%{REQUEST_URI} [L,R=301]
 </IfModule>
 AddType application/manifest+json .webmanifest
 AddType font/woff2 .woff2
+AddType application/vnd.openxmlformats-officedocument.spreadsheetml.sheet .xlsx
 ''')
 
 

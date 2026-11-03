@@ -492,5 +492,6 @@
  "Liftr couldn't find a date column with exercises in this file.": "Liftr ei löytänyt tästä tiedostosta päivämääräsaraketta, jossa on liikkeitä.",
  "{1} workouts from {2} to {3}": "{1} treeniä ajalta {2} – {3}",
  "Other file": "Toinen tiedosto",
- "{1} were already imported and were skipped.": "{1} oli jo tuotu ja ohitettiin."
+ "{1} were already imported and were skipped.": "{1} oli jo tuotu ja ohitettiin.",
+ "Download the import sheet": "Lataa tuontitaulukko"
 }

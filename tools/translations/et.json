@@ -492,5 +492,6 @@
  "Liftr couldn't find a date column with exercises in this file.": "Liftr ei leidnud selles failis kuupäevaveergu koos harjutustega.",
  "{1} workouts from {2} to {3}": "{1} treeningut vahemikus {2} kuni {3}",
  "Other file": "Muu fail",
- "{1} were already imported and were skipped.": "{1} oli juba imporditud ja jäeti vahele."
+ "{1} were already imported and were skipped.": "{1} oli juba imporditud ja jäeti vahele.",
+ "Download the import sheet": "Laadi alla impordileht"
 }

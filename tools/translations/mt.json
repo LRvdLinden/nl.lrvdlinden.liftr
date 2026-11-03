@@ -492,5 +492,6 @@
  "Liftr couldn't find a date column with exercises in this file.": "Liftr ma sab ebda kolonna tad-data b'eżerċizzji f'dan il-fajl.",
  "{1} workouts from {2} to {3}": "{1} taħriġ minn {2} sa {3}",
  "Other file": "Fajl ieħor",
- "{1} were already imported and were skipped.": "{1} kienu diġà ġew importati u ġew maqbuża."
+ "{1} were already imported and were skipped.": "{1} kienu diġà ġew importati u ġew maqbuża.",
+ "Download the import sheet": "Niżżel il-folja tal-importazzjoni"
 }

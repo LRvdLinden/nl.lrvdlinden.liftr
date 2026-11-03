@@ -492,5 +492,6 @@
  "Liftr couldn't find a date column with exercises in this file.": "Liftr v tomto súbore nenašiel stĺpec s dátumom a cvikmi.",
  "{1} workouts from {2} to {3}": "Tréningy: {1}, od {2} do {3}",
  "Other file": "Iný súbor",
- "{1} were already imported and were skipped.": "Už importované a preskočené: {1}."
+ "{1} were already imported and were skipped.": "Už importované a preskočené: {1}.",
+ "Download the import sheet": "Stiahnuť importnú tabuľku"
 }

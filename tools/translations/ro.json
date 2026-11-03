@@ -492,5 +492,6 @@
  "Liftr couldn't find a date column with exercises in this file.": "Liftr nu a găsit în acest fișier o coloană de dată cu exerciții.",
  "{1} workouts from {2} to {3}": "{1} antrenamente din {2} până în {3}",
  "Other file": "Alt fișier",
- "{1} were already imported and were skipped.": "{1} au fost deja importate și au fost omise."
+ "{1} were already imported and were skipped.": "{1} au fost deja importate și au fost omise.",
+ "Download the import sheet": "Descarcă foaia de import"
 }

@@ -492,5 +492,6 @@
  "Liftr couldn't find a date column with exercises in this file.": "Liftr није пронашао колону са датумом и вежбама у овој датотеци.",
  "{1} workouts from {2} to {3}": "Тренинга: {1}, од {2} до {3}",
  "Other file": "Друга датотека",
- "{1} were already imported and were skipped.": "Већ увезено и прескочено: {1}."
+ "{1} were already imported and were skipped.": "Већ увезено и прескочено: {1}.",
+ "Download the import sheet": "Преузми табелу за увоз"
 }

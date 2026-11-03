@@ -492,5 +492,6 @@
  "Liftr couldn't find a date column with exercises in this file.": "Liftr šiame faile nerado datos stulpelio su pratimais.",
  "{1} workouts from {2} to {3}": "Treniruočių: {1}, nuo {2} iki {3}",
  "Other file": "Kitas failas",
- "{1} were already imported and were skipped.": "Jau importuota ir praleista: {1}."
+ "{1} were already imported and were skipped.": "Jau importuota ir praleista: {1}.",
+ "Download the import sheet": "Atsisiųsti importo lentelę"
 }

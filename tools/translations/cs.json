@@ -492,5 +492,6 @@
  "Liftr couldn't find a date column with exercises in this file.": "Liftr v tomto souboru nenašel sloupec s datem a cviky.",
  "{1} workouts from {2} to {3}": "{1} tréninků od {2} do {3}",
  "Other file": "Jiný soubor",
- "{1} were already imported and were skipped.": "{1} už byly dříve importovány a byly přeskočeny."
+ "{1} were already imported and were skipped.": "{1} už byly dříve importovány a byly přeskočeny.",
+ "Download the import sheet": "Stáhnout importní tabulku"
 }

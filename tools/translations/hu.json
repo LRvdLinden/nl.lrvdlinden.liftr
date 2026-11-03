@@ -492,5 +492,6 @@
  "Liftr couldn't find a date column with exercises in this file.": "A Liftr nem talált dátumoszlopot gyakorlatokkal ebben a fájlban.",
  "{1} workouts from {2} to {3}": "{1} edzés {2} és {3} között",
  "Other file": "Másik fájl",
- "{1} were already imported and were skipped.": "{1} már importálva volt, ezért kimaradt."
+ "{1} were already imported and were skipped.": "{1} már importálva volt, ezért kimaradt.",
+ "Download the import sheet": "Importálási táblázat letöltése"
 }

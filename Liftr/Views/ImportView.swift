@@ -40,6 +40,11 @@ struct ImportView: View {
     Loopband 20 min 2,5 km
     """
 
+    /// The empty sheet to fill in, with instructions, on liftr.nu.
+    private static var importSheetURL: URL {
+        URL(string: L10n.isDutch ? "https://liftr.nu/#importsheet" : "https://liftr.nu/en/#import-sheet")!
+    }
+
     private static let fileTypes: [UTType] = [
         UTType("org.openxmlformats.spreadsheetml.sheet") ?? .spreadsheet,
         .commaSeparatedText, .tabSeparatedText, .plainText,
@@ -136,6 +141,9 @@ struct ImportView: View {
             } label: {
                 Label(tr("Choose file", "Kies bestand"), systemImage: "tablecells")
                     .font(.headline)
+            }
+            Link(destination: Self.importSheetURL) {
+                Label(tr("Download the import sheet", "Download de importsheet"), systemImage: "arrow.down.doc")
             }
         } header: {
             Text(tr("Excel or CSV", "Excel of CSV"))
@@ -320,7 +328,7 @@ struct ImportView: View {
             renames = [:]
             // Start on the sheet Liftr understands best.
             let scores = tables.map { SpreadsheetImporter.parse($0, options: options, unit: unit).days.count }
-            tableIndex = scores.indices.max { scores[$0] < scores[$1] } ?? 0
+            tableIndex = scores.firstIndex(of: scores.max() ?? 0) ?? 0
             reparse()
             analysed = true
         } catch {

@@ -492,5 +492,6 @@
  "Liftr couldn't find a date column with exercises in this file.": "Liftr bu dosyada egzersiz içeren bir tarih sütunu bulamadı.",
  "{1} workouts from {2} to {3}": "{2} – {3} arasında {1} antrenman",
  "Other file": "Başka dosya",
- "{1} were already imported and were skipped.": "{1} daha önce içe aktarılmıştı ve atlandı."
+ "{1} were already imported and were skipped.": "{1} daha önce içe aktarılmıştı ve atlandı.",
+ "Download the import sheet": "İçe aktarma tablosunu indir"
 }
