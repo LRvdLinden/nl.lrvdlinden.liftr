@@ -126,7 +126,7 @@ final class HealthKitManager {
     /// Saves a finished Liftr workout to Health. Returns the Health workout's UUID.
     func saveWorkout(_ workout: Workout) async -> String? {
         // Imported history (notes, spreadsheets) stays in Liftr and is never written to Health.
-        guard isAvailable, writeWorkouts, workout.source != "import", let end = workout.endDate else { return nil }
+        guard isAvailable, writeWorkouts, !workout.isImported, let end = workout.endDate else { return nil }
         let entries = workout.sortedEntries
         let cardioEntries = entries.filter { $0.exercise?.kind.isCardio == true }
         let allCardio = !entries.isEmpty && cardioEntries.count == entries.count

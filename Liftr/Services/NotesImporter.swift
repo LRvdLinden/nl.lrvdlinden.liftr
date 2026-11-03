@@ -183,13 +183,14 @@ enum NotesImporter {
 
     /// Creates the workouts. Exercises are matched by name; unknown names become new exercises.
     /// A day that was imported before (same date, same exercises) is skipped, so importing a file twice is safe.
-    /// Imported workouts are history only: they are never written to Apple Health (source "import").
+    /// Imported workouts are history only: they are never written to Apple Health (source "import|…").
     @MainActor
-    static func importDays(_ days: [ParsedDay], context: ModelContext) -> ImportResult {
+    static func importDays(_ days: [ParsedDay], context: ModelContext, label: String) -> ImportResult {
         var exercises = (try? context.fetch(FetchDescriptor<Exercise>())) ?? []
-        let existing = ((try? context.fetch(FetchDescriptor<Workout>())) ?? []).filter { $0.source == "import" }
+        let existing = ((try? context.fetch(FetchDescriptor<Workout>())) ?? []).filter(\.isImported)
         let calendar = Calendar.current
         var result = ImportResult()
+        let source = Workout.importSource(label: label)
         for day in days {
             let lines = day.lines.filter { $0.include && !$0.sets.isEmpty }
             guard !lines.isEmpty else { continue }
@@ -202,7 +203,7 @@ enum NotesImporter {
                 result.skipped += 1
                 continue
             }
-            let workout = Workout(title: tr("Imported workout", "Geïmporteerde training"), startDate: day.date, source: "import")
+            let workout = Workout(title: tr("Imported workout", "Geïmporteerde training"), startDate: day.date, source: source)
             workout.endDate = day.date.addingTimeInterval(60 * 60)
             workout.notes = day.note
             context.insert(workout)

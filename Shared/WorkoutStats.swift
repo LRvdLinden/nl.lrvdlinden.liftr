@@ -60,6 +60,14 @@ enum WorkoutStats {
         }.joined(separator: ", ") + (weights.contains { $0 > 0 } ? " \(unit.symbol)" : "")
     }
 
+    /// Every set: "40×12 · 42,5×12 · 42,5×10 kg" (cardio: minutes and km).
+    static func setsList(_ sets: [SetRecord], unit: WeightUnit, cardio: Bool = false) -> String {
+        guard !sets.isEmpty else { return "–" }
+        if cardio { return summary(sets, unit: unit, cardio: true) }
+        let parts = sets.map { $0.weight > 0 ? "\(unit.number($0.weight))×\($0.reps)" : "\($0.reps)×" }
+        return parts.joined(separator: " · ") + (sets.contains { $0.weight > 0 } ? " \(unit.symbol)" : "")
+    }
+
     struct ExercisePoint: Identifiable {
         let id = UUID()
         let date: Date

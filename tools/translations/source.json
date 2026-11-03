@@ -249,7 +249,7 @@
   "key": "Cancel",
   "en": "Cancel",
   "nl": "Annuleren",
-  "context": "ScannerView.swift; ExercisePickerView.swift; GymPassViews.swift; ImportView.swift; LibraryView.swift; RoutineEditView.swift; SettingsView.swift; WorkoutSessionView.swift"
+  "context": "ScannerView.swift; DataManagementView.swift; ExercisePickerView.swift; GymPassViews.swift; ImportView.swift; LibraryView.swift; RoutineEditView.swift; SettingsView.swift; WorkoutSessionView.swift"
  },
  {
   "key": "This file can't be read. Use an Excel file (.xlsx) or a CSV file.",
@@ -346,6 +346,114 @@
   "en": "Max",
   "nl": "Max",
   "context": "InsightChart.swift"
+ },
+ {
+  "key": "Earlier import",
+  "en": "Earlier import",
+  "nl": "Eerdere import",
+  "context": "DataManagementView.swift"
+ },
+ {
+  "key": "No imports yet.",
+  "en": "No imports yet.",
+  "nl": "Nog geen imports.",
+  "context": "DataManagementView.swift"
+ },
+ {
+  "key": "{1} workouts · {2} – {3}",
+  "en": "{1} workouts · {2} – {3}",
+  "nl": "{1} trainingen · {2} – {3}",
+  "context": "DataManagementView.swift"
+ },
+ {
+  "key": "Imported {1}",
+  "en": "Imported {1}",
+  "nl": "Geïmporteerd op {1}",
+  "context": "DataManagementView.swift"
+ },
+ {
+  "key": "Delete import",
+  "en": "Delete import",
+  "nl": "Import verwijderen",
+  "context": "DataManagementView.swift"
+ },
+ {
+  "key": "Imports",
+  "en": "Imports",
+  "nl": "Imports",
+  "context": "DataManagementView.swift"
+ },
+ {
+  "key": "Deleting an import removes only the workouts from that file. Workouts you logged in Liftr stay.",
+  "en": "Deleting an import removes only the workouts from that file. Workouts you logged in Liftr stay.",
+  "nl": "Een import verwijderen haalt alleen de trainingen uit dat bestand weg. Trainingen die je in Liftr hebt gelogd blijven staan.",
+  "context": "DataManagementView.swift"
+ },
+ {
+  "key": "Delete all data",
+  "en": "Delete all data",
+  "nl": "Alle gegevens wissen",
+  "context": "DataManagementView.swift"
+ },
+ {
+  "key": "Deletes all workouts, routines, body measurements, gym passes and your own exercises from this iPhone, and through iCloud from your iPad and Apple Watch too. Your settings stay.",
+  "en": "Deletes all workouts, routines, body measurements, gym passes and your own exercises from this iPhone, and through iCloud from your iPad and Apple Watch too. Your settings stay.",
+  "nl": "Wist alle trainingen, schema's, lichaamsmetingen, sportschoolpassen en je eigen oefeningen van deze iPhone, en via iCloud ook van je iPad en Apple Watch. Je instellingen blijven staan.",
+  "context": "DataManagementView.swift"
+ },
+ {
+  "key": "Manage data",
+  "en": "Manage data",
+  "nl": "Gegevens beheren",
+  "context": "DataManagementView.swift; SettingsView.swift"
+ },
+ {
+  "key": "Delete this import?",
+  "en": "Delete this import?",
+  "nl": "Deze import verwijderen?",
+  "context": "DataManagementView.swift"
+ },
+ {
+  "key": "Delete {1} workouts",
+  "en": "Delete {1} workouts",
+  "nl": "{1} trainingen verwijderen",
+  "context": "DataManagementView.swift"
+ },
+ {
+  "key": "Delete all data?",
+  "en": "Delete all data?",
+  "nl": "Alle gegevens wissen?",
+  "context": "DataManagementView.swift"
+ },
+ {
+  "key": "Delete all, also from Apple Health",
+  "en": "Delete all, also from Apple Health",
+  "nl": "Alles wissen, ook uit Apple Gezondheid",
+  "context": "DataManagementView.swift"
+ },
+ {
+  "key": "This can't be undone.",
+  "en": "This can't be undone.",
+  "nl": "Dit kan niet ongedaan worden gemaakt.",
+  "context": "DataManagementView.swift"
+ },
+ {
+  "key": "Done",
+  "en": "Done",
+  "nl": "Klaar",
+  "context": "DataManagementView.swift; WorkoutDetailView.swift; WorkoutSessionView.swift"
+ },
+ {
+  "key": "{1} imported workouts deleted.",
+  "en": "{1} imported workouts deleted.",
+  "nl": "{1} geïmporteerde trainingen verwijderd.",
+  "context": "DataManagementView.swift"
+ },
+ {
+  "key": "All data has been deleted.",
+  "en": "All data has been deleted.",
+  "nl": "Alle gegevens zijn gewist.",
+  "context": "DataManagementView.swift"
  },
  {
   "key": "New exercise",
@@ -759,7 +867,7 @@
   "key": "Import",
   "en": "Import",
   "nl": "Importeren",
-  "context": "ImportView.swift"
+  "context": "ImportView.swift; SettingsView.swift"
  },
  {
   "key": "Imported",
@@ -1356,12 +1464,6 @@
   "context": "SettingsView.swift"
  },
  {
-  "key": "Import from notes",
-  "en": "Import from notes",
-  "nl": "Importeren uit notities",
-  "context": "SettingsView.swift"
- },
- {
   "key": "Liftr export",
   "en": "Liftr export",
   "nl": "Liftr-export",
@@ -1626,12 +1728,6 @@
   "context": "WorkoutDetailView.swift"
  },
  {
-  "key": "Done",
-  "en": "Done",
-  "nl": "Klaar",
-  "context": "WorkoutDetailView.swift; WorkoutSessionView.swift"
- },
- {
   "key": "Delete this workout?",
   "en": "Delete this workout?",
   "nl": "Training verwijderen?",
@@ -1758,6 +1854,12 @@
   "context": "WorkoutSessionView.swift"
  },
  {
+  "key": "LAST",
+  "en": "LAST",
+  "nl": "VORIGE",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
   "key": "MIN",
   "en": "MIN",
   "nl": "MIN",
@@ -1794,6 +1896,12 @@
   "context": "WorkoutSessionView.swift"
  },
  {
+  "key": "Last time: {1}. Tap to use",
+  "en": "Last time: {1}. Tap to use",
+  "nl": "Vorige keer: {1}. Tik om over te nemen",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
   "key": "Set done",
   "en": "Set done",
   "nl": "Set gedaan",
@@ -1815,6 +1923,24 @@
   "key": "Skip rest",
   "en": "Skip rest",
   "nl": "Rust overslaan",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "Previous workouts",
+  "en": "Previous workouts",
+  "nl": "Vorige trainingen",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "Add all",
+  "en": "Add all",
+  "nl": "Alles toevoegen",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "Adds this exercise with these sets",
+  "en": "Adds this exercise with these sets",
+  "nl": "Voegt deze oefening toe met deze sets",
   "context": "WorkoutSessionView.swift"
  },
  {

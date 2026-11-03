@@ -131,7 +131,7 @@ final class Workout {
     var healthKitUUID: String? = nil
     var activeCalories: Double = 0
     var averageHeartRate: Double = 0
-    /// "iphone", "watch" or "import".
+    /// "iphone", "watch", or "import|<ISO date>|<file name>" for imported history (see `importSource`).
     var source: String = "iphone"
 
     @Relationship(deleteRule: .cascade, inverse: \WorkoutEntry.workout)
@@ -295,6 +295,26 @@ final class GymPass {
     var format: BarcodeFormat {
         get { BarcodeFormat(rawValue: formatRaw) ?? .qr }
         set { formatRaw = newValue.rawValue }
+    }
+}
+
+extension Workout {
+    /// Imported from notes or a spreadsheet: history only, never written to Apple Health.
+    var isImported: Bool { source.hasPrefix("import") }
+
+    /// Marks the workouts of one import, so that import can be deleted again later.
+    static func importSource(label: String, at date: Date = Date()) -> String {
+        let clean = label.replacingOccurrences(of: "|", with: " ")
+        return "import|\(date.formatted(.iso8601))|\(clean)"
+    }
+
+    /// The import this workout came from: when, and from which file. nil for workouts done in Liftr.
+    var importBatch: (date: Date?, label: String)? {
+        guard isImported else { return nil }
+        let parts = source.split(separator: "|", maxSplits: 2, omittingEmptySubsequences: false).map(String.init)
+        var date: Date? = nil
+        if parts.count > 1 { date = try? Date(parts[1], strategy: .iso8601) }
+        return (date, parts.count > 2 ? parts[2] : "")
     }
 }
 

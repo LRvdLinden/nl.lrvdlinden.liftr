@@ -121,12 +121,18 @@ struct SettingsView: View {
                     Button {
                         showImport = true
                     } label: {
-                        Label(tr("Import from notes", "Importeren uit notities"), systemImage: "square.and.arrow.down")
+                        Label(tr("Import", "Importeren"), systemImage: "square.and.arrow.down")
                     }
                     .foregroundStyle(.white)
                     ShareLink(item: CSVExport(workouts: workouts),
                               preview: SharePreview(tr("Liftr export", "Liftr-export"), image: Image(systemName: "tablecells"))) {
                         Label(tr("Export to CSV", "Exporteren als CSV"), systemImage: "square.and.arrow.up")
+                    }
+                    .foregroundStyle(.white)
+                    NavigationLink {
+                        DataManagementView()
+                    } label: {
+                        Label(tr("Manage data", "Gegevens beheren"), systemImage: "externaldrive.badge.minus")
                     }
                     .foregroundStyle(.white)
                 } header: {

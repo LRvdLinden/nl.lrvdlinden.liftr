@@ -72,7 +72,7 @@ struct LibraryView: View {
 
     private func row(_ exercise: Exercise) -> some View {
         NavigationLink(value: exercise) {
-            ExerciseListRow(exercise: exercise)
+            ExerciseListRow(exercise: exercise, showsLastTime: true)
                 .opacity(exercise.isArchived ? 0.5 : 1)
         }
         .listRowBackground(Theme.card)

@@ -42,7 +42,7 @@ struct ExercisePickerView: View {
                             onPick(exercise)
                             dismiss()
                         } label: {
-                            ExerciseListRow(exercise: exercise)
+                            ExerciseListRow(exercise: exercise, showsLastTime: true)
                         }
                         .listRowBackground(Theme.card)
                     }
@@ -101,6 +101,9 @@ struct ExercisePickerView: View {
 
 struct ExerciseListRow: View {
     let exercise: Exercise
+    /// Shows what you did last time (weight × reps per set) under the name.
+    var showsLastTime = false
+    @AppStorage(WeightUnit.storageKey) private var unitRaw = "kg"
 
     var body: some View {
         HStack(spacing: 12) {
@@ -112,6 +115,12 @@ struct ExerciseListRow: View {
                 Text("\(exercise.muscle.title) · \(exercise.kind.title)")
                     .font(.caption)
                     .foregroundStyle(Theme.muted)
+                if showsLastTime, let last = WorkoutStats.previousSets(for: exercise, excluding: nil) {
+                    Text("\(LiftrFormat.shortDay(last.date)): \(WorkoutStats.setsList(last.sets, unit: WeightUnit(rawValue: unitRaw) ?? .kg, cardio: exercise.kind.isCardio))")
+                        .font(.caption.weight(.semibold).monospacedDigit())
+                        .foregroundStyle(Theme.accent)
+                        .lineLimit(2)
+                }
             }
             Spacer()
             if exercise.isFavorite {

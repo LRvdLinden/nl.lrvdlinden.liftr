@@ -297,7 +297,8 @@ struct ImportView: View {
         ToolbarItem(placement: .confirmationAction) {
             if analysed {
                 Button(tr("Import", "Importeer")) {
-                    result = NotesImporter.importDays(renamed(days), context: context)
+                    result = NotesImporter.importDays(renamed(days), context: context,
+                                                     label: mode == .file ? fileName : tr("Notes", "Notities"))
                 }
                 .fontWeight(.bold)
                 .disabled(days.isEmpty)
