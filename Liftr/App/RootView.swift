@@ -48,6 +48,7 @@ struct RootView: View {
             ExerciseLibrary.prepare(context)
             controller.restore(context)
             await CloudSyncStatus.shared.refresh()
+            ReminderScheduler.reschedule(context)
             await HealthKitManager.shared.refresh()
         }
         .onChange(of: scenePhase) { _, phase in
@@ -55,6 +56,7 @@ struct RootView: View {
                 ExerciseLibrary.mergeDuplicates(context)
                 try? context.save()
                 Task { await CloudSyncStatus.shared.refresh() }
+                ReminderScheduler.reschedule(context)
             }
         }
         .onChange(of: router.pendingStart) { _, start in

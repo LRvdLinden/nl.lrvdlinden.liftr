@@ -152,7 +152,8 @@ final class HealthKitManager {
             }
             let meters = cardioEntries.flatMap { WorkoutStats.countedSets($0) }.reduce(0) { $0 + $1.distanceMeters }
             if meters > 0 {
-                let isBike = cardioEntries.contains { $0.exercise?.seedID == "exercise-bike" }
+                let bikes: Set<String> = ["exercise-bike", "recumbent-bike", "spin-bike", "air-bike"]
+                let isBike = cardioEntries.contains { bikes.contains($0.exercise?.seedID ?? "") }
                 samples.append(HKQuantitySample(type: isBike ? distanceCycling : distanceWalkRun,
                                                 quantity: HKQuantity(unit: .meter(), doubleValue: meters),
                                                 start: start, end: end))
@@ -210,7 +211,11 @@ final class HealthKitManager {
     private func cardioActivity(for exercise: Exercise?) -> HKWorkoutActivityType {
         switch exercise?.seedID {
         case "treadmill": .running
-        case "exercise-bike": .cycling
+        case "incline-walk": .walking
+        case "exercise-bike", "recumbent-bike", "spin-bike", "air-bike": .cycling
+        case "stepper": .stairClimbing
+        case "ski-erg": .crossCountrySkiing
+        case "jump-rope": .jumpRope
         case "rowing-machine": .rowing
         case "stair-climber": .stairClimbing
         case "cross-trainer": .elliptical

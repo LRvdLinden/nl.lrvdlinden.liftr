@@ -11,7 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEAM = "EU3UY476T6"
 BUNDLE = "nl.lrvdlinden.liftr"
 VERSION = "1.0.0"
-BUILD = "2"
+BUILD = "3"
 
 
 def oid(*parts):
@@ -145,6 +145,8 @@ proj_release = dict(common_project, **{
 HEALTH_SHARE = "Liftr reads your weight, body composition and heart rate to show your progress."
 HEALTH_UPDATE = "Liftr saves your gym workouts, calories and weight in Apple Health."
 CATEGORY = "public.app-category.healthcare-fitness"
+CAMERA = "Liftr uses the camera to scan the QR code or barcode of your gym pass."
+PHOTOS = "Liftr reads the code of your gym pass from a screenshot you choose."
 
 app_settings = {
     "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
@@ -156,8 +158,10 @@ app_settings = {
     "INFOPLIST_FILE": "Config/Liftr-Info.plist",
     "INFOPLIST_KEY_CFBundleDisplayName": "Liftr",
     "INFOPLIST_KEY_LSApplicationCategoryType": CATEGORY,
+    "INFOPLIST_KEY_NSCameraUsageDescription": CAMERA,
     "INFOPLIST_KEY_NSHealthShareUsageDescription": HEALTH_SHARE,
     "INFOPLIST_KEY_NSHealthUpdateUsageDescription": HEALTH_UPDATE,
+    "INFOPLIST_KEY_NSPhotoLibraryUsageDescription": PHOTOS,
     "INFOPLIST_KEY_NSSupportsLiveActivities": "YES",
     "INFOPLIST_KEY_UIApplicationSceneManifest_Generation": "YES",
     "INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents": "YES",

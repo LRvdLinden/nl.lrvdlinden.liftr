@@ -69,6 +69,40 @@
           }
         }
       }
+    },
+    "NSCameraUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr uses the camera to scan the QR code or barcode of your gym pass."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr gebruikt de camera om de QR- of barcode van je sportschoolpas te scannen."
+          }
+        }
+      }
+    },
+    "NSPhotoLibraryUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr reads the code of your gym pass from a screenshot you choose."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr leest de code van je sportschoolpas uit een screenshot die je kiest."
+          }
+        }
+      }
     }
   }
 }

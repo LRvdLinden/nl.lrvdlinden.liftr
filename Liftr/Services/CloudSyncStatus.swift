@@ -23,6 +23,8 @@ final class CloudSyncStatus {
     private(set) var state: State = .checking
     private(set) var lastSync: Date? = UserDefaults.standard.object(forKey: "cloud.lastSync") as? Date
     private var observer: NSObjectProtocol?
+    /// Called after every successful sync (e.g. to re-plan reminders when a Watch workout arrives).
+    var onSync: (() -> Void)?
 
     private init() {
         // SwiftData syncs through NSPersistentCloudKitContainer, which posts these events.
@@ -47,6 +49,7 @@ final class CloudSyncStatus {
             lastSync = ended
             UserDefaults.standard.set(ended, forKey: "cloud.lastSync")
             state = .synced(ended)
+            onSync?()
         } else {
             state = .failed(error ?? tr("Unknown error", "Onbekende fout"))
         }

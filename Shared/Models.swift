@@ -266,9 +266,37 @@ final class BodyMeasurement {
     }
 }
 
+/// The gym membership pass: its access code shown as QR or barcode at the entrance.
+@Model
+final class GymPass {
+    var id: UUID = UUID()
+    var gymName: String = ""
+    var memberName: String = ""
+    /// Encrypted end to end in iCloud: only your own devices hold the key.
+    @Attribute(.allowsCloudEncryption) var code: String = ""
+    var formatRaw: String = BarcodeFormat.qr.rawValue
+    var note: String = ""
+    var createdAt: Date = Date()
+    /// PNG of a 2D code, rendered on iPhone/iPad for the Watch (which has no Core Image).
+    @Attribute(.externalStorage) var codeImage: Data? = nil
+
+    init(gymName: String, code: String, format: BarcodeFormat) {
+        self.id = UUID()
+        self.gymName = gymName
+        self.code = code
+        self.formatRaw = format.rawValue
+        self.createdAt = Date()
+    }
+
+    var format: BarcodeFormat {
+        get { BarcodeFormat(rawValue: formatRaw) ?? .qr }
+        set { formatRaw = newValue.rawValue }
+    }
+}
+
 enum LiftrSchema {
     static let models: [any PersistentModel.Type] = [
         Exercise.self, Workout.self, WorkoutEntry.self, SetRecord.self,
-        Routine.self, RoutineItem.self, BodyMeasurement.self,
+        Routine.self, RoutineItem.self, BodyMeasurement.self, GymPass.self,
     ]
 }

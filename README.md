@@ -5,7 +5,7 @@ Sportschool-logboek voor iPhone, iPad en Apple Watch. Houd per training bij welk
 | | |
 |---|---|
 | Bundle ID | `nl.lrvdlinden.liftr` (Watch: `.watchkitapp`, widgets: `.widgets`) |
-| Versie | 1.0.0 (build 2) |
+| Versie | 1.0.0 (build 3) |
 | Platforms | iOS/iPadOS 17+, watchOS 10+ |
 | Talen | Nederlands, Engels |
 | Team | EU3UY476T6 |
@@ -13,13 +13,15 @@ Sportschool-logboek voor iPhone, iPad en Apple Watch. Houd per training bij welk
 ## Functies
 
 **iPhone & iPad**
+- **Sportschoolpas** – op Vandaag onder "Start training": je QR- of barcode voor de toegang, schermvullend op wit met maximale helderheid. Toevoegen door te scannen, uit een screenshot of door het nummer te typen (EAN, Code 128, Code 39, ITF, QR, PDF417, Aztec). Ook op de Apple Watch. Code versleuteld in iCloud.
+- **Herinneringen** (lokale meldingen, geen server) – vaste trainingsdagen met tijdstip, na X dagen niet getraind, weekoverzicht op zondag 20:00. Dagen waarop al getraind is (ook op Watch/iPad) worden overgeslagen.
 - **Vandaag** – training starten of hervatten, weekoverzicht met trainingsdagen, weken-op-rij, volume, laatste training, schema's, lichaamsgegevens en badges.
 - **Trainen** – per oefening sets met gewicht en herhalingen, *wat je vorige keer deed* staat erbij en wordt vooraf ingevuld. Toetsenbordbalk met −/+ 2,5 kg en −/+ 1 herhaling, set afvinken, setsoort (warming-up, dropset, tot falen), notitie per oefening. Cardio met minuten en kilometers.
 - **Rusttimer** – start automatisch na een set, ±15 s, melding als de app op de achtergrond staat.
 - **Live Activity** – oefening, sets en rusttimer op het toegangsscherm en in het Dynamic Island.
 - **Geschiedenis** – maandkalender met een stip op elke trainingsdag; tik een datum voor alles wat je die dag deed. Trainingen achteraf aanpassen of verwijderen.
 - **Voortgang** – per oefening grafieken van zwaarste set, geschat 1RM en volume, plus records. Trainingen en volume per week. Gewicht en vetpercentage (uit Gezondheid of zelf ingevoerd).
-- **Bibliotheek** – ±50 standaard oefeningen (apparaten, vrije gewichten, kabel, cardio) per spiergroep, eigen oefeningen, favorieten, archiveren. Schema's (bijv. "Maandag: benen") die je met één tik start.
+- **Bibliotheek** – ±125 standaard oefeningen (apparaten, plate-loaded, smith machine, kabel, vrije gewichten, functional, cardio) per spiergroep, eigen oefeningen, favorieten, archiveren. Schema's (bijv. "Maandag: benen") die je met één tik start.
 - **Importeren uit notities** – plak je oude notities; Liftr herkent regels als `Leg press 3x12 40 kg`, `Chest press 3 x 10 x 35kg`, `Lat pulldown 30kg 12, 35kg 10`, `Loopband 20 min 2,5 km` en datums als `3-11-2026` of `maandag 3 november`. Je controleert en past aan vóór het importeren.
 - **Exporteren** als CSV.
 - **Siri / Opdrachten** – "Start een training in Liftr".

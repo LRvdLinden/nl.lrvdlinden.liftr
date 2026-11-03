@@ -217,6 +217,7 @@ final class WorkoutController {
         isPresented = false
         finished = workout
         WidgetCenter.shared.reloadAllTimelines()
+        ReminderScheduler.reschedule(context)
     }
 
     func discard(_ context: ModelContext) {

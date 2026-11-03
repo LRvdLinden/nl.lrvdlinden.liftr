@@ -19,6 +19,7 @@ struct WatchRootView: View {
     @State private var manager = WatchWorkoutManager.shared
     @Query(sort: \Routine.createdAt) private var routines: [Routine]
     @Query(sort: \Workout.startDate, order: .reverse) private var workouts: [Workout]
+    @Query(sort: \GymPass.createdAt) private var passes: [GymPass]
     @State private var starting = false
 
     var body: some View {
@@ -40,6 +41,14 @@ struct WatchRootView: View {
                     }
                     .listRowBackground(RoundedRectangle(cornerRadius: 16, style: .continuous).fill(Theme.accentGradient))
                     .disabled(starting)
+
+                    if let pass = passes.first {
+                        NavigationLink {
+                            WatchPassView(pass: pass)
+                        } label: {
+                            Label(tr("Gym pass", "Sportschoolpas"), systemImage: "qrcode")
+                        }
+                    }
 
                     if !routines.isEmpty {
                         Section(tr("Routines", "Schema's")) {
@@ -115,5 +124,28 @@ struct WatchSummaryView: View {
                     .padding(.top, 6)
             }
         }
+    }
+}
+
+/// The gym pass on the wrist: white background, code as large as the screen allows.
+struct WatchPassView: View {
+    let pass: GymPass
+
+    var body: some View {
+        ZStack {
+            Color.white.ignoresSafeArea()
+            VStack(spacing: 4) {
+                BarcodeView(value: pass.code, format: pass.format, codeImage: pass.codeImage)
+                    .padding(pass.format.isLinear ? 2 : 6)
+                if pass.format.isLinear {
+                    Text(pass.code)
+                        .font(.system(size: 12, design: .monospaced))
+                        .foregroundStyle(.black)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                }
+            }
+        }
+        .navigationTitle(pass.gymName.isEmpty ? tr("Pass", "Pas") : pass.gymName)
     }
 }
