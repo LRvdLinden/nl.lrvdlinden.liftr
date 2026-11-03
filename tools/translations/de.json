@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Liftr versucht es später erneut. Deine Trainings sind auf diesem Gerät sicher.",
  "Tap for technical details": "Tippe für technische Details",
  "Technical details": "Technische Details",
- "Copy": "Kopieren"
+ "Copy": "Kopieren",
+ "Show {1} pass": "{1}-Ausweis zeigen",
+ "Show front": "Vorderseite zeigen",
+ "Show code": "Code zeigen",
+ "Tap the card to turn it over": "Tipp auf die Karte, um sie umzudrehen",
+ "Tap the card to show the code": "Tipp auf die Karte, um den Code zu zeigen",
+ "Another gym": "Anderes Studio",
+ "Search gym": "Studio suchen",
+ "Choose your gym": "Wähl dein Studio",
+ "Name of the gym": "Name des Studios",
+ "Card colour": "Kartenfarbe"
 }

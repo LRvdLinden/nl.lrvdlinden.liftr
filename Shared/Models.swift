@@ -271,6 +271,10 @@ final class BodyMeasurement {
 final class GymPass {
     var id: UUID = UUID()
     var gymName: String = ""
+    /// Known chain from GymTemplates (logo, colour); nil for another gym.
+    var templateID: String? = nil
+    /// Card colour, e.g. "#FB7819".
+    var colorHex: String = "#FF6B00"
     var memberName: String = ""
     /// Encrypted end to end in iCloud: only your own devices hold the key.
     @Attribute(.allowsCloudEncryption) var code: String = ""

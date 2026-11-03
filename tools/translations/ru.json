@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Liftr попробует снова позже. Твои тренировки в безопасности на этом устройстве.",
  "Tap for technical details": "Коснись, чтобы увидеть технические подробности",
  "Technical details": "Технические подробности",
- "Copy": "Скопировать"
+ "Copy": "Скопировать",
+ "Show {1} pass": "Показать карту {1}",
+ "Show front": "Показать лицевую сторону",
+ "Show code": "Показать код",
+ "Tap the card to turn it over": "Нажми на карту, чтобы перевернуть её",
+ "Tap the card to show the code": "Нажми на карту, чтобы показать код",
+ "Another gym": "Другой зал",
+ "Search gym": "Поиск зала",
+ "Choose your gym": "Выбери свой зал",
+ "Name of the gym": "Название зала",
+ "Card colour": "Цвет карты"
 }

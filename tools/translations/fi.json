@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Liftr yrittää myöhemmin uudelleen. Treenisi ovat turvassa tällä laitteella.",
  "Tap for technical details": "Napauta nähdäksesi tekniset tiedot",
  "Technical details": "Tekniset tiedot",
- "Copy": "Kopioi"
+ "Copy": "Kopioi",
+ "Show {1} pass": "Näytä {1}-kortti",
+ "Show front": "Näytä etupuoli",
+ "Show code": "Näytä koodi",
+ "Tap the card to turn it over": "Käännä kortti napauttamalla",
+ "Tap the card to show the code": "Näytä koodi napauttamalla korttia",
+ "Another gym": "Muu sali",
+ "Search gym": "Hae salia",
+ "Choose your gym": "Valitse salisi",
+ "Name of the gym": "Salin nimi",
+ "Card colour": "Kortin väri"
 }

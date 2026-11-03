@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Liftr to zkusí znovu později. Tvoje tréninky jsou v tomto zařízení v bezpečí.",
  "Tap for technical details": "Klepni pro technické podrobnosti",
  "Technical details": "Technické podrobnosti",
- "Copy": "Kopírovat"
+ "Copy": "Kopírovat",
+ "Show {1} pass": "Zobrazit permanentku {1}",
+ "Show front": "Zobrazit přední stranu",
+ "Show code": "Zobrazit kód",
+ "Tap the card to turn it over": "Klepnutím kartu otočíš",
+ "Tap the card to show the code": "Klepnutím na kartu zobrazíš kód",
+ "Another gym": "Jiná posilovna",
+ "Search gym": "Hledat posilovnu",
+ "Choose your gym": "Vyber svou posilovnu",
+ "Name of the gym": "Název posilovny",
+ "Card colour": "Barva karty"
 }

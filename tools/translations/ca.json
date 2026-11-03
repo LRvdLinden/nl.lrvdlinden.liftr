@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "El Liftr ho tornarà a provar més tard. Els teus entrenaments estan segurs en aquest dispositiu.",
  "Tap for technical details": "Toca per veure els detalls tècnics",
  "Technical details": "Detalls tècnics",
- "Copy": "Copia"
+ "Copy": "Copia",
+ "Show {1} pass": "Mostra el carnet de {1}",
+ "Show front": "Mostra la part davantera",
+ "Show code": "Mostra el codi",
+ "Tap the card to turn it over": "Toca el carnet per girar-lo",
+ "Tap the card to show the code": "Toca el carnet per veure el codi",
+ "Another gym": "Un altre gimnàs",
+ "Search gym": "Cerca un gimnàs",
+ "Choose your gym": "Tria el teu gimnàs",
+ "Name of the gym": "Nom del gimnàs",
+ "Card colour": "Color del carnet"
 }

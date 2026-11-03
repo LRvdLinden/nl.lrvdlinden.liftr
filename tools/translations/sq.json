@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Liftr do të provojë sërish më vonë. Stërvitjet e tua janë të sigurta në këtë pajisje.",
  "Tap for technical details": "Prek për detaje teknike",
  "Technical details": "Detaje teknike",
- "Copy": "Kopjo"
+ "Copy": "Kopjo",
+ "Show {1} pass": "Shfaq kartën e {1}",
+ "Show front": "Shfaq pjesën e përparme",
+ "Show code": "Shfaq kodin",
+ "Tap the card to turn it over": "Prek kartën për ta kthyer",
+ "Tap the card to show the code": "Prek kartën për të shfaqur kodin",
+ "Another gym": "Palestër tjetër",
+ "Search gym": "Kërko palestër",
+ "Choose your gym": "Zgjidh palestrën tënde",
+ "Name of the gym": "Emri i palestrës",
+ "Card colour": "Ngjyra e kartës"
 }

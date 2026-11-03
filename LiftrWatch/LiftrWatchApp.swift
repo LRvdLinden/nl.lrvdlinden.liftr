@@ -46,7 +46,13 @@ struct WatchRootView: View {
                         NavigationLink {
                             WatchPassView(pass: pass)
                         } label: {
-                            Label(tr("Gym pass", "Sportschoolpas"), systemImage: "qrcode")
+                            HStack {
+                                Image(systemName: "qrcode")
+                                    .foregroundStyle(Color.ink(on: pass.colorHex))
+                                    .frame(width: 28, height: 28)
+                                    .background(Color(hex: pass.colorHex), in: RoundedRectangle(cornerRadius: 7))
+                                Text(pass.displayName)
+                            }
                         }
                     }
 
@@ -146,6 +152,6 @@ struct WatchPassView: View {
                 }
             }
         }
-        .navigationTitle(pass.gymName.isEmpty ? tr("Pass", "Pas") : pass.gymName)
+        .navigationTitle(pass.displayName)
     }
 }

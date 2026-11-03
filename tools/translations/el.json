@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Το Liftr θα ξαναδοκιμάσει αργότερα. Οι προπονήσεις σου είναι ασφαλείς σε αυτή τη συσκευή.",
  "Tap for technical details": "Πάτησε για τεχνικές λεπτομέρειες",
  "Technical details": "Τεχνικές λεπτομέρειες",
- "Copy": "Αντιγραφή"
+ "Copy": "Αντιγραφή",
+ "Show {1} pass": "Εμφάνιση κάρτας {1}",
+ "Show front": "Εμφάνιση μπροστινής όψης",
+ "Show code": "Εμφάνιση κωδικού",
+ "Tap the card to turn it over": "Πάτησε την κάρτα για να τη γυρίσεις",
+ "Tap the card to show the code": "Πάτησε την κάρτα για να δεις τον κωδικό",
+ "Another gym": "Άλλο γυμναστήριο",
+ "Search gym": "Αναζήτηση γυμναστηρίου",
+ "Choose your gym": "Διάλεξε το γυμναστήριό σου",
+ "Name of the gym": "Όνομα γυμναστηρίου",
+ "Card colour": "Χρώμα κάρτας"
 }

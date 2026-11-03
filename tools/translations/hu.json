@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "A Liftr később újrapróbálja. Az edzéseid biztonságban vannak ezen az eszközön.",
  "Tap for technical details": "Koppints a technikai részletekért",
  "Technical details": "Technikai részletek",
- "Copy": "Másolás"
+ "Copy": "Másolás",
+ "Show {1} pass": "{1}-bérlet megjelenítése",
+ "Show front": "Előlap megjelenítése",
+ "Show code": "Kód megjelenítése",
+ "Tap the card to turn it over": "Koppints a kártyára a megfordításhoz",
+ "Tap the card to show the code": "Koppints a kártyára a kód megjelenítéséhez",
+ "Another gym": "Másik edzőterem",
+ "Search gym": "Edzőterem keresése",
+ "Choose your gym": "Válaszd ki az edzőtermed",
+ "Name of the gym": "Az edzőterem neve",
+ "Card colour": "Kártya színe"
 }

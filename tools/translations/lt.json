@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Liftr bandys dar kartą vėliau. Tavo treniruotės saugios šiame įrenginyje.",
  "Tap for technical details": "Bakstelėk, kad matytum techninę informaciją",
  "Technical details": "Techninė informacija",
- "Copy": "Kopijuoti"
+ "Copy": "Kopijuoti",
+ "Show {1} pass": "Rodyti {1} kortelę",
+ "Show front": "Rodyti priekinę pusę",
+ "Show code": "Rodyti kodą",
+ "Tap the card to turn it over": "Bakstelk kortelę, kad ją apverstum",
+ "Tap the card to show the code": "Bakstelk kortelę, kad pamatytum kodą",
+ "Another gym": "Kitas sporto klubas",
+ "Search gym": "Ieškoti sporto klubo",
+ "Choose your gym": "Pasirink savo sporto klubą",
+ "Name of the gym": "Sporto klubo pavadinimas",
+ "Card colour": "Kortelės spalva"
 }

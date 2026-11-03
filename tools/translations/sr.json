@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Liftr ће покушати поново касније. Твоји тренинзи су безбедни на овом уређају.",
  "Tap for technical details": "Додирни за техничке детаље",
  "Technical details": "Технички детаљи",
- "Copy": "Копирај"
+ "Copy": "Копирај",
+ "Show {1} pass": "Прикажи картицу {1}",
+ "Show front": "Прикажи предњу страну",
+ "Show code": "Прикажи код",
+ "Tap the card to turn it over": "Додирни картицу да је окренеш",
+ "Tap the card to show the code": "Додирни картицу за приказ кода",
+ "Another gym": "Друга теретана",
+ "Search gym": "Претражи теретане",
+ "Choose your gym": "Изабери своју теретану",
+ "Name of the gym": "Назив теретане",
+ "Card colour": "Боја картице"
 }

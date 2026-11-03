@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Liftr jerġa' jipprova aktar tard. It-taħriġiet tiegħek huma sikuri fuq dan l-apparat.",
  "Tap for technical details": "Agħfas għad-dettalji tekniċi",
  "Technical details": "Dettalji tekniċi",
- "Copy": "Ikkopja"
+ "Copy": "Ikkopja",
+ "Show {1} pass": "Uri l-pass ta' {1}",
+ "Show front": "Uri n-naħa ta' quddiem",
+ "Show code": "Uri l-kodiċi",
+ "Tap the card to turn it over": "Agħfas il-kard biex taqlibha",
+ "Tap the card to show the code": "Agħfas il-kard biex turi l-kodiċi",
+ "Another gym": "Gym oħra",
+ "Search gym": "Fittex gym",
+ "Choose your gym": "Agħżel il-gym tiegħek",
+ "Name of the gym": "Isem il-gym",
+ "Card colour": "Kulur tal-kard"
 }

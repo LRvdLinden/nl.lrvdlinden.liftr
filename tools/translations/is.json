@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Liftr reynir aftur síðar. Æfingarnar þínar eru öruggar á þessu tæki.",
  "Tap for technical details": "Ýttu til að sjá tæknilegar upplýsingar",
  "Technical details": "Tæknilegar upplýsingar",
- "Copy": "Afrita"
+ "Copy": "Afrita",
+ "Show {1} pass": "Sýna {1}-kort",
+ "Show front": "Sýna framhlið",
+ "Show code": "Sýna kóða",
+ "Tap the card to turn it over": "Ýttu á kortið til að snúa því við",
+ "Tap the card to show the code": "Ýttu á kortið til að sýna kóðann",
+ "Another gym": "Önnur líkamsræktarstöð",
+ "Search gym": "Leita að líkamsræktarstöð",
+ "Choose your gym": "Veldu líkamsræktarstöðina þína",
+ "Name of the gym": "Nafn líkamsræktarstöðvar",
+ "Card colour": "Litur korts"
 }

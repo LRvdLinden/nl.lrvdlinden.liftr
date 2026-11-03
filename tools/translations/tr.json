@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Liftr daha sonra yeniden deneyecek. Antrenmanların bu aygıtta güvende.",
  "Tap for technical details": "Teknik ayrıntılar için dokun",
  "Technical details": "Teknik ayrıntılar",
- "Copy": "Kopyala"
+ "Copy": "Kopyala",
+ "Show {1} pass": "{1} kartını göster",
+ "Show front": "Ön yüzü göster",
+ "Show code": "Kodu göster",
+ "Tap the card to turn it over": "Çevirmek için karta dokun",
+ "Tap the card to show the code": "Kodu göstermek için karta dokun",
+ "Another gym": "Başka bir salon",
+ "Search gym": "Salon ara",
+ "Choose your gym": "Salonunu seç",
+ "Name of the gym": "Salonun adı",
+ "Card colour": "Kart rengi"
 }

@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Liftr prøver igjen senere. Øktene dine er trygge på denne enheten.",
  "Tap for technical details": "Trykk for tekniske detaljer",
  "Technical details": "Tekniske detaljer",
- "Copy": "Kopier"
+ "Copy": "Kopier",
+ "Show {1} pass": "Vis {1}-kort",
+ "Show front": "Vis forsiden",
+ "Show code": "Vis kode",
+ "Tap the card to turn it over": "Trykk på kortet for å snu det",
+ "Tap the card to show the code": "Trykk på kortet for å vise koden",
+ "Another gym": "Annet treningssenter",
+ "Search gym": "Søk etter treningssenter",
+ "Choose your gym": "Velg treningssenteret ditt",
+ "Name of the gym": "Navn på treningssenteret",
+ "Card colour": "Kortfarge"
 }

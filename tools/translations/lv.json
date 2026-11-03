@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Liftr mēģinās vēlreiz vēlāk. Tavi treniņi ir drošībā šajā ierīcē.",
  "Tap for technical details": "Pieskaries, lai skatītu tehnisko informāciju",
  "Technical details": "Tehniskā informācija",
- "Copy": "Kopēt"
+ "Copy": "Kopēt",
+ "Show {1} pass": "Rādīt {1} karti",
+ "Show front": "Rādīt priekšpusi",
+ "Show code": "Rādīt kodu",
+ "Tap the card to turn it over": "Pieskaries kartei, lai to apgrieztu",
+ "Tap the card to show the code": "Pieskaries kartei, lai parādītu kodu",
+ "Another gym": "Cita sporta zāle",
+ "Search gym": "Meklēt sporta zāli",
+ "Choose your gym": "Izvēlies savu sporta zāli",
+ "Name of the gym": "Sporta zāles nosaukums",
+ "Card colour": "Kartes krāsa"
 }

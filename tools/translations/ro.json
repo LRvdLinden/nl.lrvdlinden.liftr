@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Liftr va încerca din nou mai târziu. Antrenamentele tale sunt în siguranță pe acest dispozitiv.",
  "Tap for technical details": "Atinge pentru detalii tehnice",
  "Technical details": "Detalii tehnice",
- "Copy": "Copiază"
+ "Copy": "Copiază",
+ "Show {1} pass": "Arată abonamentul {1}",
+ "Show front": "Arată fața",
+ "Show code": "Arată codul",
+ "Tap the card to turn it over": "Atinge cardul ca să-l întorci",
+ "Tap the card to show the code": "Atinge cardul ca să vezi codul",
+ "Another gym": "Altă sală",
+ "Search gym": "Caută o sală",
+ "Choose your gym": "Alege-ți sala",
+ "Name of the gym": "Numele sălii",
+ "Card colour": "Culoarea cardului"
 }

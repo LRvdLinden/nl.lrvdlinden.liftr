@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Bainfidh Liftr triail eile as níos déanaí. Tá do sheisiúin slán ar an ngléas seo.",
  "Tap for technical details": "Tapáil le haghaidh sonraí teicniúla",
  "Technical details": "Sonraí teicniúla",
- "Copy": "Cóipeáil"
+ "Copy": "Cóipeáil",
+ "Show {1} pass": "Taispeáin pas {1}",
+ "Show front": "Taispeáin an tosach",
+ "Show code": "Taispeáin an cód",
+ "Tap the card to turn it over": "Tapáil an cárta lena chasadh",
+ "Tap the card to show the code": "Tapáil an cárta leis an gcód a thaispeáint",
+ "Another gym": "Giomnáisiam eile",
+ "Search gym": "Cuardaigh giomnáisiam",
+ "Choose your gym": "Roghnaigh do ghiomnáisiam",
+ "Name of the gym": "Ainm an ghiomnáisiam",
+ "Card colour": "Dath an chárta"
 }

@@ -461,5 +461,15 @@
  "Liftr tries again later. Your workouts are safe on this device.": "Liftr försöker igen senare. Dina pass är säkra på den här enheten.",
  "Tap for technical details": "Tryck för tekniska detaljer",
  "Technical details": "Tekniska detaljer",
- "Copy": "Kopiera"
+ "Copy": "Kopiera",
+ "Show {1} pass": "Visa {1}-kort",
+ "Show front": "Visa framsidan",
+ "Show code": "Visa kod",
+ "Tap the card to turn it over": "Tryck på kortet för att vända det",
+ "Tap the card to show the code": "Tryck på kortet för att visa koden",
+ "Another gym": "Annat gym",
+ "Search gym": "Sök gym",
+ "Choose your gym": "Välj ditt gym",
+ "Name of the gym": "Gymmets namn",
+ "Card colour": "Kortets färg"
 }

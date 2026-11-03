@@ -366,27 +366,15 @@
   "context": "ExercisePickerView.swift; RoutineEditView.swift; WorkoutDetailView.swift; WorkoutSessionView.swift"
  },
  {
-  "key": "My gym pass",
-  "en": "My gym pass",
-  "nl": "Mijn sportschoolpas",
+  "key": "Gym pass",
+  "en": "Gym pass",
+  "nl": "Sportschoolpas",
   "context": "GymPassViews.swift"
  },
  {
-  "key": "Gym",
-  "en": "Gym",
-  "nl": "Sportschool",
-  "context": "GymPassViews.swift"
- },
- {
-  "key": "Tap to show at the entrance",
-  "en": "Tap to show at the entrance",
-  "nl": "Tik om te tonen bij de ingang",
-  "context": "GymPassViews.swift"
- },
- {
-  "key": "Show gym pass",
-  "en": "Show gym pass",
-  "nl": "Toon sportschoolpas",
+  "key": "Show {1} pass",
+  "en": "Show {1} pass",
+  "nl": "Toon pas van {1}",
   "context": "GymPassViews.swift"
  },
  {
@@ -414,9 +402,69 @@
   "context": "GymPassViews.swift; LibraryView.swift; WorkoutDetailView.swift"
  },
  {
+  "key": "Show front",
+  "en": "Show front",
+  "nl": "Toon voorkant",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Show code",
+  "en": "Show code",
+  "nl": "Toon code",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Tap the card to turn it over",
+  "en": "Tap the card to turn it over",
+  "nl": "Tik op de kaart om hem om te draaien",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Tap the card to show the code",
+  "en": "Tap the card to show the code",
+  "nl": "Tik op de kaart om de code te tonen",
+  "context": "GymPassViews.swift"
+ },
+ {
   "key": "Screen brightness is turned up",
   "en": "Screen brightness is turned up",
   "nl": "Schermhelderheid staat op maximaal",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Another gym",
+  "en": "Another gym",
+  "nl": "Andere sportschool",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Search gym",
+  "en": "Search gym",
+  "nl": "Zoek sportschool",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Choose your gym",
+  "en": "Choose your gym",
+  "nl": "Kies je sportschool",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Gym",
+  "en": "Gym",
+  "nl": "Sportschool",
+  "context": "GymPassViews.swift; GymTemplates.swift"
+ },
+ {
+  "key": "Name of the gym",
+  "en": "Name of the gym",
+  "nl": "Naam van de sportschool",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Card colour",
+  "en": "Card colour",
+  "nl": "Kleur van de kaart",
   "context": "GymPassViews.swift"
  },
  {
@@ -432,18 +480,6 @@
   "context": "GymPassViews.swift"
  },
  {
-  "key": "Code",
-  "en": "Code",
-  "nl": "Code",
-  "context": "GymPassViews.swift"
- },
- {
-  "key": "Scan the card or key fob, or take a screenshot of the code in your gym's app and choose it here.",
-  "en": "Scan the card or key fob, or take a screenshot of the code in your gym's app and choose it here.",
-  "nl": "Scan je pasje of sleutelhanger, of maak een screenshot van de code in de app van je sportschool en kies hem hier.",
-  "context": "GymPassViews.swift"
- },
- {
   "key": "Code or member number",
   "en": "Code or member number",
   "nl": "Code of lidnummer",
@@ -456,15 +492,21 @@
   "context": "GymPassViews.swift; LibraryView.swift"
  },
  {
-  "key": "Details",
-  "en": "Details",
-  "nl": "Gegevens",
+  "key": "Code",
+  "en": "Code",
+  "nl": "Code",
   "context": "GymPassViews.swift"
  },
  {
-  "key": "Gym, e.g. my local gym",
-  "en": "Gym, e.g. my local gym",
-  "nl": "Sportschool, bijv. club in Apeldoorn",
+  "key": "Scan the card or key fob, or take a screenshot of the code in your gym's app and choose it here.",
+  "en": "Scan the card or key fob, or take a screenshot of the code in your gym's app and choose it here.",
+  "nl": "Scan je pasje of sleutelhanger, of maak een screenshot van de code in de app van je sportschool en kies hem hier.",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Details",
+  "en": "Details",
+  "nl": "Gegevens",
   "context": "GymPassViews.swift"
  },
  {
@@ -484,12 +526,6 @@
   "en": "Delete pass",
   "nl": "Pas verwijderen",
   "context": "GymPassViews.swift"
- },
- {
-  "key": "Gym pass",
-  "en": "Gym pass",
-  "nl": "Sportschoolpas",
-  "context": "GymPassViews.swift; LiftrWatchApp.swift"
  },
  {
   "key": "Edit pass",
@@ -1683,12 +1719,6 @@
   "key": "{1} wk",
   "en": "{1} wk",
   "nl": "{1} wk",
-  "context": "LiftrWatchApp.swift"
- },
- {
-  "key": "Pass",
-  "en": "Pass",
-  "nl": "Pas",
   "context": "LiftrWatchApp.swift"
  },
  {
