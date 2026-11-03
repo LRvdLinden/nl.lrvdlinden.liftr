@@ -372,6 +372,18 @@
   "context": "GymPassViews.swift"
  },
  {
+  "key": "Show code",
+  "en": "Show code",
+  "nl": "Toon code",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Edit pass",
+  "en": "Edit pass",
+  "nl": "Pas wijzigen",
+  "context": "GymPassViews.swift"
+ },
+ {
   "key": "Show {1} pass",
   "en": "Show {1} pass",
   "nl": "Toon pas van {1}",
@@ -381,12 +393,6 @@
   "key": "Add your gym pass",
   "en": "Add your gym pass",
   "nl": "Voeg je sportschoolpas toe",
-  "context": "GymPassViews.swift"
- },
- {
-  "key": "Show the QR code or barcode at the entrance, right from Liftr.",
-  "en": "Show the QR code or barcode at the entrance, right from Liftr.",
-  "nl": "Toon de QR- of barcode bij de ingang, gewoon vanuit Liftr.",
   "context": "GymPassViews.swift"
  },
  {
@@ -405,12 +411,6 @@
   "key": "Show front",
   "en": "Show front",
   "nl": "Toon voorkant",
-  "context": "GymPassViews.swift"
- },
- {
-  "key": "Show code",
-  "en": "Show code",
-  "nl": "Toon code",
   "context": "GymPassViews.swift"
  },
  {
@@ -525,12 +525,6 @@
   "key": "Delete pass",
   "en": "Delete pass",
   "nl": "Pas verwijderen",
-  "context": "GymPassViews.swift"
- },
- {
-  "key": "Edit pass",
-  "en": "Edit pass",
-  "nl": "Pas wijzigen",
   "context": "GymPassViews.swift"
  },
  {

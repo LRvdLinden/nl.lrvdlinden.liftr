@@ -170,10 +170,12 @@ struct FlipGymCard: View, Animatable {
 
 // MARK: - Today
 
-/// On Today, right under "Start workout": the pass front; tap and it comes forward and turns to the code.
-struct GymPassCard: View {
+/// Round button at the top right of Today: in the gym's colour with a pass icon. Tap to show the pass
+/// (it comes forward and turns to the code); long-press to edit. Without a pass it starts "Choose your gym".
+struct GymPassButton: View {
     @Query(sort: \GymPass.createdAt) private var passes: [GymPass]
     @State private var showing: GymPass?
+    @State private var editing: GymPass?
     @State private var adding = false
 
     var body: some View {
@@ -182,45 +184,39 @@ struct GymPassCard: View {
                 Button {
                     showing = pass
                 } label: {
-                    GymCardFace(look: GymPassLook(pass), compact: true)
-                        .aspectRatio(1.9, contentMode: .fit)
-                        .frame(maxWidth: 560)
-                        .frame(maxWidth: .infinity)
+                    Image(systemName: "wallet.pass.fill")
+                        .font(.system(size: 21, weight: .semibold))
+                        .foregroundStyle(Color.ink(on: pass.colorHex))
+                        .frame(width: 50, height: 50)
+                        .background(Color(hex: pass.colorHex), in: Circle())
+                        .overlay(Circle().strokeBorder(.white.opacity(0.18), lineWidth: 1))
+                        .shadow(color: Color(hex: pass.colorHex).opacity(0.45), radius: 10, y: 4)
                 }
                 .buttonStyle(.plain)
+                .contextMenu {
+                    Button { showing = pass } label: { Label(tr("Show code", "Toon code"), systemImage: "qrcode") }
+                    Button { editing = pass } label: { Label(tr("Edit pass", "Pas wijzigen"), systemImage: "pencil") }
+                }
                 .accessibilityLabel(trf("Show {1} pass", "Toon pas van {1}", pass.displayName))
             } else {
                 Button {
                     adding = true
                 } label: {
-                    HStack(spacing: 14) {
-                        Image(systemName: "qrcode")
-                            .font(.title)
-                            .foregroundStyle(Theme.accent)
-                            .frame(width: 56, height: 56)
-                            .background(Theme.accent.opacity(0.14), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-                        VStack(alignment: .leading, spacing: 3) {
-                            Text(tr("Add your gym pass", "Voeg je sportschoolpas toe"))
-                                .font(.headline)
-                                .foregroundStyle(.white)
-                            Text(tr("Show the QR code or barcode at the entrance, right from Liftr.",
-                                    "Toon de QR- of barcode bij de ingang, gewoon vanuit Liftr."))
-                                .font(.subheadline)
-                                .foregroundStyle(Theme.muted)
-                        }
-                        Spacer()
-                        Image(systemName: "plus.circle.fill")
-                            .font(.title2)
-                            .foregroundStyle(Theme.accent)
-                    }
-                    .liftrCard(padding: 14)
+                    Image(systemName: "wallet.pass")
+                        .font(.system(size: 21, weight: .semibold))
+                        .foregroundStyle(Theme.accent)
+                        .frame(width: 50, height: 50)
+                        .background(Theme.card, in: Circle())
+                        .overlay(Circle().strokeBorder(Theme.accent.opacity(0.45), lineWidth: 1.5))
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel(tr("Add your gym pass", "Voeg je sportschoolpas toe"))
             }
         }
         .fullScreenCover(item: $showing) { pass in
             GymPassFullScreen(pass: pass)
         }
+        .sheet(item: $editing) { pass in GymPassEditView(pass: pass) }
         .sheet(isPresented: $adding) { GymPassEditView(pass: nil) }
     }
 }

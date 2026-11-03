@@ -5,7 +5,7 @@ Sportschool-logboek voor iPhone, iPad en Apple Watch. Houd per training bij welk
 | | |
 |---|---|
 | Bundle ID | `nl.lrvdlinden.liftr` (Watch: `.watchkitapp`, widgets: `.widgets`) |
-| Versie | 1.0.0 (build 9) |
+| Versie | 1.0.0 (build 10) |
 | Platforms | iOS/iPadOS 17+, watchOS 10+ |
 | Talen | 33 Europese talen: Engels, Nederlands, Duits, Frans, Spaans, Italiaans, Portugees (PT), Catalaans, Roemeens, Grieks, Zweeds, Deens, Noors, IJslands, Fins, Pools, Tsjechisch, Slowaaks, Sloveens, Kroatisch, Servisch, Macedonisch, Bulgaars, Hongaars, Ests, Lets, Litouws, Russisch, Oekraïens, Turks, Iers, Maltees, Albanees |
 | Team | EU3UY476T6 |
@@ -13,7 +13,7 @@ Sportschool-logboek voor iPhone, iPad en Apple Watch. Houd per training bij welk
 ## Functies
 
 **iPhone & iPad**
-- **Sportschoolpas** – zoals in Pasr: kies je sportschool (Basic-Fit, SportCity, Anytime Fitness, TrainMore, Fit For Free, Snap Fitness, Big Gym, fit20, HealthCity of een andere) met logo en huiskleur; op Vandaag onder "Start training". Tik en de kaart komt naar voren en draait om naar de QR- of barcode, met maximale helderheid. Toevoegen door te scannen, uit een screenshot of door het nummer te typen (EAN, Code 128, Code 39, ITF, QR, PDF417, Aztec). Ook op de Apple Watch. Code versleuteld in iCloud.
+- **Sportschoolpas** – zoals in Pasr: kies je sportschool (Basic-Fit, SportCity, Anytime Fitness, TrainMore, Fit For Free, Snap Fitness, Big Gym, fit20, HealthCity of een andere) met logo en huiskleur; op Vandaag als ronde knop rechtsboven (in de kleur van je sportschool). Tik en de kaart komt naar voren en draait om naar de QR- of barcode, met maximale helderheid. Toevoegen door te scannen, uit een screenshot of door het nummer te typen (EAN, Code 128, Code 39, ITF, QR, PDF417, Aztec). Ook op de Apple Watch. Code versleuteld in iCloud.
 - **Herinneringen** (lokale meldingen, geen server) – vaste trainingsdagen met tijdstip, na X dagen niet getraind, weekoverzicht op zondag 20:00. Dagen waarop al getraind is (ook op Watch/iPad) worden overgeslagen.
 - **Vandaag** – training starten of hervatten, weekoverzicht met trainingsdagen, weken-op-rij, volume, laatste training, schema's, lichaamsgegevens en badges.
 - **Trainen** – per oefening sets met gewicht en herhalingen, *wat je vorige keer deed* staat erbij en wordt vooraf ingevuld. Toetsenbordbalk met −/+ 2,5 kg en −/+ 1 herhaling, set afvinken, setsoort (warming-up, dropset, tot falen), notitie per oefening. Cardio met minuten en kilometers.

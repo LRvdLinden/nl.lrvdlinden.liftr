@@ -206,9 +206,9 @@ def screens(s, unit_dec):
     dots = "".join(f'<div><i class="{"on" if on else ""}"></i>{d[0]}<br>{n}</div>'
                    for on, d, n in zip(dots_on, s["wd"], range(2, 9)))
     today = f'''<div class="scr" data-screen="today">
-  <div><div class="t-sub">{e(s["date"])}</div><div class="t-big">{e(s["today"])}</div></div>
+  <div style="display:flex;align-items:center;justify-content:space-between"><div><div class="t-sub">{e(s["date"])}</div><div class="t-big">{e(s["today"])}</div></div>
+    <div style="width:12cqw;height:12cqw;border-radius:50%;background:#FB7819;display:grid;place-items:center;box-shadow:0 1.5cqw 4cqw rgba(251,120,25,.45)"><svg viewBox="0 0 24 24" style="width:6cqw" fill="#fff"><rect x="3" y="5" width="18" height="14" rx="3"/><rect x="6" y="9" width="7" height="2" rx="1" fill="#FB7819"/><rect x="6" y="13" width="10" height="2" rx="1" fill="#FB7819"/></svg></div></div>
   <div class="hot"><div class="t-mid">{e(s["ready"])}</div><div class="wbtn">{e(s["start"])}</div></div>
-  <div class="c" style="display:flex;align-items:center;gap:3cqw"><div style="width:16cqw;height:12cqw;background:#fff;border-radius:2cqw;padding:1cqw">{qr_svg(3, 21)}</div><div><div class="t-sub" style="font-size:2.6cqw">{e(s["pass_title"])}</div><b>{e(s["pass_tap"])}</b></div></div>
   <div class="c"><div class="muted" style="font-size:2.6cqw;font-weight:800;text-transform:uppercase">{e(s["last_w"])}</div><div class="t-mid" style="font-size:4.6cqw;margin-top:1cqw">{e(s["legs"])}</div><div class="muted" style="font-size:3cqw">52 min · 18 sets · 8,4 t</div></div>
   <div class="c"><div style="display:flex;justify-content:space-between;margin-bottom:2.4cqw"><b class="t-mid" style="font-size:4.6cqw">{e(s["week"])}</b><span class="acc" style="font-weight:800;font-size:3cqw">🔥 {e(s["streak"])}</span></div><div class="dots">{dots}</div></div>
   <div class="row3"><div class="tile"><b>2</b><small>{e(s["w_label"])}</small></div><div class="tile"><b>9</b><small>{e(s["m_label"])}</small></div><div class="tile"><b>8,4 t</b><small>{e(s["v_label"])}</small></div></div>

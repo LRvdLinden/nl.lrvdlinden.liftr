@@ -18,8 +18,9 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             LiftrPage(title: tr("Today", "Vandaag"), subtitle: LiftrFormat.day(Date())) {
+                GymPassButton()
+            } content: {
                 startCard
-                GymPassCard()
                 weekCard
                 statsRow
                 if let last = done.first { lastWorkout(last) }

@@ -1,25 +1,39 @@
 import SwiftUI
 
 /// Dark scroll page with a big heading, used by every tab.
-struct LiftrPage<Content: View>: View {
+struct LiftrPage<Content: View, Trailing: View>: View {
     let title: String
     var subtitle: String? = nil
-    @ViewBuilder var content: Content
+    var trailing: Trailing
+    var content: Content
+
+    init(title: String, subtitle: String? = nil,
+         @ViewBuilder trailing: () -> Trailing,
+         @ViewBuilder content: () -> Content) {
+        self.title = title
+        self.subtitle = subtitle
+        self.trailing = trailing()
+        self.content = content()
+    }
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 18) {
-                VStack(alignment: .leading, spacing: 2) {
-                    if let subtitle {
-                        Text(subtitle)
-                            .font(.subheadline.weight(.semibold))
-                            .foregroundStyle(Theme.accent)
+                HStack(alignment: .center, spacing: 12) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        if let subtitle {
+                            Text(subtitle)
+                                .font(.subheadline.weight(.semibold))
+                                .foregroundStyle(Theme.accent)
+                                .textCase(.uppercase)
+                        }
+                        Text(title)
+                            .font(Theme.display(40))
                             .textCase(.uppercase)
+                            .foregroundStyle(.white)
                     }
-                    Text(title)
-                        .font(Theme.display(40))
-                        .textCase(.uppercase)
-                        .foregroundStyle(.white)
+                    Spacer(minLength: 0)
+                    trailing
                 }
                 .padding(.top, 8)
                 content
@@ -31,6 +45,12 @@ struct LiftrPage<Content: View>: View {
         }
         .scrollIndicators(.hidden)
         .background(Theme.background.ignoresSafeArea())
+    }
+}
+
+extension LiftrPage where Trailing == EmptyView {
+    init(title: String, subtitle: String? = nil, @ViewBuilder content: () -> Content) {
+        self.init(title: title, subtitle: subtitle, trailing: { EmptyView() }, content: content)
     }
 }
 
