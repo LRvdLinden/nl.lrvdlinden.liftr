@@ -395,6 +395,37 @@
 				en,
 				Base,
 				nl,
+				bg,
+				ca,
+				cs,
+				da,
+				de,
+				el,
+				es,
+				et,
+				fi,
+				fr,
+				ga,
+				hr,
+				hu,
+				is,
+				it,
+				lt,
+				lv,
+				mk,
+				mt,
+				nb,
+				pl,
+				"pt-PT",
+				ro,
+				ru,
+				sk,
+				sl,
+				sq,
+				sr,
+				sv,
+				tr,
+				uk,
 			);
 			mainGroup = E22E8117CB1EC174016D9BD0;
 			minimizedProjectReferenceProxies = 1;
@@ -544,7 +575,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = EU3UY476T6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -698,7 +729,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = EU3UY476T6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;

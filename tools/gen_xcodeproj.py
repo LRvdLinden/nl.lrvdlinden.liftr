@@ -11,7 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEAM = "EU3UY476T6"
 BUNDLE = "nl.lrvdlinden.liftr"
 VERSION = "1.0.0"
-BUILD = "3"
+BUILD = "4"
 
 
 def oid(*parts):
@@ -327,7 +327,7 @@ objects[project_id] = {
     "buildConfigurationList": proj_cfg,
     "developmentRegion": "en",
     "hasScannedForEncodings": "0",
-    "knownRegions": ["en", "Base", "nl"],
+    "knownRegions": ["en", "Base", "nl", "bg", "ca", "cs", "da", "de", "el", "es", "et", "fi", "fr", "ga", "hr", "hu", "is", "it", "lt", "lv", "mk", "mt", "nb", "pl", "pt-PT", "ro", "ru", "sk", "sl", "sq", "sr", "sv", "tr", "uk"],
     "mainGroup": main_group,
     "minimizedProjectReferenceProxies": "1",
     "preferredProjectObjectVersion": "77",

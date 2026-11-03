@@ -97,7 +97,7 @@ struct ImportView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button(analysed ? tr("Back", "Terug") : tr("Cancel", "Annuleren")) {
+                    Button(analysed ? tr("Edit text", "Tekst wijzigen") : tr("Cancel", "Annuleren")) {
                         if analysed { analysed = false } else { dismiss() }
                     }
                 }

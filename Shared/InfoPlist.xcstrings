@@ -5,13 +5,199 @@
     "CFBundleDisplayName": {
       "extractionState": "manual",
       "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Liftr"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "is": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "mk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
         "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "sq": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "sr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "uk": {
           "stringUnit": {
             "state": "translated",
             "value": "Liftr"
@@ -22,13 +208,199 @@
     "CFBundleName": {
       "extractionState": "manual",
       "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Liftr"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "is": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "mk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
         "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "sq": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "sr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr"
+          }
+        },
+        "uk": {
           "stringUnit": {
             "state": "translated",
             "value": "Liftr"
@@ -39,10 +411,130 @@
     "NSHealthShareUsageDescription": {
       "extractionState": "manual",
       "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr чете теглото, телесния състав и пулса ти, за да показва прогреса ти."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El Liftr llegeix el teu pes, la composició corporal i la freqüència cardíaca per mostrar-te el teu progrés."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr čte tvou hmotnost, složení těla a tepovou frekvenci, aby ti ukázal tvůj pokrok."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr læser din vægt, kropssammensætning og puls for at vise dine fremskridt."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr liest dein Gewicht, deine Körperzusammensetzung und deinen Puls, um deinen Fortschritt zu zeigen."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το Liftr διαβάζει το βάρος, τη σύσταση σώματος και τους καρδιακούς παλμούς σου για να σου δείξει την πρόοδό σου."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Liftr reads your weight, body composition and heart rate to show your progress."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr lee tu peso, tu composición corporal y tu frecuencia cardiaca para mostrarte tu progreso."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr loeb sinu kaalu, keha koostist ja pulssi, et näidata sinu arengut."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr lukee painosi, kehonkoostumuksesi ja sykkeesi näyttääkseen edistymisesi."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr lit ton poids, ta composition corporelle et ta fréquence cardiaque pour te montrer tes progrès."
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Léann Liftr do mheáchan, comhdhéanamh coirp agus ráta croí chun do dhul chun cinn a thaispeáint."
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr čita tvoju težinu, sastav tijela i puls kako bi prikazao tvoj napredak."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Liftr kiolvassa a testsúlyodat, testösszetételedet és pulzusodat, hogy megmutassa a fejlődésedet."
+          }
+        },
+        "is": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr les þyngd, líkamssamsetningu og púls til að sýna framfarirnar þínar."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr legge peso, composizione corporea e battito cardiaco per mostrarti i tuoi progressi."
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr nuskaito tavo svorį, kūno sudėtį ir pulsą, kad parodytų tavo pažangą."
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr nolasa tavu svaru, ķermeņa sastāvu un pulsu, lai parādītu tavu progresu."
+          }
+        },
+        "mk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr ги чита твојата тежина, составот на телото и пулсот за да го прикаже твојот напредок."
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr jaqra l-piż, il-kompożizzjoni tal-ġisem u r-rata tal-qalb tiegħek biex juri l-progress tiegħek."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr leser vekt, kroppssammensetning og puls for å vise fremgangen din."
           }
         },
         "nl": {
@@ -50,16 +542,202 @@
             "state": "translated",
             "value": "Liftr leest je gewicht, lichaamssamenstelling en hartslag om je vooruitgang te laten zien."
           }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr odczytuje Twoją wagę, skład ciała i tętno, aby pokazywać Twoje postępy."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Liftr lê o teu peso, composição corporal e frequência cardíaca para mostrar o teu progresso."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr îți citește greutatea, compoziția corporală și pulsul ca să-ți arate progresul."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr считывает твой вес, состав тела и пульс, чтобы показывать твой прогресс."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr číta tvoju hmotnosť, zloženie tela a tep, aby ti ukázal tvoj pokrok."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr bere tvojo težo, sestavo telesa in srčni utrip, da ti prikaže tvoj napredek."
+          }
+        },
+        "sq": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr lexon peshën, përbërjen trupore dhe rrahjet e zemrës për të treguar progresin tënd."
+          }
+        },
+        "sr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr чита твоју тежину, састав тела и пулс да би приказао твој напредак."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr läser din vikt, kroppssammansättning och puls för att visa dina framsteg."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr ilerlemeni göstermek için kilonu, vücut kompozisyonunu ve nabzını okur."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr зчитує твою вагу, склад тіла й пульс, щоб показувати твій прогрес."
+          }
         }
       }
     },
     "NSHealthUpdateUsageDescription": {
       "extractionState": "manual",
       "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr запазва фитнес тренировките, калориите и теглото ти в Здраве."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El Liftr desa els teus entrenaments de gimnàs, les calories i el pes a l'app Salut."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr ukládá tvé tréninky v posilovně, kalorie a hmotnost do aplikace Zdraví."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr gemmer dine træningspas, kalorier og vægt i Sundhed."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr sichert deine Krafttrainings, Kalorien und dein Gewicht in Apple Health."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το Liftr αποθηκεύει τις προπονήσεις γυμναστηρίου, τις θερμίδες και το βάρος σου στην Υγεία."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Liftr saves your gym workouts, calories and weight in Apple Health."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr guarda tus entrenos de gimnasio, calorías y peso en Salud."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr salvestab sinu jõusaalitreeningud, kalorid ja kaalu rakendusse Tervis."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr tallentaa salitreenisi, kalorit ja painosi Terveyteen."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr enregistre tes séances de musculation, tes calories et ton poids dans Santé."
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sábhálann Liftr do sheisiúin ghiomnáisiam, calraí agus meáchan in Apple Health."
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr sprema tvoje treninge u teretani, kalorije i težinu u aplikaciju Zdravlje."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Liftr elmenti a konditermi edzéseidet, kalóriáidat és testsúlyodat az Egészség appba."
+          }
+        },
+        "is": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr vistar æfingarnar, hitaeiningarnar og þyngdina þína í Heilsu."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr salva i tuoi allenamenti in palestra, le calorie e il peso in Salute."
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr išsaugo tavo sporto klubo treniruotes, kalorijas ir svorį programėlėje Sveikata."
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr saglabā tavus sporta zāles treniņus, kalorijas un svaru lietotnē Veselība."
+          }
+        },
+        "mk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr ги зачувува твоите тренинзи во теретана, калориите и тежината во Здравје."
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr jissalva t-taħriġiet tal-gym, il-kaloriji u l-piż tiegħek f'Apple Health."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr lagrer treningsøktene, kaloriene og vekten din i Helse."
           }
         },
         "nl": {
@@ -67,16 +745,202 @@
             "state": "translated",
             "value": "Liftr bewaart je trainingen, calorieën en gewicht in Apple Gezondheid."
           }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr zapisuje Twoje treningi na siłowni, kalorie i wagę w aplikacji Zdrowie."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Liftr guarda os teus treinos de ginásio, calorias e peso na app Saúde."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr salvează antrenamentele de la sală, caloriile și greutatea în Sănătate."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr сохраняет твои тренировки, калории и вес в приложении «Здоровье»."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr ukladá tvoje tréningy v posilňovni, kalórie a hmotnosť do aplikácie Zdravie."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr shranjuje tvoje treninge v fitnesu, kalorije in težo v aplikacijo Zdravje."
+          }
+        },
+        "sq": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr ruan stërvitjet e palestrës, kaloritë dhe peshën tënde në Apple Health."
+          }
+        },
+        "sr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr чува твоје тренинге у теретани, калорије и тежину у апликацији Здравље."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr sparar dina gympass, kalorier och vikt i Hälsa."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr spor salonu antrenmanlarını, kalorilerini ve kilonu Sağlık'a kaydeder."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr зберігає твої тренування, калорії та вагу в програмі «Здоровʼя»."
+          }
         }
       }
     },
     "NSCameraUsageDescription": {
       "extractionState": "manual",
       "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr използва камерата, за да сканира QR кода или баркода на фитнес картата ти."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El Liftr fa servir la càmera per escanejar el codi QR o de barres del teu carnet del gimnàs."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr používá fotoaparát ke skenování QR kódu nebo čárového kódu tvé permanentky."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr bruger kameraet til at scanne QR-koden eller stregkoden på dit medlemskort."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr verwendet die Kamera, um den QR-Code oder Barcode deines Mitgliedsausweises zu scannen."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το Liftr χρησιμοποιεί την κάμερα για να σαρώσει τον κωδικό QR ή το barcode της κάρτας γυμναστηρίου σου."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Liftr uses the camera to scan the QR code or barcode of your gym pass."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr usa la cámara para escanear el código QR o de barras de tu tarjeta del gimnasio."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr kasutab kaamerat sinu jõusaalikaardi QR-koodi või vöötkoodi skannimiseks."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr käyttää kameraa salikorttisi QR- tai viivakoodin skannaamiseen."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr utilise la caméra pour scanner le QR code ou le code-barres de ta carte de salle."
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Úsáideann Liftr an ceamara chun cód QR nó barrachód do phas giomnáisiam a scanadh."
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr koristi kameru za skeniranje QR koda ili crtičnog koda tvoje članske kartice."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Liftr a kamerát használja a konditermi bérleted QR-kódjának vagy vonalkódjának beolvasásához."
+          }
+        },
+        "is": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr notar myndavélina til að skanna QR-kóðann eða strikamerkið á aðgangskortinu þínu."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr usa la fotocamera per scansionare il codice QR o a barre della tua tessera della palestra."
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr naudoja kamerą tavo sporto klubo kortelės QR kodui ar brūkšniniam kodui nuskenuoti."
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr izmanto kameru, lai noskenētu tavas sporta zāles kartes QR kodu vai svītrkodu."
+          }
+        },
+        "mk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr ја користи камерата за да го скенира QR-кодот или баркодот на твојата членска картичка."
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr juża l-kamera biex jiskennja l-kodiċi QR jew il-barcode tal-pass tal-gym tiegħek."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr bruker kameraet til å skanne QR-koden eller strekkoden på medlemskortet ditt."
           }
         },
         "nl": {
@@ -84,22 +948,274 @@
             "state": "translated",
             "value": "Liftr gebruikt de camera om de QR- of barcode van je sportschoolpas te scannen."
           }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr używa aparatu do skanowania kodu QR lub kodu kreskowego Twojego karnetu."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Liftr usa a câmara para digitalizar o código QR ou de barras do teu cartão do ginásio."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr folosește camera pentru a scana codul QR sau codul de bare al abonamentului tău de sală."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr использует камеру, чтобы сканировать QR-код или штрихкод твоей клубной карты."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr používa fotoaparát na skenovanie QR kódu alebo čiarového kódu tvojej permanentky."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr uporablja kamero za skeniranje kode QR ali črtne kode tvoje fitnes kartice."
+          }
+        },
+        "sq": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr përdor kamerën për të skanuar kodin QR ose barkodin e kartës sate të palestrës."
+          }
+        },
+        "sr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr користи камеру за скенирање QR кода или бар-кода твоје чланске картице."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr använder kameran för att skanna QR-koden eller streckkoden på ditt gymkort."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr spor salonu kartındaki QR kodu veya barkodu taramak için kamerayı kullanır."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr використовує камеру, щоб сканувати QR-код або штрихкод твоєї клубної картки."
+          }
         }
       }
     },
     "NSPhotoLibraryUsageDescription": {
       "extractionState": "manual",
       "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr чете кода на фитнес картата ти от екранна снимка, която избереш."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El Liftr llegeix el codi del teu carnet del gimnàs a partir d'una captura de pantalla que triïs."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr čte kód tvé permanentky ze snímku obrazovky, který vybereš."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr læser koden på dit medlemskort fra et skærmbillede, du vælger."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr liest den Code deines Mitgliedsausweises aus einem Screenshot, den du auswählst."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Το Liftr διαβάζει τον κωδικό της κάρτας γυμναστηρίου σου από ένα στιγμιότυπο οθόνης που επιλέγεις."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Liftr reads the code of your gym pass from a screenshot you choose."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr lee el código de tu tarjeta del gimnasio desde una captura de pantalla que elijas."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr loeb sinu jõusaalikaardi koodi sinu valitud kuvatõmmiselt."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr lukee salikorttisi koodin valitsemastasi kuvakaappauksesta."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr lit le code de ta carte de salle à partir d'une capture d'écran que tu choisis."
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Léann Liftr cód do phas giomnáisiam ó ghabháil scáileáin a roghnaíonn tú."
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr čita kod tvoje članske kartice sa snimke zaslona koju odabereš."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Liftr az általad kiválasztott képernyőképről olvassa ki a konditermi bérleted kódját."
+          }
+        },
+        "is": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr les kóðann á aðgangskortinu þínu af skjámynd sem þú velur."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr legge il codice della tua tessera della palestra da uno screenshot che scegli tu."
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr nuskaito tavo sporto klubo kortelės kodą iš tavo pasirinktos ekrano kopijos."
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr nolasa tavas sporta zāles kartes kodu no tevis izvēlēta ekrānuzņēmuma."
+          }
+        },
+        "mk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr го чита кодот на твојата членска картичка од слика од екранот што ќе ја избереш."
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr jaqra l-kodiċi tal-pass tal-gym tiegħek minn screenshot li tagħżel int."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr leser koden på medlemskortet ditt fra et skjermbilde du velger."
+          }
+        },
         "nl": {
           "stringUnit": {
             "state": "translated",
             "value": "Liftr leest de code van je sportschoolpas uit een screenshot die je kiest."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr odczytuje kod Twojego karnetu ze zrzutu ekranu, który wybierzesz."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Liftr lê o código do teu cartão do ginásio a partir de uma captura de ecrã que escolhes."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr citește codul abonamentului tău de sală dintr-o captură de ecran pe care o alegi."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr считывает код твоей клубной карты со скриншота, который ты выберешь."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr číta kód tvojej permanentky zo snímky obrazovky, ktorú vyberieš."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr bere kodo tvoje fitnes kartice s posnetka zaslona, ki ga izbereš."
+          }
+        },
+        "sq": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr lexon kodin e kartës sate të palestrës nga një pamje ekrani që zgjedh ti."
+          }
+        },
+        "sr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr чита код твоје чланске картице са снимка екрана који изабереш."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr läser koden på ditt gymkort från en skärmbild som du väljer."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr spor salonu kartının kodunu seçtiğin ekran görüntüsünden okur."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liftr зчитує код твоєї клубної картки зі знімка екрана, який ти вибереш."
           }
         }
       }

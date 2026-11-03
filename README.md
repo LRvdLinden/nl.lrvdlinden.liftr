@@ -5,9 +5,9 @@ Sportschool-logboek voor iPhone, iPad en Apple Watch. Houd per training bij welk
 | | |
 |---|---|
 | Bundle ID | `nl.lrvdlinden.liftr` (Watch: `.watchkitapp`, widgets: `.widgets`) |
-| Versie | 1.0.0 (build 3) |
+| Versie | 1.0.0 (build 4) |
 | Platforms | iOS/iPadOS 17+, watchOS 10+ |
-| Talen | Nederlands, Engels |
+| Talen | 33 Europese talen: Engels, Nederlands, Duits, Frans, Spaans, Italiaans, Portugees (PT), Catalaans, Roemeens, Grieks, Zweeds, Deens, Noors, IJslands, Fins, Pools, Tsjechisch, Slowaaks, Sloveens, Kroatisch, Servisch, Macedonisch, Bulgaars, Hongaars, Ests, Lets, Litouws, Russisch, Oekraïens, Turks, Iers, Maltees, Albanees |
 | Team | EU3UY476T6 |
 
 ## Functies
@@ -52,6 +52,14 @@ Shared/              modellen, opslag, statistiek, thema (alle targets)
 Config/              Info.plist's en entitlements
 tools/               gen_xcodeproj.py, make_icon.py
 ```
+
+### Vertalingen
+
+Teksten staan in de code als `tr("English", "Nederlands")` (of `trf` met `{1}`-plaatshouders). Overige talen komen uit `Shared/Localization/liftr-<taal>.json`.
+
+1. `python3 tools/extract_strings.py` – verzamelt alle teksten in `tools/translations/source.json`
+2. nieuwe sleutels vertalen in `tools/translations/<taal>.json`
+3. `python3 tools/build_translations.py` – controleert (ontbrekend, plaatshouders) en bouwt de tabellen, Info.plist-teksten, MoreAppsCard en footer
 
 Het Xcode-project wordt gegenereerd met `python3 tools/gen_xcodeproj.py` (alleen nodig als targets of build-instellingen veranderen; Swift-bestanden worden automatisch opgepakt via gesynchroniseerde mappen).
 

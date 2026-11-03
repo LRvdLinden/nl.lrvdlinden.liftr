@@ -648,10 +648,10 @@
   "context": "ImportView.swift"
  },
  {
-  "key": "Back",
-  "en": "Back",
-  "nl": "Terug",
-  "context": "ImportView.swift; Models.swift"
+  "key": "Edit text",
+  "en": "Edit text",
+  "nl": "Tekst wijzigen",
+  "context": "ImportView.swift"
  },
  {
   "key": "Analyse",
@@ -1611,6 +1611,12 @@
   "key": "Chest",
   "en": "Chest",
   "nl": "Borst",
+  "context": "Models.swift"
+ },
+ {
+  "key": "Back",
+  "en": "Back",
+  "nl": "Rug",
   "context": "Models.swift"
  },
  {
