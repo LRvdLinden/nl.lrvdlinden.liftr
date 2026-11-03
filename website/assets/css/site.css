@@ -284,6 +284,8 @@ h3 { margin: 0 0 .4em; font-size: 1.3rem; }
 .scr .cal span.sel::after { background: #fff; }
 .scr.white { background: #fff; color: #111; align-items: center; justify-content: center; text-align: center; }
 .scr.white .qr { width: 66cqw; aspect-ratio: 1; }
+.scr .qr { display: block; width: 100%; aspect-ratio: 1; }
+.scr.white .qr { width: 66cqw; }
 .scr .note { background: #1b1b1e; border-radius: 4cqw; padding: 3.5cqw; font-family: ui-monospace, Menlo, monospace; font-size: 3.1cqw; color: #d4d4d8; white-space: pre-line; line-height: 1.5; }
 .scr .parsed { display: grid; gap: 1.6cqw; }
 .scr .parsed div { background: #1b1b1e; border-radius: 3.6cqw; padding: 2.8cqw 3.4cqw; display: flex; justify-content: space-between; gap: 2cqw; }

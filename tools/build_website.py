@@ -52,7 +52,7 @@ T = {
             ("rest", "02", "Rusttimer & Live Activity", "Na elke set start de rusttimer. Op je toegangsscherm en in het Dynamic Island zie je oefening, sets en rust – ook met je telefoon in je zak.", "#ff8a1f"),
             ("progress", "03", "Zie je groei", "Grafieken van je zwaarste set, geschat maximum en volume. Schuif met je vinger over de lijn voor elke training, kies 1M tot alles, met min, gemiddelde en max.", "#ffb15c"),
             ("history", "04", "Terug in de tijd", "Een kalender met een stip op elke trainingsdag. Tik een datum aan en zie precies wat je die dag deed.", "#33cc73"),
-            ("pass", "05", "Je pas bij de deur", "Je QR- of barcode voor de toegang staat op Vandaag, direct onder Start training. Schermvullend, helderheid op max – ook op je Apple Watch.", "#ffffff"),
+            ("pass", "05", "Je passen bij de deur", "Tik rechtsboven op Vandaag op het ronde pasknopje. Kies je sportschool met logo en huiskleur, voeg zoveel passen toe als je wilt en de kaart draait om naar je QR- of barcode. Schermvullend, helderheid op max – ook op je Apple Watch.", "#ffffff"),
             ("import", "06", "Nooit meer notities", "Plak je oude notities en Liftr maakt er trainingen van: “Leg press 3x12 40 kg” wordt netjes een oefening met sets.", "#ff375f"),
         ],
         m_kicker="Bibliotheek", m_h2=f'{len(SEEDS)}+ oefeningen.<br><span class="outline">Klaar</span> voor gebruik.',
@@ -84,7 +84,7 @@ T = {
                      legs="Benen", last="Vorige keer: 3 × 12 · 40 kg", set="SET", reps="HERH", rest="RUST", skip="⏭",
                      lp="Leg press", lc="Leg curl (zittend)", la_sets="3 van 9 sets", heaviest="Zwaarste set", latest="Laatste: 3 nov",
                      chips=["1M", "3M", "6M", "1J", "Alles"], hist="Geschiedenis", month="November 2026", wd=["MA", "DI", "WO", "DO", "VR", "ZA", "ZO"],
-                     pass_title="Mijn sportschool", pass_hint="Schermhelderheid staat op maximaal", pass_tap="Tik om te tonen bij de ingang", last_w="Laatste training",
+                     pass_title="Mijn sportschool", pass_hint="Schermhelderheid staat op maximaal", pass_tap="Tik om te tonen bij de ingang", pass_wallet="Mijn passen", pass_two="Boulderhal", pass_label="Sportschoolpas", pass_flip="Tik op een pas om hem om te draaien", last_w="Laatste training",
                      imp="Importeren", imp_note="3-11-2026\nLeg press 3x12 40 kg\nChest press 3 x 10 x 25 kg\nLat pulldown 30kg 12, 35kg 10\nLoopband 20 min 2,5 km",
                      imp_rows=[("Leg press", "3 × 12 · 40 kg"), ("Chest press", "3 × 10 · 25 kg"), ("Lat pulldown", "2 sets"), ("Loopband", "20 min · 2,5 km")],
                      watch_set="Set 2 van 3", watch_done="Set klaar", progress="Voortgang"),
@@ -110,7 +110,7 @@ T = {
             ("rest", "02", "Rest timer & Live Activity", "The rest timer starts after every set. Your Lock Screen and Dynamic Island show exercise, sets and rest – even with your phone in your pocket.", "#ff8a1f"),
             ("progress", "03", "Watch yourself grow", "Charts of your heaviest set, estimated max and volume. Slide your finger along the line for any workout, pick 1M to all time, with min, average and max.", "#ffb15c"),
             ("history", "04", "Back in time", "A calendar with a dot on every training day. Tap a date and see exactly what you did that day.", "#33cc73"),
-            ("pass", "05", "Your pass at the door", "Your access QR code or barcode sits on Today, right under Start workout. Full screen, brightness up – on your Apple Watch too.", "#ffffff"),
+            ("pass", "05", "Your passes at the door", "Tap the round pass button at the top right of Today. Pick your gym with its logo and colours, add as many passes as you like, and the card flips over to your QR code or barcode. Full screen, brightness up – on your Apple Watch too.", "#ffffff"),
             ("import", "06", "No more notes", "Paste your old notes and Liftr turns them into workouts: “Leg press 3x12 40 kg” becomes a proper exercise with sets.", "#ff375f"),
         ],
         m_kicker="Library", m_h2=f'{len(SEEDS)}+ exercises.<br><span class="outline">Ready</span> to go.',
@@ -142,7 +142,7 @@ T = {
                      legs="Legs", last="Last time: 3 × 12 · 40 kg", set="SET", reps="REPS", rest="REST", skip="⏭",
                      lp="Leg press", lc="Seated leg curl", la_sets="3 of 9 sets", heaviest="Heaviest set", latest="Latest: 3 Nov",
                      chips=["1M", "3M", "6M", "1Y", "All"], hist="History", month="November 2026", wd=["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
-                     pass_title="My gym", pass_hint="Screen brightness is turned up", pass_tap="Tap to show at the entrance", last_w="Last workout",
+                     pass_title="My gym", pass_hint="Screen brightness is turned up", pass_tap="Tap to show at the entrance", pass_wallet="My passes", pass_two="Climbing gym", pass_label="Gym pass", pass_flip="Tap a pass to flip it over", last_w="Last workout",
                      imp="Import", imp_note="3-11-2026\nLeg press 3x12 40 kg\nChest press 3 x 10 x 25 kg\nLat pulldown 30kg 12, 35kg 10\nTreadmill 20 min 2.5 km",
                      imp_rows=[("Leg press", "3 × 12 · 40 kg"), ("Chest press", "3 × 10 · 25 kg"), ("Lat pulldown", "2 sets"), ("Treadmill", "20 min · 2.5 km")],
                      watch_set="Set 2 of 3", watch_done="Set done", progress="Progress"),
@@ -246,10 +246,26 @@ def screens(s, unit_dec):
   <div class="c"><div class="t-mid" style="text-align:center;font-size:4.8cqw;margin-bottom:3cqw">{e(s["month"])}</div><div class="cal">{cal}</div></div>
   <div class="c"><div class="t-mid" style="font-size:4.6cqw">{e(s["legs"])}</div><div class="muted" style="font-size:3cqw">52 min · 18 sets · 8,4 t</div><div style="font-size:3.2cqw;margin-top:1.4cqw">{e(s["lp"])} · {e(s["lc"])} · Hip thrust</div></div>
 </div>'''
-    passs = f'''<div class="scr white" data-screen="pass">
-  <div class="t-big" style="font-size:9cqw;color:#111">{e(s["pass_title"])}</div>{qr_svg()}
-  <div style="font-family:ui-monospace,Menlo,monospace;font-weight:700;font-size:4cqw;color:#333">8 7192 4402 1187</div>
-  <div style="font-size:2.8cqw;color:#999">☀ {e(s["pass_hint"])}</div>
+    def card_head(name, mono, bg, ink):
+        return (f'<div style="display:flex;align-items:center;gap:2.4cqw">'
+                f'<div style="width:9cqw;height:9cqw;border-radius:2.2cqw;background:rgba(255,255,255,.18);display:grid;place-items:center;font-weight:900;font-size:3.6cqw;color:{ink}">{mono}</div>'
+                f'<b style="font-size:4.4cqw;color:{ink};flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{e(name)}</b>'
+                f'<span style="font-size:2.2cqw;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:{ink};opacity:.72">{e(s["pass_label"])}</span></div>')
+    passs = f'''<div class="scr" data-screen="pass">
+  <div style="display:flex;align-items:center;justify-content:space-between"><div class="t-big">{e(s["pass_wallet"])}</div>
+    <div style="width:10cqw;height:10cqw;border-radius:50%;background:#2a2a2a;display:grid;place-items:center;color:#FF6B00;font-weight:900;font-size:6cqw">+</div></div>
+  <div style="background:#FB7819;border-radius:5cqw;padding:4.5cqw;box-shadow:0 2cqw 6cqw rgba(251,120,25,.35)">
+    {card_head(s["pass_title"], "MS", "#FB7819", "#fff")}
+    <div style="background:#fff;border-radius:3.5cqw;margin-top:3.5cqw;padding:3.5cqw;display:grid;justify-items:center;gap:1.6cqw">
+      <div style="width:44cqw">{qr_svg()}</div>
+      <div style="font-family:ui-monospace,Menlo,monospace;font-weight:700;font-size:3.6cqw;color:#333">8 7192 4402 1187</div></div>
+  </div>
+  <div style="background:#5E2D91;border-radius:5cqw;padding:4.5cqw;height:30cqw;display:flex;flex-direction:column;justify-content:space-between">
+    {card_head(s["pass_two"], "B", "#5E2D91", "#fff")}
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;color:#fff"><div><div style="font-weight:700;font-size:3.2cqw">Sanne de Vries</div>
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:3.2cqw;opacity:.9">2041 7730 5512</div></div><span style="opacity:.6;font-size:4cqw">⟲</span></div>
+  </div>
+  <div class="muted" style="font-size:2.8cqw;text-align:center">⟲ {e(s["pass_flip"])} · ☀ {e(s["pass_hint"])}</div>
 </div>'''
     rows = "".join(f"<div><b>{e(a)}</b><span>{e(b)}</span></div>" for a, b in s["imp_rows"])
     imp = f'''<div class="scr" data-screen="import">
@@ -325,7 +341,7 @@ def page_head(lang, t, path, title, desc, og_slug, jsonld):
 <link rel="apple-touch-icon" href="/assets/img/appicon-180.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/overpass-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/site.css?v=13">
 {LANG_REDIRECT if lang == "nl" else ""}<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>
 </head>'''
 
@@ -555,7 +571,7 @@ def build_meta():
     write("404.html", '''<!doctype html>
 <html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Niet gevonden | Liftr</title><meta name="robots" content="noindex"><link rel="icon" href="/favicon.ico">
-<link rel="stylesheet" href="/assets/css/site.css"></head>
+<link rel="stylesheet" href="/assets/css/site.css?v=13"></head>
 <body><main class="legal" style="text-align:center"><h1>404</h1><p class="lead">Deze pagina bestaat niet. · This page doesn't exist.</p>
 <p><a class="btn btn-orange" href="/">liftr.nu</a></p></main></body></html>
 ''')
