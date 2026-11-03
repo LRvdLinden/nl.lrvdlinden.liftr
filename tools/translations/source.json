@@ -372,6 +372,18 @@
   "context": "GymPassViews.swift"
  },
  {
+  "key": "Add your gym pass",
+  "en": "Add your gym pass",
+  "nl": "Voeg je sportschoolpas toe",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "My passes",
+  "en": "My passes",
+  "nl": "Mijn passen",
+  "context": "GymPassViews.swift"
+ },
+ {
   "key": "Show code",
   "en": "Show code",
   "nl": "Toon code",
@@ -384,15 +396,21 @@
   "context": "GymPassViews.swift"
  },
  {
+  "key": "Delete pass",
+  "en": "Delete pass",
+  "nl": "Pas verwijderen",
+  "context": "GymPassViews.swift"
+ },
+ {
   "key": "Show {1} pass",
   "en": "Show {1} pass",
   "nl": "Toon pas van {1}",
   "context": "GymPassViews.swift"
  },
  {
-  "key": "Add your gym pass",
-  "en": "Add your gym pass",
-  "nl": "Voeg je sportschoolpas toe",
+  "key": "Add pass",
+  "en": "Add pass",
+  "nl": "Pas toevoegen",
   "context": "GymPassViews.swift"
  },
  {
@@ -400,6 +418,18 @@
   "en": "Close",
   "nl": "Sluiten",
   "context": "GymPassViews.swift; WorkoutSummaryView.swift; LiftrWatchApp.swift"
+ },
+ {
+  "key": "Delete this pass?",
+  "en": "Delete this pass?",
+  "nl": "Pas verwijderen?",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Delete",
+  "en": "Delete",
+  "nl": "Verwijderen",
+  "context": "GymPassViews.swift; RoutineEditView.swift; WorkoutDetailView.swift"
  },
  {
   "key": "Edit",
@@ -522,12 +552,6 @@
   "context": "GymPassViews.swift"
  },
  {
-  "key": "Delete pass",
-  "en": "Delete pass",
-  "nl": "Pas verwijderen",
-  "context": "GymPassViews.swift"
- },
- {
   "key": "Save",
   "en": "Save",
   "nl": "Bewaar",
@@ -544,18 +568,6 @@
   "en": "Liftr couldn't find a QR code or barcode in this picture.",
   "nl": "Liftr vond geen QR- of barcode in deze afbeelding.",
   "context": "GymPassViews.swift"
- },
- {
-  "key": "Delete this pass?",
-  "en": "Delete this pass?",
-  "nl": "Pas verwijderen?",
-  "context": "GymPassViews.swift"
- },
- {
-  "key": "Delete",
-  "en": "Delete",
-  "nl": "Verwijderen",
-  "context": "GymPassViews.swift; RoutineEditView.swift; WorkoutDetailView.swift"
  },
  {
   "key": "{1} workouts in total",

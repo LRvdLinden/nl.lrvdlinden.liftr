@@ -170,38 +170,27 @@ struct FlipGymCard: View, Animatable {
 
 // MARK: - Today
 
-/// Round button at the top right of Today: in the gym's colour with a pass icon. Tap to show the pass
-/// (it comes forward and turns to the code); long-press to edit. Without a pass it starts "Choose your gym".
+/// Round button at the top right of Today, in the colour of the first pass (with the number of passes when
+/// there are more). Tap: your passes, like Wallet. Without a pass it starts "Choose your gym".
 struct GymPassButton: View {
     @Query(sort: \GymPass.createdAt) private var passes: [GymPass]
-    @State private var showing: GymPass?
-    @State private var editing: GymPass?
+    @State private var showWallet = false
     @State private var adding = false
 
     var body: some View {
-        Group {
-            if let pass = passes.first {
-                Button {
-                    showing = pass
-                } label: {
+        Button {
+            if passes.isEmpty { adding = true } else { showWallet = true }
+        } label: {
+            ZStack(alignment: .topTrailing) {
+                if let first = passes.first {
                     Image(systemName: "wallet.pass.fill")
                         .font(.system(size: 21, weight: .semibold))
-                        .foregroundStyle(Color.ink(on: pass.colorHex))
+                        .foregroundStyle(Color.ink(on: first.colorHex))
                         .frame(width: 50, height: 50)
-                        .background(Color(hex: pass.colorHex), in: Circle())
+                        .background(Color(hex: first.colorHex), in: Circle())
                         .overlay(Circle().strokeBorder(.white.opacity(0.18), lineWidth: 1))
-                        .shadow(color: Color(hex: pass.colorHex).opacity(0.45), radius: 10, y: 4)
-                }
-                .buttonStyle(.plain)
-                .contextMenu {
-                    Button { showing = pass } label: { Label(tr("Show code", "Toon code"), systemImage: "qrcode") }
-                    Button { editing = pass } label: { Label(tr("Edit pass", "Pas wijzigen"), systemImage: "pencil") }
-                }
-                .accessibilityLabel(trf("Show {1} pass", "Toon pas van {1}", pass.displayName))
-            } else {
-                Button {
-                    adding = true
-                } label: {
+                        .shadow(color: Color(hex: first.colorHex).opacity(0.45), radius: 10, y: 4)
+                } else {
                     Image(systemName: "wallet.pass")
                         .font(.system(size: 21, weight: .semibold))
                         .foregroundStyle(Theme.accent)
@@ -209,15 +198,90 @@ struct GymPassButton: View {
                         .background(Theme.card, in: Circle())
                         .overlay(Circle().strokeBorder(Theme.accent.opacity(0.45), lineWidth: 1.5))
                 }
-                .buttonStyle(.plain)
-                .accessibilityLabel(tr("Add your gym pass", "Voeg je sportschoolpas toe"))
+                if passes.count > 1 {
+                    Text("\(passes.count)")
+                        .font(.caption2.weight(.heavy))
+                        .foregroundStyle(.black)
+                        .frame(minWidth: 18, minHeight: 18)
+                        .background(.white, in: Circle())
+                        .offset(x: 4, y: -4)
+                }
             }
         }
-        .fullScreenCover(item: $showing) { pass in
-            GymPassFullScreen(pass: pass)
-        }
-        .sheet(item: $editing) { pass in GymPassEditView(pass: pass) }
+        .buttonStyle(.plain)
+        .accessibilityLabel(passes.isEmpty ? tr("Add your gym pass", "Voeg je sportschoolpas toe") : tr("My passes", "Mijn passen"))
+        .sheet(isPresented: $showWallet) { GymPassWalletView() }
         .sheet(isPresented: $adding) { GymPassEditView(pass: nil) }
+    }
+}
+
+/// All passes as cards, like Wallet: tap one to show its code, long-press to edit or delete, + to add.
+struct GymPassWalletView: View {
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var context
+    @Query(sort: \GymPass.createdAt) private var passes: [GymPass]
+    @State private var showing: GymPass?
+    @State private var editing: GymPass?
+    @State private var adding = false
+    @State private var deleting: GymPass?
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(spacing: 14) {
+                    ForEach(passes) { pass in
+                        Button {
+                            showing = pass
+                        } label: {
+                            GymCardFace(look: GymPassLook(pass), compact: true)
+                                .aspectRatio(1.75, contentMode: .fit)
+                        }
+                        .buttonStyle(.plain)
+                        .contextMenu {
+                            Button { showing = pass } label: { Label(tr("Show code", "Toon code"), systemImage: "qrcode") }
+                            Button { editing = pass } label: { Label(tr("Edit pass", "Pas wijzigen"), systemImage: "pencil") }
+                            Button(role: .destructive) { deleting = pass } label: { Label(tr("Delete pass", "Pas verwijderen"), systemImage: "trash") }
+                        }
+                        .accessibilityLabel(trf("Show {1} pass", "Toon pas van {1}", pass.displayName))
+                    }
+                    Button {
+                        adding = true
+                    } label: {
+                        Label(tr("Add pass", "Pas toevoegen"), systemImage: "plus")
+                    }
+                    .buttonStyle(LiftrButtonStyle(filled: passes.isEmpty))
+                    .padding(.top, 6)
+                }
+                .padding(16)
+                .frame(maxWidth: 560)
+                .frame(maxWidth: .infinity)
+            }
+            .background(Theme.background.ignoresSafeArea())
+            .navigationTitle(tr("My passes", "Mijn passen"))
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button(tr("Close", "Sluiten")) { dismiss() }
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    Button { adding = true } label: { Image(systemName: "plus") }
+                        .accessibilityLabel(tr("Add pass", "Pas toevoegen"))
+                }
+            }
+            .fullScreenCover(item: $showing) { pass in GymPassFullScreen(pass: pass) }
+            .sheet(item: $editing) { pass in GymPassEditView(pass: pass) }
+            .sheet(isPresented: $adding) { GymPassEditView(pass: nil) }
+            .confirmationDialog(tr("Delete this pass?", "Pas verwijderen?"),
+                                isPresented: Binding(get: { deleting != nil }, set: { if !$0 { deleting = nil } }),
+                                titleVisibility: .visible) {
+                Button(tr("Delete", "Verwijderen"), role: .destructive) {
+                    if let pass = deleting { context.delete(pass) }
+                    try? context.save()
+                    deleting = nil
+                }
+            }
+        }
+        .preferredColorScheme(.dark)
     }
 }
 

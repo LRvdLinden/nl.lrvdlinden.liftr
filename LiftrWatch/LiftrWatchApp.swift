@@ -42,7 +42,7 @@ struct WatchRootView: View {
                     .listRowBackground(RoundedRectangle(cornerRadius: 16, style: .continuous).fill(Theme.accentGradient))
                     .disabled(starting)
 
-                    if let pass = passes.first {
+                    ForEach(passes) { pass in
                         NavigationLink {
                             WatchPassView(pass: pass)
                         } label: {
