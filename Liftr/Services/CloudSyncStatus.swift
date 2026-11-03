@@ -28,6 +28,12 @@ final class CloudSyncStatus {
 
     /// Technical details of the last failed sync (CloudKit error codes), shown on request.
     private(set) var technicalDetails: String?
+    /// Debug builds: progress of creating the CloudKit schema.
+    var schemaMessage: String?
+
+    func reportSchemaFailure(_ details: String) {
+        technicalDetails = details
+    }
 
     private(set) var state: State = .checking
     private(set) var lastSync: Date? = UserDefaults.standard.object(forKey: "cloud.lastSync") as? Date

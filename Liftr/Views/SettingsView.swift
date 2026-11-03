@@ -100,6 +100,18 @@ struct SettingsView: View {
                     .contentShape(Rectangle())
                     .onTapGesture { if cloud.technicalDetails != nil { showSyncDetails = true } }
                     .accessibilityElement(children: .combine)
+                    #if DEBUG
+                    if let message = cloud.schemaMessage {
+                        Text(message)
+                            .font(.caption)
+                            .foregroundStyle(Theme.muted)
+                    }
+                    Button(devText("Create iCloud schema again (developer)", "iCloud-schema opnieuw aanmaken (ontwikkelaar)")) {
+                        CloudSchema.initializeIfNeeded(force: true)
+                    }
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(Theme.accent)
+                    #endif
                     if cloud.state == .noAccount {
                         Button(tr("Open Settings", "Open Instellingen")) {
                             if let url = URL(string: UIApplication.openSettingsURLString) { openURL(url) }

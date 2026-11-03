@@ -5,7 +5,7 @@ Sportschool-logboek voor iPhone, iPad en Apple Watch. Houd per training bij welk
 | | |
 |---|---|
 | Bundle ID | `nl.lrvdlinden.liftr` (Watch: `.watchkitapp`, widgets: `.widgets`) |
-| Versie | 1.0.0 (build 6) |
+| Versie | 1.0.0 (build 7) |
 | Platforms | iOS/iPadOS 17+, watchOS 10+ |
 | Talen | 33 Europese talen: Engels, Nederlands, Duits, Frans, Spaans, Italiaans, Portugees (PT), Catalaans, Roemeens, Grieks, Zweeds, Deens, Noors, IJslands, Fins, Pools, Tsjechisch, Slowaaks, Sloveens, Kroatisch, Servisch, Macedonisch, Bulgaars, Hongaars, Ests, Lets, Litouws, Russisch, Oekraïens, Turks, Iers, Maltees, Albanees |
 | Team | EU3UY476T6 |
@@ -77,7 +77,7 @@ Het Xcode-project wordt gegenereerd met `python3 tools/gen_xcodeproj.py` (alleen
 
 1. App ID `nl.lrvdlinden.liftr` (+ `.watchkitapp`, `.widgets`, `.watchkitapp.widgets`) met HealthKit, iCloud (CloudKit) en App Groups – Xcode doet dit automatisch met *Automatically manage signing*.
 2. iCloud-container `iCloud.nl.lrvdlinden.liftr` en App Group `group.nl.lrvdlinden.liftr`.
-3. Na de eerste testversie: in het CloudKit Dashboard het schema naar **Production** zetten vóór de App Store-release.
+3. **CloudKit-schema:** draai Liftr één keer vanuit Xcode (Debug) op een toestel dat bij iCloud is ingelogd. De app maakt dan zelf alle recordtypes (`CD_Exercise`, `CD_Workout`, `CD_GymPass`, …) aan in **Development** (`initializeCloudKitSchema`, zie `Liftr/Services/CloudSchema.swift`). Daarna in de CloudKit Console → Development → **Deploy Schema Changes…** naar **Production**. Herhaal dit na elke wijziging aan het datamodel, vóór een TestFlight- of App Store-build – anders geeft iCloud "Failed to modify some records".
 
 ## Standaard onderdelen
 

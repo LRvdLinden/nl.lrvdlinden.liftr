@@ -48,6 +48,9 @@ struct RootView: View {
             ExerciseLibrary.prepare(context)
             controller.restore(context)
             await CloudSyncStatus.shared.refresh()
+            #if DEBUG
+            CloudSchema.initializeIfNeeded()
+            #endif
             ReminderScheduler.reschedule(context)
             await HealthKitManager.shared.refresh()
         }
