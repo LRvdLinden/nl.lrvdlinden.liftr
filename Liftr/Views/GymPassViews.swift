@@ -45,21 +45,48 @@ struct GymPassLook: Equatable {
     }
 }
 
-/// The gym's logo on its card colour: see-through logos as they are, square artwork as a rounded icon,
-/// otherwise a monogram.
+/// The gym's logo on its card: the chain's official icon as a rounded tile, a wordmark on a pill,
+/// or a monogram for other gyms. See-through logos get a tile so they always read on the card colour.
 struct GymLogoMark: View {
     let look: GymPassLook
     var height: CGFloat
 
+    @State private var logo: (image: UIImage, fromWebsite: Bool)?
+
+    init(look: GymPassLook, height: CGFloat) {
+        self.look = look
+        self.height = height
+        _logo = State(initialValue: GymTemplates.logo(for: look.template))
+    }
+
     var body: some View {
-        if let image = GymTemplates.logo(for: look.template) {
-            if look.template?.opaqueLogo == true {
-                Image(uiImage: image).resizable().scaledToFit()
+        content
+            .task(id: look.templateID) {
+                logo = GymTemplates.logo(for: look.template)
+                if let template = look.template { await GymLogoService.refresh(template) }
+            }
+            .onReceive(NotificationCenter.default.publisher(for: GymLogoService.didUpdate)) { note in
+                guard (note.object as? String) == look.template?.domain else { return }
+                logo = GymTemplates.logo(for: look.template)
+            }
+    }
+
+    @ViewBuilder private var content: some View {
+        if let logo, let template = look.template {
+            if logo.fromWebsite || template.logoStyle == .icon {
+                // Website icons are square artwork; bundled square logos may be see-through.
+                Image(uiImage: logo.image).resizable().scaledToFit()
+                    .padding(logo.fromWebsite || template.logoBackgroundHex == nil ? 0 : height * 0.1)
                     .frame(width: height, height: height)
+                    .background(tile(template, fromWebsite: logo.fromWebsite))
                     .clipShape(RoundedRectangle(cornerRadius: height * 0.22, style: .continuous))
             } else {
-                Image(uiImage: image).resizable().scaledToFit()
+                Image(uiImage: logo.image).resizable().scaledToFit()
+                    .padding(.horizontal, template.logoBackgroundHex == nil ? 0 : height * 0.22)
+                    .padding(.vertical, template.logoBackgroundHex == nil ? 0 : height * 0.14)
                     .frame(maxWidth: height * 3.4, maxHeight: height, alignment: .leading)
+                    .background(tile(template, fromWebsite: false))
+                    .clipShape(RoundedRectangle(cornerRadius: height * 0.22, style: .continuous))
             }
         } else {
             Text(look.monogram.isEmpty ? "L" : look.monogram)
@@ -69,6 +96,17 @@ struct GymLogoMark: View {
                 .background(look.ink.opacity(0.16), in: RoundedRectangle(cornerRadius: height * 0.24, style: .continuous))
         }
     }
+
+    private func tile(_ template: GymTemplate, fromWebsite: Bool) -> Color {
+        if fromWebsite { return .white }
+        return template.logoBackgroundHex.map { Color(hex: $0) } ?? .clear
+    }
+}
+
+/// True when the logo already shows the gym's name, so the card does not repeat it.
+private func logoShowsName(_ look: GymPassLook) -> Bool {
+    guard let template = look.template, let logo = GymTemplates.logo(for: template) else { return false }
+    return !logo.fromWebsite && template.logoStyle == .wordmark
 }
 
 /// Front: logo, gym name, member and number. Back (`showsCode`): the code on a white panel.
@@ -84,7 +122,7 @@ struct GymCardFace: View {
             VStack(alignment: .leading, spacing: compact ? 8 : 12) {
                 HStack(spacing: 10) {
                     GymLogoMark(look: look, height: compact ? 34 : 44)
-                    if GymTemplates.logo(for: look.template) == nil || look.template?.opaqueLogo == true {
+                    if !logoShowsName(look) {
                         Text(look.name)
                             .font(.system(compact ? .headline : .title3, design: .rounded).weight(.bold))
                             .lineLimit(1)
@@ -365,7 +403,7 @@ struct GymPickerView: View {
     @State private var search = ""
 
     private var filtered: [GymTemplate] {
-        search.isEmpty ? GymTemplates.all : GymTemplates.all.filter { $0.name.localizedCaseInsensitiveContains(search) }
+        search.isEmpty ? GymTemplates.selectable : GymTemplates.selectable.filter { $0.name.localizedCaseInsensitiveContains(search) }
     }
 
     var body: some View {

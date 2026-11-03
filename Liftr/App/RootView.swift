@@ -52,11 +52,14 @@ struct RootView: View {
             CloudSchema.initializeIfNeeded()
             #endif
             ReminderScheduler.reschedule(context)
+            GymTemplates.updateCardColors(in: context)
             await HealthKitManager.shared.refresh()
+            await GymLogoService.refreshAll()
         }
         .onChange(of: scenePhase) { _, phase in
             if phase == .active {
                 ExerciseLibrary.mergeDuplicates(context)
+                GymTemplates.updateCardColors(in: context)
                 try? context.save()
                 Task { await CloudSyncStatus.shared.refresh() }
                 ReminderScheduler.reschedule(context)
