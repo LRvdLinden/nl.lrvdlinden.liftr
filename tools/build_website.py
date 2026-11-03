@@ -12,7 +12,7 @@ OUT = os.path.join(ROOT, "website")
 DOMAIN = "https://liftr.nu"
 TODAY = datetime.date.today().isoformat()
 # Fill in once Liftr is live, e.g. "https://apps.apple.com/nl/app/liftr/id1234567890".
-# While empty, the site shows no App Store buttons at all.
+# While empty, the site shows "Coming soon to the App Store" (never on the og-images).
 APP_STORE_URL = ""
 
 lib = open(os.path.join(ROOT, "Shared/ExerciseLibrary.swift"), encoding="utf-8").read()
@@ -37,7 +37,7 @@ T = {
         desc="Houd elke training bij: oefeningen, sets, herhalingen en gewicht. Met rusttimer, voortgangsgrafieken, sportschoolpas en Apple Gezondheid.",
         og_alt="Liftr – elke herhaling telt. Sportschool-logboek voor iPhone, iPad en Apple Watch.",
         nav=[("#functies", "Functies"), ("#apparaten", "Apparaten"), ("#gezondheid", "Gezondheid"), ("#privacy", "Privacy")],
-        soon="Download in de App Store", features_btn="Bekijk de functies", nav_cta="Bekijk de app",
+        soon="Download in de App Store", soon_pre="Binnenkort in de App Store", features_btn="Bekijk de functies", nav_cta="Bekijk de app",
         eyebrow="Sportschool-logboek voor iPhone, iPad & Apple Watch",
         h1='Elke herhaling. <span class="outline">Telt.</span>',
         lead="Weg met de notities-app. Liftr houdt per training bij wat je deed – oefening, sets, herhalingen en gewicht – en laat zien hoe je sterker wordt. Met rusttimer, je sportschoolpas en Apple Gezondheid.",
@@ -76,7 +76,7 @@ T = {
                  ("🔐", "Versleuteld", "De code van je sportschoolpas is end-to-end versleuteld in iCloud.")],
         privacy_link="Lees de privacyverklaring",
         l_kicker="Talen", l_h2=f'{N_LANGS} talen.<br>Heel <span class="grad">Europa</span>.',
-        final_h2='Klaar voor<br>je volgende set?', final_p="Liftr is er voor iPhone, iPad en Apple Watch – in 33 talen.",
+        final_h2='Klaar voor<br>je volgende set?', final_p="Liftr komt binnenkort naar de App Store voor iPhone, iPad en Apple Watch – in 33 talen.",
         footer_privacy="Privacy", footer_more="Meer apps",
         screens=dict(today="Vandaag", date="dinsdag 3 november", ready="Klaar om te trainen?", start="▶ START TRAINING",
                      week="Deze week", streak="6 wk op rij", w_label="Trainingen", m_label="Deze maand", v_label="Getild",
@@ -95,7 +95,7 @@ T = {
         desc="Track every workout: exercises, sets, reps and weight. Rest timer, progress charts, gym pass and Apple Health. For iPhone, iPad and Apple Watch.",
         og_alt="Liftr – every rep counts. Gym logbook for iPhone, iPad and Apple Watch.",
         nav=[("#features", "Features"), ("#devices", "Devices"), ("#health", "Health"), ("#privacy", "Privacy")],
-        soon="Download on the App Store", features_btn="See the features", nav_cta="See the app",
+        soon="Download on the App Store", soon_pre="Coming soon to the App Store", features_btn="See the features", nav_cta="See the app",
         eyebrow="Gym logbook for iPhone, iPad & Apple Watch",
         h1='Every rep. <span class="outline">Counts.</span>',
         lead="Ditch the notes app. Liftr logs what you did in every workout – exercise, sets, reps and weight – and shows how you're getting stronger. With a rest timer, your gym pass and Apple Health.",
@@ -134,7 +134,7 @@ T = {
                  ("🔐", "Encrypted", "Your gym pass code is end-to-end encrypted in iCloud.")],
         privacy_link="Read the privacy policy",
         l_kicker="Languages", l_h2=f'{N_LANGS} languages.<br>All of <span class="grad">Europe</span>.',
-        final_h2='Ready for<br>your next set?', final_p="Liftr is made for iPhone, iPad and Apple Watch – in 33 languages.",
+        final_h2='Ready for<br>your next set?', final_p="Liftr is coming soon to the App Store for iPhone, iPad and Apple Watch – in 33 languages.",
         footer_privacy="Privacy", footer_more="More apps",
         screens=dict(today="Today", date="Tuesday 3 November", ready="Ready to train?", start="▶ START WORKOUT",
                      week="This week", streak="6 wk streak", w_label="Workouts", m_label="This month", v_label="Lifted",
@@ -324,7 +324,7 @@ def nav_html(t, lang, home_rel):
     return f'''<header class="nav" id="nav">
   <a class="brand" href="{home_rel or './'}" aria-label="Liftr"><img src="/assets/img/appicon-180.png" alt="" width="36" height="36"><b>LIFTR</b></a>
   <nav class="links" aria-label="Menu">{links}<a class="lang" href="{t["other"]}" hreflang="{"en" if lang == "nl" else "nl"}" lang="{"en" if lang == "nl" else "nl"}">{t["other_label"]}</a></nav>
-  {f'<a class="btn btn-orange btn-sm" href="{APP_STORE_URL}">{e(t["soon"])}</a>' if APP_STORE_URL else f'<a class="btn btn-orange btn-sm" href="{home_rel}#{t["nav"][0][0][1:]}">{e(t["nav_cta"])}</a>'}
+  <a class="btn btn-orange btn-sm" href="{APP_STORE_URL or home_rel + '#download'}">{e(t["soon"] if APP_STORE_URL else t["soon_pre"])}</a>
 </header>'''
 
 
@@ -380,7 +380,9 @@ def build_home(lang):
     notes_js = json.dumps([{"icon": "/assets/img/appicon-180.png", "title": a, "body": b} for a, b in t["notes"]], ensure_ascii=False)
     apple = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.3.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.8-4.1zM13.9 5.1c.7-.8 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>'
     def store_btn(cls):
-        return f'<a class="btn {cls}" href="{APP_STORE_URL}">{apple}<span>{e(t["soon"])}</span></a>' if APP_STORE_URL else ""
+        if APP_STORE_URL:
+            return f'<a class="btn {cls}" href="{APP_STORE_URL}">{apple}<span>{e(t["soon"])}</span></a>'
+        return f'<a class="btn {cls}" href="#download">{apple}<span>{e(t["soon_pre"])}</span></a>'
     body = f'''
 <body>
 <a class="skip" href="#main">{"Naar inhoud" if lang == "nl" else "Skip to content"}</a>
@@ -393,7 +395,7 @@ def build_home(lang):
         <p class="eyebrow"><span class="dot"></span>{e(t["eyebrow"])}</p>
         <h1>{t["h1"]}</h1>
         <p class="lead">{e(t["lead"])}</p>
-        <div class="cta">{store_btn("btn-white")}<a class="btn {"btn-ghost" if APP_STORE_URL else "btn-white"}" href="#{ids["features"]}">{e(t["features_btn"])}</a></div>
+        <div class="cta">{store_btn("btn-white")}<a class="btn btn-ghost" href="#{ids["features"]}">{e(t["features_btn"])}</a></div>
         <dl class="stats">{stats}</dl>
       </div>
       <div class="hero-device">
@@ -446,7 +448,7 @@ def build_home(lang):
   <section class="final" id="download">
     <img src="/assets/img/appicon-512.png" alt="Liftr app icon" width="128" height="128" loading="lazy">
     <h2>{t["final_h2"]}</h2><p>{e(t["final_p"])}</p>
-    {f'<div class="cta center">{store_btn("btn-orange")}</div>' if APP_STORE_URL else f'<div class="cta center"><a class="btn btn-orange" href="#{ids["features"]}">{e(t["features_btn"])}</a></div>'}
+    <div class="cta center">{store_btn("btn-orange")}</div>
   </section>
 </main>
 {footer_html(t, lang)}
