@@ -450,5 +450,16 @@
  "Privacy": "Príobháideacht",
  "Liftr is built to keep your training private.": "Tá Liftr déanta chun do thraenáil a choinneáil príobháideach.",
  "Questions?": "Ceisteanna?",
- "Last updated: November 2026": "Nuashonraithe go deireanach: Samhain 2026"
+ "Last updated: November 2026": "Nuashonraithe go deireanach: Samhain 2026",
+ "Waiting for internet": "Ag fanacht ar an idirlíon",
+ "iCloud storage is full": "Tá stóras iCloud lán",
+ "iCloud isn't set up yet": "Níl iCloud socraithe fós",
+ "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.": "Tá iCloud gnóthach. Bainfidh Liftr triail eile as go huathoibríoch; tá do sheisiúin slán ar an ngléas seo.",
+ "Your workouts sync as soon as you're online again.": "Sioncrónófar do sheisiúin a luaithe a bheidh tú ar líne arís.",
+ "Free up space in iCloud to keep syncing. Your workouts are safe on this device.": "Saor spás in iCloud chun leanúint ar aghaidh ag sioncronú. Tá do sheisiúin slán ar an ngléas seo.",
+ "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.": "Ní féidir leis an leagan seo de Liftr sábháil in iCloud fós. Tá do sheisiúin slán ar an ngléas seo agus sioncrónófar iad nuair a bheidh sé seo réitithe.",
+ "Liftr tries again later. Your workouts are safe on this device.": "Bainfidh Liftr triail eile as níos déanaí. Tá do sheisiúin slán ar an ngléas seo.",
+ "Tap for technical details": "Tapáil le haghaidh sonraí teicniúla",
+ "Technical details": "Sonraí teicniúla",
+ "Copy": "Cóipeáil"
 }

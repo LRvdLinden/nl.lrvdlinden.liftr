@@ -450,5 +450,16 @@
  "Privacy": "Privatezza",
  "Liftr is built to keep your training private.": "Liftr inbena biex iżomm it-taħriġ tiegħek privat.",
  "Questions?": "Mistoqsijiet?",
- "Last updated: November 2026": "L-aħħar aġġornament: Novembru 2026"
+ "Last updated: November 2026": "L-aħħar aġġornament: Novembru 2026",
+ "Waiting for internet": "Qed nistenna l-internet",
+ "iCloud storage is full": "L-ispazju tal-iCloud mimli",
+ "iCloud isn't set up yet": "L-iCloud għadu mhux issettjat",
+ "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.": "L-iCloud okkupat. Liftr jerġa' jipprova awtomatikament; it-taħriġiet tiegħek huma sikuri fuq dan l-apparat.",
+ "Your workouts sync as soon as you're online again.": "It-taħriġiet tiegħek jissinkronizzaw hekk kif terġa' tkun online.",
+ "Free up space in iCloud to keep syncing. Your workouts are safe on this device.": "Agħmel spazju fl-iCloud biex tkompli tissinkronizza. It-taħriġiet tiegħek huma sikuri fuq dan l-apparat.",
+ "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.": "Din il-verżjoni ta' Liftr għadha ma tistax tissejvja fl-iCloud. It-taħriġiet tiegħek huma sikuri fuq dan l-apparat u jissinkronizzaw hekk kif dan jissewwa.",
+ "Liftr tries again later. Your workouts are safe on this device.": "Liftr jerġa' jipprova aktar tard. It-taħriġiet tiegħek huma sikuri fuq dan l-apparat.",
+ "Tap for technical details": "Agħfas għad-dettalji tekniċi",
+ "Technical details": "Dettalji tekniċi",
+ "Copy": "Ikkopja"
 }

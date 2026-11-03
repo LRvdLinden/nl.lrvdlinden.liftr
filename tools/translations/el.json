@@ -450,5 +450,16 @@
  "Privacy": "Απόρρητο",
  "Liftr is built to keep your training private.": "Το Liftr είναι φτιαγμένο ώστε η προπόνησή σου να μένει ιδιωτική.",
  "Questions?": "Ερωτήσεις;",
- "Last updated: November 2026": "Τελευταία ενημέρωση: Νοέμβριος 2026"
+ "Last updated: November 2026": "Τελευταία ενημέρωση: Νοέμβριος 2026",
+ "Waiting for internet": "Αναμονή για internet",
+ "iCloud storage is full": "Ο αποθηκευτικός χώρος iCloud είναι πλήρης",
+ "iCloud isn't set up yet": "Το iCloud δεν έχει ρυθμιστεί ακόμα",
+ "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.": "Το iCloud είναι απασχολημένο. Το Liftr θα ξαναδοκιμάσει αυτόματα· οι προπονήσεις σου είναι ασφαλείς σε αυτή τη συσκευή.",
+ "Your workouts sync as soon as you're online again.": "Οι προπονήσεις σου θα συγχρονιστούν μόλις συνδεθείς ξανά.",
+ "Free up space in iCloud to keep syncing. Your workouts are safe on this device.": "Απελευθέρωσε χώρο στο iCloud για να συνεχιστεί ο συγχρονισμός. Οι προπονήσεις σου είναι ασφαλείς σε αυτή τη συσκευή.",
+ "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.": "Αυτή η έκδοση του Liftr δεν μπορεί ακόμα να αποθηκεύσει στο iCloud. Οι προπονήσεις σου είναι ασφαλείς σε αυτή τη συσκευή και θα συγχρονιστούν μόλις διορθωθεί.",
+ "Liftr tries again later. Your workouts are safe on this device.": "Το Liftr θα ξαναδοκιμάσει αργότερα. Οι προπονήσεις σου είναι ασφαλείς σε αυτή τη συσκευή.",
+ "Tap for technical details": "Πάτησε για τεχνικές λεπτομέρειες",
+ "Technical details": "Τεχνικές λεπτομέρειες",
+ "Copy": "Αντιγραφή"
 }

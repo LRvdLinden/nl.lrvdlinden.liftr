@@ -450,5 +450,16 @@
  "Privacy": "Adatvédelem",
  "Liftr is built to keep your training private.": "A Liftr úgy készült, hogy az edzéseid privátak maradjanak.",
  "Questions?": "Kérdésed van?",
- "Last updated: November 2026": "Utolsó frissítés: 2026. november"
+ "Last updated: November 2026": "Utolsó frissítés: 2026. november",
+ "Waiting for internet": "Várakozás az internetre",
+ "iCloud storage is full": "Az iCloud-tárhely megtelt",
+ "iCloud isn't set up yet": "Az iCloud még nincs beállítva",
+ "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.": "Az iCloud éppen foglalt. A Liftr automatikusan újrapróbálja; az edzéseid biztonságban vannak ezen az eszközön.",
+ "Your workouts sync as soon as you're online again.": "Az edzéseid szinkronizálódnak, amint újra online leszel.",
+ "Free up space in iCloud to keep syncing. Your workouts are safe on this device.": "Szabadíts fel helyet az iCloudon, hogy a szinkronizálás folytatódjon. Az edzéseid biztonságban vannak ezen az eszközön.",
+ "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.": "A Liftr ezen verziója még nem tud az iCloudba menteni. Az edzéseid biztonságban vannak ezen az eszközön, és szinkronizálódnak, amint ez javítva lesz.",
+ "Liftr tries again later. Your workouts are safe on this device.": "A Liftr később újrapróbálja. Az edzéseid biztonságban vannak ezen az eszközön.",
+ "Tap for technical details": "Koppints a technikai részletekért",
+ "Technical details": "Technikai részletek",
+ "Copy": "Másolás"
 }

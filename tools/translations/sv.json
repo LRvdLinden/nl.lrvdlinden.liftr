@@ -450,5 +450,16 @@
  "Privacy": "Integritet",
  "Liftr is built to keep your training private.": "Liftr är byggd för att hålla din träning privat.",
  "Questions?": "Frågor?",
- "Last updated: November 2026": "Senast uppdaterad: november 2026"
+ "Last updated: November 2026": "Senast uppdaterad: november 2026",
+ "Waiting for internet": "Väntar på internet",
+ "iCloud storage is full": "iCloud-lagringen är full",
+ "iCloud isn't set up yet": "iCloud är inte konfigurerat än",
+ "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.": "iCloud är upptaget. Liftr försöker igen automatiskt; dina pass är säkra på den här enheten.",
+ "Your workouts sync as soon as you're online again.": "Dina pass synkas så fort du är online igen.",
+ "Free up space in iCloud to keep syncing. Your workouts are safe on this device.": "Frigör utrymme i iCloud för att fortsätta synka. Dina pass är säkra på den här enheten.",
+ "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.": "Den här versionen av Liftr kan inte spara i iCloud än. Dina pass är säkra på den här enheten och synkas så fort det är fixat.",
+ "Liftr tries again later. Your workouts are safe on this device.": "Liftr försöker igen senare. Dina pass är säkra på den här enheten.",
+ "Tap for technical details": "Tryck för tekniska detaljer",
+ "Technical details": "Tekniska detaljer",
+ "Copy": "Kopiera"
 }

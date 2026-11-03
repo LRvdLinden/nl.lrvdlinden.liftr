@@ -450,5 +450,16 @@
  "Privacy": "Privatumas",
  "Liftr is built to keep your training private.": "Liftr sukurtas tam, kad tavo treniruotės liktų privačios.",
  "Questions?": "Klausimų?",
- "Last updated: November 2026": "Paskutinį kartą atnaujinta: 2026 m. lapkritis"
+ "Last updated: November 2026": "Paskutinį kartą atnaujinta: 2026 m. lapkritis",
+ "Waiting for internet": "Laukiama interneto",
+ "iCloud storage is full": "iCloud saugykla pilna",
+ "iCloud isn't set up yet": "iCloud dar nenustatyta",
+ "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.": "iCloud šiuo metu užimta. Liftr automatiškai bandys dar kartą; tavo treniruotės saugios šiame įrenginyje.",
+ "Your workouts sync as soon as you're online again.": "Tavo treniruotės bus sinchronizuotos, kai tik vėl prisijungsi prie interneto.",
+ "Free up space in iCloud to keep syncing. Your workouts are safe on this device.": "Atlaisvink vietos iCloud, kad sinchronizavimas tęstųsi. Tavo treniruotės saugios šiame įrenginyje.",
+ "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.": "Ši Liftr versija dar negali išsaugoti iCloud. Tavo treniruotės saugios šiame įrenginyje ir bus sinchronizuotos, kai tai bus pataisyta.",
+ "Liftr tries again later. Your workouts are safe on this device.": "Liftr bandys dar kartą vėliau. Tavo treniruotės saugios šiame įrenginyje.",
+ "Tap for technical details": "Bakstelėk, kad matytum techninę informaciją",
+ "Technical details": "Techninė informacija",
+ "Copy": "Kopijuoti"
 }

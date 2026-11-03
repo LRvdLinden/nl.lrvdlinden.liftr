@@ -450,5 +450,16 @@
  "Privacy": "Privātums",
  "Liftr is built to keep your training private.": "Liftr ir veidota, lai tavi treniņi paliktu privāti.",
  "Questions?": "Jautājumi?",
- "Last updated: November 2026": "Pēdējo reizi atjaunināts: 2026. gada novembris"
+ "Last updated: November 2026": "Pēdējo reizi atjaunināts: 2026. gada novembris",
+ "Waiting for internet": "Gaida interneta savienojumu",
+ "iCloud storage is full": "iCloud krātuve ir pilna",
+ "iCloud isn't set up yet": "iCloud vēl nav iestatīts",
+ "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.": "iCloud pašlaik ir aizņemts. Liftr automātiski mēģinās vēlreiz; tavi treniņi ir drošībā šajā ierīcē.",
+ "Your workouts sync as soon as you're online again.": "Tavi treniņi tiks sinhronizēti, tiklīdz atkal būsi tiešsaistē.",
+ "Free up space in iCloud to keep syncing. Your workouts are safe on this device.": "Atbrīvo vietu iCloud, lai sinhronizācija turpinātos. Tavi treniņi ir drošībā šajā ierīcē.",
+ "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.": "Šī Liftr versija vēl nevar saglabāt iCloud. Tavi treniņi ir drošībā šajā ierīcē un tiks sinhronizēti, tiklīdz tas būs salabots.",
+ "Liftr tries again later. Your workouts are safe on this device.": "Liftr mēģinās vēlreiz vēlāk. Tavi treniņi ir drošībā šajā ierīcē.",
+ "Tap for technical details": "Pieskaries, lai skatītu tehnisko informāciju",
+ "Technical details": "Tehniskā informācija",
+ "Copy": "Kopēt"
 }

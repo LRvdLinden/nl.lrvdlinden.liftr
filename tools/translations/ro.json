@@ -450,5 +450,16 @@
  "Privacy": "Confidențialitate",
  "Liftr is built to keep your training private.": "Liftr e creat ca antrenamentele tale să rămână private.",
  "Questions?": "Întrebări?",
- "Last updated: November 2026": "Ultima actualizare: noiembrie 2026"
+ "Last updated: November 2026": "Ultima actualizare: noiembrie 2026",
+ "Waiting for internet": "Se așteaptă internetul",
+ "iCloud storage is full": "Spațiul iCloud este plin",
+ "iCloud isn't set up yet": "iCloud nu este încă configurat",
+ "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.": "iCloud este ocupat. Liftr va încerca din nou automat; antrenamentele tale sunt în siguranță pe acest dispozitiv.",
+ "Your workouts sync as soon as you're online again.": "Antrenamentele tale se sincronizează imediat ce ești din nou online.",
+ "Free up space in iCloud to keep syncing. Your workouts are safe on this device.": "Eliberează spațiu în iCloud ca sincronizarea să continue. Antrenamentele tale sunt în siguranță pe acest dispozitiv.",
+ "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.": "Această versiune de Liftr nu poate salva încă în iCloud. Antrenamentele tale sunt în siguranță pe acest dispozitiv și se vor sincroniza imediat ce problema este rezolvată.",
+ "Liftr tries again later. Your workouts are safe on this device.": "Liftr va încerca din nou mai târziu. Antrenamentele tale sunt în siguranță pe acest dispozitiv.",
+ "Tap for technical details": "Atinge pentru detalii tehnice",
+ "Technical details": "Detalii tehnice",
+ "Copy": "Copiază"
 }

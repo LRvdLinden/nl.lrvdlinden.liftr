@@ -450,5 +450,16 @@
  "Privacy": "Privaatsus",
  "Liftr is built to keep your training private.": "Liftr on loodud hoidma sinu treeningud privaatsena.",
  "Questions?": "Küsimusi?",
- "Last updated: November 2026": "Viimati uuendatud: november 2026"
+ "Last updated: November 2026": "Viimati uuendatud: november 2026",
+ "Waiting for internet": "Ootan internetiühendust",
+ "iCloud storage is full": "iCloudi salvestusruum on täis",
+ "iCloud isn't set up yet": "iCloud pole veel seadistatud",
+ "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.": "iCloud on hõivatud. Liftr proovib automaatselt uuesti; sinu treeningud on selles seadmes kindlas kohas.",
+ "Your workouts sync as soon as you're online again.": "Sinu treeningud sünkroonitakse kohe, kui oled jälle võrgus.",
+ "Free up space in iCloud to keep syncing. Your workouts are safe on this device.": "Vabasta iCloudis ruumi, et sünkroonimine jätkuks. Sinu treeningud on selles seadmes kindlas kohas.",
+ "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.": "See Liftri versioon ei saa veel iCloudi salvestada. Sinu treeningud on selles seadmes kindlas kohas ja sünkroonitakse, kui see on parandatud.",
+ "Liftr tries again later. Your workouts are safe on this device.": "Liftr proovib hiljem uuesti. Sinu treeningud on selles seadmes kindlas kohas.",
+ "Tap for technical details": "Puuduta tehniliste üksikasjade nägemiseks",
+ "Technical details": "Tehnilised üksikasjad",
+ "Copy": "Kopeeri"
 }

@@ -450,5 +450,16 @@
  "Privacy": "Gizlilik",
  "Liftr is built to keep your training private.": "Liftr, antrenmanını gizli tutmak için tasarlandı.",
  "Questions?": "Sorular?",
- "Last updated: November 2026": "Son güncelleme: Kasım 2026"
+ "Last updated: November 2026": "Son güncelleme: Kasım 2026",
+ "Waiting for internet": "İnternet bekleniyor",
+ "iCloud storage is full": "iCloud saklama alanı dolu",
+ "iCloud isn't set up yet": "iCloud henüz ayarlanmadı",
+ "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.": "iCloud şu an meşgul. Liftr otomatik olarak yeniden deneyecek; antrenmanların bu aygıtta güvende.",
+ "Your workouts sync as soon as you're online again.": "Antrenmanların yeniden çevrimiçi olduğunda eşzamanlanacak.",
+ "Free up space in iCloud to keep syncing. Your workouts are safe on this device.": "Eşzamanlamaya devam etmek için iCloud'da yer aç. Antrenmanların bu aygıtta güvende.",
+ "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.": "Liftr'ın bu sürümü henüz iCloud'a kaydedemiyor. Antrenmanların bu aygıtta güvende ve sorun giderilir giderilmez eşzamanlanacak.",
+ "Liftr tries again later. Your workouts are safe on this device.": "Liftr daha sonra yeniden deneyecek. Antrenmanların bu aygıtta güvende.",
+ "Tap for technical details": "Teknik ayrıntılar için dokun",
+ "Technical details": "Teknik ayrıntılar",
+ "Copy": "Kopyala"
 }

@@ -450,5 +450,16 @@
  "Privacy": "Súkromie",
  "Liftr is built to keep your training private.": "Liftr je vytvorený tak, aby tvoje tréningy zostali súkromné.",
  "Questions?": "Otázky?",
- "Last updated: November 2026": "Posledná aktualizácia: november 2026"
+ "Last updated: November 2026": "Posledná aktualizácia: november 2026",
+ "Waiting for internet": "Čaká sa na internet",
+ "iCloud storage is full": "Úložisko iCloudu je plné",
+ "iCloud isn't set up yet": "iCloud ešte nie je nastavený",
+ "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.": "iCloud je práve zaneprázdnený. Liftr to automaticky skúsi znova; tvoje tréningy sú v tomto zariadení v bezpečí.",
+ "Your workouts sync as soon as you're online again.": "Tvoje tréningy sa zosynchronizujú, hneď ako budeš znova online.",
+ "Free up space in iCloud to keep syncing. Your workouts are safe on this device.": "Uvoľni miesto v iCloude, aby synchronizácia mohla pokračovať. Tvoje tréningy sú v tomto zariadení v bezpečí.",
+ "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.": "Táto verzia Liftru zatiaľ nevie ukladať do iCloudu. Tvoje tréningy sú v tomto zariadení v bezpečí a zosynchronizujú sa, hneď ako to bude opravené.",
+ "Liftr tries again later. Your workouts are safe on this device.": "Liftr to skúsi znova neskôr. Tvoje tréningy sú v tomto zariadení v bezpečí.",
+ "Tap for technical details": "Klepni pre technické podrobnosti",
+ "Technical details": "Technické podrobnosti",
+ "Copy": "Kopírovať"
 }

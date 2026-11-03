@@ -450,5 +450,16 @@
  "Privacy": "Persónuvernd",
  "Liftr is built to keep your training private.": "Liftr er gert til að halda æfingunum þínum persónulegum.",
  "Questions?": "Spurningar?",
- "Last updated: November 2026": "Síðast uppfært: nóvember 2026"
+ "Last updated: November 2026": "Síðast uppfært: nóvember 2026",
+ "Waiting for internet": "Bíð eftir nettengingu",
+ "iCloud storage is full": "iCloud-geymslan er full",
+ "iCloud isn't set up yet": "iCloud hefur ekki verið sett upp enn",
+ "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.": "iCloud er upptekið. Liftr reynir sjálfkrafa aftur; æfingarnar þínar eru öruggar á þessu tæki.",
+ "Your workouts sync as soon as you're online again.": "Æfingarnar þínar samstillast um leið og þú kemst aftur á netið.",
+ "Free up space in iCloud to keep syncing. Your workouts are safe on this device.": "Losaðu pláss í iCloud til að halda samstillingu áfram. Æfingarnar þínar eru öruggar á þessu tæki.",
+ "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.": "Þessi útgáfa af Liftr getur ekki enn vistað í iCloud. Æfingarnar þínar eru öruggar á þessu tæki og samstillast um leið og þetta hefur verið lagað.",
+ "Liftr tries again later. Your workouts are safe on this device.": "Liftr reynir aftur síðar. Æfingarnar þínar eru öruggar á þessu tæki.",
+ "Tap for technical details": "Ýttu til að sjá tæknilegar upplýsingar",
+ "Technical details": "Tæknilegar upplýsingar",
+ "Copy": "Afrita"
 }

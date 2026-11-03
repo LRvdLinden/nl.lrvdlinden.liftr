@@ -30,12 +30,6 @@
   "context": "RootView.swift; SettingsView.swift"
  },
  {
-  "key": "Unknown error",
-  "en": "Unknown error",
-  "nl": "Onbekende fout",
-  "context": "CloudSyncStatus.swift"
- },
- {
   "key": "Checking iCloud…",
   "en": "Checking iCloud…",
   "nl": "iCloud controleren…",
@@ -69,6 +63,24 @@
   "key": "iCloud temporarily unavailable",
   "en": "iCloud temporarily unavailable",
   "nl": "iCloud tijdelijk niet bereikbaar",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "Waiting for internet",
+  "en": "Waiting for internet",
+  "nl": "Wacht op internet",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "iCloud storage is full",
+  "en": "iCloud storage is full",
+  "nl": "iCloud-opslag is vol",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "iCloud isn't set up yet",
+  "en": "iCloud isn't set up yet",
+  "nl": "iCloud is nog niet ingesteld",
   "context": "CloudSyncStatus.swift"
  },
  {
@@ -111,6 +123,36 @@
   "key": "Liftr tries again automatically.",
   "en": "Liftr tries again automatically.",
   "nl": "Liftr probeert het automatisch opnieuw.",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.",
+  "en": "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.",
+  "nl": "iCloud is even bezig. Liftr probeert het automatisch opnieuw; je trainingen staan veilig op dit apparaat.",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "Your workouts sync as soon as you're online again.",
+  "en": "Your workouts sync as soon as you're online again.",
+  "nl": "Je trainingen synchroniseren zodra je weer online bent.",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "Free up space in iCloud to keep syncing. Your workouts are safe on this device.",
+  "en": "Free up space in iCloud to keep syncing. Your workouts are safe on this device.",
+  "nl": "Maak ruimte vrij in iCloud om te blijven synchroniseren. Je trainingen staan veilig op dit apparaat.",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.",
+  "en": "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.",
+  "nl": "Deze versie van Liftr kan nog niet in iCloud opslaan. Je trainingen staan veilig op dit apparaat en synchroniseren zodra dit is opgelost.",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "Liftr tries again later. Your workouts are safe on this device.",
+  "en": "Liftr tries again later. Your workouts are safe on this device.",
+  "nl": "Liftr probeert het later opnieuw. Je trainingen staan veilig op dit apparaat.",
   "context": "CloudSyncStatus.swift"
  },
  {
@@ -1140,6 +1182,12 @@
   "context": "SettingsView.swift"
  },
  {
+  "key": "Tap for technical details",
+  "en": "Tap for technical details",
+  "nl": "Tik voor technische details",
+  "context": "SettingsView.swift"
+ },
+ {
   "key": "Open Settings",
   "en": "Open Settings",
   "nl": "Open Instellingen",
@@ -1173,6 +1221,18 @@
   "key": "Your workouts sync through your own iCloud between iPhone, iPad and Apple Watch.",
   "en": "Your workouts sync through your own iCloud between iPhone, iPad and Apple Watch.",
   "nl": "Je trainingen synchroniseren via je eigen iCloud tussen iPhone, iPad en Apple Watch.",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Technical details",
+  "en": "Technical details",
+  "nl": "Technische details",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Copy",
+  "en": "Copy",
+  "nl": "Kopiëren",
   "context": "SettingsView.swift"
  },
  {

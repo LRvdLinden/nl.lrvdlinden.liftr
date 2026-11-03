@@ -22,6 +22,7 @@ struct SettingsView: View {
     @AppStorage(ReminderScheduler.Key.inactiveDays) private var inactiveDays = 3
     @AppStorage(ReminderScheduler.Key.weeklyOn) private var remindWeekly = false
     @State private var notificationsDenied = false
+    @State private var showSyncDetails = false
 
     var body: some View {
         NavigationStack {
@@ -78,7 +79,7 @@ struct SettingsView: View {
                         Image(systemName: cloud.symbol)
                             .font(.title3)
                             .foregroundStyle(cloud.isHealthy ? Theme.success : .orange)
-                            .symbolEffect(.pulse, isActive: cloud.state == .syncing || cloud.state == .checking)
+                            .symbolEffect(.pulse, isActive: cloud.state == .syncing || cloud.state == .checking || cloud.state == .retrying)
                             .frame(width: 28)
                         VStack(alignment: .leading, spacing: 2) {
                             Text(cloud.title)
@@ -88,9 +89,16 @@ struct SettingsView: View {
                                     .font(.caption)
                                     .foregroundStyle(Theme.muted)
                             }
+                            if cloud.technicalDetails != nil, !cloud.isHealthy {
+                                Text(tr("Tap for technical details", "Tik voor technische details"))
+                                    .font(.caption.weight(.semibold))
+                                    .foregroundStyle(Theme.accent)
+                            }
                         }
                     }
                     .padding(.vertical, 2)
+                    .contentShape(Rectangle())
+                    .onTapGesture { if cloud.technicalDetails != nil { showSyncDetails = true } }
                     .accessibilityElement(children: .combine)
                     if cloud.state == .noAccount {
                         Button(tr("Open Settings", "Open Instellingen")) {
@@ -149,6 +157,12 @@ struct SettingsView: View {
             .onChange(of: remindDaysRaw) { _, _ in ReminderScheduler.reschedule(context) }
             .onChange(of: remindTime) { _, _ in ReminderScheduler.reschedule(context) }
             .onChange(of: inactiveDays) { _, _ in ReminderScheduler.reschedule(context) }
+            .alert(tr("Technical details", "Technische details"), isPresented: $showSyncDetails) {
+                Button(tr("Copy", "Kopiëren")) { UIPasteboard.general.string = cloud.technicalDetails }
+                Button("OK", role: .cancel) {}
+            } message: {
+                Text(cloud.technicalDetails ?? "")
+            }
             .alert(tr("Notifications are off", "Meldingen staan uit"), isPresented: $notificationsDenied) {
                 Button(tr("Open Settings", "Open Instellingen")) {
                     if let url = URL(string: UIApplication.openSettingsURLString) { openURL(url) }

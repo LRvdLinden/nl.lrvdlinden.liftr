@@ -450,5 +450,16 @@
  "Privacy": "Приватност",
  "Liftr is built to keep your training private.": "Liftr је направљен да твој тренинг остане приватан.",
  "Questions?": "Питања?",
- "Last updated: November 2026": "Последње ажурирање: новембар 2026"
+ "Last updated: November 2026": "Последње ажурирање: новембар 2026",
+ "Waiting for internet": "Чека се интернет",
+ "iCloud storage is full": "iCloud простор је пун",
+ "iCloud isn't set up yet": "iCloud још није подешен",
+ "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.": "iCloud је тренутно заузет. Liftr ће аутоматски покушати поново; твоји тренинзи су безбедни на овом уређају.",
+ "Your workouts sync as soon as you're online again.": "Твоји тренинзи ће се синхронизовати чим поново будеш на мрежи.",
+ "Free up space in iCloud to keep syncing. Your workouts are safe on this device.": "Ослободи простор на iCloud-у да би се синхронизација наставила. Твоји тренинзи су безбедни на овом уређају.",
+ "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.": "Ова верзија Liftr-а још не може да чува на iCloud. Твоји тренинзи су безбедни на овом уређају и синхронизоваће се чим ово буде исправљено.",
+ "Liftr tries again later. Your workouts are safe on this device.": "Liftr ће покушати поново касније. Твоји тренинзи су безбедни на овом уређају.",
+ "Tap for technical details": "Додирни за техничке детаље",
+ "Technical details": "Технички детаљи",
+ "Copy": "Копирај"
 }

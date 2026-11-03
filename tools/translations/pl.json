@@ -450,5 +450,16 @@
  "Privacy": "Prywatność",
  "Liftr is built to keep your training private.": "Liftr powstał, by Twoje treningi pozostały prywatne.",
  "Questions?": "Pytania?",
- "Last updated: November 2026": "Ostatnia aktualizacja: listopad 2026"
+ "Last updated: November 2026": "Ostatnia aktualizacja: listopad 2026",
+ "Waiting for internet": "Czekam na internet",
+ "iCloud storage is full": "Miejsce w iCloud jest pełne",
+ "iCloud isn't set up yet": "iCloud nie jest jeszcze skonfigurowany",
+ "iCloud is busy. Liftr tries again automatically; your workouts are safe on this device.": "iCloud jest zajęty. Liftr spróbuje ponownie automatycznie; Twoje treningi są bezpieczne na tym urządzeniu.",
+ "Your workouts sync as soon as you're online again.": "Twoje treningi zsynchronizują się, gdy tylko znów będziesz online.",
+ "Free up space in iCloud to keep syncing. Your workouts are safe on this device.": "Zwolnij miejsce w iCloud, aby synchronizacja mogła trwać dalej. Twoje treningi są bezpieczne na tym urządzeniu.",
+ "This version of Liftr can't save to iCloud yet. Your workouts are safe on this device and sync once this is fixed.": "Ta wersja Liftr nie może jeszcze zapisywać w iCloud. Twoje treningi są bezpieczne na tym urządzeniu i zsynchronizują się, gdy tylko zostanie to naprawione.",
+ "Liftr tries again later. Your workouts are safe on this device.": "Liftr spróbuje ponownie później. Twoje treningi są bezpieczne na tym urządzeniu.",
+ "Tap for technical details": "Stuknij, aby zobaczyć szczegóły techniczne",
+ "Technical details": "Szczegóły techniczne",
+ "Copy": "Kopiuj"
 }

@@ -5,7 +5,7 @@ Sportschool-logboek voor iPhone, iPad en Apple Watch. Houd per training bij welk
 | | |
 |---|---|
 | Bundle ID | `nl.lrvdlinden.liftr` (Watch: `.watchkitapp`, widgets: `.widgets`) |
-| Versie | 1.0.0 (build 5) |
+| Versie | 1.0.0 (build 6) |
 | Platforms | iOS/iPadOS 17+, watchOS 10+ |
 | Talen | 33 Europese talen: Engels, Nederlands, Duits, Frans, Spaans, Italiaans, Portugees (PT), Catalaans, Roemeens, Grieks, Zweeds, Deens, Noors, IJslands, Fins, Pools, Tsjechisch, Slowaaks, Sloveens, Kroatisch, Servisch, Macedonisch, Bulgaars, Hongaars, Ests, Lets, Litouws, Russisch, Oekraïens, Turks, Iers, Maltees, Albanees |
 | Team | EU3UY476T6 |
