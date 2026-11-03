@@ -252,6 +252,12 @@
   "context": "ScannerView.swift; ExercisePickerView.swift; GymPassViews.swift; ImportView.swift; LibraryView.swift; RoutineEditView.swift; SettingsView.swift; WorkoutSessionView.swift"
  },
  {
+  "key": "This file can't be read. Use an Excel file (.xlsx) or a CSV file.",
+  "en": "This file can't be read. Use an Excel file (.xlsx) or a CSV file.",
+  "nl": "Dit bestand kan niet gelezen worden. Gebruik een Excel-bestand (.xlsx) of een CSV-bestand.",
+  "context": "SpreadsheetImporter.swift"
+ },
+ {
   "key": "Morning workout",
   "en": "Morning workout",
   "nl": "Ochtendtraining",
@@ -345,7 +351,7 @@
   "key": "New exercise",
   "en": "New exercise",
   "nl": "Nieuwe oefening",
-  "context": "ExercisePickerView.swift; LibraryView.swift"
+  "context": "ExercisePickerView.swift; ImportView.swift; LibraryView.swift"
  },
  {
   "key": "Create “{1}”",
@@ -732,6 +738,42 @@
   "context": "HomeView.swift; LibraryView.swift; WorkoutDetailView.swift"
  },
  {
+  "key": "Import from",
+  "en": "Import from",
+  "nl": "Importeren uit",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Notes",
+  "en": "Notes",
+  "nl": "Notities",
+  "context": "ImportView.swift; LibraryView.swift; WorkoutDetailView.swift"
+ },
+ {
+  "key": "Spreadsheet",
+  "en": "Spreadsheet",
+  "nl": "Spreadsheet",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Import",
+  "en": "Import",
+  "nl": "Importeren",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Imported",
+  "en": "Imported",
+  "nl": "Geïmporteerd",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Can't read file",
+  "en": "Can't read file",
+  "nl": "Bestand niet gelezen",
+  "context": "ImportView.swift"
+ },
+ {
   "key": "Paste",
   "en": "Paste",
   "nl": "Plakken",
@@ -756,9 +798,93 @@
   "context": "ImportView.swift"
  },
  {
+  "key": "Choose file",
+  "en": "Choose file",
+  "nl": "Kies bestand",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Excel or CSV",
+  "en": "Excel or CSV",
+  "nl": "Excel of CSV",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "One row per training day with a date column and a column per exercise, e.g. “Date | Leg press | Chest press” with “45”, “27 (3×10)” or “25 / 18” in the cells. A file with one row per set (date, exercise, reps, weight) works too, as does a Liftr export.",
+  "en": "One row per training day with a date column and a column per exercise, e.g. “Date | Leg press | Chest press” with “45”, “27 (3×10)” or “25 / 18” in the cells. A file with one row per set (date, exercise, reps, weight) works too, as does a Liftr export.",
+  "nl": "Eén rij per trainingsdag met een datumkolom en een kolom per oefening, bijvoorbeeld “Datum | Leg press | Chest press” met “45”, “27 (3×10)” of “25 / 18” in de cellen. Een bestand met één rij per set (datum, oefening, herhalingen, gewicht) kan ook, net als een Liftr-export.",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Imported workouts go into your history and charts, but are not written to Apple Health.",
+  "en": "Imported workouts go into your history and charts, but are not written to Apple Health.",
+  "nl": "Geïmporteerde trainingen komen in je geschiedenis en grafieken, maar worden niet naar Apple Gezondheid geschreven.",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Sheet",
+  "en": "Sheet",
+  "nl": "Werkblad",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Sets per weight",
+  "en": "Sets per weight",
+  "nl": "Sets per gewicht",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Reps per set",
+  "en": "Reps per set",
+  "nl": "Herhalingen per set",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Used when a cell only holds a weight. A cell like “27 (3×10)” keeps its own sets and reps.",
+  "en": "Used when a cell only holds a weight. A cell like “27 (3×10)” keeps its own sets and reps.",
+  "nl": "Gebruikt als een cel alleen een gewicht bevat. Een cel als “27 (3×10)” houdt zijn eigen sets en herhalingen.",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Exercises",
+  "en": "Exercises",
+  "nl": "Oefeningen",
+  "context": "ImportView.swift; LibraryView.swift; RoutineEditView.swift; StatsView.swift"
+ },
+ {
+  "key": "Rename a column to link it to an exercise you already have.",
+  "en": "Rename a column to link it to an exercise you already have.",
+  "nl": "Geef een kolom een andere naam om hem aan een oefening te koppelen die je al hebt.",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "{1} cells not read",
+  "en": "{1} cells not read",
+  "nl": "{1} cellen niet gelezen",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Linked to {1}",
+  "en": "Linked to {1}",
+  "nl": "Gekoppeld aan {1}",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Liftr couldn't find a date column with exercises in this file.",
+  "en": "Liftr couldn't find a date column with exercises in this file.",
+  "nl": "Liftr vond in dit bestand geen datumkolom met oefeningen.",
+  "context": "ImportView.swift"
+ },
+ {
   "key": "Liftr couldn't find any exercises. Use lines like “Leg press 3x12 40 kg”.",
   "en": "Liftr couldn't find any exercises. Use lines like “Leg press 3x12 40 kg”.",
   "nl": "Liftr vond geen oefeningen. Gebruik regels als “Leg press 3x12 40 kg”.",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "{1} workouts from {2} to {3}",
+  "en": "{1} workouts from {2} to {3}",
+  "nl": "{1} trainingen van {2} tot {3}",
   "context": "ImportView.swift"
  },
  {
@@ -774,9 +900,9 @@
   "context": "ImportView.swift; WorkoutDetailView.swift; WorkoutSessionView.swift; WatchWorkoutView.swift"
  },
  {
-  "key": "Import",
-  "en": "Import",
-  "nl": "Importeren",
+  "key": "Other file",
+  "en": "Other file",
+  "nl": "Ander bestand",
   "context": "ImportView.swift"
  },
  {
@@ -792,22 +918,16 @@
   "context": "ImportView.swift"
  },
  {
-  "key": "Imported",
-  "en": "Imported",
-  "nl": "Geïmporteerd",
-  "context": "ImportView.swift"
- },
- {
   "key": "{1} workouts added to your history.",
   "en": "{1} workouts added to your history.",
   "nl": "{1} trainingen toegevoegd aan je geschiedenis.",
   "context": "ImportView.swift"
  },
  {
-  "key": "Exercises",
-  "en": "Exercises",
-  "nl": "Oefeningen",
-  "context": "LibraryView.swift; RoutineEditView.swift; StatsView.swift"
+  "key": "{1} were already imported and were skipped.",
+  "en": "{1} were already imported and were skipped.",
+  "nl": "{1} waren al eerder geïmporteerd en zijn overgeslagen.",
+  "context": "ImportView.swift"
  },
  {
   "key": "Routines",
@@ -868,12 +988,6 @@
   "en": "Muscle group",
   "nl": "Spiergroep",
   "context": "LibraryView.swift"
- },
- {
-  "key": "Notes",
-  "en": "Notes",
-  "nl": "Notities",
-  "context": "LibraryView.swift; WorkoutDetailView.swift"
  },
  {
   "key": "E.g. seat position, grip",

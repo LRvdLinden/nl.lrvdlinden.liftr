@@ -24,12 +24,16 @@ enum NotesImporter {
         var sets: [ParsedSet]
         var original: String
         var include = true
+        /// Note for this exercise in the workout (e.g. "rechte" from "27 (rechte 3×10)").
+        var note = ""
     }
 
     struct ParsedDay: Identifiable, Hashable {
         let id = UUID()
         var date: Date
         var lines: [ParsedLine]
+        /// Note for the workout (e.g. "Periode 1").
+        var note = ""
     }
 
     // MARK: Parsing
@@ -175,26 +179,44 @@ enum NotesImporter {
 
     // MARK: Import
 
+    struct ImportResult { var added = 0; var skipped = 0 }
+
     /// Creates the workouts. Exercises are matched by name; unknown names become new exercises.
+    /// A day that was imported before (same date, same exercises) is skipped, so importing a file twice is safe.
+    /// Imported workouts are history only: they are never written to Apple Health (source "import").
     @MainActor
-    static func importDays(_ days: [ParsedDay], context: ModelContext) -> Int {
+    static func importDays(_ days: [ParsedDay], context: ModelContext) -> ImportResult {
         var exercises = (try? context.fetch(FetchDescriptor<Exercise>())) ?? []
-        var created = 0
+        let existing = ((try? context.fetch(FetchDescriptor<Workout>())) ?? []).filter { $0.source == "import" }
+        let calendar = Calendar.current
+        var result = ImportResult()
         for day in days {
             let lines = day.lines.filter { $0.include && !$0.sets.isEmpty }
             guard !lines.isEmpty else { continue }
+            let names = Set(lines.map { normalized($0.name) })
+            let duplicate = existing.contains { workout in
+                calendar.isDate(workout.startDate, inSameDayAs: day.date)
+                    && Set(workout.sortedEntries.compactMap { $0.exercise.map { normalized($0.name) } }) == names
+            }
+            if duplicate {
+                result.skipped += 1
+                continue
+            }
             let workout = Workout(title: tr("Imported workout", "Geïmporteerde training"), startDate: day.date, source: "import")
             workout.endDate = day.date.addingTimeInterval(60 * 60)
+            workout.notes = day.note
             context.insert(workout)
             for (index, line) in lines.enumerated() {
                 let exercise = match(line.name, in: exercises) ?? {
                     let isCardio = line.sets.allSatisfy { $0.reps == 0 && ($0.minutes > 0 || $0.km > 0) }
-                    let new = Exercise(name: line.name, muscle: isCardio ? .cardio : .fullBody, kind: isCardio ? .cardio : .machine)
+                    let new = Exercise(name: line.name, muscle: isCardio ? .cardio : guessMuscle(line.name),
+                                       kind: isCardio ? .cardio : .machine)
                     context.insert(new)
                     exercises.append(new)
                     return new
                 }()
                 let entry = WorkoutEntry(order: index, exercise: exercise)
+                entry.notes = line.note
                 entry.workout = workout
                 context.insert(entry)
                 for (n, parsed) in line.sets.enumerated() {
@@ -207,10 +229,25 @@ enum NotesImporter {
                     context.insert(set)
                 }
             }
-            created += 1
+            result.added += 1
         }
         try? context.save()
-        return created
+        return result
+    }
+
+    /// Muscle group for a new exercise from words in its name.
+    static func guessMuscle(_ name: String) -> Muscle {
+        let n = name.lowercased()
+        let table: [(Muscle, [String])] = [
+            (.glutes, ["abduct", "adduct", "glute", "bil", "hip thrust", "kickback"]),
+            (.legs, ["leg", "been", "squat", "lunge", "calf", "kuit", "hack"]),
+            (.chest, ["chest", "borst", "bench", "fly", "pec", "dip"]),
+            (.shoulders, ["shoulder", "schouder", "delt", "lateral", "raise"]),
+            (.back, ["lat", "row", "roei", "pulley", "pull", "rug", "back", "deadlift"]),
+            (.arms, ["curl", "bicep", "tricep", "arm"]),
+            (.core, ["abdom", "buik", "crunch", "torso", "core", "plank", "oblique"]),
+        ]
+        return table.first { _, words in words.contains { n.contains($0) } }?.0 ?? .fullBody
     }
 
     static func normalized(_ s: String) -> String {
