@@ -1,0 +1,152 @@
+[
+ {
+  "key": "1M",
+  "en": "1M",
+  "nl": "1M",
+  "context": "InsightChart.swift"
+ },
+ {
+  "key": "3M",
+  "en": "3M",
+  "nl": "3M",
+  "context": "InsightChart.swift"
+ },
+ {
+  "key": "6M",
+  "en": "6M",
+  "nl": "6M",
+  "context": "InsightChart.swift"
+ },
+ {
+  "key": "1Y",
+  "en": "1Y",
+  "nl": "1J",
+  "context": "InsightChart.swift"
+ },
+ {
+  "key": "No data in this period.",
+  "en": "No data in this period.",
+  "nl": "Geen gegevens in deze periode.",
+  "context": "InsightChart.swift"
+ },
+ {
+  "key": "Min",
+  "en": "Min",
+  "nl": "Min",
+  "context": "InsightChart.swift"
+ },
+ {
+  "key": "Average",
+  "en": "Average",
+  "nl": "Gemiddeld",
+  "context": "InsightChart.swift"
+ },
+ {
+  "key": "Max",
+  "en": "Max",
+  "nl": "Max",
+  "context": "InsightChart.swift"
+ },
+ {
+  "key": "Your data stays yours",
+  "en": "Your data stays yours",
+  "nl": "Jouw gegevens blijven van jou",
+  "context": "PrivacyView.swift"
+ },
+ {
+  "key": "Liftr has no account, no server and no advertising. Your workouts, exercises, routines, body measurements and gym pass are stored on your device and in your own private iCloud.",
+  "en": "Liftr has no account, no server and no advertising. Your workouts, exercises, routines, body measurements and gym pass are stored on your device and in your own private iCloud.",
+  "nl": "Liftr heeft geen account, geen server en geen advertenties. Je trainingen, oefeningen, schema's, lichaamsmetingen en sportschoolpas staan op je apparaat en in je eigen privé-iCloud.",
+  "context": "PrivacyView.swift"
+ },
+ {
+  "key": "Only with your permission, Liftr reads your weight, body composition and resting heart rate, and saves workouts, calories, distance and weight. Health data never leaves your devices through Liftr and is never used for advertising. You can change access at any time in the Health app.",
+  "en": "Only with your permission, Liftr reads your weight, body composition and resting heart rate, and saves workouts, calories, distance and weight. Health data never leaves your devices through Liftr and is never used for advertising. You can change access at any time in the Health app.",
+  "nl": "Alleen met jouw toestemming leest Liftr je gewicht, lichaamssamenstelling en rusthartslag, en bewaart het trainingen, calorieën, afstand en gewicht. Gezondheidsgegevens verlaten je apparaten nooit via Liftr en worden nooit voor advertenties gebruikt. Je wijzigt de toegang altijd in de Gezondheid-app.",
+  "context": "PrivacyView.swift"
+ },
+ {
+  "key": "iCloud",
+  "en": "iCloud",
+  "nl": "iCloud",
+  "context": "PrivacyView.swift"
+ },
+ {
+  "key": "Syncing between your iPhone, iPad and Apple Watch goes through your private iCloud database. The developer cannot see this data. The code of your gym pass is end-to-end encrypted.",
+  "en": "Syncing between your iPhone, iPad and Apple Watch goes through your private iCloud database. The developer cannot see this data. The code of your gym pass is end-to-end encrypted.",
+  "nl": "Synchroniseren tussen je iPhone, iPad en Apple Watch gaat via je privé-iCloud-database. De ontwikkelaar kan deze gegevens niet zien. De code van je sportschoolpas is end-to-end versleuteld.",
+  "context": "PrivacyView.swift"
+ },
+ {
+  "key": "Camera and photos",
+  "en": "Camera and photos",
+  "nl": "Camera en foto's",
+  "context": "PrivacyView.swift"
+ },
+ {
+  "key": "The camera and your photos are only used to read the code of your gym pass. Images are not saved or sent anywhere.",
+  "en": "The camera and your photos are only used to read the code of your gym pass. Images are not saved or sent anywhere.",
+  "nl": "De camera en je foto's worden alleen gebruikt om de code van je sportschoolpas te lezen. Afbeeldingen worden niet bewaard of verstuurd.",
+  "context": "PrivacyView.swift"
+ },
+ {
+  "key": "Notifications",
+  "en": "Notifications",
+  "nl": "Meldingen",
+  "context": "PrivacyView.swift"
+ },
+ {
+  "key": "Reminders and the rest timer are planned on your device. There is no push server.",
+  "en": "Reminders and the rest timer are planned on your device. There is no push server.",
+  "nl": "Herinneringen en de rusttimer worden op je apparaat ingepland. Er is geen pushserver.",
+  "context": "PrivacyView.swift"
+ },
+ {
+  "key": "No tracking",
+  "en": "No tracking",
+  "nl": "Geen tracking",
+  "context": "PrivacyView.swift"
+ },
+ {
+  "key": "Liftr contains no analytics, no third-party code and no tracking of any kind.",
+  "en": "Liftr contains no analytics, no third-party code and no tracking of any kind.",
+  "nl": "Liftr bevat geen analytics, geen code van derden en geen enkele vorm van tracking.",
+  "context": "PrivacyView.swift"
+ },
+ {
+  "key": "Deleting your data",
+  "en": "Deleting your data",
+  "nl": "Je gegevens verwijderen",
+  "context": "PrivacyView.swift"
+ },
+ {
+  "key": "Delete workouts in the app. To remove everything, delete Liftr and remove its data in Settings → your name → iCloud → Manage Storage.",
+  "en": "Delete workouts in the app. To remove everything, delete Liftr and remove its data in Settings → your name → iCloud → Manage Storage.",
+  "nl": "Verwijder trainingen in de app. Om alles te wissen verwijder je Liftr en haal je de gegevens weg via Instellingen → je naam → iCloud → Beheer opslag.",
+  "context": "PrivacyView.swift"
+ },
+ {
+  "key": "Privacy",
+  "en": "Privacy",
+  "nl": "Privacy",
+  "context": "PrivacyView.swift; SettingsView.swift"
+ },
+ {
+  "key": "Liftr is built to keep your training private.",
+  "en": "Liftr is built to keep your training private.",
+  "nl": "Liftr is gemaakt om je training privé te houden.",
+  "context": "PrivacyView.swift"
+ },
+ {
+  "key": "Questions?",
+  "en": "Questions?",
+  "nl": "Vragen?",
+  "context": "PrivacyView.swift"
+ },
+ {
+  "key": "Last updated: November 2026",
+  "en": "Last updated: November 2026",
+  "nl": "Laatst bijgewerkt: november 2026",
+  "context": "PrivacyView.swift"
+ }
+]

@@ -117,6 +117,15 @@ struct SettingsView: View {
                 }
                 .listRowBackground(Theme.card)
 
+                Section {
+                    NavigationLink {
+                        PrivacyView()
+                    } label: {
+                        Label(tr("Privacy", "Privacy"), systemImage: "hand.raised.fill")
+                    }
+                }
+                .listRowBackground(Theme.card)
+
                 Section(MoreAppsText.current.section) {
                     MoreAppsCard()
                 }

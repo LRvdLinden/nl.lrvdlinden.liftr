@@ -88,8 +88,13 @@ struct HomeView: View {
     private var weekCard: some View {
         let streak = WorkoutStats.weekStreak(workouts)
         return VStack(alignment: .leading, spacing: 14) {
-            HStack {
-                Text(tr("This week", "Deze week")).liftrTitle(18)
+            HStack(alignment: .firstTextBaseline) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(tr("This week", "Deze week")).liftrTitle(18)
+                    Text(weekRange)
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(Theme.muted)
+                }
                 Spacer()
                 Label(trf("{1} wk streak", "{1} wk op rij", streak), systemImage: "flame.fill")
                     .font(.subheadline.weight(.bold))
@@ -98,6 +103,14 @@ struct HomeView: View {
             WeekDots(trained: WorkoutStats.trainedDaysThisWeek(workouts))
         }
         .liftrCard()
+    }
+
+    /// "3 – 9 Nov"
+    private var weekRange: String {
+        guard let interval = WorkoutStats.calendar.dateInterval(of: .weekOfYear, for: Date()) else { return "" }
+        let end = interval.end.addingTimeInterval(-1)
+        let style = Date.FormatStyle.dateTime.day().month(.abbreviated).locale(L10n.locale)
+        return "\(interval.start.formatted(style)) – \(end.formatted(style))"
     }
 
     private var statsRow: some View {

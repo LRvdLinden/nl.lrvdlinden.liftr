@@ -146,6 +146,15 @@ struct WeekDots: View {
         L10n.weekdaySymbols(.veryShort)
     }
 
+    /// Day of the month for Monday…Sunday of this week.
+    private var dayNumbers: [String] {
+        let cal = WorkoutStats.calendar
+        guard let start = cal.dateInterval(of: .weekOfYear, for: Date())?.start else { return Array(repeating: "", count: 7) }
+        return (0..<7).map { offset in
+            cal.date(byAdding: .day, value: offset, to: start).map { String(cal.component(.day, from: $0)) } ?? ""
+        }
+    }
+
     private var todayIndex: Int {
         (Calendar.current.component(.weekday, from: Date()) + 5) % 7
     }
@@ -165,9 +174,14 @@ struct WeekDots: View {
                     }
                     .frame(width: 34, height: 34)
                     .overlay(Circle().strokeBorder(i == todayIndex ? Theme.accent : .clear, lineWidth: 2))
-                    Text(labels[i])
-                        .font(.caption2.weight(.bold))
-                        .foregroundStyle(i == todayIndex ? Theme.accent : Theme.muted)
+                    VStack(spacing: 0) {
+                        Text(labels[i])
+                            .font(.caption2.weight(.bold))
+                        Text(dayNumbers[i])
+                            .font(.caption2.weight(i == todayIndex ? .heavy : .regular))
+                            .monospacedDigit()
+                    }
+                    .foregroundStyle(i == todayIndex ? Theme.accent : Theme.muted)
                 }
                 .frame(maxWidth: .infinity)
             }

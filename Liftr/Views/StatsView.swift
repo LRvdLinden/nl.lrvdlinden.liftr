@@ -84,42 +84,12 @@ struct StatsView: View {
                 }
                 .pickerStyle(.segmented)
 
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(metricTitle).font(.caption.weight(.bold)).foregroundStyle(Theme.muted).textCase(.uppercase)
-                    Chart(points) { point in
-                        let value = unit.fromKg(metricValue(point))
-                        if metric == 2 {
-                            BarMark(x: .value("Date", point.date, unit: .day), y: .value(unit.symbol, value))
-                                .foregroundStyle(Theme.accentGradient)
-                                .cornerRadius(4)
-                        } else {
-                            AreaMark(x: .value("Date", point.date), y: .value(unit.symbol, value))
-                                .foregroundStyle(LinearGradient(colors: [Theme.accent.opacity(0.35), .clear],
-                                                                startPoint: .top, endPoint: .bottom))
-                                .interpolationMethod(.monotone)
-                            LineMark(x: .value("Date", point.date), y: .value(unit.symbol, value))
-                                .foregroundStyle(Theme.accent)
-                                .lineStyle(StrokeStyle(lineWidth: 3, lineCap: .round))
-                                .interpolationMethod(.monotone)
-                            PointMark(x: .value("Date", point.date), y: .value(unit.symbol, value))
-                                .foregroundStyle(Theme.accent)
-                                .symbolSize(40)
-                        }
-                    }
-                    .chartYAxis {
-                        AxisMarks(position: .leading) { _ in
-                            AxisGridLine().foregroundStyle(Theme.line)
-                            AxisValueLabel().foregroundStyle(Theme.muted)
-                        }
-                    }
-                    .chartXAxis {
-                        AxisMarks { _ in
-                            AxisValueLabel(format: .dateTime.day().month(.abbreviated)).foregroundStyle(Theme.muted)
-                        }
-                    }
-                    .frame(height: 240)
-                }
-                .liftrCard()
+                InsightChart(title: metricTitle,
+                             unit: unit.symbol,
+                             points: points.map { InsightPoint(date: $0.date, value: unit.fromKg(metricValue($0))) },
+                             style: metric == 2 ? .bar : .line,
+                             decimals: metric == 2 ? 0 : 1)
+                    .id("exercise-\(exercise.id)-\(metric)")
 
                 if let record = WorkoutStats.records(for: exercise) {
                     SectionHeader(title: tr("Records", "Records"))
@@ -188,55 +158,19 @@ struct StatsView: View {
 
     @ViewBuilder
     private var weeksSection: some View {
-        let weeks = WorkoutStats.weeklyCounts(workouts)
-        VStack(alignment: .leading, spacing: 8) {
-            Text(tr("Workouts per week", "Trainingen per week"))
-                .font(.caption.weight(.bold)).foregroundStyle(Theme.muted).textCase(.uppercase)
-            Chart(weeks) { week in
-                BarMark(x: .value("Week", week.weekStart, unit: .weekOfYear), y: .value("#", week.count))
-                    .foregroundStyle(Theme.accentGradient)
-                    .cornerRadius(5)
-            }
-            .chartYAxis {
-                AxisMarks(position: .leading) { _ in
-                    AxisGridLine().foregroundStyle(Theme.line)
-                    AxisValueLabel().foregroundStyle(Theme.muted)
-                }
-            }
-            .chartXAxis {
-                AxisMarks(values: .stride(by: .weekOfYear, count: 2)) { _ in
-                    AxisValueLabel(format: .dateTime.day().month(.abbreviated)).foregroundStyle(Theme.muted)
-                }
-            }
-            .frame(height: 200)
-        }
-        .liftrCard()
-
-        VStack(alignment: .leading, spacing: 8) {
-            Text(tr("Volume per week", "Volume per week") + " (\(unit.symbol))")
-                .font(.caption.weight(.bold)).foregroundStyle(Theme.muted).textCase(.uppercase)
-            Chart(weeks) { week in
-                LineMark(x: .value("Week", week.weekStart), y: .value(unit.symbol, unit.fromKg(week.volume)))
-                    .foregroundStyle(Theme.accent)
-                    .lineStyle(StrokeStyle(lineWidth: 3))
-                    .interpolationMethod(.monotone)
-                PointMark(x: .value("Week", week.weekStart), y: .value(unit.symbol, unit.fromKg(week.volume)))
-                    .foregroundStyle(Theme.accent)
-            }
-            .chartYAxis {
-                AxisMarks(position: .leading) { _ in
-                    AxisGridLine().foregroundStyle(Theme.line)
-                    AxisValueLabel().foregroundStyle(Theme.muted)
-                }
-            }
-            .chartXAxis {
-                AxisMarks(values: .stride(by: .weekOfYear, count: 2)) { _ in
-                    AxisValueLabel(format: .dateTime.day().month(.abbreviated)).foregroundStyle(Theme.muted)
-                }
-            }
-            .frame(height: 200)
-        }
-        .liftrCard()
+        let weeks = WorkoutStats.weeklyCounts(workouts, weeks: 104)
+            .filter { $0.weekStart >= (WorkoutStats.finished(workouts).map(\.startDate).min() ?? Date()).addingTimeInterval(-7 * 86_400) }
+        InsightChart(title: tr("Workouts per week", "Trainingen per week"),
+                     unit: "",
+                     points: weeks.map { InsightPoint(date: $0.weekStart, value: Double($0.count)) },
+                     style: .bar,
+                     decimals: 0)
+        InsightChart(title: tr("Volume per week", "Volume per week"),
+                     unit: unit.symbol,
+                     points: weeks.map { InsightPoint(date: $0.weekStart, value: unit.fromKg($0.volume)) },
+                     style: .line,
+                     decimals: 0,
+                     zeroBased: true)
 
         let done = WorkoutStats.finished(workouts)
         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
@@ -284,47 +218,18 @@ struct StatsView: View {
                          label: trf("Since {1}", "Sinds {1}", LiftrFormat.shortDay(weights.first!.date)),
                          symbol: change <= 0 ? "arrow.down.right" : "arrow.up.right")
             }
-            bodyChart(title: tr("Weight", "Gewicht") + " (\(unit.symbol))",
-                      points: weights.map { ($0.date, unit.fromKg($0.kg)) })
+            InsightChart(title: tr("Weight", "Gewicht"),
+                         unit: unit.symbol,
+                         points: weights.map { InsightPoint(date: $0.date, value: unit.fromKg($0.kg)) })
         }
         let fats = fatPoints
         if !fats.isEmpty {
-            bodyChart(title: tr("Body fat (%)", "Vetpercentage (%)"), points: fats.map { ($0.date, $0.percent) })
+            InsightChart(title: tr("Body fat", "Vetpercentage"),
+                         unit: "%",
+                         points: fats.map { InsightPoint(date: $0.date, value: $0.percent) })
         }
         if let lean = health.latestLeanMassKg {
             StatTile(value: unit.format(lean), label: tr("Lean body mass", "Vetvrije massa"), symbol: "figure.arms.open")
         }
-    }
-
-    private func bodyChart(title: String, points: [(Date, Double)]) -> some View {
-        let values = points.map(\.1)
-        let low = (values.min() ?? 0) - 1
-        let high = (values.max() ?? 1) + 1
-        return VStack(alignment: .leading, spacing: 8) {
-            Text(title).font(.caption.weight(.bold)).foregroundStyle(Theme.muted).textCase(.uppercase)
-            Chart(Array(points.enumerated()), id: \.offset) { _, point in
-                LineMark(x: .value("Date", point.0), y: .value("Value", point.1))
-                    .foregroundStyle(Theme.accent)
-                    .lineStyle(StrokeStyle(lineWidth: 3, lineCap: .round))
-                    .interpolationMethod(.monotone)
-                PointMark(x: .value("Date", point.0), y: .value("Value", point.1))
-                    .foregroundStyle(Theme.accent)
-                    .symbolSize(30)
-            }
-            .chartYScale(domain: low...high)
-            .chartYAxis {
-                AxisMarks(position: .leading) { _ in
-                    AxisGridLine().foregroundStyle(Theme.line)
-                    AxisValueLabel().foregroundStyle(Theme.muted)
-                }
-            }
-            .chartXAxis {
-                AxisMarks { _ in
-                    AxisValueLabel(format: .dateTime.day().month(.abbreviated)).foregroundStyle(Theme.muted)
-                }
-            }
-            .frame(height: 200)
-        }
-        .liftrCard()
     }
 }
