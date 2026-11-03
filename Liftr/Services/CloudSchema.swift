@@ -1,4 +1,5 @@
 #if DEBUG
+import CloudKit
 import CoreData
 import Foundation
 import SwiftData
@@ -25,6 +26,15 @@ enum CloudSchema {
         guard LiftrStore.usesCloudKit, force || !isDone else { return }
         CloudSyncStatus.shared.schemaMessage = devText("Creating iCloud schema…", "iCloud-schema aanmaken…")
         Task.detached(priority: .utility) {
+            let status = try? await CKContainer(identifier: LiftrStore.cloudContainer).accountStatus()
+            guard status == .available else {
+                await MainActor.run {
+                    CloudSyncStatus.shared.schemaMessage = devText(
+                        "Can't create the iCloud schema: this device isn't signed in to iCloud (or iCloud is off for Liftr). Simulator: Settings → Sign in to your iPhone. Then run again.",
+                        "Kan het iCloud-schema niet aanmaken: dit apparaat is niet bij iCloud ingelogd (of iCloud staat uit voor Liftr). Simulator: Instellingen → Log in op je iPhone. Daarna opnieuw draaien.")
+                }
+                return
+            }
             let result: Result<Void, Error> = Result { try initialize() }
             await MainActor.run {
                 switch result {
