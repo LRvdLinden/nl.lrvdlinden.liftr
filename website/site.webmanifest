@@ -1,0 +1,20 @@
+{
+  "name": "Liftr",
+  "short_name": "Liftr",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0c",
+  "theme_color": "#ff6b00",
+  "icons": [
+    {
+      "src": "/assets/img/appicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/appicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+ErrorDocument 404 /404.html
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://liftr.nu%{REQUEST_URI} [L,R=301]
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+AddType application/manifest+json .webmanifest
+AddType font/woff2 .woff2
