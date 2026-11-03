@@ -5,7 +5,7 @@ Sportschool-logboek voor iPhone, iPad en Apple Watch. Houd per training bij welk
 | | |
 |---|---|
 | Bundle ID | `nl.lrvdlinden.liftr` (Watch: `.watchkitapp`, widgets: `.widgets`) |
-| Versie | 1.0.0 (build 4) |
+| Versie | 1.0.0 (build 5) |
 | Platforms | iOS/iPadOS 17+, watchOS 10+ |
 | Talen | 33 Europese talen: Engels, Nederlands, Duits, Frans, Spaans, Italiaans, Portugees (PT), Catalaans, Roemeens, Grieks, Zweeds, Deens, Noors, IJslands, Fins, Pools, Tsjechisch, Slowaaks, Sloveens, Kroatisch, Servisch, Macedonisch, Bulgaars, Hongaars, Ests, Lets, Litouws, Russisch, Oekraïens, Turks, Iers, Maltees, Albanees |
 | Team | EU3UY476T6 |
@@ -20,10 +20,11 @@ Sportschool-logboek voor iPhone, iPad en Apple Watch. Houd per training bij welk
 - **Rusttimer** – start automatisch na een set, ±15 s, melding als de app op de achtergrond staat.
 - **Live Activity** – oefening, sets en rusttimer op het toegangsscherm en in het Dynamic Island.
 - **Geschiedenis** – maandkalender met een stip op elke trainingsdag; tik een datum voor alles wat je die dag deed. Trainingen achteraf aanpassen of verwijderen.
-- **Voortgang** – per oefening grafieken van zwaarste set, geschat 1RM en volume, plus records. Trainingen en volume per week. Gewicht en vetpercentage (uit Gezondheid of zelf ingevoerd).
+- **Voortgang** – grafieken in Insights-stijl (grote waarde bovenaan, met je vinger over de grafiek scrollen voor elk punt, periode 1M/3M/6M/1J/Alles, min/gemiddeld/max): per oefening van zwaarste set, geschat 1RM en volume, plus records. Trainingen en volume per week. Gewicht en vetpercentage (uit Gezondheid of zelf ingevoerd).
 - **Bibliotheek** – ±125 standaard oefeningen (apparaten, plate-loaded, smith machine, kabel, vrije gewichten, functional, cardio) per spiergroep, eigen oefeningen, favorieten, archiveren. Schema's (bijv. "Maandag: benen") die je met één tik start.
 - **Importeren uit notities** – plak je oude notities; Liftr herkent regels als `Leg press 3x12 40 kg`, `Chest press 3 x 10 x 35kg`, `Lat pulldown 30kg 12, 35kg 10`, `Loopband 20 min 2,5 km` en datums als `3-11-2026` of `maandag 3 november`. Je controleert en past aan vóór het importeren.
 - **Exporteren** als CSV.
+- **Privacy** – privacypagina in Instellingen.
 - **Siri / Opdrachten** – "Start een training in Liftr".
 - **Widgets** – deze week (klein/middel) en toegangsscherm-widgets.
 
