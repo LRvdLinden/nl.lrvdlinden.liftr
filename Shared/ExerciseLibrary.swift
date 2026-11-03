@@ -159,7 +159,7 @@ enum ExerciseLibrary {
         // Exercises can only be archived, not deleted, so every missing built-in is simply added.
         // New app versions bring new exercises this way.
         for seed in seeds where !known.contains(seed.id) {
-            let exercise = Exercise(name: tr(seed.en, seed.nl), muscle: seed.muscle, kind: seed.kind, seedID: seed.id)
+            let exercise = Exercise(name: L10n.exerciseName(id: seed.id, en: seed.en, nl: seed.nl), muscle: seed.muscle, kind: seed.kind, seedID: seed.id)
             exercise.createdAt = Date(timeIntervalSince1970: 0)
             context.insert(exercise)
         }

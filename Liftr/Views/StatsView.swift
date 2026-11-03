@@ -80,7 +80,7 @@ struct StatsView: View {
                 Picker("", selection: $metric) {
                     Text(tr("Heaviest", "Zwaarste")).tag(0)
                     Text(tr("Est. max", "Geschat max")).tag(1)
-                    Text("Volume").tag(2)
+                    Text(tr("Volume", "Volume")).tag(2)
                 }
                 .pickerStyle(.segmented)
 
@@ -281,7 +281,7 @@ struct StatsView: View {
                 let first = weights.first!.kg
                 let change = weights.last!.kg - first
                 StatTile(value: (change >= 0 ? "+" : "−") + unit.format(abs(change)),
-                         label: tr("Since \(LiftrFormat.shortDay(weights.first!.date))", "Sinds \(LiftrFormat.shortDay(weights.first!.date))"),
+                         label: trf("Since {1}", "Sinds {1}", LiftrFormat.shortDay(weights.first!.date)),
                          symbol: change <= 0 ? "arrow.down.right" : "arrow.up.right")
             }
             bodyChart(title: tr("Weight", "Gewicht") + " (\(unit.symbol))",

@@ -143,7 +143,7 @@ struct WeekDots: View {
     let trained: [Bool]
 
     private var labels: [String] {
-        L10n.isDutch ? ["M", "D", "W", "D", "V", "Z", "Z"] : ["M", "T", "W", "T", "F", "S", "S"]
+        L10n.weekdaySymbols(.veryShort)
     }
 
     private var todayIndex: Int {

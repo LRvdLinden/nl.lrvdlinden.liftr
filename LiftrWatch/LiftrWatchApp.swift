@@ -58,7 +58,7 @@ struct WatchRootView: View {
                                 } label: {
                                     VStack(alignment: .leading, spacing: 2) {
                                         Text(routine.name).font(.headline)
-                                        Text(tr("\(routine.sortedItems.count) exercises", "\(routine.sortedItems.count) oefeningen"))
+                                        Text(trf("{1} exercises", "{1} oefeningen", routine.sortedItems.count))
                                             .font(.caption2)
                                             .foregroundStyle(.secondary)
                                     }
@@ -71,9 +71,9 @@ struct WatchRootView: View {
                     Section {
                         HStack {
                             Image(systemName: "flame.fill").foregroundStyle(Theme.accent)
-                            Text(tr("\(week) this week", "\(week) deze week"))
+                            Text(trf("{1} this week", "{1} deze week", week))
                             Spacer()
-                            Text(tr("\(WorkoutStats.weekStreak(workouts)) wk", "\(WorkoutStats.weekStreak(workouts)) wk"))
+                            Text(trf("{1} wk", "{1} wk", WorkoutStats.weekStreak(workouts)))
                                 .foregroundStyle(.secondary)
                         }
                         .font(.footnote)
@@ -113,7 +113,7 @@ struct WatchSummaryView: View {
                     .font(Theme.heading(22))
                     .textCase(.uppercase)
                 Text(LiftrFormat.longDuration(workout.duration)).font(.headline)
-                Text("\(WorkoutStats.setCount(workout)) sets · \(WeightUnit.current.volume(WorkoutStats.volume(workout)))")
+                Text(trf("{1} sets", "{1} sets", WorkoutStats.setCount(workout)) + " · " + WeightUnit.current.volume(WorkoutStats.volume(workout)))
                     .font(.footnote)
                     .foregroundStyle(.secondary)
                 if workout.activeCalories > 0 {

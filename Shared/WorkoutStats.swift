@@ -209,22 +209,23 @@ enum WorkoutStats {
         var list: [Badge] = []
         for n in [1, 10, 25, 50, 100, 250] {
             list.append(Badge(id: "workouts-\(n)",
-                              title: n == 1 ? tr("First workout", "Eerste training") : tr("\(n) workouts", "\(n) trainingen"),
-                              detail: tr("Finish \(n) workout\(n == 1 ? "" : "s")", "Rond \(n) training\(n == 1 ? "" : "en") af"),
+                              title: n == 1 ? tr("First workout", "Eerste training") : trf("{1} workouts", "{1} trainingen", n),
+                              detail: n == 1 ? tr("Finish your first workout", "Rond je eerste training af")
+                                             : trf("Finish {1} workouts", "Rond {1} trainingen af", n),
                               symbol: n >= 100 ? "trophy.fill" : "medal.fill",
                               achieved: count >= n))
         }
         for w in [4, 12, 26] {
             list.append(Badge(id: "streak-\(w)",
-                              title: tr("\(w) weeks in a row", "\(w) weken op rij"),
-                              detail: tr("Train every week for \(w) weeks", "Train \(w) weken lang elke week"),
+                              title: trf("{1} weeks in a row", "{1} weken op rij", w),
+                              detail: trf("Train every week for {1} weeks", "Train {1} weken lang elke week", w),
                               symbol: "flame.fill",
                               achieved: streak >= w))
         }
         for t in [1, 10, 100] {
             list.append(Badge(id: "volume-\(t)",
-                              title: tr("\(t) tonnes lifted", "\(t) ton getild"),
-                              detail: tr("Lift \(t) tonnes in total", "Til in totaal \(t) ton"),
+                              title: trf("{1} tonnes lifted", "{1} ton getild", t),
+                              detail: trf("Lift {1} tonnes in total", "Til in totaal {1} ton", t),
                               symbol: "scalemass.fill",
                               achieved: totalVolume >= Double(t) * 1000))
         }

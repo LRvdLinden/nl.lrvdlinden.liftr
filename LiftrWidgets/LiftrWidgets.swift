@@ -76,7 +76,7 @@ struct WeekWidgetView: View {
     @Environment(\.widgetFamily) private var family
 
     private var labels: [String] {
-        L10n.isDutch ? ["M", "D", "W", "D", "V", "Z", "Z"] : ["M", "T", "W", "T", "F", "S", "S"]
+        L10n.weekdaySymbols(.veryShort)
     }
 
     var body: some View {
@@ -92,11 +92,11 @@ struct WeekWidgetView: View {
         case .accessoryRectangular:
             VStack(alignment: .leading, spacing: 2) {
                 Text("LIFTR").font(.caption2.weight(.heavy))
-                Text(tr("\(entry.workoutsThisWeek) this week", "\(entry.workoutsThisWeek) deze week")).font(.headline)
-                Text(tr("\(entry.streak) weeks in a row", "\(entry.streak) weken op rij")).font(.caption)
+                Text(trf("{1} this week", "{1} deze week", entry.workoutsThisWeek)).font(.headline)
+                Text(trf("{1} weeks in a row", "{1} weken op rij", entry.streak)).font(.caption)
             }
         case .accessoryInline:
-            Label(tr("\(entry.workoutsThisWeek) workouts this week", "\(entry.workoutsThisWeek) trainingen deze week"), systemImage: "dumbbell.fill")
+            Label(trf("{1} workouts this week", "{1} trainingen deze week", entry.workoutsThisWeek), systemImage: "dumbbell.fill")
         case .systemMedium:
             HStack(spacing: 16) {
                 summary
@@ -245,7 +245,7 @@ struct LockScreenActivityView: View {
                     .textCase(.uppercase)
                     .foregroundStyle(.white)
                     .lineLimit(1)
-                Text(tr("\(context.state.setsDone) of \(context.state.totalSets) sets", "\(context.state.setsDone) van \(context.state.totalSets) sets"))
+                Text(trf("{1} of {2} sets", "{1} van {2} sets", context.state.setsDone, context.state.totalSets))
                     .font(.subheadline)
                     .foregroundStyle(Theme.muted)
             }

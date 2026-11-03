@@ -121,7 +121,7 @@ struct ImportView: View {
             .alert(tr("Imported", "Geïmporteerd"), isPresented: Binding(get: { imported != nil }, set: { if !$0 { imported = nil } })) {
                 Button("OK") { dismiss() }
             } message: {
-                Text(tr("\(imported ?? 0) workouts added to your history.", "\(imported ?? 0) trainingen toegevoegd aan je geschiedenis."))
+                Text(trf("{1} workouts added to your history.", "{1} trainingen toegevoegd aan je geschiedenis.", imported ?? 0))
             }
         }
         .preferredColorScheme(.dark)

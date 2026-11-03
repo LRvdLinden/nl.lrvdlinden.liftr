@@ -40,10 +40,10 @@ struct RoutineEditView: View {
                                 Text(tr("Cardio", "Cardio")).font(.caption).foregroundStyle(Theme.muted)
                             } else {
                                 HStack {
-                                    Stepper("\(item.sets) sets", value: $item.sets, in: 1...10)
+                                    Stepper(trf("{1} sets", "{1} sets", item.sets), value: $item.sets, in: 1...10)
                                 }
                                 HStack {
-                                    Stepper(tr("\(item.reps) reps", "\(item.reps) herhalingen"), value: $item.reps, in: 1...50)
+                                    Stepper(trf("{1} reps", "{1} herhalingen", item.reps), value: $item.reps, in: 1...50)
                                 }
                             }
                         }

@@ -51,7 +51,7 @@ struct ExercisePickerView: View {
                             creating = true
                         } label: {
                             Label(search.isEmpty ? tr("New exercise", "Nieuwe oefening")
-                                                 : tr("Create “\(search)”", "Maak “\(search)” aan"),
+                                                 : trf("Create “{1}”", "Maak “{1}” aan", search),
                                   systemImage: "plus.circle.fill")
                                 .foregroundStyle(Theme.accent)
                         }

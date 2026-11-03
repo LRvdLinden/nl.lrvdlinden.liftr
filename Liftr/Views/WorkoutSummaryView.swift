@@ -34,7 +34,7 @@ struct WorkoutSummaryView: View {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
                     StatTile(value: LiftrFormat.longDuration(workout.duration), label: tr("Duration", "Duur"), symbol: "clock")
                     StatTile(value: unit.volume(WorkoutStats.volume(workout)), label: tr("Volume", "Volume"), symbol: "scalemass.fill")
-                    StatTile(value: "\(WorkoutStats.setCount(workout))", label: "Sets", symbol: "square.stack.3d.up.fill")
+                    StatTile(value: "\(WorkoutStats.setCount(workout))", label: tr("Sets", "Sets"), symbol: "square.stack.3d.up.fill")
                     StatTile(value: "\(Int(workout.activeCalories))", label: "kcal", symbol: "flame.fill")
                 }
 

@@ -99,7 +99,7 @@ final class CloudSyncStatus {
         case .synced(let date):
             guard let date else { return tr("Your workouts are kept in your iCloud.", "Je trainingen worden in je iCloud bewaard.") }
             let when = date.formatted(.relative(presentation: .named).locale(L10n.locale))
-            return tr("Last synced \(when)", "Laatst gesynchroniseerd \(when)")
+            return trf("Last synced {1}", "Laatst gesynchroniseerd {1}", when)
         case .noAccount:
             return tr("Sign in to iCloud in Settings to sync with your iPad and Apple Watch. Your workouts are saved on this device.",
                       "Log in bij iCloud in Instellingen om te synchroniseren met je iPad en Apple Watch. Je trainingen staan nu alleen op dit apparaat.")

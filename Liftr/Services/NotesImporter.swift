@@ -222,7 +222,10 @@ enum NotesImporter {
         let key = normalized(name)
         guard !key.isEmpty else { return nil }
         if let exact = exercises.first(where: { normalized($0.name) == key }) { return exact }
-        if let seed = ExerciseLibrary.seeds.first(where: { normalized($0.en) == key || normalized($0.nl) == key }),
+        if let seed = ExerciseLibrary.seeds.first(where: {
+            normalized($0.en) == key || normalized($0.nl) == key
+                || normalized(L10n.exerciseName(id: $0.id, en: $0.en, nl: $0.nl)) == key
+        }),
            let found = exercises.first(where: { $0.seedID == seed.id }) {
             return found
         }

@@ -79,7 +79,7 @@ enum ReminderScheduler {
                 let content = UNMutableNotificationContent()
                 content.title = tr("Time to train 💪", "Tijd voor je training 💪")
                 content.body = streak > 0
-                    ? tr("Keep your \(streak)-week streak going.", "Houd je reeks van \(streak) weken vast.")
+                    ? trf("Keep your {1}-week streak going.", "Houd je reeks van {1} weken vast.", streak)
                     : tr("Your workout is planned for today.", "Je training staat vandaag gepland.")
                 content.sound = .default
                 requests.append(request("day.\(offset)", content, fire))
@@ -91,9 +91,9 @@ enum ReminderScheduler {
             let n = inactiveDays
             if let day = cal.date(byAdding: .day, value: n, to: cal.startOfDay(for: last)), let fire = at(day), fire > now {
                 let content = UNMutableNotificationContent()
-                content.title = tr("\(n) days without training", "Al \(n) dagen niet getraind")
+                content.title = trf("{1} days without training", "Al {1} dagen niet getraind", n)
                 content.body = streak > 0
-                    ? tr("Your \(streak)-week streak is at risk 🔥", "Je reeks van \(streak) weken loopt gevaar 🔥")
+                    ? trf("Your {1}-week streak is at risk 🔥", "Je reeks van {1} weken loopt gevaar 🔥", streak)
                     : tr("A short workout today? Every rep counts.", "Vandaag een korte training? Elke herhaling telt.")
                 content.sound = .default
                 requests.append(request("inactive", content, fire))
@@ -112,8 +112,9 @@ enum ReminderScheduler {
                 content.title = tr("Your week in Liftr", "Jouw week in Liftr")
                 if isThisWeek, weekCount > 0 {
                     let volume = WeightUnit.current.volume(weekVolume)
-                    content.body = tr("This week: \(weekCount) workout\(weekCount == 1 ? "" : "s"), \(volume) lifted. Great job!",
-                                      "Deze week \(weekCount) training\(weekCount == 1 ? "" : "en"), \(volume) getild. Goed bezig!")
+                    content.body = weekCount == 1
+                        ? trf("This week: 1 workout, {1} lifted. Great job!", "Deze week 1 training, {1} getild. Goed bezig!", volume)
+                        : trf("This week: {1} workouts, {2} lifted. Great job!", "Deze week {1} trainingen, {2} getild. Goed bezig!", weekCount, volume)
                 } else {
                     content.body = tr("No workouts this week yet — next week is a fresh start.",
                                       "Deze week nog niet getraind — volgende week is een nieuwe kans.")

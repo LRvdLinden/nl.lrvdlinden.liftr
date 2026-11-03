@@ -91,7 +91,7 @@ struct HomeView: View {
             HStack {
                 Text(tr("This week", "Deze week")).liftrTitle(18)
                 Spacer()
-                Label(tr("\(streak) wk streak", "\(streak) wk op rij"), systemImage: "flame.fill")
+                Label(trf("{1} wk streak", "{1} wk op rij", streak), systemImage: "flame.fill")
                     .font(.subheadline.weight(.bold))
                     .foregroundStyle(streak > 0 ? Theme.accent : Theme.muted)
             }
@@ -242,7 +242,7 @@ struct WorkoutRow: View {
             }
             HStack(spacing: 16) {
                 Label(LiftrFormat.longDuration(workout.duration), systemImage: "clock")
-                Label("\(WorkoutStats.setCount(workout)) sets", systemImage: "square.stack.3d.up")
+                Label(trf("{1} sets", "{1} sets", WorkoutStats.setCount(workout)), systemImage: "square.stack.3d.up")
                 Label(unit.volume(WorkoutStats.volume(workout)), systemImage: "scalemass")
             }
             .font(.caption.weight(.semibold))
@@ -278,7 +278,7 @@ struct RoutineCard: View {
                     Image(systemName: "ellipsis.circle").foregroundStyle(Theme.muted)
                 }
             }
-            Text(tr("\(routine.sortedItems.count) exercises", "\(routine.sortedItems.count) oefeningen"))
+            Text(trf("{1} exercises", "{1} oefeningen", routine.sortedItems.count))
                 .font(.caption.weight(.semibold))
                 .foregroundStyle(Theme.muted)
             Text(routine.sortedItems.compactMap { $0.exercise?.name }.joined(separator: ", "))

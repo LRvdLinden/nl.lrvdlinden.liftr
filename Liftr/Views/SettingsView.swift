@@ -66,7 +66,7 @@ struct SettingsView: View {
                             .foregroundStyle(Theme.accent)
                     }
                 } header: {
-                    Text("Apple Health")
+                    Text(tr("Apple Health", "Apple Gezondheid"))
                 } footer: {
                     Text(tr("Liftr saves workouts with duration and calories and reads your weight, body composition and resting heart rate. Change access in the Health app → Profile → Apps → Liftr.",
                             "Liftr bewaart trainingen met duur en calorieën en leest je gewicht, lichaamssamenstelling en rusthartslag. Toegang wijzig je in de Gezondheid-app → Profiel → Apps → Liftr."))
@@ -194,7 +194,7 @@ extension SettingsView {
         Section {
             Toggle(tr("Training days", "Vaste trainingsdagen"), isOn: $remindDays)
             if remindDays {
-                let labels = L10n.isDutch ? ["Ma", "Di", "Wo", "Do", "Vr", "Za", "Zo"] : ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"]
+                let labels = L10n.weekdaySymbols(.short)
                 HStack(spacing: 6) {
                     ForEach(Array(Self.weekdayOrder.enumerated()), id: \.offset) { index, day in
                         let on = selectedDays.contains(day)
@@ -221,7 +221,7 @@ extension SettingsView {
                     HStack {
                         Text(tr("After", "Na"))
                         Spacer()
-                        Text(tr("\(inactiveDays) days", "\(inactiveDays) dagen"))
+                        Text(trf("{1} days", "{1} dagen", inactiveDays))
                             .foregroundStyle(Theme.accent)
                     }
                 }

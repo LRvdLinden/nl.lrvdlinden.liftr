@@ -134,7 +134,7 @@ struct WorkoutSessionView: View {
             .buttonStyle(.plain)
             let sets = workout.sortedEntries.flatMap { $0.sortedSets }
             HStack(spacing: 14) {
-                Label("\(sets.filter(\.isDone).count)/\(sets.count) sets", systemImage: "checkmark.circle")
+                Label(trf("{1}/{2} sets", "{1}/{2} sets", sets.filter(\.isDone).count, sets.count), systemImage: "checkmark.circle")
                 Label(unit.volume(WorkoutStats.volume(workout)), systemImage: "scalemass")
             }
             .font(.subheadline.weight(.semibold))
@@ -241,8 +241,8 @@ struct EntryCard: View {
             HStack(spacing: 8) {
                 Text(tr("SET", "SET")).frame(width: 34)
                 if isCardio {
-                    Text("MIN").frame(maxWidth: .infinity)
-                    Text("KM").frame(maxWidth: .infinity)
+                    Text(tr("MIN", "MIN")).frame(maxWidth: .infinity)
+                    Text(tr("KM", "KM")).frame(maxWidth: .infinity)
                 } else {
                     Text(unit.symbol.uppercased()).frame(maxWidth: .infinity)
                     Text(tr("REPS", "HERH")).frame(maxWidth: .infinity)

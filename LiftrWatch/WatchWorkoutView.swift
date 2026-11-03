@@ -38,7 +38,7 @@ struct WatchMetricsView: View {
                 Label("\(Int(manager.activeCalories)) kcal", systemImage: "flame.fill")
                     .font(.title3.monospacedDigit().weight(.semibold))
                 if let workout = manager.workout {
-                    Label("\(WorkoutStats.setCount(workout)) sets", systemImage: "square.stack.3d.up.fill")
+                    Label(trf("{1} sets", "{1} sets", WorkoutStats.setCount(workout)), systemImage: "square.stack.3d.up.fill")
                         .font(.title3.monospacedDigit().weight(.semibold))
                 }
             }
@@ -171,7 +171,7 @@ struct WatchSetEditor: View {
             .buttonStyle(.plain)
 
             if let set = currentSet {
-                Text(tr("Set \(set.order + 1) of \(sets.count)", "Set \(set.order + 1) van \(sets.count)"))
+                Text(trf("Set {1} of {2}", "Set {1} van {2}", set.order + 1, sets.count))
                     .font(.caption2)
                     .foregroundStyle(.secondary)
                 HStack(spacing: 6) {
@@ -199,7 +199,7 @@ struct WatchSetEditor: View {
                 }
                 .tint(Theme.accent)
             } else {
-                Text(tr("\(doneCount) sets done", "\(doneCount) sets gedaan"))
+                Text(trf("{1} sets done", "{1} sets gedaan", doneCount))
                     .font(.footnote)
                     .foregroundStyle(.secondary)
                 Button {

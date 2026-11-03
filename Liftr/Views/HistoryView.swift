@@ -15,7 +15,7 @@ struct HistoryView: View {
     var body: some View {
         NavigationStack {
             LiftrPage(title: tr("History", "Geschiedenis"),
-                      subtitle: tr("\(done.count) workouts in total", "\(done.count) trainingen in totaal")) {
+                      subtitle: trf("{1} workouts in total", "{1} trainingen in totaal", done.count)) {
                 calendarCard
                 let dayWorkouts = done.filter { cal.isDate($0.startDate, inSameDayAs: selected) }
                 SectionHeader(title: LiftrFormat.day(selected))
@@ -52,7 +52,7 @@ struct HistoryView: View {
     private var calendarCard: some View {
         let days = monthDays()
         let trainedDays = Set(done.map { cal.startOfDay(for: $0.startDate) })
-        let symbols = L10n.isDutch ? ["MA", "DI", "WO", "DO", "VR", "ZA", "ZO"] : ["MO", "TU", "WE", "TH", "FR", "SA", "SU"]
+        let symbols = L10n.weekdaySymbols(.short).map { $0.uppercased(with: L10n.locale) }
         return VStack(spacing: 14) {
             HStack {
                 Button { shiftMonth(-1) } label: { Image(systemName: "chevron.left") }

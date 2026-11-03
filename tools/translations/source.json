@@ -1,0 +1,2558 @@
+[
+ {
+  "key": "Today",
+  "en": "Today",
+  "nl": "Vandaag",
+  "context": "RootView.swift; HomeView.swift"
+ },
+ {
+  "key": "History",
+  "en": "History",
+  "nl": "Geschiedenis",
+  "context": "RootView.swift; HistoryView.swift"
+ },
+ {
+  "key": "Progress",
+  "en": "Progress",
+  "nl": "Voortgang",
+  "context": "RootView.swift; StatsView.swift"
+ },
+ {
+  "key": "Library",
+  "en": "Library",
+  "nl": "Bibliotheek",
+  "context": "RootView.swift; LibraryView.swift"
+ },
+ {
+  "key": "Settings",
+  "en": "Settings",
+  "nl": "Instellingen",
+  "context": "RootView.swift; SettingsView.swift"
+ },
+ {
+  "key": "Unknown error",
+  "en": "Unknown error",
+  "nl": "Onbekende fout",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "Checking iCloud…",
+  "en": "Checking iCloud…",
+  "nl": "iCloud controleren…",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "Synced with iCloud",
+  "en": "Synced with iCloud",
+  "nl": "Gesynchroniseerd met iCloud",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "Syncing…",
+  "en": "Syncing…",
+  "nl": "Bezig met synchroniseren…",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "iCloud is off",
+  "en": "iCloud is off",
+  "nl": "iCloud staat uit",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "iCloud is restricted",
+  "en": "iCloud is restricted",
+  "nl": "iCloud is beperkt",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "iCloud temporarily unavailable",
+  "en": "iCloud temporarily unavailable",
+  "nl": "iCloud tijdelijk niet bereikbaar",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "Sync problem",
+  "en": "Sync problem",
+  "nl": "Probleem met synchroniseren",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "Saved on this device only",
+  "en": "Saved on this device only",
+  "nl": "Alleen op dit apparaat bewaard",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "Your workouts are kept in your iCloud.",
+  "en": "Your workouts are kept in your iCloud.",
+  "nl": "Je trainingen worden in je iCloud bewaard.",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "Last synced {1}",
+  "en": "Last synced {1}",
+  "nl": "Laatst gesynchroniseerd {1}",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "Sign in to iCloud in Settings to sync with your iPad and Apple Watch. Your workouts are saved on this device.",
+  "en": "Sign in to iCloud in Settings to sync with your iPad and Apple Watch. Your workouts are saved on this device.",
+  "nl": "Log in bij iCloud in Instellingen om te synchroniseren met je iPad en Apple Watch. Je trainingen staan nu alleen op dit apparaat.",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "iCloud is blocked on this device (e.g. Screen Time).",
+  "en": "iCloud is blocked on this device (e.g. Screen Time).",
+  "nl": "iCloud is geblokkeerd op dit apparaat (bijv. Schermtijd).",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "Liftr tries again automatically.",
+  "en": "Liftr tries again automatically.",
+  "nl": "Liftr probeert het automatisch opnieuw.",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "iCloud could not be started. Restart Liftr to try again.",
+  "en": "iCloud could not be started. Restart Liftr to try again.",
+  "nl": "iCloud kon niet starten. Start Liftr opnieuw om het nog eens te proberen.",
+  "context": "CloudSyncStatus.swift"
+ },
+ {
+  "key": "Imported workout",
+  "en": "Imported workout",
+  "nl": "Geïmporteerde training",
+  "context": "NotesImporter.swift"
+ },
+ {
+  "key": "Time to train 💪",
+  "en": "Time to train 💪",
+  "nl": "Tijd voor je training 💪",
+  "context": "ReminderScheduler.swift"
+ },
+ {
+  "key": "Keep your {1}-week streak going.",
+  "en": "Keep your {1}-week streak going.",
+  "nl": "Houd je reeks van {1} weken vast.",
+  "context": "ReminderScheduler.swift"
+ },
+ {
+  "key": "Your workout is planned for today.",
+  "en": "Your workout is planned for today.",
+  "nl": "Je training staat vandaag gepland.",
+  "context": "ReminderScheduler.swift"
+ },
+ {
+  "key": "{1} days without training",
+  "en": "{1} days without training",
+  "nl": "Al {1} dagen niet getraind",
+  "context": "ReminderScheduler.swift"
+ },
+ {
+  "key": "Your {1}-week streak is at risk 🔥",
+  "en": "Your {1}-week streak is at risk 🔥",
+  "nl": "Je reeks van {1} weken loopt gevaar 🔥",
+  "context": "ReminderScheduler.swift"
+ },
+ {
+  "key": "A short workout today? Every rep counts.",
+  "en": "A short workout today? Every rep counts.",
+  "nl": "Vandaag een korte training? Elke herhaling telt.",
+  "context": "ReminderScheduler.swift"
+ },
+ {
+  "key": "Your week in Liftr",
+  "en": "Your week in Liftr",
+  "nl": "Jouw week in Liftr",
+  "context": "ReminderScheduler.swift"
+ },
+ {
+  "key": "This week: 1 workout, {1} lifted. Great job!",
+  "en": "This week: 1 workout, {1} lifted. Great job!",
+  "nl": "Deze week 1 training, {1} getild. Goed bezig!",
+  "context": "ReminderScheduler.swift"
+ },
+ {
+  "key": "This week: {1} workouts, {2} lifted. Great job!",
+  "en": "This week: {1} workouts, {2} lifted. Great job!",
+  "nl": "Deze week {1} trainingen, {2} getild. Goed bezig!",
+  "context": "ReminderScheduler.swift"
+ },
+ {
+  "key": "No workouts this week yet — next week is a fresh start.",
+  "en": "No workouts this week yet — next week is a fresh start.",
+  "nl": "Deze week nog niet getraind — volgende week is een nieuwe kans.",
+  "context": "ReminderScheduler.swift"
+ },
+ {
+  "key": "Point the camera at the code on your pass",
+  "en": "Point the camera at the code on your pass",
+  "nl": "Richt de camera op de code van je pas",
+  "context": "ScannerView.swift"
+ },
+ {
+  "key": "Camera not available",
+  "en": "Camera not available",
+  "nl": "Camera niet beschikbaar",
+  "context": "ScannerView.swift"
+ },
+ {
+  "key": "Allow camera access in Settings, or choose a screenshot of your pass.",
+  "en": "Allow camera access in Settings, or choose a screenshot of your pass.",
+  "nl": "Geef toegang tot de camera in Instellingen, of kies een screenshot van je pas.",
+  "context": "ScannerView.swift"
+ },
+ {
+  "key": "Cancel",
+  "en": "Cancel",
+  "nl": "Annuleren",
+  "context": "ScannerView.swift; ExercisePickerView.swift; GymPassViews.swift; ImportView.swift; LibraryView.swift; RoutineEditView.swift; SettingsView.swift; WorkoutSessionView.swift"
+ },
+ {
+  "key": "Morning workout",
+  "en": "Morning workout",
+  "nl": "Ochtendtraining",
+  "context": "WorkoutController.swift"
+ },
+ {
+  "key": "Afternoon workout",
+  "en": "Afternoon workout",
+  "nl": "Middagtraining",
+  "context": "WorkoutController.swift"
+ },
+ {
+  "key": "Evening workout",
+  "en": "Evening workout",
+  "nl": "Avondtraining",
+  "context": "WorkoutController.swift"
+ },
+ {
+  "key": "Rest is over",
+  "en": "Rest is over",
+  "nl": "Rust voorbij",
+  "context": "WorkoutController.swift"
+ },
+ {
+  "key": "Time for your next set 💪",
+  "en": "Time for your next set 💪",
+  "nl": "Tijd voor je volgende set 💪",
+  "context": "WorkoutController.swift"
+ },
+ {
+  "key": "Workout",
+  "en": "Workout",
+  "nl": "Training",
+  "context": "WorkoutController.swift; WatchWorkoutManager.swift"
+ },
+ {
+  "key": "All",
+  "en": "All",
+  "nl": "Alles",
+  "context": "ExercisePickerView.swift"
+ },
+ {
+  "key": "New exercise",
+  "en": "New exercise",
+  "nl": "Nieuwe oefening",
+  "context": "ExercisePickerView.swift; LibraryView.swift"
+ },
+ {
+  "key": "Create “{1}”",
+  "en": "Create “{1}”",
+  "nl": "Maak “{1}” aan",
+  "context": "ExercisePickerView.swift"
+ },
+ {
+  "key": "Search exercise",
+  "en": "Search exercise",
+  "nl": "Zoek oefening",
+  "context": "ExercisePickerView.swift"
+ },
+ {
+  "key": "Add exercise",
+  "en": "Add exercise",
+  "nl": "Oefening toevoegen",
+  "context": "ExercisePickerView.swift; RoutineEditView.swift; WorkoutDetailView.swift; WorkoutSessionView.swift"
+ },
+ {
+  "key": "My gym pass",
+  "en": "My gym pass",
+  "nl": "Mijn sportschoolpas",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Gym",
+  "en": "Gym",
+  "nl": "Sportschool",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Tap to show at the entrance",
+  "en": "Tap to show at the entrance",
+  "nl": "Tik om te tonen bij de ingang",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Show gym pass",
+  "en": "Show gym pass",
+  "nl": "Toon sportschoolpas",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Add your gym pass",
+  "en": "Add your gym pass",
+  "nl": "Voeg je sportschoolpas toe",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Show the QR code or barcode at the entrance, right from Liftr.",
+  "en": "Show the QR code or barcode at the entrance, right from Liftr.",
+  "nl": "Toon de QR- of barcode bij de ingang, gewoon vanuit Liftr.",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Close",
+  "en": "Close",
+  "nl": "Sluiten",
+  "context": "GymPassViews.swift; WorkoutSummaryView.swift; LiftrWatchApp.swift"
+ },
+ {
+  "key": "Edit",
+  "en": "Edit",
+  "nl": "Wijzig",
+  "context": "GymPassViews.swift; LibraryView.swift; WorkoutDetailView.swift"
+ },
+ {
+  "key": "Screen brightness is turned up",
+  "en": "Screen brightness is turned up",
+  "nl": "Schermhelderheid staat op maximaal",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Scan with camera",
+  "en": "Scan with camera",
+  "nl": "Scan met de camera",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Choose a screenshot or photo",
+  "en": "Choose a screenshot or photo",
+  "nl": "Kies een screenshot of foto",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Code",
+  "en": "Code",
+  "nl": "Code",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Scan the card or key fob, or take a screenshot of the code in your gym's app and choose it here.",
+  "en": "Scan the card or key fob, or take a screenshot of the code in your gym's app and choose it here.",
+  "nl": "Scan je pasje of sleutelhanger, of maak een screenshot van de code in de app van je sportschool en kies hem hier.",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Code or member number",
+  "en": "Code or member number",
+  "nl": "Code of lidnummer",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Type",
+  "en": "Type",
+  "nl": "Soort",
+  "context": "GymPassViews.swift; LibraryView.swift"
+ },
+ {
+  "key": "Details",
+  "en": "Details",
+  "nl": "Gegevens",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Gym, e.g. my local gym",
+  "en": "Gym, e.g. my local gym",
+  "nl": "Sportschool, bijv. club in Apeldoorn",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Name on the pass (optional)",
+  "en": "Name on the pass (optional)",
+  "nl": "Naam op de pas (optioneel)",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Note (optional)",
+  "en": "Note (optional)",
+  "nl": "Notitie (optioneel)",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Delete pass",
+  "en": "Delete pass",
+  "nl": "Pas verwijderen",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Gym pass",
+  "en": "Gym pass",
+  "nl": "Sportschoolpas",
+  "context": "GymPassViews.swift; LiftrWatchApp.swift"
+ },
+ {
+  "key": "Edit pass",
+  "en": "Edit pass",
+  "nl": "Pas wijzigen",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Save",
+  "en": "Save",
+  "nl": "Bewaar",
+  "context": "GymPassViews.swift; LibraryView.swift; RoutineEditView.swift; SettingsView.swift"
+ },
+ {
+  "key": "No code found",
+  "en": "No code found",
+  "nl": "Geen code gevonden",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Liftr couldn't find a QR code or barcode in this picture.",
+  "en": "Liftr couldn't find a QR code or barcode in this picture.",
+  "nl": "Liftr vond geen QR- of barcode in deze afbeelding.",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Delete this pass?",
+  "en": "Delete this pass?",
+  "nl": "Pas verwijderen?",
+  "context": "GymPassViews.swift"
+ },
+ {
+  "key": "Delete",
+  "en": "Delete",
+  "nl": "Verwijderen",
+  "context": "GymPassViews.swift; RoutineEditView.swift; WorkoutDetailView.swift"
+ },
+ {
+  "key": "{1} workouts in total",
+  "en": "{1} workouts in total",
+  "nl": "{1} trainingen in totaal",
+  "context": "HistoryView.swift"
+ },
+ {
+  "key": "No workout on this day.",
+  "en": "No workout on this day.",
+  "nl": "Geen training op deze dag.",
+  "context": "HistoryView.swift"
+ },
+ {
+  "key": "exercises",
+  "en": "exercises",
+  "nl": "oefeningen",
+  "context": "HistoryView.swift; LiftrWidgets.swift"
+ },
+ {
+  "key": "Workout in progress",
+  "en": "Workout in progress",
+  "nl": "Training bezig",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "Continue",
+  "en": "Continue",
+  "nl": "Ga verder",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "Ready to train?",
+  "en": "Ready to train?",
+  "nl": "Klaar om te trainen?",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "Start an empty workout and add exercises as you go.",
+  "en": "Start an empty workout and add exercises as you go.",
+  "nl": "Start een lege training en voeg oefeningen toe terwijl je bezig bent.",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "Start workout",
+  "en": "Start workout",
+  "nl": "Start training",
+  "context": "HomeView.swift; LiftrComplications.swift"
+ },
+ {
+  "key": "This week",
+  "en": "This week",
+  "nl": "Deze week",
+  "context": "HomeView.swift; LiftrWidgets.swift"
+ },
+ {
+  "key": "{1} wk streak",
+  "en": "{1} wk streak",
+  "nl": "{1} wk op rij",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "Workouts this week",
+  "en": "Workouts this week",
+  "nl": "Trainingen deze week",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "This month",
+  "en": "This month",
+  "nl": "Deze maand",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "Lifted this week",
+  "en": "Lifted this week",
+  "nl": "Getild deze week",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "Last workout",
+  "en": "Last workout",
+  "nl": "Laatste training",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "My routines",
+  "en": "My routines",
+  "nl": "Mijn schema's",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "New",
+  "en": "New",
+  "nl": "Nieuw",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "Make a routine",
+  "en": "Make a routine",
+  "nl": "Maak een schema",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "E.g. “Monday: legs” – start it with one tap.",
+  "en": "E.g. “Monday: legs” – start it with one tap.",
+  "nl": "Bijv. “Maandag: benen” – start hem met één tik.",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "Body",
+  "en": "Body",
+  "nl": "Lichaam",
+  "context": "HomeView.swift; StatsView.swift"
+ },
+ {
+  "key": "Add",
+  "en": "Add",
+  "nl": "Toevoegen",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "Weight",
+  "en": "Weight",
+  "nl": "Gewicht",
+  "context": "HomeView.swift; SettingsView.swift; StatsView.swift"
+ },
+ {
+  "key": "Body fat",
+  "en": "Body fat",
+  "nl": "Vetpercentage",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "Resting heart rate",
+  "en": "Resting heart rate",
+  "nl": "Rusthartslag",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "Badges",
+  "en": "Badges",
+  "nl": "Badges",
+  "context": "HomeView.swift"
+ },
+ {
+  "key": "{1} sets",
+  "en": "{1} sets",
+  "nl": "{1} sets",
+  "context": "HomeView.swift; RoutineEditView.swift; LiftrWatchApp.swift; WatchWorkoutView.swift"
+ },
+ {
+  "key": "{1} exercises",
+  "en": "{1} exercises",
+  "nl": "{1} oefeningen",
+  "context": "HomeView.swift; LiftrWatchApp.swift"
+ },
+ {
+  "key": "Start",
+  "en": "Start",
+  "nl": "Start",
+  "context": "HomeView.swift; LibraryView.swift; WorkoutDetailView.swift"
+ },
+ {
+  "key": "Paste",
+  "en": "Paste",
+  "nl": "Plakken",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Your notes",
+  "en": "Your notes",
+  "nl": "Je notities",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Copy the note from the Notes app and paste it here. A line with a date starts a new workout; lines without a date before them get the date below.",
+  "en": "Copy the note from the Notes app and paste it here. A line with a date starts a new workout; lines without a date before them get the date below.",
+  "nl": "Kopieer de notitie uit de Notities-app en plak hem hier. Een regel met een datum begint een nieuwe training; regels zonder datum ervoor krijgen de datum hieronder.",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Date without heading",
+  "en": "Date without heading",
+  "nl": "Datum zonder kopje",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Liftr couldn't find any exercises. Use lines like “Leg press 3x12 40 kg”.",
+  "en": "Liftr couldn't find any exercises. Use lines like “Leg press 3x12 40 kg”.",
+  "nl": "Liftr vond geen oefeningen. Gebruik regels als “Leg press 3x12 40 kg”.",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Date",
+  "en": "Date",
+  "nl": "Datum",
+  "context": "ImportView.swift; SettingsView.swift"
+ },
+ {
+  "key": "Exercise",
+  "en": "Exercise",
+  "nl": "Oefening",
+  "context": "ImportView.swift; WorkoutDetailView.swift; WorkoutSessionView.swift; WatchWorkoutView.swift"
+ },
+ {
+  "key": "Import",
+  "en": "Import",
+  "nl": "Importeren",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Back",
+  "en": "Back",
+  "nl": "Terug",
+  "context": "ImportView.swift; Models.swift"
+ },
+ {
+  "key": "Analyse",
+  "en": "Analyse",
+  "nl": "Analyseer",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Imported",
+  "en": "Imported",
+  "nl": "Geïmporteerd",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "{1} workouts added to your history.",
+  "en": "{1} workouts added to your history.",
+  "nl": "{1} trainingen toegevoegd aan je geschiedenis.",
+  "context": "ImportView.swift"
+ },
+ {
+  "key": "Exercises",
+  "en": "Exercises",
+  "nl": "Oefeningen",
+  "context": "LibraryView.swift; RoutineEditView.swift; StatsView.swift"
+ },
+ {
+  "key": "Routines",
+  "en": "Routines",
+  "nl": "Schema's",
+  "context": "LibraryView.swift; LiftrWatchApp.swift"
+ },
+ {
+  "key": "Search",
+  "en": "Search",
+  "nl": "Zoeken",
+  "context": "LibraryView.swift"
+ },
+ {
+  "key": "New routine",
+  "en": "New routine",
+  "nl": "Nieuw schema",
+  "context": "LibraryView.swift; RoutineEditView.swift"
+ },
+ {
+  "key": "Favourites",
+  "en": "Favourites",
+  "nl": "Favorieten",
+  "context": "LibraryView.swift"
+ },
+ {
+  "key": "Show archived",
+  "en": "Show archived",
+  "nl": "Toon gearchiveerd",
+  "context": "LibraryView.swift"
+ },
+ {
+  "key": "Favourite",
+  "en": "Favourite",
+  "nl": "Favoriet",
+  "context": "LibraryView.swift"
+ },
+ {
+  "key": "No routines yet",
+  "en": "No routines yet",
+  "nl": "Nog geen schema's",
+  "context": "LibraryView.swift"
+ },
+ {
+  "key": "A routine is a fixed set of exercises, like “Monday: legs”. Start it with one tap and Liftr fills in what you did last time.",
+  "en": "A routine is a fixed set of exercises, like “Monday: legs”. Start it with one tap and Liftr fills in what you did last time.",
+  "nl": "Een schema is een vaste set oefeningen, zoals “Maandag: benen”. Start hem met één tik en Liftr vult in wat je vorige keer deed.",
+  "context": "LibraryView.swift"
+ },
+ {
+  "key": "Name",
+  "en": "Name",
+  "nl": "Naam",
+  "context": "LibraryView.swift; WorkoutDetailView.swift; WorkoutSessionView.swift"
+ },
+ {
+  "key": "Muscle group",
+  "en": "Muscle group",
+  "nl": "Spiergroep",
+  "context": "LibraryView.swift"
+ },
+ {
+  "key": "Notes",
+  "en": "Notes",
+  "nl": "Notities",
+  "context": "LibraryView.swift; WorkoutDetailView.swift"
+ },
+ {
+  "key": "E.g. seat position, grip",
+  "en": "E.g. seat position, grip",
+  "nl": "Bijv. stoelstand, greep",
+  "context": "LibraryView.swift"
+ },
+ {
+  "key": "Edit exercise",
+  "en": "Edit exercise",
+  "nl": "Oefening wijzigen",
+  "context": "LibraryView.swift"
+ },
+ {
+  "key": "Heaviest",
+  "en": "Heaviest",
+  "nl": "Zwaarste",
+  "context": "LibraryView.swift; StatsView.swift"
+ },
+ {
+  "key": "Est. 1-rep max",
+  "en": "Est. 1-rep max",
+  "nl": "Geschat 1RM",
+  "context": "LibraryView.swift; StatsView.swift"
+ },
+ {
+  "key": "Sessions",
+  "en": "Sessions",
+  "nl": "Sessies",
+  "context": "LibraryView.swift; StatsView.swift"
+ },
+ {
+  "key": "Not done yet.",
+  "en": "Not done yet.",
+  "nl": "Nog niet gedaan.",
+  "context": "LibraryView.swift"
+ },
+ {
+  "key": "Remove favourite",
+  "en": "Remove favourite",
+  "nl": "Geen favoriet meer",
+  "context": "LibraryView.swift"
+ },
+ {
+  "key": "Restore",
+  "en": "Restore",
+  "nl": "Terugzetten",
+  "context": "LibraryView.swift"
+ },
+ {
+  "key": "Archive",
+  "en": "Archive",
+  "nl": "Archiveren",
+  "context": "LibraryView.swift"
+ },
+ {
+  "key": "Every rep counts",
+  "en": "Every rep counts",
+  "nl": "Elke herhaling telt",
+  "context": "OnboardingView.swift"
+ },
+ {
+  "key": "Log your exercises, sets, reps and weight in seconds — no more notes.",
+  "en": "Log your exercises, sets, reps and weight in seconds — no more notes.",
+  "nl": "Leg je oefeningen, sets, herhalingen en gewicht vast in een paar tikken. Geen notities meer.",
+  "context": "OnboardingView.swift"
+ },
+ {
+  "key": "See your progress",
+  "en": "See your progress",
+  "nl": "Zie je vooruitgang",
+  "context": "OnboardingView.swift"
+ },
+ {
+  "key": "Liftr shows what you did last time, your records and how much stronger you're getting.",
+  "en": "Liftr shows what you did last time, your records and how much stronger you're getting.",
+  "nl": "Liftr laat zien wat je vorige keer deed, je records en hoeveel sterker je wordt.",
+  "context": "OnboardingView.swift"
+ },
+ {
+  "key": "Works with Apple Health",
+  "en": "Works with Apple Health",
+  "nl": "Werkt met Apple Gezondheid",
+  "context": "OnboardingView.swift"
+ },
+ {
+  "key": "Workouts, calories and weight go to Apple Health. Train with your Apple Watch for heart rate too.",
+  "en": "Workouts, calories and weight go to Apple Health. Train with your Apple Watch for heart rate too.",
+  "nl": "Trainingen, calorieën en gewicht gaan naar Apple Gezondheid. Train met je Apple Watch voor ook je hartslag.",
+  "context": "OnboardingView.swift"
+ },
+ {
+  "key": "Skip",
+  "en": "Skip",
+  "nl": "Overslaan",
+  "context": "OnboardingView.swift; WatchWorkoutView.swift"
+ },
+ {
+  "key": "Connect Apple Health",
+  "en": "Connect Apple Health",
+  "nl": "Koppel Apple Gezondheid",
+  "context": "OnboardingView.swift"
+ },
+ {
+  "key": "Not now",
+  "en": "Not now",
+  "nl": "Nu niet",
+  "context": "OnboardingView.swift"
+ },
+ {
+  "key": "Next",
+  "en": "Next",
+  "nl": "Volgende",
+  "context": "OnboardingView.swift"
+ },
+ {
+  "key": "Name, e.g. Monday: legs",
+  "en": "Name, e.g. Monday: legs",
+  "nl": "Naam, bijv. Maandag: benen",
+  "context": "RoutineEditView.swift"
+ },
+ {
+  "key": "Cardio",
+  "en": "Cardio",
+  "nl": "Cardio",
+  "context": "RoutineEditView.swift; Models.swift"
+ },
+ {
+  "key": "{1} reps",
+  "en": "{1} reps",
+  "nl": "{1} herhalingen",
+  "context": "RoutineEditView.swift"
+ },
+ {
+  "key": "Delete routine",
+  "en": "Delete routine",
+  "nl": "Schema verwijderen",
+  "context": "RoutineEditView.swift"
+ },
+ {
+  "key": "Edit routine",
+  "en": "Edit routine",
+  "nl": "Schema wijzigen",
+  "context": "RoutineEditView.swift"
+ },
+ {
+  "key": "Delete this routine?",
+  "en": "Delete this routine?",
+  "nl": "Schema verwijderen?",
+  "context": "RoutineEditView.swift"
+ },
+ {
+  "key": "Training",
+  "en": "Training",
+  "nl": "Training",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Unit",
+  "en": "Unit",
+  "nl": "Eenheid",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Kilograms (kg)",
+  "en": "Kilograms (kg)",
+  "nl": "Kilogram (kg)",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Pounds (lb)",
+  "en": "Pounds (lb)",
+  "nl": "Pond (lb)",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Rest time",
+  "en": "Rest time",
+  "nl": "Rusttijd",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Start rest timer after each set",
+  "en": "Start rest timer after each set",
+  "nl": "Rusttimer starten na elke set",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Apple Health is not available on this device.",
+  "en": "Apple Health is not available on this device.",
+  "nl": "Apple Gezondheid is niet beschikbaar op dit apparaat.",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Connected",
+  "en": "Connected",
+  "nl": "Gekoppeld",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Not connected",
+  "en": "Not connected",
+  "nl": "Niet gekoppeld",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Check access",
+  "en": "Check access",
+  "nl": "Toegang controleren",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Connect",
+  "en": "Connect",
+  "nl": "Koppelen",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Save workouts",
+  "en": "Save workouts",
+  "nl": "Trainingen opslaan",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Save weight and body fat",
+  "en": "Save weight and body fat",
+  "nl": "Gewicht en vetpercentage opslaan",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Log weight",
+  "en": "Log weight",
+  "nl": "Gewicht invoeren",
+  "context": "SettingsView.swift; StatsView.swift"
+ },
+ {
+  "key": "Apple Health",
+  "en": "Apple Health",
+  "nl": "Apple Gezondheid",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Liftr saves workouts with duration and calories and reads your weight, body composition and resting heart rate. Change access in the Health app → Profile → Apps → Liftr.",
+  "en": "Liftr saves workouts with duration and calories and reads your weight, body composition and resting heart rate. Change access in the Health app → Profile → Apps → Liftr.",
+  "nl": "Liftr bewaart trainingen met duur en calorieën en leest je gewicht, lichaamssamenstelling en rusthartslag. Toegang wijzig je in de Gezondheid-app → Profiel → Apps → Liftr.",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Open Settings",
+  "en": "Open Settings",
+  "nl": "Open Instellingen",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Import from notes",
+  "en": "Import from notes",
+  "nl": "Importeren uit notities",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Liftr export",
+  "en": "Liftr export",
+  "nl": "Liftr-export",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Export to CSV",
+  "en": "Export to CSV",
+  "nl": "Exporteren als CSV",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Data",
+  "en": "Data",
+  "nl": "Gegevens",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Your workouts sync through your own iCloud between iPhone, iPad and Apple Watch.",
+  "en": "Your workouts sync through your own iCloud between iPhone, iPad and Apple Watch.",
+  "nl": "Je trainingen synchroniseren via je eigen iCloud tussen iPhone, iPad en Apple Watch.",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Notifications are off",
+  "en": "Notifications are off",
+  "nl": "Meldingen staan uit",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Allow notifications for Liftr in Settings to get reminders.",
+  "en": "Allow notifications for Liftr in Settings to get reminders.",
+  "nl": "Sta meldingen voor Liftr toe in Instellingen om herinneringen te krijgen.",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Training days",
+  "en": "Training days",
+  "nl": "Vaste trainingsdagen",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Time",
+  "en": "Time",
+  "nl": "Tijdstip",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "When I haven't trained for a while",
+  "en": "When I haven't trained for a while",
+  "nl": "Als ik een tijd niet heb getraind",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "After",
+  "en": "After",
+  "nl": "Na",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "{1} days",
+  "en": "{1} days",
+  "nl": "{1} dagen",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Weekly summary (Sunday 20:00)",
+  "en": "Weekly summary (Sunday 20:00)",
+  "nl": "Weekoverzicht (zondag 20:00)",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Reminders",
+  "en": "Reminders",
+  "nl": "Herinneringen",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Reminders are planned on this device. A day you already trained (also on Apple Watch or iPad) is skipped.",
+  "en": "Reminders are planned on this device. A day you already trained (also on Apple Watch or iPad) is skipped.",
+  "nl": "Herinneringen worden op dit apparaat ingepland. Een dag waarop je al hebt getraind (ook op Apple Watch of iPad) wordt overgeslagen.",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Body fat (optional)",
+  "en": "Body fat (optional)",
+  "nl": "Vetpercentage (optioneel)",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Weeks",
+  "en": "Weeks",
+  "nl": "Weken",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Charts are for strength exercises. Cardio sessions are in your history.",
+  "en": "Charts are for strength exercises. Cardio sessions are in your history.",
+  "nl": "Grafieken zijn er voor krachtoefeningen. Cardio staat in je geschiedenis.",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Est. max",
+  "en": "Est. max",
+  "nl": "Geschat max",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Volume",
+  "en": "Volume",
+  "nl": "Volume",
+  "context": "StatsView.swift; WorkoutDetailView.swift; WorkoutSummaryView.swift"
+ },
+ {
+  "key": "Records",
+  "en": "Records",
+  "nl": "Records",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Most reps",
+  "en": "Most reps",
+  "nl": "Meeste herh.",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Best volume",
+  "en": "Best volume",
+  "nl": "Beste volume",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Heaviest set per workout",
+  "en": "Heaviest set per workout",
+  "nl": "Zwaarste set per training",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Estimated one-rep max",
+  "en": "Estimated one-rep max",
+  "nl": "Geschat maximum (1 herhaling)",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Total volume per workout (weight × reps)",
+  "en": "Total volume per workout (weight × reps)",
+  "nl": "Totaal volume per training (gewicht × herhalingen)",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "No data yet",
+  "en": "No data yet",
+  "nl": "Nog geen gegevens",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Finish a workout and your progress shows up here.",
+  "en": "Finish a workout and your progress shows up here.",
+  "nl": "Rond een training af en je vooruitgang verschijnt hier.",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Workouts per week",
+  "en": "Workouts per week",
+  "nl": "Trainingen per week",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Volume per week",
+  "en": "Volume per week",
+  "nl": "Volume per week",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Workouts in total",
+  "en": "Workouts in total",
+  "nl": "Trainingen totaal",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Weeks in a row",
+  "en": "Weeks in a row",
+  "nl": "Weken op rij",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Lifted in total",
+  "en": "Lifted in total",
+  "nl": "Totaal getild",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Time trained",
+  "en": "Time trained",
+  "nl": "Tijd getraind",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "No weight yet. Log it here or connect a smart scale to Apple Health.",
+  "en": "No weight yet. Log it here or connect a smart scale to Apple Health.",
+  "nl": "Nog geen gewicht. Voer het hier in of koppel een slimme weegschaal aan Apple Gezondheid.",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Now",
+  "en": "Now",
+  "nl": "Nu",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Since {1}",
+  "en": "Since {1}",
+  "nl": "Sinds {1}",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Body fat (%)",
+  "en": "Body fat (%)",
+  "nl": "Vetpercentage (%)",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Lean body mass",
+  "en": "Lean body mass",
+  "nl": "Vetvrije massa",
+  "context": "StatsView.swift"
+ },
+ {
+  "key": "Duration",
+  "en": "Duration",
+  "nl": "Duur",
+  "context": "WorkoutDetailView.swift; WorkoutSummaryView.swift"
+ },
+ {
+  "key": "Sets",
+  "en": "Sets",
+  "nl": "Sets",
+  "context": "WorkoutDetailView.swift; WorkoutSummaryView.swift"
+ },
+ {
+  "key": "Avg. heart rate",
+  "en": "Avg. heart rate",
+  "nl": "Gem. hartslag",
+  "context": "WorkoutDetailView.swift"
+ },
+ {
+  "key": "Saved in Apple Health",
+  "en": "Saved in Apple Health",
+  "nl": "Opgeslagen in Apple Gezondheid",
+  "context": "WorkoutDetailView.swift; WorkoutSummaryView.swift"
+ },
+ {
+  "key": "Delete workout",
+  "en": "Delete workout",
+  "nl": "Training verwijderen",
+  "context": "WorkoutDetailView.swift"
+ },
+ {
+  "key": "Done",
+  "en": "Done",
+  "nl": "Klaar",
+  "context": "WorkoutDetailView.swift; WorkoutSessionView.swift"
+ },
+ {
+  "key": "Delete this workout?",
+  "en": "Delete this workout?",
+  "nl": "Training verwijderen?",
+  "context": "WorkoutDetailView.swift"
+ },
+ {
+  "key": "Also removed from Apple Health if Liftr saved it there.",
+  "en": "Also removed from Apple Health if Liftr saved it there.",
+  "nl": "Wordt ook uit Apple Gezondheid gehaald als Liftr hem daar heeft opgeslagen.",
+  "context": "WorkoutDetailView.swift"
+ },
+ {
+  "key": "bodyweight",
+  "en": "bodyweight",
+  "nl": "lichaamsgewicht",
+  "context": "WorkoutDetailView.swift"
+ },
+ {
+  "key": "Discard workout",
+  "en": "Discard workout",
+  "nl": "Training weggooien",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "Minimise",
+  "en": "Minimise",
+  "nl": "Minimaliseren",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "Finish",
+  "en": "Finish",
+  "nl": "Afronden",
+  "context": "WorkoutSessionView.swift; WatchWorkoutView.swift"
+ },
+ {
+  "key": "Finish this workout?",
+  "en": "Finish this workout?",
+  "nl": "Training afronden?",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "Finish and save",
+  "en": "Finish and save",
+  "nl": "Afronden en opslaan",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "Keep going",
+  "en": "Keep going",
+  "nl": "Doorgaan",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "Sets you didn't fill in are left out.",
+  "en": "Sets you didn't fill in are left out.",
+  "nl": "Sets die je niet hebt ingevuld worden weggelaten.",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "Discard this workout?",
+  "en": "Discard this workout?",
+  "nl": "Training weggooien?",
+  "context": "WorkoutSessionView.swift; WatchWorkoutView.swift"
+ },
+ {
+  "key": "Discard",
+  "en": "Discard",
+  "nl": "Weggooien",
+  "context": "WorkoutSessionView.swift; WatchWorkoutView.swift"
+ },
+ {
+  "key": "Workout name",
+  "en": "Workout name",
+  "nl": "Naam training",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "{1}/{2} sets",
+  "en": "{1}/{2} sets",
+  "nl": "{1}/{2} sets",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "−1 rep",
+  "en": "−1 rep",
+  "nl": "−1 herh",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "+1 rep",
+  "en": "+1 rep",
+  "nl": "+1 herh",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "Last time",
+  "en": "Last time",
+  "nl": "Vorige keer",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "First time — set your starting point",
+  "en": "First time — set your starting point",
+  "nl": "Eerste keer — bepaal je startpunt",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "Note",
+  "en": "Note",
+  "nl": "Notitie",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "Remove exercise",
+  "en": "Remove exercise",
+  "nl": "Oefening verwijderen",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "SET",
+  "en": "SET",
+  "nl": "SET",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "MIN",
+  "en": "MIN",
+  "nl": "MIN",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "KM",
+  "en": "KM",
+  "nl": "KM",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "REPS",
+  "en": "REPS",
+  "nl": "HERH",
+  "context": "WorkoutSessionView.swift; WatchWorkoutView.swift"
+ },
+ {
+  "key": "Delete set",
+  "en": "Delete set",
+  "nl": "Set verwijderen",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "Add set",
+  "en": "Add set",
+  "nl": "Set toevoegen",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "E.g. seat position 4",
+  "en": "E.g. seat position 4",
+  "nl": "Bijv. stoelstand 4",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "Set done",
+  "en": "Set done",
+  "nl": "Set gedaan",
+  "context": "WorkoutSessionView.swift; WatchWorkoutView.swift"
+ },
+ {
+  "key": "Mark set done",
+  "en": "Mark set done",
+  "nl": "Set afvinken",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "REST",
+  "en": "REST",
+  "nl": "RUST",
+  "context": "WorkoutSessionView.swift; WatchWorkoutView.swift; LiftrWidgets.swift"
+ },
+ {
+  "key": "Skip rest",
+  "en": "Skip rest",
+  "nl": "Rust overslaan",
+  "context": "WorkoutSessionView.swift"
+ },
+ {
+  "key": "Well done!",
+  "en": "Well done!",
+  "nl": "Goed gedaan!",
+  "context": "WorkoutSummaryView.swift; LiftrWatchApp.swift"
+ },
+ {
+  "key": "New records",
+  "en": "New records",
+  "nl": "Nieuwe records",
+  "context": "WorkoutSummaryView.swift"
+ },
+ {
+  "key": "START",
+  "en": "START",
+  "nl": "START",
+  "context": "LiftrWatchApp.swift"
+ },
+ {
+  "key": "{1} this week",
+  "en": "{1} this week",
+  "nl": "{1} deze week",
+  "context": "LiftrWatchApp.swift; LiftrWidgets.swift"
+ },
+ {
+  "key": "{1} wk",
+  "en": "{1} wk",
+  "nl": "{1} wk",
+  "context": "LiftrWatchApp.swift"
+ },
+ {
+  "key": "Pass",
+  "en": "Pass",
+  "nl": "Pas",
+  "context": "LiftrWatchApp.swift"
+ },
+ {
+  "key": "Resume",
+  "en": "Resume",
+  "nl": "Hervat",
+  "context": "WatchWorkoutView.swift"
+ },
+ {
+  "key": "Pause",
+  "en": "Pause",
+  "nl": "Pauze",
+  "context": "WatchWorkoutView.swift"
+ },
+ {
+  "key": "Choose your first exercise",
+  "en": "Choose your first exercise",
+  "nl": "Kies je eerste oefening",
+  "context": "WatchWorkoutView.swift"
+ },
+ {
+  "key": "Set {1} of {2}",
+  "en": "Set {1} of {2}",
+  "nl": "Set {1} van {2}",
+  "context": "WatchWorkoutView.swift"
+ },
+ {
+  "key": "{1} sets done",
+  "en": "{1} sets done",
+  "nl": "{1} sets gedaan",
+  "context": "WatchWorkoutView.swift"
+ },
+ {
+  "key": "Extra set",
+  "en": "Extra set",
+  "nl": "Extra set",
+  "context": "WatchWorkoutView.swift"
+ },
+ {
+  "key": "Next exercise",
+  "en": "Next exercise",
+  "nl": "Volgende oefening",
+  "context": "WatchWorkoutView.swift"
+ },
+ {
+  "key": "In this workout",
+  "en": "In this workout",
+  "nl": "In deze training",
+  "context": "WatchWorkoutView.swift"
+ },
+ {
+  "key": "Start a workout from your watch face.",
+  "en": "Start a workout from your watch face.",
+  "nl": "Start een training vanaf je wijzerplaat.",
+  "context": "LiftrComplications.swift"
+ },
+ {
+  "key": "Legs",
+  "en": "Legs",
+  "nl": "Benen",
+  "context": "LiftrWidgets.swift; Models.swift"
+ },
+ {
+  "key": "Your training days, streak and last workout.",
+  "en": "Your training days, streak and last workout.",
+  "nl": "Je trainingsdagen, reeks en laatste training.",
+  "context": "LiftrWidgets.swift"
+ },
+ {
+  "key": "{1} weeks in a row",
+  "en": "{1} weeks in a row",
+  "nl": "{1} weken op rij",
+  "context": "LiftrWidgets.swift; WorkoutStats.swift"
+ },
+ {
+  "key": "{1} workouts this week",
+  "en": "{1} workouts this week",
+  "nl": "{1} trainingen deze week",
+  "context": "LiftrWidgets.swift"
+ },
+ {
+  "key": "LAST WORKOUT",
+  "en": "LAST WORKOUT",
+  "nl": "LAATSTE TRAINING",
+  "context": "LiftrWidgets.swift"
+ },
+ {
+  "key": "No workouts yet",
+  "en": "No workouts yet",
+  "nl": "Nog geen trainingen",
+  "context": "LiftrWidgets.swift"
+ },
+ {
+  "key": "this week",
+  "en": "this week",
+  "nl": "deze week",
+  "context": "LiftrWidgets.swift"
+ },
+ {
+  "key": "Rest",
+  "en": "Rest",
+  "nl": "Rust",
+  "context": "LiftrWidgets.swift"
+ },
+ {
+  "key": "{1} of {2} sets",
+  "en": "{1} of {2} sets",
+  "nl": "{1} van {2} sets",
+  "context": "LiftrWidgets.swift"
+ },
+ {
+  "key": "TIME",
+  "en": "TIME",
+  "nl": "TIJD",
+  "context": "LiftrWidgets.swift"
+ },
+ {
+  "key": "This code can't be drawn",
+  "en": "This code can't be drawn",
+  "nl": "Deze code kan niet worden getekend",
+  "context": "BarcodeView.swift"
+ },
+ {
+  "key": "Chest",
+  "en": "Chest",
+  "nl": "Borst",
+  "context": "Models.swift"
+ },
+ {
+  "key": "Shoulders",
+  "en": "Shoulders",
+  "nl": "Schouders",
+  "context": "Models.swift"
+ },
+ {
+  "key": "Arms",
+  "en": "Arms",
+  "nl": "Armen",
+  "context": "Models.swift"
+ },
+ {
+  "key": "Glutes",
+  "en": "Glutes",
+  "nl": "Billen",
+  "context": "Models.swift"
+ },
+ {
+  "key": "Core",
+  "en": "Core",
+  "nl": "Core",
+  "context": "Models.swift"
+ },
+ {
+  "key": "Full body",
+  "en": "Full body",
+  "nl": "Hele lichaam",
+  "context": "Models.swift"
+ },
+ {
+  "key": "Machine",
+  "en": "Machine",
+  "nl": "Apparaat",
+  "context": "Models.swift"
+ },
+ {
+  "key": "Free weight",
+  "en": "Free weight",
+  "nl": "Vrij gewicht",
+  "context": "Models.swift"
+ },
+ {
+  "key": "Cable",
+  "en": "Cable",
+  "nl": "Kabel",
+  "context": "Models.swift"
+ },
+ {
+  "key": "Bodyweight",
+  "en": "Bodyweight",
+  "nl": "Lichaamsgewicht",
+  "context": "Models.swift"
+ },
+ {
+  "key": "Warm-up",
+  "en": "Warm-up",
+  "nl": "Warming-up",
+  "context": "Models.swift"
+ },
+ {
+  "key": "Working set",
+  "en": "Working set",
+  "nl": "Werkset",
+  "context": "Models.swift"
+ },
+ {
+  "key": "Drop set",
+  "en": "Drop set",
+  "nl": "Dropset",
+  "context": "Models.swift"
+ },
+ {
+  "key": "To failure",
+  "en": "To failure",
+  "nl": "Tot falen",
+  "context": "Models.swift"
+ },
+ {
+  "key": "h",
+  "en": "h",
+  "nl": "u",
+  "context": "Units.swift"
+ },
+ {
+  "key": "First workout",
+  "en": "First workout",
+  "nl": "Eerste training",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "{1} workouts",
+  "en": "{1} workouts",
+  "nl": "{1} trainingen",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Finish your first workout",
+  "en": "Finish your first workout",
+  "nl": "Rond je eerste training af",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Finish {1} workouts",
+  "en": "Finish {1} workouts",
+  "nl": "Rond {1} trainingen af",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Train every week for {1} weeks",
+  "en": "Train every week for {1} weeks",
+  "nl": "Train {1} weken lang elke week",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "{1} tonnes lifted",
+  "en": "{1} tonnes lifted",
+  "nl": "{1} ton getild",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Lift {1} tonnes in total",
+  "en": "Lift {1} tonnes in total",
+  "nl": "Til in totaal {1} ton",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "exercise.leg-press",
+  "en": "Leg press",
+  "nl": "Leg press",
+  "context": "gym exercise name (legs, machine)"
+ },
+ {
+  "key": "exercise.leg-extension",
+  "en": "Leg extension",
+  "nl": "Leg extension",
+  "context": "gym exercise name (legs, machine)"
+ },
+ {
+  "key": "exercise.seated-leg-curl",
+  "en": "Seated leg curl",
+  "nl": "Leg curl (zittend)",
+  "context": "gym exercise name (legs, machine)"
+ },
+ {
+  "key": "exercise.lying-leg-curl",
+  "en": "Lying leg curl",
+  "nl": "Leg curl (liggend)",
+  "context": "gym exercise name (legs, machine)"
+ },
+ {
+  "key": "exercise.hip-abduction",
+  "en": "Hip abduction",
+  "nl": "Abductor (benen naar buiten)",
+  "context": "gym exercise name (glutes, machine)"
+ },
+ {
+  "key": "exercise.hip-adduction",
+  "en": "Hip adduction",
+  "nl": "Adductor (benen naar binnen)",
+  "context": "gym exercise name (legs, machine)"
+ },
+ {
+  "key": "exercise.glute-kickback",
+  "en": "Glute kickback machine",
+  "nl": "Glute kickback",
+  "context": "gym exercise name (glutes, machine)"
+ },
+ {
+  "key": "exercise.hip-thrust",
+  "en": "Hip thrust",
+  "nl": "Hip thrust",
+  "context": "gym exercise name (glutes, freeWeight)"
+ },
+ {
+  "key": "exercise.barbell-squat",
+  "en": "Barbell squat",
+  "nl": "Squat met halter",
+  "context": "gym exercise name (legs, freeWeight)"
+ },
+ {
+  "key": "exercise.smith-squat",
+  "en": "Smith machine squat",
+  "nl": "Squat in smith machine",
+  "context": "gym exercise name (legs, machine)"
+ },
+ {
+  "key": "exercise.goblet-squat",
+  "en": "Goblet squat",
+  "nl": "Goblet squat",
+  "context": "gym exercise name (legs, freeWeight)"
+ },
+ {
+  "key": "exercise.lunges",
+  "en": "Lunges",
+  "nl": "Lunges",
+  "context": "gym exercise name (legs, freeWeight)"
+ },
+ {
+  "key": "exercise.romanian-deadlift",
+  "en": "Romanian deadlift",
+  "nl": "Roemeense deadlift",
+  "context": "gym exercise name (legs, freeWeight)"
+ },
+ {
+  "key": "exercise.calf-raise",
+  "en": "Calf raise",
+  "nl": "Kuitheffen",
+  "context": "gym exercise name (legs, machine)"
+ },
+ {
+  "key": "exercise.hack-squat",
+  "en": "Hack squat",
+  "nl": "Hack squat",
+  "context": "gym exercise name (legs, machine)"
+ },
+ {
+  "key": "exercise.pendulum-squat",
+  "en": "Pendulum squat",
+  "nl": "Pendulum squat",
+  "context": "gym exercise name (legs, machine)"
+ },
+ {
+  "key": "exercise.standing-leg-curl",
+  "en": "Standing leg curl",
+  "nl": "Leg curl (staand)",
+  "context": "gym exercise name (legs, machine)"
+ },
+ {
+  "key": "exercise.seated-calf-raise",
+  "en": "Seated calf raise",
+  "nl": "Kuitheffen (zittend)",
+  "context": "gym exercise name (legs, machine)"
+ },
+ {
+  "key": "exercise.leg-press-calf",
+  "en": "Calf press on leg press",
+  "nl": "Kuitdrukken op leg press",
+  "context": "gym exercise name (legs, machine)"
+ },
+ {
+  "key": "exercise.hip-thrust-machine",
+  "en": "Hip thrust machine",
+  "nl": "Hip thrust (apparaat)",
+  "context": "gym exercise name (glutes, machine)"
+ },
+ {
+  "key": "exercise.cable-kickback",
+  "en": "Cable glute kickback",
+  "nl": "Kickback aan de kabel",
+  "context": "gym exercise name (glutes, cable)"
+ },
+ {
+  "key": "exercise.cable-abduction",
+  "en": "Cable hip abduction",
+  "nl": "Abductie aan de kabel",
+  "context": "gym exercise name (glutes, cable)"
+ },
+ {
+  "key": "exercise.glute-bridge",
+  "en": "Glute bridge",
+  "nl": "Glute bridge",
+  "context": "gym exercise name (glutes, bodyweight)"
+ },
+ {
+  "key": "exercise.front-squat",
+  "en": "Front squat",
+  "nl": "Front squat",
+  "context": "gym exercise name (legs, freeWeight)"
+ },
+ {
+  "key": "exercise.sumo-squat",
+  "en": "Sumo squat",
+  "nl": "Sumo squat",
+  "context": "gym exercise name (legs, freeWeight)"
+ },
+ {
+  "key": "exercise.bulgarian-split-squat",
+  "en": "Bulgarian split squat",
+  "nl": "Bulgaarse split squat",
+  "context": "gym exercise name (legs, freeWeight)"
+ },
+ {
+  "key": "exercise.step-up",
+  "en": "Step-ups",
+  "nl": "Step-ups",
+  "context": "gym exercise name (legs, freeWeight)"
+ },
+ {
+  "key": "exercise.smith-lunge",
+  "en": "Smith machine lunge",
+  "nl": "Lunges in smith machine",
+  "context": "gym exercise name (legs, machine)"
+ },
+ {
+  "key": "exercise.sumo-deadlift",
+  "en": "Sumo deadlift",
+  "nl": "Sumo deadlift",
+  "context": "gym exercise name (legs, freeWeight)"
+ },
+ {
+  "key": "exercise.bodyweight-squat",
+  "en": "Bodyweight squat",
+  "nl": "Squat (lichaamsgewicht)",
+  "context": "gym exercise name (legs, bodyweight)"
+ },
+ {
+  "key": "exercise.chest-press",
+  "en": "Chest press machine",
+  "nl": "Chest press",
+  "context": "gym exercise name (chest, machine)"
+ },
+ {
+  "key": "exercise.bench-press",
+  "en": "Bench press",
+  "nl": "Bankdrukken",
+  "context": "gym exercise name (chest, freeWeight)"
+ },
+ {
+  "key": "exercise.incline-db-press",
+  "en": "Incline dumbbell press",
+  "nl": "Schuin bankdrukken (dumbbells)",
+  "context": "gym exercise name (chest, freeWeight)"
+ },
+ {
+  "key": "exercise.pec-deck",
+  "en": "Pec deck (butterfly)",
+  "nl": "Butterfly (pec deck)",
+  "context": "gym exercise name (chest, machine)"
+ },
+ {
+  "key": "exercise.cable-fly",
+  "en": "Cable fly",
+  "nl": "Cable fly",
+  "context": "gym exercise name (chest, cable)"
+ },
+ {
+  "key": "exercise.push-up",
+  "en": "Push-ups",
+  "nl": "Push-ups",
+  "context": "gym exercise name (chest, bodyweight)"
+ },
+ {
+  "key": "exercise.incline-chest-press",
+  "en": "Incline chest press machine",
+  "nl": "Incline chest press",
+  "context": "gym exercise name (chest, machine)"
+ },
+ {
+  "key": "exercise.decline-chest-press",
+  "en": "Decline chest press machine",
+  "nl": "Decline chest press",
+  "context": "gym exercise name (chest, machine)"
+ },
+ {
+  "key": "exercise.incline-bench-press",
+  "en": "Incline bench press",
+  "nl": "Schuin bankdrukken (halter)",
+  "context": "gym exercise name (chest, freeWeight)"
+ },
+ {
+  "key": "exercise.db-bench-press",
+  "en": "Dumbbell bench press",
+  "nl": "Bankdrukken (dumbbells)",
+  "context": "gym exercise name (chest, freeWeight)"
+ },
+ {
+  "key": "exercise.smith-bench-press",
+  "en": "Smith machine bench press",
+  "nl": "Bankdrukken in smith machine",
+  "context": "gym exercise name (chest, machine)"
+ },
+ {
+  "key": "exercise.db-fly",
+  "en": "Dumbbell fly",
+  "nl": "Flyes (dumbbells)",
+  "context": "gym exercise name (chest, freeWeight)"
+ },
+ {
+  "key": "exercise.low-cable-fly",
+  "en": "Low-to-high cable fly",
+  "nl": "Cable fly (van laag naar hoog)",
+  "context": "gym exercise name (chest, cable)"
+ },
+ {
+  "key": "exercise.chest-dips",
+  "en": "Chest dips",
+  "nl": "Dips (borst)",
+  "context": "gym exercise name (chest, bodyweight)"
+ },
+ {
+  "key": "exercise.lat-pulldown",
+  "en": "Lat pulldown",
+  "nl": "Lat pulldown",
+  "context": "gym exercise name (back, cable)"
+ },
+ {
+  "key": "exercise.seated-row",
+  "en": "Seated row machine",
+  "nl": "Seated row",
+  "context": "gym exercise name (back, machine)"
+ },
+ {
+  "key": "exercise.cable-row",
+  "en": "Cable row",
+  "nl": "Roeien aan de kabel",
+  "context": "gym exercise name (back, cable)"
+ },
+ {
+  "key": "exercise.assisted-pull-up",
+  "en": "Assisted pull-up",
+  "nl": "Assisted pull-up",
+  "context": "gym exercise name (back, machine)"
+ },
+ {
+  "key": "exercise.back-extension",
+  "en": "Back extension",
+  "nl": "Rugstrekken",
+  "context": "gym exercise name (back, bodyweight)"
+ },
+ {
+  "key": "exercise.deadlift",
+  "en": "Deadlift",
+  "nl": "Deadlift",
+  "context": "gym exercise name (back, freeWeight)"
+ },
+ {
+  "key": "exercise.db-row",
+  "en": "Dumbbell row",
+  "nl": "Roeien met dumbbell",
+  "context": "gym exercise name (back, freeWeight)"
+ },
+ {
+  "key": "exercise.close-grip-pulldown",
+  "en": "Close-grip pulldown",
+  "nl": "Pulldown (smalle greep)",
+  "context": "gym exercise name (back, cable)"
+ },
+ {
+  "key": "exercise.high-row",
+  "en": "High row machine",
+  "nl": "High row",
+  "context": "gym exercise name (back, machine)"
+ },
+ {
+  "key": "exercise.low-row",
+  "en": "Low row machine",
+  "nl": "Low row",
+  "context": "gym exercise name (back, machine)"
+ },
+ {
+  "key": "exercise.t-bar-row",
+  "en": "T-bar row",
+  "nl": "T-bar row",
+  "context": "gym exercise name (back, freeWeight)"
+ },
+ {
+  "key": "exercise.barbell-row",
+  "en": "Barbell row",
+  "nl": "Roeien met halter",
+  "context": "gym exercise name (back, freeWeight)"
+ },
+ {
+  "key": "exercise.straight-arm-pulldown",
+  "en": "Straight-arm pulldown",
+  "nl": "Pulldown met gestrekte armen",
+  "context": "gym exercise name (back, cable)"
+ },
+ {
+  "key": "exercise.pull-up",
+  "en": "Pull-ups",
+  "nl": "Pull-ups",
+  "context": "gym exercise name (back, bodyweight)"
+ },
+ {
+  "key": "exercise.chin-up",
+  "en": "Chin-ups",
+  "nl": "Chin-ups",
+  "context": "gym exercise name (back, bodyweight)"
+ },
+ {
+  "key": "exercise.lower-back-machine",
+  "en": "Lower back machine",
+  "nl": "Lower back (apparaat)",
+  "context": "gym exercise name (back, machine)"
+ },
+ {
+  "key": "exercise.db-shrug",
+  "en": "Shrugs",
+  "nl": "Shrugs",
+  "context": "gym exercise name (back, freeWeight)"
+ },
+ {
+  "key": "exercise.shoulder-press",
+  "en": "Shoulder press machine",
+  "nl": "Shoulder press",
+  "context": "gym exercise name (shoulders, machine)"
+ },
+ {
+  "key": "exercise.db-shoulder-press",
+  "en": "Dumbbell shoulder press",
+  "nl": "Schouderdrukken (dumbbells)",
+  "context": "gym exercise name (shoulders, freeWeight)"
+ },
+ {
+  "key": "exercise.lateral-raise",
+  "en": "Lateral raise",
+  "nl": "Zijwaarts heffen",
+  "context": "gym exercise name (shoulders, freeWeight)"
+ },
+ {
+  "key": "exercise.rear-delt-fly",
+  "en": "Rear delt fly",
+  "nl": "Reverse butterfly",
+  "context": "gym exercise name (shoulders, machine)"
+ },
+ {
+  "key": "exercise.face-pull",
+  "en": "Face pull",
+  "nl": "Face pull",
+  "context": "gym exercise name (shoulders, cable)"
+ },
+ {
+  "key": "exercise.lateral-raise-machine",
+  "en": "Lateral raise machine",
+  "nl": "Zijwaarts heffen (apparaat)",
+  "context": "gym exercise name (shoulders, machine)"
+ },
+ {
+  "key": "exercise.cable-lateral-raise",
+  "en": "Cable lateral raise",
+  "nl": "Zijwaarts heffen aan de kabel",
+  "context": "gym exercise name (shoulders, cable)"
+ },
+ {
+  "key": "exercise.front-raise",
+  "en": "Front raise",
+  "nl": "Voorwaarts heffen",
+  "context": "gym exercise name (shoulders, freeWeight)"
+ },
+ {
+  "key": "exercise.arnold-press",
+  "en": "Arnold press",
+  "nl": "Arnold press",
+  "context": "gym exercise name (shoulders, freeWeight)"
+ },
+ {
+  "key": "exercise.overhead-press",
+  "en": "Barbell overhead press",
+  "nl": "Overhead press (halter)",
+  "context": "gym exercise name (shoulders, freeWeight)"
+ },
+ {
+  "key": "exercise.smith-shoulder-press",
+  "en": "Smith machine shoulder press",
+  "nl": "Schouderdrukken in smith machine",
+  "context": "gym exercise name (shoulders, machine)"
+ },
+ {
+  "key": "exercise.upright-row",
+  "en": "Upright row",
+  "nl": "Upright row",
+  "context": "gym exercise name (shoulders, freeWeight)"
+ },
+ {
+  "key": "exercise.db-rear-delt-fly",
+  "en": "Bent-over rear delt fly",
+  "nl": "Reverse fly (dumbbells)",
+  "context": "gym exercise name (shoulders, freeWeight)"
+ },
+ {
+  "key": "exercise.biceps-curl-machine",
+  "en": "Biceps curl machine",
+  "nl": "Bicepscurl (apparaat)",
+  "context": "gym exercise name (arms, machine)"
+ },
+ {
+  "key": "exercise.db-curl",
+  "en": "Dumbbell curl",
+  "nl": "Bicepscurl (dumbbells)",
+  "context": "gym exercise name (arms, freeWeight)"
+ },
+ {
+  "key": "exercise.hammer-curl",
+  "en": "Hammer curl",
+  "nl": "Hammer curl",
+  "context": "gym exercise name (arms, freeWeight)"
+ },
+ {
+  "key": "exercise.cable-curl",
+  "en": "Cable curl",
+  "nl": "Bicepscurl aan de kabel",
+  "context": "gym exercise name (arms, cable)"
+ },
+ {
+  "key": "exercise.triceps-pushdown",
+  "en": "Triceps pushdown",
+  "nl": "Triceps pushdown",
+  "context": "gym exercise name (arms, cable)"
+ },
+ {
+  "key": "exercise.triceps-machine",
+  "en": "Triceps extension machine",
+  "nl": "Triceps extension (apparaat)",
+  "context": "gym exercise name (arms, machine)"
+ },
+ {
+  "key": "exercise.assisted-dips",
+  "en": "Assisted dips",
+  "nl": "Assisted dips",
+  "context": "gym exercise name (arms, machine)"
+ },
+ {
+  "key": "exercise.preacher-curl",
+  "en": "Preacher curl",
+  "nl": "Preacher curl",
+  "context": "gym exercise name (arms, machine)"
+ },
+ {
+  "key": "exercise.ez-bar-curl",
+  "en": "EZ-bar curl",
+  "nl": "Bicepscurl (EZ-stang)",
+  "context": "gym exercise name (arms, freeWeight)"
+ },
+ {
+  "key": "exercise.concentration-curl",
+  "en": "Concentration curl",
+  "nl": "Concentratiecurl",
+  "context": "gym exercise name (arms, freeWeight)"
+ },
+ {
+  "key": "exercise.rope-pushdown",
+  "en": "Rope triceps pushdown",
+  "nl": "Triceps pushdown (touw)",
+  "context": "gym exercise name (arms, cable)"
+ },
+ {
+  "key": "exercise.overhead-triceps-cable",
+  "en": "Overhead cable triceps extension",
+  "nl": "Triceps extension boven het hoofd (kabel)",
+  "context": "gym exercise name (arms, cable)"
+ },
+ {
+  "key": "exercise.skull-crusher",
+  "en": "Skull crusher",
+  "nl": "Skull crusher",
+  "context": "gym exercise name (arms, freeWeight)"
+ },
+ {
+  "key": "exercise.triceps-kickback",
+  "en": "Triceps kickback",
+  "nl": "Triceps kickback",
+  "context": "gym exercise name (arms, freeWeight)"
+ },
+ {
+  "key": "exercise.close-grip-bench",
+  "en": "Close-grip bench press",
+  "nl": "Bankdrukken (smalle greep)",
+  "context": "gym exercise name (arms, freeWeight)"
+ },
+ {
+  "key": "exercise.bench-dips",
+  "en": "Bench dips",
+  "nl": "Bankdips",
+  "context": "gym exercise name (arms, bodyweight)"
+ },
+ {
+  "key": "exercise.ab-crunch-machine",
+  "en": "Ab crunch machine",
+  "nl": "Buikcrunch (apparaat)",
+  "context": "gym exercise name (core, machine)"
+ },
+ {
+  "key": "exercise.cable-crunch",
+  "en": "Cable crunch",
+  "nl": "Crunch aan de kabel",
+  "context": "gym exercise name (core, cable)"
+ },
+ {
+  "key": "exercise.plank",
+  "en": "Plank",
+  "nl": "Plank",
+  "context": "gym exercise name (core, bodyweight)"
+ },
+ {
+  "key": "exercise.leg-raise",
+  "en": "Hanging leg raise",
+  "nl": "Benen heffen (hangend)",
+  "context": "gym exercise name (core, bodyweight)"
+ },
+ {
+  "key": "exercise.russian-twist",
+  "en": "Russian twist",
+  "nl": "Russian twist",
+  "context": "gym exercise name (core, bodyweight)"
+ },
+ {
+  "key": "exercise.rotary-torso",
+  "en": "Rotary torso machine",
+  "nl": "Rotary torso (apparaat)",
+  "context": "gym exercise name (core, machine)"
+ },
+ {
+  "key": "exercise.side-plank",
+  "en": "Side plank",
+  "nl": "Zijplank",
+  "context": "gym exercise name (core, bodyweight)"
+ },
+ {
+  "key": "exercise.crunch",
+  "en": "Crunches",
+  "nl": "Crunches",
+  "context": "gym exercise name (core, bodyweight)"
+ },
+ {
+  "key": "exercise.sit-up",
+  "en": "Sit-ups",
+  "nl": "Sit-ups",
+  "context": "gym exercise name (core, bodyweight)"
+ },
+ {
+  "key": "exercise.bicycle-crunch",
+  "en": "Bicycle crunch",
+  "nl": "Fietscrunch",
+  "context": "gym exercise name (core, bodyweight)"
+ },
+ {
+  "key": "exercise.captains-chair",
+  "en": "Knee raise (captain's chair)",
+  "nl": "Knieheffen (dipstation)",
+  "context": "gym exercise name (core, bodyweight)"
+ },
+ {
+  "key": "exercise.ab-wheel",
+  "en": "Ab wheel rollout",
+  "nl": "Ab wheel",
+  "context": "gym exercise name (core, bodyweight)"
+ },
+ {
+  "key": "exercise.mountain-climbers",
+  "en": "Mountain climbers",
+  "nl": "Mountain climbers",
+  "context": "gym exercise name (core, bodyweight)"
+ },
+ {
+  "key": "exercise.cable-woodchop",
+  "en": "Cable woodchop",
+  "nl": "Woodchop aan de kabel",
+  "context": "gym exercise name (core, cable)"
+ },
+ {
+  "key": "exercise.dead-bug",
+  "en": "Dead bug",
+  "nl": "Dead bug",
+  "context": "gym exercise name (core, bodyweight)"
+ },
+ {
+  "key": "exercise.kettlebell-swing",
+  "en": "Kettlebell swing",
+  "nl": "Kettlebell swing",
+  "context": "gym exercise name (fullBody, freeWeight)"
+ },
+ {
+  "key": "exercise.kettlebell-goblet-lunge",
+  "en": "Kettlebell lunge",
+  "nl": "Lunge met kettlebell",
+  "context": "gym exercise name (fullBody, freeWeight)"
+ },
+ {
+  "key": "exercise.thruster",
+  "en": "Thrusters",
+  "nl": "Thrusters",
+  "context": "gym exercise name (fullBody, freeWeight)"
+ },
+ {
+  "key": "exercise.burpee",
+  "en": "Burpees",
+  "nl": "Burpees",
+  "context": "gym exercise name (fullBody, bodyweight)"
+ },
+ {
+  "key": "exercise.box-jump",
+  "en": "Box jumps",
+  "nl": "Box jumps",
+  "context": "gym exercise name (fullBody, bodyweight)"
+ },
+ {
+  "key": "exercise.battle-ropes",
+  "en": "Battle ropes",
+  "nl": "Battle ropes",
+  "context": "gym exercise name (fullBody, bodyweight)"
+ },
+ {
+  "key": "exercise.farmers-walk",
+  "en": "Farmer's walk",
+  "nl": "Farmer's walk",
+  "context": "gym exercise name (fullBody, freeWeight)"
+ },
+ {
+  "key": "exercise.medicine-ball-slam",
+  "en": "Medicine ball slam",
+  "nl": "Medicijnbal slam",
+  "context": "gym exercise name (fullBody, freeWeight)"
+ },
+ {
+  "key": "exercise.sled-push",
+  "en": "Sled push",
+  "nl": "Slee duwen",
+  "context": "gym exercise name (fullBody, freeWeight)"
+ },
+ {
+  "key": "exercise.trx-row",
+  "en": "Suspension trainer row",
+  "nl": "Roeien met suspension trainer",
+  "context": "gym exercise name (fullBody, bodyweight)"
+ },
+ {
+  "key": "exercise.treadmill",
+  "en": "Treadmill",
+  "nl": "Loopband",
+  "context": "gym exercise name (cardio, cardio)"
+ },
+ {
+  "key": "exercise.cross-trainer",
+  "en": "Cross trainer",
+  "nl": "Crosstrainer",
+  "context": "gym exercise name (cardio, cardio)"
+ },
+ {
+  "key": "exercise.exercise-bike",
+  "en": "Exercise bike",
+  "nl": "Hometrainer (fiets)",
+  "context": "gym exercise name (cardio, cardio)"
+ },
+ {
+  "key": "exercise.rowing-machine",
+  "en": "Rowing machine",
+  "nl": "Roeimachine",
+  "context": "gym exercise name (cardio, cardio)"
+ },
+ {
+  "key": "exercise.stair-climber",
+  "en": "Stair climber",
+  "nl": "Traploper",
+  "context": "gym exercise name (cardio, cardio)"
+ },
+ {
+  "key": "exercise.recumbent-bike",
+  "en": "Recumbent bike",
+  "nl": "Ligfiets",
+  "context": "gym exercise name (cardio, cardio)"
+ },
+ {
+  "key": "exercise.spin-bike",
+  "en": "Indoor cycling bike",
+  "nl": "Spinningfiets",
+  "context": "gym exercise name (cardio, cardio)"
+ },
+ {
+  "key": "exercise.stepper",
+  "en": "Stepper",
+  "nl": "Stepper",
+  "context": "gym exercise name (cardio, cardio)"
+ },
+ {
+  "key": "exercise.incline-walk",
+  "en": "Incline treadmill walk",
+  "nl": "Wandelen op de loopband (helling)",
+  "context": "gym exercise name (cardio, cardio)"
+ },
+ {
+  "key": "exercise.ski-erg",
+  "en": "Ski ergometer",
+  "nl": "Ski-ergometer",
+  "context": "gym exercise name (cardio, cardio)"
+ },
+ {
+  "key": "exercise.air-bike",
+  "en": "Air bike",
+  "nl": "Air bike",
+  "context": "gym exercise name (cardio, cardio)"
+ },
+ {
+  "key": "exercise.jump-rope",
+  "en": "Jump rope",
+  "nl": "Touwtjespringen",
+  "context": "gym exercise name (cardio, cardio)"
+ },
+ {
+  "key": "moreapps.section",
+  "en": "Discover",
+  "nl": "Ontdekken",
+  "context": "settings section header above the developer card"
+ },
+ {
+  "key": "moreapps.title",
+  "en": "More apps from the developer",
+  "nl": "Meer apps van de ontwikkelaar",
+  "context": "card title"
+ },
+ {
+  "key": "moreapps.subtitle",
+  "en": "Apps for iPhone, iPad, Apple TV and Homey",
+  "nl": "Apps voor iPhone, iPad, Apple TV en Homey",
+  "context": "card subtitle (Homey is a product name)"
+ },
+ {
+  "key": "moreapps.action",
+  "en": "View",
+  "nl": "Bekijk",
+  "context": "small button on the card"
+ },
+ {
+  "key": "appinfo.version",
+  "en": "Version",
+  "nl": "Versie",
+  "context": "footer: 'Version: 1.0.0 (3)'"
+ },
+ {
+  "key": "plist.NSHealthShareUsageDescription",
+  "en": "Liftr reads your weight, body composition and heart rate to show your progress.",
+  "nl": "Liftr leest je gewicht, lichaamssamenstelling en hartslag om je vooruitgang te laten zien.",
+  "context": "iOS permission prompt text"
+ },
+ {
+  "key": "plist.NSHealthUpdateUsageDescription",
+  "en": "Liftr saves your gym workouts, calories and weight in Apple Health.",
+  "nl": "Liftr bewaart je trainingen, calorieën en gewicht in Apple Gezondheid.",
+  "context": "iOS permission prompt text"
+ },
+ {
+  "key": "plist.NSCameraUsageDescription",
+  "en": "Liftr uses the camera to scan the QR code or barcode of your gym pass.",
+  "nl": "Liftr gebruikt de camera om de QR- of barcode van je sportschoolpas te scannen.",
+  "context": "iOS permission prompt text"
+ },
+ {
+  "key": "plist.NSPhotoLibraryUsageDescription",
+  "en": "Liftr reads the code of your gym pass from a screenshot you choose.",
+  "nl": "Liftr leest de code van je sportschoolpas uit een screenshot die je kiest.",
+  "context": "iOS permission prompt text"
+ }
+]
