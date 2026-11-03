@@ -1,0 +1,858 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CDBBE011BAB915EFEEC2223 = {
+			isa = PBXBuildFile;
+			fileRef = "927E503E5C5ACE7BBDFCD040";
+			settings = {
+				ATTRIBUTES = (
+					RemoveHeadersOnCopy,
+				);
+			};
+		};
+		425C144BC84813091A159816 = {
+			isa = PBXBuildFile;
+			fileRef = "4AF588132CA4FBD3C5654E34";
+			platformFilter = ios;
+		};
+		F302F2715A2DBF1A54F1E811 = {
+			isa = PBXBuildFile;
+			fileRef = F4A96AD7B7F7A02BD5C55904;
+			settings = {
+				ATTRIBUTES = (
+					RemoveHeadersOnCopy,
+				);
+			};
+		};
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7685E9876975D08E5A3CD9D8 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D05534B0D2FA41783916544C;
+			proxyType = 1;
+			remoteGlobalIDString = B03314AB8FCB6E94D4BE65F1;
+			remoteInfo = LiftrWatch;
+		};
+		820727DDE6B1078D16AFD0A3 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D05534B0D2FA41783916544C;
+			proxyType = 1;
+			remoteGlobalIDString = "9074393D2702F09B9FD3F4CE";
+			remoteInfo = LiftrWatchWidgetsExtension;
+		};
+		954508B8BCB89C2E2EB1DDA2 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D05534B0D2FA41783916544C;
+			proxyType = 1;
+			remoteGlobalIDString = "86E3BEDF893EC9870A8888E7";
+			remoteInfo = LiftrWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1FBA058FD6013E38E335F931 = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				"425C144BC84813091A159816",
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B72F47E496CF921B3EF35119 = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F302F2715A2DBF1A54F1E811,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D466F2946C487099ADF8FBBC = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				"2CDBBE011BAB915EFEEC2223",
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4AF588132CA4FBD3C5654E34 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = LiftrWatch.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		55912DA66B84516F9993CD55 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = Liftr.entitlements;
+			sourceTree = "<group>";
+		};
+		62AE66B4FD6BE26D6C06A13C = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = Liftr.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F2B7406F3A0A5B663F37630 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = LiftrWatchWidgets.entitlements;
+			sourceTree = "<group>";
+		};
+		83C3A33EE1A6C1F7B4C044D9 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = LiftrWidgets.entitlements;
+			sourceTree = "<group>";
+		};
+		927E503E5C5ACE7BBDFCD040 = {
+			isa = PBXFileReference;
+			explicitFileType = "wrapper.app-extension";
+			includeInIndex = 0;
+			path = LiftrWatchWidgetsExtension.appex;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C0CFBC5FD5036F79CE34641B = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = "LiftrWidgets-Info.plist";
+			sourceTree = "<group>";
+		};
+		CF21CBBA4D662B61AFAA24C9 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = "LiftrWatch-Info.plist";
+			sourceTree = "<group>";
+		};
+		DE86BD144559FCA36AB33411 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = LiftrWatch.entitlements;
+			sourceTree = "<group>";
+		};
+		F4A96AD7B7F7A02BD5C55904 = {
+			isa = PBXFileReference;
+			explicitFileType = "wrapper.app-extension";
+			includeInIndex = 0;
+			path = LiftrWidgetsExtension.appex;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F58C9933BB00C81AF6D568EA = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = "Liftr-Info.plist";
+			sourceTree = "<group>";
+		};
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1F1EA8C1AA5958799812250C = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LiftrWatch;
+			sourceTree = "<group>";
+		};
+		38E1CB9BD1D44D8AD6D8C3A4 = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LiftrWatchWidgets;
+			sourceTree = "<group>";
+		};
+		B169489BBD3B5F34B515A928 = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Liftr;
+			sourceTree = "<group>";
+		};
+		D92DB039DE9AD065DBC1D87D = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E0E926853DFA927AE8393F11 = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LiftrWidgets;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A2BA933BF54019D59B912C3 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2063D9350D71D64F7C8FD5A6 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DA42C910DBC02F174C269CC = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2290351FF71B3E000988CFA = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40682C27648819830745E095 = {
+			isa = PBXGroup;
+			children = (
+				F58C9933BB00C81AF6D568EA,
+				CF21CBBA4D662B61AFAA24C9,
+				C0CFBC5FD5036F79CE34641B,
+				"55912DA66B84516F9993CD55",
+				DE86BD144559FCA36AB33411,
+				"83C3A33EE1A6C1F7B4C044D9",
+				"6F2B7406F3A0A5B663F37630",
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		B51748C7B3AAA30C8D61649D = {
+			isa = PBXGroup;
+			children = (
+				"62AE66B4FD6BE26D6C06A13C",
+				"4AF588132CA4FBD3C5654E34",
+				F4A96AD7B7F7A02BD5C55904,
+				"927E503E5C5ACE7BBDFCD040",
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E22E8117CB1EC174016D9BD0 = {
+			isa = PBXGroup;
+			children = (
+				B169489BBD3B5F34B515A928,
+				D92DB039DE9AD065DBC1D87D,
+				"1F1EA8C1AA5958799812250C",
+				E0E926853DFA927AE8393F11,
+				"38E1CB9BD1D44D8AD6D8C3A4",
+				"40682C27648819830745E095",
+				B51748C7B3AAA30C8D61649D,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A96A0C240DBB00A1A989B78 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2C0FBDDD38243A3CA51AB13;
+			buildPhases = (
+				CF718C1EE6A33AA9ED372A13,
+				B2290351FF71B3E000988CFA,
+				"4F21FD5010F1C7ABCD4A267A",
+				B72F47E496CF921B3EF35119,
+				"1FBA058FD6013E38E335F931",
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEEE1D6ABCC89A72FDDB3481,
+				"7DE307705AD1B1333DB9E61C",
+			);
+			fileSystemSynchronizedGroups = (
+				B169489BBD3B5F34B515A928,
+				D92DB039DE9AD065DBC1D87D,
+			);
+			name = Liftr;
+			packageProductDependencies = (
+			);
+			productName = Liftr;
+			productReference = "62AE66B4FD6BE26D6C06A13C";
+			productType = "com.apple.product-type.application";
+		};
+		86E3BEDF893EC9870A8888E7 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = "599520152277F55701163846";
+			buildPhases = (
+				D498E251EE81D67062638BE5,
+				"8DA42C910DBC02F174C269CC",
+				"5EEA9D539640E03719C15226",
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E0E926853DFA927AE8393F11,
+				D92DB039DE9AD065DBC1D87D,
+			);
+			name = LiftrWidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = LiftrWidgetsExtension;
+			productReference = F4A96AD7B7F7A02BD5C55904;
+			productType = "com.apple.product-type.app-extension";
+		};
+		9074393D2702F09B9FD3F4CE = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9AD24626FABFDEF13359139;
+			buildPhases = (
+				"478BAD2081DF6E3E5B67CB7C",
+				"0A2BA933BF54019D59B912C3",
+				"41B58BF9F8CB58C15B907808",
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				"38E1CB9BD1D44D8AD6D8C3A4",
+				D92DB039DE9AD065DBC1D87D,
+			);
+			name = LiftrWatchWidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = LiftrWatchWidgetsExtension;
+			productReference = "927E503E5C5ACE7BBDFCD040";
+			productType = "com.apple.product-type.app-extension";
+		};
+		B03314AB8FCB6E94D4BE65F1 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B17BCB97699729A21BE0A5A5;
+			buildPhases = (
+				CEAF8ABE69680A272EA53101,
+				"2063D9350D71D64F7C8FD5A6",
+				"5BB314F0E91B26F4077E1997",
+				D466F2946C487099ADF8FBBC,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA48544D66FCBE0F1659BC43,
+			);
+			fileSystemSynchronizedGroups = (
+				"1F1EA8C1AA5958799812250C",
+				D92DB039DE9AD065DBC1D87D,
+			);
+			name = LiftrWatch;
+			packageProductDependencies = (
+			);
+			productName = LiftrWatch;
+			productReference = "4AF588132CA4FBD3C5654E34";
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D05534B0D2FA41783916544C = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					"5A96A0C240DBB00A1A989B78" = {
+						CreatedOnToolsVersion = "16.0";
+					};
+					B03314AB8FCB6E94D4BE65F1 = {
+						CreatedOnToolsVersion = "16.0";
+					};
+					"86E3BEDF893EC9870A8888E7" = {
+						CreatedOnToolsVersion = "16.0";
+					};
+					"9074393D2702F09B9FD3F4CE" = {
+						CreatedOnToolsVersion = "16.0";
+					};
+				};
+			};
+			buildConfigurationList = "0F2360D86DC7558578F2F243";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				nl,
+			);
+			mainGroup = E22E8117CB1EC174016D9BD0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B51748C7B3AAA30C8D61649D;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"5A96A0C240DBB00A1A989B78",
+				B03314AB8FCB6E94D4BE65F1,
+				"86E3BEDF893EC9870A8888E7",
+				"9074393D2702F09B9FD3F4CE",
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41B58BF9F8CB58C15B907808 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F21FD5010F1C7ABCD4A267A = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BB314F0E91B26F4077E1997 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EEA9D539640E03719C15226 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		478BAD2081DF6E3E5B67CB7C = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEAF8ABE69680A272EA53101 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF718C1EE6A33AA9ED372A13 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D498E251EE81D67062638BE5 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7DE307705AD1B1333DB9E61C = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = B03314AB8FCB6E94D4BE65F1;
+			targetProxy = "7685E9876975D08E5A3CD9D8";
+		};
+		CA48544D66FCBE0F1659BC43 = {
+			isa = PBXTargetDependency;
+			target = "9074393D2702F09B9FD3F4CE";
+			targetProxy = "820727DDE6B1078D16AFD0A3";
+		};
+		FEEE1D6ABCC89A72FDDB3481 = {
+			isa = PBXTargetDependency;
+			target = "86E3BEDF893EC9870A8888E7";
+			targetProxy = "954508B8BCB89C2E2EB1DDA2";
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1EFD75C2687A375475F9F1D7 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/Liftr.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/Liftr-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Liftr;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Liftr reads your weight, body composition and heart rate to show your progress.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Liftr saves your gym workouts, calories and weight in Apple Health.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.liftr;
+				PRODUCT_NAME = Liftr;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2F689255688D8C6ED6E73F12 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = EU3UY476T6;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = "1.0.0";
+				MTL_FAST_MATH = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = "5.0";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		572B338D89F1E3EA1FC078E4 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/LiftrWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/LiftrWatch-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Liftr;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Liftr reads your weight, body composition and heart rate to show your progress.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Liftr saves your gym workouts, calories and weight in Apple Health.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = nl.lrvdlinden.liftr;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.liftr.watchkitapp;
+				PRODUCT_NAME = LiftrWatch;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = "10.0";
+			};
+			name = Release;
+		};
+		5952A5C97BA742CE7371D005 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = Config/LiftrWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/LiftrWidgets-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Liftr;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.liftr.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6B265CB2FED69C0C33F12A6A = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/Liftr.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/Liftr-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Liftr;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Liftr reads your weight, body composition and heart rate to show your progress.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Liftr saves your gym workouts, calories and weight in Apple Health.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.liftr;
+				PRODUCT_NAME = Liftr;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A30CFD166E1A0326A3A97327 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = Config/LiftrWatchWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/LiftrWidgets-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Liftr;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.liftr.watchkitapp.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = "10.0";
+			};
+			name = Debug;
+		};
+		CC7DE79CD33C9464F923FAA6 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = EU3UY476T6;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = "1.0.0";
+				MTL_FAST_MATH = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = "5.0";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA628CB62CBCC71749C0A1FA = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = Config/LiftrWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/LiftrWidgets-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Liftr;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.liftr.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DCAF0404CD4957EC631B8F61 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = Config/LiftrWatchWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/LiftrWidgets-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Liftr;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.liftr.watchkitapp.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = "10.0";
+			};
+			name = Release;
+		};
+		E2E5C961A85E3CB563ED45B1 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/LiftrWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/LiftrWatch-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Liftr;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Liftr reads your weight, body composition and heart rate to show your progress.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Liftr saves your gym workouts, calories and weight in Apple Health.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = nl.lrvdlinden.liftr;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lrvdlinden.liftr.watchkitapp;
+				PRODUCT_NAME = LiftrWatch;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = "10.0";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F2360D86DC7558578F2F243 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC7DE79CD33C9464F923FAA6,
+				"2F689255688D8C6ED6E73F12",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		599520152277F55701163846 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA628CB62CBCC71749C0A1FA,
+				"5952A5C97BA742CE7371D005",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9AD24626FABFDEF13359139 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A30CFD166E1A0326A3A97327,
+				DCAF0404CD4957EC631B8F61,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B17BCB97699729A21BE0A5A5 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2E5C961A85E3CB563ED45B1,
+				"572B338D89F1E3EA1FC078E4",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2C0FBDDD38243A3CA51AB13 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"6B265CB2FED69C0C33F12A6A",
+				"1EFD75C2687A375475F9F1D7",
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D05534B0D2FA41783916544C;
+}

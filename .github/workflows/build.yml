@@ -1,0 +1,48 @@
+name: Build
+
+# Compiles Liftr for iOS/iPadOS and watchOS (no signing) to catch build errors early.
+on:
+  push:
+    branches: [main, "feat-**"]
+    paths-ignore: ["**.md", "appstore/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: ${{ matrix.name }}
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: iOS
+            scheme: Liftr
+            destination: generic/platform=iOS Simulator
+          - name: watchOS
+            scheme: LiftrWatch
+            destination: generic/platform=watchOS Simulator
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select newest Xcode
+        run: |
+          XC=$(ls -d /Applications/Xcode*.app | grep -vi beta | sort -V | tail -1)
+          sudo xcode-select -s "$XC"
+          xcodebuild -version
+      - name: Build
+        run: |
+          set +e
+          xcodebuild -project Liftr.xcodeproj -scheme "${{ matrix.scheme }}" \
+            -destination "${{ matrix.destination }}" -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build > build.log 2>&1
+          status=$?
+          grep -E "error:|BUILD (SUCCEEDED|FAILED)" build.log | sort -u | head -200
+          exit $status
+      - name: Upload log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log-${{ matrix.name }}
+          path: build.log
