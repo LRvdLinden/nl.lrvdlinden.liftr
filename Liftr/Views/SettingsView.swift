@@ -23,10 +23,30 @@ struct SettingsView: View {
     @AppStorage(ReminderScheduler.Key.weeklyOn) private var remindWeekly = false
     @State private var notificationsDenied = false
     @State private var showSyncDetails = false
+    @AppStorage(UserProfile.nameKey) private var userName = ""
 
     var body: some View {
         NavigationStack {
             List {
+                Section {
+                    HStack(spacing: 12) {
+                        Image(systemName: "person.crop.circle.fill")
+                            .font(.title2)
+                            .foregroundStyle(Theme.accent)
+                        TextField(tr("Your name", "Je naam"), text: $userName)
+                            .textContentType(.givenName)
+                            .textInputAutocapitalization(.words)
+                            .autocorrectionDisabled()
+                            .submitLabel(.done)
+                    }
+                } header: {
+                    Text(tr("Profile", "Profiel"))
+                } footer: {
+                    Text(tr("Used to greet you and on the back of your badges.",
+                            "Wordt gebruikt om je te begroeten en op de achterkant van je badges."))
+                }
+                .listRowBackground(Theme.card)
+
                 Section(tr("Training", "Training")) {
                     Picker(tr("Unit", "Eenheid"), selection: $unitRaw) {
                         Text(tr("Kilograms (kg)", "Kilogram (kg)")).tag("kg")

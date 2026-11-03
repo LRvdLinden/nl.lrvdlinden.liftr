@@ -1,10 +1,15 @@
 import SwiftUI
 
-/// First-launch welcome: three short pages, ending with the Apple Health connection.
+/// First-launch welcome: a few short pages with your name, ending with the Apple Health connection.
 struct OnboardingView: View {
     var onDone: () -> Void
     @State private var page = 0
     @State private var connecting = false
+    @AppStorage(UserProfile.nameKey) private var name = ""
+    @FocusState private var nameFocused: Bool
+
+    /// The page that asks for your name.
+    private let namePage = 1
 
     private struct Page {
         let symbol: String
@@ -18,6 +23,10 @@ struct OnboardingView: View {
                  title: tr("Every rep counts", "Elke herhaling telt"),
                  text: tr("Log your exercises, sets, reps and weight in seconds — no more notes.",
                           "Leg je oefeningen, sets, herhalingen en gewicht vast in een paar tikken. Geen notities meer.")),
+            Page(symbol: "person.fill",
+                 title: tr("What's your name?", "Hoe heet je?"),
+                 text: tr("Liftr uses it to greet you and puts it on the back of the badges you earn. You can change it later in Settings.",
+                          "Liftr gebruikt hem om je te begroeten en zet hem op de achterkant van de badges die je haalt. Je kunt hem later wijzigen in Instellingen.")),
             Page(symbol: "chart.line.uptrend.xyaxis",
                  title: tr("See your progress", "Zie je vooruitgang"),
                  text: tr("Liftr shows what you did last time, your records and how much stronger you're getting.",
@@ -68,6 +77,24 @@ struct OnboardingView: View {
                                     .multilineTextAlignment(.center)
                                     .foregroundStyle(Theme.muted)
                                     .padding(.horizontal, 12)
+                                if i == namePage {
+                                    TextField(tr("Your name", "Je naam"), text: $name)
+                                        .textContentType(.givenName)
+                                        .textInputAutocapitalization(.words)
+                                        .autocorrectionDisabled()
+                                        .submitLabel(.next)
+                                        .focused($nameFocused)
+                                        .onSubmit { withAnimation { page += 1 } }
+                                        .font(.title2.weight(.semibold))
+                                        .multilineTextAlignment(.center)
+                                        .foregroundStyle(.white)
+                                        .padding(.vertical, 14)
+                                        .padding(.horizontal, 16)
+                                        .background(Theme.card, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                        .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous)
+                                            .strokeBorder(nameFocused ? Theme.accent : Theme.line, lineWidth: 1.5))
+                                        .padding(.top, 8)
+                                }
                             }
                             Spacer()
                         }
@@ -77,6 +104,9 @@ struct OnboardingView: View {
                     }
                 }
                 .tabViewStyle(.page(indexDisplayMode: .always))
+                .onChange(of: page) { _, new in
+                    nameFocused = new == namePage
+                }
 
                 VStack(spacing: 12) {
                     if page == pages.count - 1 {
@@ -99,8 +129,11 @@ struct OnboardingView: View {
                         Button(tr("Not now", "Nu niet")) { onDone() }
                             .buttonStyle(LiftrButtonStyle(filled: false))
                     } else {
-                        Button(tr("Next", "Volgende")) { withAnimation { page += 1 } }
-                            .buttonStyle(LiftrButtonStyle())
+                        Button(page == namePage && name.trimmingCharacters(in: .whitespaces).isEmpty
+                               ? tr("Skip for now", "Later invullen") : tr("Next", "Volgende")) {
+                            withAnimation { page += 1 }
+                        }
+                        .buttonStyle(LiftrButtonStyle(filled: !(page == namePage && name.trimmingCharacters(in: .whitespaces).isEmpty)))
                     }
                 }
                 .frame(maxWidth: 480)

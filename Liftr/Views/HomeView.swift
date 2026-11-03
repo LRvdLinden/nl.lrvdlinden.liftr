@@ -11,9 +11,12 @@ struct HomeView: View {
     @State private var showBody = false
     @State private var newRoutine = false
     @State private var editing: Routine?
+    @State private var showBadges = false
+    @AppStorage(UserProfile.nameKey) private var userName = ""
 
     private var unit: WeightUnit { WeightUnit(rawValue: unitRaw) ?? .kg }
     private var done: [Workout] { WorkoutStats.finished(workouts) }
+    private var firstName: String { userName.trimmingCharacters(in: .whitespaces).split(separator: " ").first.map(String.init) ?? "" }
 
     var body: some View {
         NavigationStack {
@@ -30,6 +33,7 @@ struct HomeView: View {
             }
             .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: Workout.self) { WorkoutDetailView(workout: $0) }
+            .navigationDestination(isPresented: $showBadges) { BadgesView() }
             .sheet(isPresented: $showBody) { BodyMeasurementView() }
             .sheet(isPresented: $newRoutine) { RoutineEditView(routine: nil) }
             .sheet(item: $editing) { RoutineEditView(routine: $0) }
@@ -55,7 +59,8 @@ struct HomeView: View {
                 Button(tr("Continue", "Ga verder")) { controller.isPresented = true }
                     .buttonStyle(WhiteButtonStyle())
             } else {
-                Text(tr("Ready to train?", "Klaar om te trainen?"))
+                Text(firstName.isEmpty ? tr("Ready to train?", "Klaar om te trainen?")
+                                       : trf("Ready to train, {1}?", "Klaar om te trainen, {1}?", firstName))
                     .font(Theme.display(30))
                     .textCase(.uppercase)
                     .foregroundStyle(.white)
@@ -202,14 +207,18 @@ struct HomeView: View {
 
     private var badgesSection: some View {
         let badges = WorkoutStats.badges(workouts)
+        let earned = badges.filter(\.achieved).sorted { ($0.date ?? .distantPast) > ($1.date ?? .distantPast) }
+        let next = badges.filter { !$0.achieved }.sorted { $0.progress > $1.progress }
         return VStack(alignment: .leading, spacing: 10) {
-            SectionHeader(title: tr("Badges", "Badges"))
+            SectionHeader(title: trf("Badges {1}/{2}", "Badges {1}/{2}", earned.count, badges.count),
+                          action: tr("All", "Alle")) { showBadges = true }
             ScrollView(.horizontal) {
                 HStack(spacing: 12) {
-                    ForEach(badges.sorted { $0.achieved && !$1.achieved }) { badge in
+                    ForEach(Array((earned + next).prefix(14))) { badge in
                         BadgeView(badge: badge)
                     }
                 }
+                .padding(.vertical, 2)
             }
             .scrollIndicators(.hidden)
         }
@@ -315,30 +324,3 @@ struct RoutineCard: View {
     }
 }
 
-struct BadgeView: View {
-    let badge: WorkoutStats.Badge
-
-    var body: some View {
-        VStack(spacing: 8) {
-            ZStack {
-                Circle()
-                    .fill(badge.achieved ? AnyShapeStyle(Theme.accentGradient) : AnyShapeStyle(Theme.cardRaised))
-                Image(systemName: badge.symbol)
-                    .font(.system(size: 26, weight: .bold))
-                    .foregroundStyle(badge.achieved ? .white : Theme.muted.opacity(0.6))
-            }
-            .frame(width: 64, height: 64)
-            Text(badge.title)
-                .font(.caption.weight(.bold))
-                .foregroundStyle(badge.achieved ? .white : Theme.muted)
-                .multilineTextAlignment(.center)
-                .lineLimit(2, reservesSpace: true)
-        }
-        .frame(width: 96)
-        .padding(.vertical, 12)
-        .background(Theme.card, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-        .opacity(badge.achieved ? 1 : 0.7)
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(badge.title). \(badge.detail)")
-    }
-}

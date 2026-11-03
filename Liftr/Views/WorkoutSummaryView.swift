@@ -1,3 +1,4 @@
+import SwiftData
 import SwiftUI
 
 /// Shown after finishing a workout.
@@ -5,6 +6,8 @@ struct WorkoutSummaryView: View {
     let workout: Workout
     @Environment(\.dismiss) private var dismiss
     @AppStorage(WeightUnit.storageKey) private var unitRaw = "kg"
+    @AppStorage(UserProfile.nameKey) private var userName = ""
+    @Query private var workouts: [Workout]
 
     private var unit: WeightUnit { WeightUnit(rawValue: unitRaw) ?? .kg }
 
@@ -22,7 +25,8 @@ struct WorkoutSummaryView: View {
                 .padding(.top, 30)
 
                 VStack(spacing: 6) {
-                    Text(tr("Well done!", "Goed gedaan!"))
+                    let first = userName.trimmingCharacters(in: .whitespaces).split(separator: " ").first.map(String.init) ?? ""
+                    Text(first.isEmpty ? tr("Well done!", "Goed gedaan!") : trf("Well done, {1}!", "Goed gedaan, {1}!", first))
                         .font(Theme.display(42))
                         .textCase(.uppercase)
                         .foregroundStyle(.white)
@@ -49,6 +53,24 @@ struct WorkoutSummaryView: View {
                                 .font(.headline)
                                 .foregroundStyle(.white)
                         }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .liftrCard()
+                }
+
+                let newBadges = WorkoutStats.badges(workouts).filter { $0.date == workout.startDate }
+                if !newBadges.isEmpty {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Label(tr("New badges", "Nieuwe badges"), systemImage: "rosette")
+                            .font(Theme.heading(20))
+                            .textCase(.uppercase)
+                            .foregroundStyle(Theme.accent)
+                        ScrollView(.horizontal) {
+                            HStack(spacing: 12) {
+                                ForEach(newBadges) { BadgeView(badge: $0) }
+                            }
+                        }
+                        .scrollIndicators(.hidden)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .liftrCard()

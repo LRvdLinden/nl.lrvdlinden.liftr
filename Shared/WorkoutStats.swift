@@ -202,40 +202,198 @@ enum WorkoutStats {
     // MARK: Badges
 
     struct Badge: Identifiable {
+        enum Category: String, CaseIterable, Identifiable {
+            case workouts, streak, volume, sets, records, strength, variety, moments, cardio
+            var id: String { rawValue }
+            var title: String {
+                switch self {
+                case .workouts: tr("Workouts", "Trainingen")
+                case .streak: tr("Streaks", "Reeksen")
+                case .volume: tr("Lifted", "Getild")
+                case .sets: tr("Sets & reps", "Sets & herhalingen")
+                case .records: tr("Records", "Records")
+                case .strength: tr("Strength", "Kracht")
+                case .variety: tr("Variety", "Afwisseling")
+                case .moments: tr("Moments", "Momenten")
+                case .cardio: tr("Cardio", "Cardio")
+                }
+            }
+        }
+
         let id: String
+        let category: Category
         let title: String
         let detail: String
         let symbol: String
-        let achieved: Bool
+        /// When it was earned (the workout that crossed the line); nil while not earned yet.
+        let date: Date?
+        /// 0…1 towards the goal.
+        let progress: Double
+        /// "37 / 50" style progress, empty for one-off badges.
+        let progressText: String
+
+        var achieved: Bool { date != nil }
     }
 
-    static func badges(_ workouts: [Workout]) -> [Badge] {
-        let done = finished(workouts)
-        let count = done.count
-        let totalVolume = done.reduce(0) { $0 + volume($1) }
-        let streak = weekStreak(workouts)
+    /// All badges with the date each was earned, worked out from the workout history
+    /// (imported history counts too, with its original dates).
+    static func badges(_ workouts: [Workout], now: Date = Date()) -> [Badge] {
+        let done = finished(workouts).sorted { $0.startDate < $1.startDate }
+        let cal = calendar
+
+        // Running totals, recording the first date each threshold is crossed.
+        var reached: [String: Date] = [:]
+        func mark(_ id: String, _ date: Date) { if reached[id] == nil { reached[id] = date } }
+
+        let workoutSteps = [1, 5, 10, 25, 50, 100, 250, 500]
+        let tonneSteps = [1, 5, 10, 25, 50, 100, 250, 500]
+        let setSteps = [100, 500, 1000, 2500, 5000]
+        let repSteps = [1000, 5000, 10000, 25000, 50000]
+        let recordSteps = [1, 10, 25, 50, 100]
+        let heavySteps = [50, 100, 150, 200]
+        let varietySteps = [5, 15, 30, 50]
+        let kmSteps = [10, 50, 100, 250]
+        let streakSteps = [2, 4, 8, 12, 26, 52]
+
+        var volumeKg = 0.0, sets = 0, reps = 0, records = 0, heaviest = 0.0, km = 0.0
+        var exercisesDone = Set<UUID>()
+        var bestOneRM: [UUID: Double] = [:]
+        var weekdaysByWeek: [Date: Set<Int>] = [:]
+        var longest: TimeInterval = 0
+
+        for (index, workout) in done.enumerated() {
+            let date = workout.startDate
+            let n = index + 1
+            for step in workoutSteps where n >= step { mark("workouts-\(step)", date) }
+
+            var workoutVolume = 0.0
+            for entry in workout.sortedEntries {
+                let counted = countedSets(entry)
+                guard let exercise = entry.exercise, !counted.isEmpty else { continue }
+                exercisesDone.insert(exercise.id)
+                let working = counted.filter { $0.kind != .warmup }
+                sets += counted.count
+                reps += counted.reduce(0) { $0 + $1.reps }
+                workoutVolume += working.reduce(0) { $0 + $1.volume }
+                km += counted.reduce(0) { $0 + $1.distanceMeters } / 1000
+                heaviest = max(heaviest, working.map(\.weight).max() ?? 0)
+                if !exercise.kind.isCardio {
+                    let best = working.map { oneRepMax(weight: $0.weight, reps: $0.reps) }.max() ?? 0
+                    if let previous = bestOneRM[exercise.id] {
+                        if best > previous { records += 1; bestOneRM[exercise.id] = best }
+                    } else if best > 0 {
+                        bestOneRM[exercise.id] = best
+                    }
+                }
+            }
+            volumeKg += workoutVolume
+
+            for step in tonneSteps where volumeKg >= Double(step) * 1000 { mark("volume-\(step)", date) }
+            for step in setSteps where sets >= step { mark("sets-\(step)", date) }
+            for step in repSteps where reps >= step { mark("reps-\(step)", date) }
+            for step in recordSteps where records >= step { mark("records-\(step)", date) }
+            for step in heavySteps where heaviest >= Double(step) { mark("heavy-\(step)", date) }
+            for step in varietySteps where exercisesDone.count >= step { mark("variety-\(step)", date) }
+            for step in kmSteps where km >= Double(step) { mark("km-\(step)", date) }
+
+            // Moments
+            let hour = cal.component(.hour, from: date)
+            if hour < 7 { mark("early", date) }
+            if hour >= 21 { mark("late", date) }
+            if let end = workout.endDate {
+                longest = max(longest, end.timeIntervalSince(date))
+                if end.timeIntervalSince(date) >= 90 * 60, !workout.isImported { mark("marathon", date) }
+            }
+            if workoutVolume >= 10_000 { mark("big-day", date) }
+            if let week = cal.dateInterval(of: .weekOfYear, for: date)?.start {
+                let weekday = cal.component(.weekday, from: date)
+                weekdaysByWeek[week, default: []].insert(weekday)
+                if weekdaysByWeek[week]!.isSuperset(of: [1, 7]) { mark("weekend", date) }
+                if weekdaysByWeek[week]!.count >= 5 { mark("five-a-week", date) }
+            }
+            if cal.component(.month, from: date) == 1, cal.component(.day, from: date) <= 7 { mark("new-year", date) }
+        }
+
+        // Week streaks: walk the weeks in order and note when a run first reaches each length.
+        let weekStarts = Set(done.compactMap { cal.dateInterval(of: .weekOfYear, for: $0.startDate)?.start }).sorted()
+        var run = 0
+        var previousWeek: Date?
+        var bestRun = 0
+        for week in weekStarts {
+            if let previousWeek, cal.date(byAdding: .weekOfYear, value: 1, to: previousWeek) == week { run += 1 } else { run = 1 }
+            previousWeek = week
+            bestRun = max(bestRun, run)
+            let firstInWeek = done.first { cal.dateInterval(of: .weekOfYear, for: $0.startDate)?.start == week }?.startDate ?? week
+            for step in streakSteps where run >= step { mark("streak-\(step)", firstInWeek) }
+        }
+
+        func progress(_ value: Double, _ goal: Double) -> Double { goal > 0 ? min(1, value / goal) : 0 }
+        func count(_ value: Int, _ goal: Int) -> String { "\(min(value, goal).formatted()) / \(goal.formatted())" }
+
         var list: [Badge] = []
-        for n in [1, 10, 25, 50, 100, 250] {
-            list.append(Badge(id: "workouts-\(n)",
-                              title: n == 1 ? tr("First workout", "Eerste training") : trf("{1} workouts", "{1} trainingen", n),
-                              detail: n == 1 ? tr("Finish your first workout", "Rond je eerste training af")
-                                             : trf("Finish {1} workouts", "Rond {1} trainingen af", n),
-                              symbol: n >= 100 ? "trophy.fill" : "medal.fill",
-                              achieved: count >= n))
+        func add(_ id: String, _ category: Badge.Category, _ title: String, _ detail: String, _ symbol: String,
+                 _ value: Double = 0, _ goal: Double = 1, _ text: String = "") {
+            list.append(Badge(id: id, category: category, title: title, detail: detail, symbol: symbol,
+                              date: reached[id], progress: reached[id] != nil ? 1 : progress(value, goal), progressText: text))
         }
-        for w in [4, 12, 26] {
-            list.append(Badge(id: "streak-\(w)",
-                              title: trf("{1} weeks in a row", "{1} weken op rij", w),
-                              detail: trf("Train every week for {1} weeks", "Train {1} weken lang elke week", w),
-                              symbol: "flame.fill",
-                              achieved: streak >= w))
+
+        for step in workoutSteps {
+            add("workouts-\(step)", .workouts,
+                step == 1 ? tr("First workout", "Eerste training") : trf("{1} workouts", "{1} trainingen", step),
+                step == 1 ? tr("Finish your first workout", "Rond je eerste training af") : trf("Finish {1} workouts", "Rond {1} trainingen af", step),
+                step >= 100 ? "trophy.fill" : "medal.fill", Double(done.count), Double(step), count(done.count, step))
         }
-        for t in [1, 10, 100] {
-            list.append(Badge(id: "volume-\(t)",
-                              title: trf("{1} tonnes lifted", "{1} ton getild", t),
-                              detail: trf("Lift {1} tonnes in total", "Til in totaal {1} ton", t),
-                              symbol: "scalemass.fill",
-                              achieved: totalVolume >= Double(t) * 1000))
+        for step in streakSteps {
+            add("streak-\(step)", .streak, trf("{1} weeks in a row", "{1} weken op rij", step),
+                trf("Train every week for {1} weeks", "Train {1} weken lang elke week", step),
+                "flame.fill", Double(bestRun), Double(step), count(bestRun, step))
+        }
+        for step in tonneSteps {
+            add("volume-\(step)", .volume, trf("{1} tonnes lifted", "{1} ton getild", step),
+                trf("Lift {1} tonnes in total", "Til in totaal {1} ton", step),
+                "scalemass.fill", volumeKg, Double(step) * 1000,
+                "\(LiftrFormat.decimal(min(volumeKg / 1000, Double(step)))) / \(step) t")
+        }
+        for step in setSteps {
+            add("sets-\(step)", .sets, trf("{1} sets", "{1} sets", step.formatted()),
+                trf("Complete {1} sets", "Voltooi {1} sets", step.formatted()),
+                "square.stack.3d.up.fill", Double(sets), Double(step), count(sets, step))
+        }
+        for step in repSteps {
+            add("reps-\(step)", .sets, trf("{1} reps", "{1} herhalingen", step.formatted()),
+                trf("Do {1} reps in total", "Doe in totaal {1} herhalingen", step.formatted()),
+                "repeat", Double(reps), Double(step), count(reps, step))
+        }
+        for step in recordSteps {
+            add("records-\(step)", .records,
+                step == 1 ? tr("First record", "Eerste record") : trf("{1} records", "{1} records", step),
+                step == 1 ? tr("Beat your best on an exercise", "Verbeter je beste prestatie op een oefening")
+                          : trf("Set {1} personal records", "Zet {1} persoonlijke records neer", step),
+                "star.fill", Double(records), Double(step), count(records, step))
+        }
+        for step in heavySteps {
+            add("heavy-\(step)", .strength, trf("{1} kg club", "{1} kg-club", step),
+                trf("Do a set with {1} kg or more", "Doe een set met {1} kg of meer", step),
+                "dumbbell.fill", heaviest, Double(step),
+                "\(LiftrFormat.decimal(min(heaviest, Double(step)))) / \(step) kg")
+        }
+        add("big-day", .strength, tr("10 tonne day", "Dag van 10 ton"),
+            tr("Lift 10 tonnes in one workout", "Til 10 ton in één training"), "bolt.fill")
+        for step in varietySteps {
+            add("variety-\(step)", .variety, trf("{1} exercises", "{1} oefeningen", step),
+                trf("Try {1} different exercises", "Probeer {1} verschillende oefeningen", step),
+                "square.grid.3x3.fill", Double(exercisesDone.count), Double(step), count(exercisesDone.count, step))
+        }
+        add("early", .moments, tr("Early bird", "Vroege vogel"), tr("Start a workout before 7:00", "Begin een training voor 7:00"), "sunrise.fill")
+        add("late", .moments, tr("Night owl", "Nachtuil"), tr("Start a workout after 21:00", "Begin een training na 21:00"), "moon.stars.fill")
+        add("weekend", .moments, tr("Weekend warrior", "Weekendstrijder"), tr("Train on Saturday and Sunday of the same week", "Train op zaterdag én zondag van dezelfde week"), "calendar.badge.checkmark")
+        add("five-a-week", .moments, tr("Five a week", "Vijf per week"), tr("Train on five days in one week", "Train op vijf dagen in één week"), "5.circle.fill")
+        add("marathon", .moments, tr("Marathon session", "Marathonsessie"), tr("Train for 90 minutes or longer", "Train 90 minuten of langer"), "timer")
+        add("new-year", .moments, tr("Fresh start", "Frisse start"), tr("Train in the first week of January", "Train in de eerste week van januari"), "sparkles")
+        for step in kmSteps {
+            add("km-\(step)", .cardio, trf("{1} km", "{1} km", step),
+                trf("Cover {1} km on cardio machines", "Leg {1} km af op cardio-apparaten", step),
+                "figure.run", km, Double(step), "\(LiftrFormat.decimal(min(km, Double(step)))) / \(step) km")
         }
         return list
     }

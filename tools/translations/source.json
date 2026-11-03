@@ -294,6 +294,54 @@
   "context": "WorkoutController.swift; WatchWorkoutManager.swift"
  },
  {
+  "key": "Flips the badge",
+  "en": "Flips the badge",
+  "nl": "Draait de badge om",
+  "context": "BadgeViews.swift"
+ },
+ {
+  "key": "EARNED",
+  "en": "EARNED",
+  "nl": "BEHAALD",
+  "context": "BadgeViews.swift"
+ },
+ {
+  "key": "by {1}",
+  "en": "by {1}",
+  "nl": "door {1}",
+  "context": "BadgeViews.swift"
+ },
+ {
+  "key": "Not earned yet",
+  "en": "Not earned yet",
+  "nl": "Nog niet behaald",
+  "context": "BadgeViews.swift"
+ },
+ {
+  "key": "Earned on {1}",
+  "en": "Earned on {1}",
+  "nl": "Behaald op {1}",
+  "context": "BadgeViews.swift"
+ },
+ {
+  "key": "{1} of {2} earned",
+  "en": "{1} of {2} earned",
+  "nl": "{1} van {2} behaald",
+  "context": "BadgeViews.swift"
+ },
+ {
+  "key": "Tap a badge to flip it.",
+  "en": "Tap a badge to flip it.",
+  "nl": "Tik op een badge om hem om te draaien.",
+  "context": "BadgeViews.swift"
+ },
+ {
+  "key": "Badges",
+  "en": "Badges",
+  "nl": "Badges",
+  "context": "BadgeViews.swift"
+ },
+ {
   "key": "1M",
   "en": "1M",
   "nl": "1M",
@@ -321,7 +369,7 @@
   "key": "All",
   "en": "All",
   "nl": "Alles",
-  "context": "InsightChart.swift; ExercisePickerView.swift"
+  "context": "InsightChart.swift; ExercisePickerView.swift; HomeView.swift"
  },
  {
   "key": "No data in this period.",
@@ -720,6 +768,12 @@
   "context": "HomeView.swift"
  },
  {
+  "key": "Ready to train, {1}?",
+  "en": "Ready to train, {1}?",
+  "nl": "Klaar om te trainen, {1}?",
+  "context": "HomeView.swift"
+ },
+ {
   "key": "Start an empty workout and add exercises as you go.",
   "en": "Start an empty workout and add exercises as you go.",
   "nl": "Start een lege training en voeg oefeningen toe terwijl je bezig bent.",
@@ -822,22 +876,22 @@
   "context": "HomeView.swift"
  },
  {
-  "key": "Badges",
-  "en": "Badges",
-  "nl": "Badges",
+  "key": "Badges {1}/{2}",
+  "en": "Badges {1}/{2}",
+  "nl": "Badges {1}/{2}",
   "context": "HomeView.swift"
  },
  {
   "key": "{1} sets",
   "en": "{1} sets",
   "nl": "{1} sets",
-  "context": "HomeView.swift; RoutineEditView.swift; LiftrWatchApp.swift; WatchWorkoutView.swift"
+  "context": "HomeView.swift; RoutineEditView.swift; LiftrWatchApp.swift; WatchWorkoutView.swift; WorkoutStats.swift"
  },
  {
   "key": "{1} exercises",
   "en": "{1} exercises",
   "nl": "{1} oefeningen",
-  "context": "HomeView.swift; LiftrWatchApp.swift"
+  "context": "HomeView.swift; LiftrWatchApp.swift; WorkoutStats.swift"
  },
  {
   "key": "Start",
@@ -1170,6 +1224,18 @@
   "context": "OnboardingView.swift"
  },
  {
+  "key": "What's your name?",
+  "en": "What's your name?",
+  "nl": "Hoe heet je?",
+  "context": "OnboardingView.swift"
+ },
+ {
+  "key": "Liftr uses it to greet you and puts it on the back of the badges you earn. You can change it later in Settings.",
+  "en": "Liftr uses it to greet you and puts it on the back of the badges you earn. You can change it later in Settings.",
+  "nl": "Liftr gebruikt hem om je te begroeten en zet hem op de achterkant van de badges die je haalt. Je kunt hem later wijzigen in Instellingen.",
+  "context": "OnboardingView.swift"
+ },
+ {
   "key": "See your progress",
   "en": "See your progress",
   "nl": "Zie je vooruitgang",
@@ -1200,6 +1266,12 @@
   "context": "OnboardingView.swift; WatchWorkoutView.swift"
  },
  {
+  "key": "Your name",
+  "en": "Your name",
+  "nl": "Je naam",
+  "context": "OnboardingView.swift; SettingsView.swift"
+ },
+ {
   "key": "Connect Apple Health",
   "en": "Connect Apple Health",
   "nl": "Koppel Apple Gezondheid",
@@ -1209,6 +1281,12 @@
   "key": "Not now",
   "en": "Not now",
   "nl": "Nu niet",
+  "context": "OnboardingView.swift"
+ },
+ {
+  "key": "Skip for now",
+  "en": "Skip for now",
+  "nl": "Later invullen",
   "context": "OnboardingView.swift"
  },
  {
@@ -1335,13 +1413,13 @@
   "key": "Cardio",
   "en": "Cardio",
   "nl": "Cardio",
-  "context": "RoutineEditView.swift; Models.swift"
+  "context": "RoutineEditView.swift; Models.swift; WorkoutStats.swift"
  },
  {
   "key": "{1} reps",
   "en": "{1} reps",
   "nl": "{1} herhalingen",
-  "context": "RoutineEditView.swift"
+  "context": "RoutineEditView.swift; WorkoutStats.swift"
  },
  {
   "key": "Delete routine",
@@ -1360,6 +1438,18 @@
   "en": "Delete this routine?",
   "nl": "Schema verwijderen?",
   "context": "RoutineEditView.swift"
+ },
+ {
+  "key": "Profile",
+  "en": "Profile",
+  "nl": "Profiel",
+  "context": "SettingsView.swift"
+ },
+ {
+  "key": "Used to greet you and on the back of your badges.",
+  "en": "Used to greet you and on the back of your badges.",
+  "nl": "Wordt gebruikt om je te begroeten en op de achterkant van je badges.",
+  "context": "SettingsView.swift"
  },
  {
   "key": "Training",
@@ -1593,7 +1683,7 @@
   "key": "Records",
   "en": "Records",
   "nl": "Records",
-  "context": "StatsView.swift"
+  "context": "StatsView.swift; WorkoutStats.swift"
  },
  {
   "key": "Most reps",
@@ -1950,9 +2040,21 @@
   "context": "WorkoutSummaryView.swift; LiftrWatchApp.swift"
  },
  {
+  "key": "Well done, {1}!",
+  "en": "Well done, {1}!",
+  "nl": "Goed gedaan, {1}!",
+  "context": "WorkoutSummaryView.swift"
+ },
+ {
   "key": "New records",
   "en": "New records",
   "nl": "Nieuwe records",
+  "context": "WorkoutSummaryView.swift"
+ },
+ {
+  "key": "New badges",
+  "en": "New badges",
+  "nl": "Nieuwe badges",
   "context": "WorkoutSummaryView.swift"
  },
  {
@@ -2190,6 +2292,48 @@
   "context": "Units.swift"
  },
  {
+  "key": "Workouts",
+  "en": "Workouts",
+  "nl": "Trainingen",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Streaks",
+  "en": "Streaks",
+  "nl": "Reeksen",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Lifted",
+  "en": "Lifted",
+  "nl": "Getild",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Sets & reps",
+  "en": "Sets & reps",
+  "nl": "Sets & herhalingen",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Strength",
+  "en": "Strength",
+  "nl": "Kracht",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Variety",
+  "en": "Variety",
+  "nl": "Afwisseling",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Moments",
+  "en": "Moments",
+  "nl": "Momenten",
+  "context": "WorkoutStats.swift"
+ },
+ {
   "key": "First workout",
   "en": "First workout",
   "nl": "Eerste training",
@@ -2229,6 +2373,156 @@
   "key": "Lift {1} tonnes in total",
   "en": "Lift {1} tonnes in total",
   "nl": "Til in totaal {1} ton",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Complete {1} sets",
+  "en": "Complete {1} sets",
+  "nl": "Voltooi {1} sets",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Do {1} reps in total",
+  "en": "Do {1} reps in total",
+  "nl": "Doe in totaal {1} herhalingen",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "First record",
+  "en": "First record",
+  "nl": "Eerste record",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "{1} records",
+  "en": "{1} records",
+  "nl": "{1} records",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Beat your best on an exercise",
+  "en": "Beat your best on an exercise",
+  "nl": "Verbeter je beste prestatie op een oefening",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Set {1} personal records",
+  "en": "Set {1} personal records",
+  "nl": "Zet {1} persoonlijke records neer",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "{1} kg club",
+  "en": "{1} kg club",
+  "nl": "{1} kg-club",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Do a set with {1} kg or more",
+  "en": "Do a set with {1} kg or more",
+  "nl": "Doe een set met {1} kg of meer",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "10 tonne day",
+  "en": "10 tonne day",
+  "nl": "Dag van 10 ton",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Lift 10 tonnes in one workout",
+  "en": "Lift 10 tonnes in one workout",
+  "nl": "Til 10 ton in één training",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Try {1} different exercises",
+  "en": "Try {1} different exercises",
+  "nl": "Probeer {1} verschillende oefeningen",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Early bird",
+  "en": "Early bird",
+  "nl": "Vroege vogel",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Start a workout before 7:00",
+  "en": "Start a workout before 7:00",
+  "nl": "Begin een training voor 7:00",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Night owl",
+  "en": "Night owl",
+  "nl": "Nachtuil",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Start a workout after 21:00",
+  "en": "Start a workout after 21:00",
+  "nl": "Begin een training na 21:00",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Weekend warrior",
+  "en": "Weekend warrior",
+  "nl": "Weekendstrijder",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Train on Saturday and Sunday of the same week",
+  "en": "Train on Saturday and Sunday of the same week",
+  "nl": "Train op zaterdag én zondag van dezelfde week",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Five a week",
+  "en": "Five a week",
+  "nl": "Vijf per week",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Train on five days in one week",
+  "en": "Train on five days in one week",
+  "nl": "Train op vijf dagen in één week",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Marathon session",
+  "en": "Marathon session",
+  "nl": "Marathonsessie",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Train for 90 minutes or longer",
+  "en": "Train for 90 minutes or longer",
+  "nl": "Train 90 minuten of langer",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Fresh start",
+  "en": "Fresh start",
+  "nl": "Frisse start",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Train in the first week of January",
+  "en": "Train in the first week of January",
+  "nl": "Train in de eerste week van januari",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "{1} km",
+  "en": "{1} km",
+  "nl": "{1} km",
+  "context": "WorkoutStats.swift"
+ },
+ {
+  "key": "Cover {1} km on cardio machines",
+  "en": "Cover {1} km on cardio machines",
+  "nl": "Leg {1} km af op cardio-apparaten",
   "context": "WorkoutStats.swift"
  },
  {
