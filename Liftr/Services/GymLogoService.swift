@@ -14,7 +14,7 @@ enum GymLogoService {
     /// Fetches the logo when it was not checked in the last 14 days (or `force`).
     @MainActor
     static func refresh(_ template: GymTemplate, force: Bool = false) async {
-        guard !template.retired, !template.domain.isEmpty else { return }
+        guard !template.retired, template.usesWebsiteLogo, !template.domain.isEmpty else { return }
         var checked = UserDefaults.standard.dictionary(forKey: checkedKey) as? [String: Double] ?? [:]
         if !force, let last = checked[template.domain], Date.now.timeIntervalSince1970 - last < 14 * 86_400 { return }
         if let running = inFlight[template.domain] { _ = await running.value; return }

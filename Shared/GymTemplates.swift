@@ -22,6 +22,8 @@ struct GymTemplate: Identifiable, Hashable {
     var logoStyle: LogoStyle = .icon
     /// Tile behind a see-through logo so it always reads on the card (nil: logo is opaque artwork).
     var logoBackgroundHex: String? = nil
+    /// Replace the bundled logo with the icon from the chain's website (off: always the bundled logo).
+    var usesWebsiteLogo = true
     /// Kept so existing passes still find their chain, but no longer offered in the picker.
     var retired = false
     /// Card colours earlier builds gave this chain; passes still on one of these move to the current colour.
@@ -31,7 +33,7 @@ struct GymTemplate: Identifiable, Hashable {
 enum GymTemplates {
     static let all: [GymTemplate] = [
         .init(id: "basicfit", name: "Basic-Fit", domain: "basic-fit.com", colorHex: "#FB7819", format: .qr,
-              logoStyle: .wordmark),
+              logoStyle: .wordmark, usesWebsiteLogo: false),
         .init(id: "sportcity", name: "SportCity", domain: "sportcity.nl", colorHex: "#F7B72C", format: .qr,
               formerColors: ["#E30613"]),
         .init(id: "anytime", name: "Anytime Fitness", domain: "anytimefitness.nl", colorHex: "#5E2D91", format: .code128,
@@ -78,7 +80,8 @@ enum GymTemplates {
     /// The official website icon if it was downloaded, otherwise the logo in the app.
     static func logo(for template: GymTemplate?) -> (image: UIImage, fromWebsite: Bool)? {
         guard let template, !template.retired else { return nil }
-        if let data = try? Data(contentsOf: downloadedLogoURL(domain: template.domain)), let image = UIImage(data: data) {
+        if template.usesWebsiteLogo,
+           let data = try? Data(contentsOf: downloadedLogoURL(domain: template.domain)), let image = UIImage(data: data) {
             return (image, true)
         }
         return bundledLogo(for: template).map { ($0, false) }
