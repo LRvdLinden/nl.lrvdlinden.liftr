@@ -1,0 +1,7 @@
+# Not part of the Xcode project: left out of the Xcode zip (git archive).
+website/ export-ignore
+AppStore/ export-ignore
+tools/ export-ignore
+.github/ export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
