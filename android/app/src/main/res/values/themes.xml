@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.Liftr" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/liftr_background</item>
+        <item name="android:statusBarColor">@color/liftr_background</item>
+        <item name="android:navigationBarColor">@color/liftr_background</item>
+        <item name="android:colorAccent">@color/liftr_accent</item>
+    </style>
+</resources>

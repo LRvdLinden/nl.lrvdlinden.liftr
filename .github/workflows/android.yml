@@ -1,0 +1,87 @@
+name: Android
+
+# Builds the Android phone APK (the main deliverable) and the optional Wear OS APK.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "android/**"
+      - "Shared/Localization/**"
+      - "Shared/GymLogos/**"
+      - ".github/workflows/android.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: android-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.10.2"
+
+      - name: Signing key
+        env:
+          KEYSTORE_BASE64: ${{ secrets.LIFTR_KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.LIFTR_KEYSTORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.LIFTR_KEY_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.LIFTR_KEY_ALIAS }}
+        run: |
+          KS="$RUNNER_TEMP/liftr-release.jks"
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "$KEYSTORE_BASE64" | base64 -d > "$KS"
+            {
+              echo "LIFTR_KEYSTORE_FILE=$KS"
+              echo "LIFTR_KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD"
+              echo "LIFTR_KEY_PASSWORD=${KEY_PASSWORD:-$KEYSTORE_PASSWORD}"
+              echo "LIFTR_KEY_ALIAS=${KEY_ALIAS:-liftr}"
+            } >> "$GITHUB_ENV"
+            echo "Signed with the Liftr release key from the repository secrets." >> "$GITHUB_STEP_SUMMARY"
+          else
+            # No secrets yet: sign with a throwaway key so the APK still installs for testing.
+            # APKs signed this way can NOT be installed as an update over each other.
+            PW=$(openssl rand -hex 16)
+            keytool -genkeypair -keystore "$KS" -storetype PKCS12 -alias liftr -keyalg RSA -keysize 2048 \
+              -validity 365 -storepass "$PW" -keypass "$PW" -dname "CN=Liftr test" > /dev/null
+            {
+              echo "LIFTR_KEYSTORE_FILE=$KS"
+              echo "LIFTR_KEYSTORE_PASSWORD=$PW"
+              echo "LIFTR_KEY_PASSWORD=$PW"
+              echo "LIFTR_KEY_ALIAS=liftr"
+            } >> "$GITHUB_ENV"
+            echo "::warning::LIFTR_KEYSTORE_* secrets missing: APK signed with a temporary key (not updatable). See android/README.md."
+            echo "⚠️ Signed with a TEMPORARY key: set the LIFTR_KEYSTORE_* secrets (android/README.md)." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Build phone APK
+        run: gradle -p android :app:assembleRelease --stacktrace
+
+      - name: Upload phone APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: liftr-android-apk
+          path: android/app/build/outputs/apk/release/*.apk
+          if-no-files-found: error
+
+      - name: Build Wear OS APK
+        id: wear
+        continue-on-error: true
+        run: gradle -p android :wear:assembleRelease --stacktrace
+
+      - name: Upload Wear OS APK
+        if: steps.wear.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: liftr-wear-apk
+          path: android/wear/build/outputs/apk/release/*.apk
