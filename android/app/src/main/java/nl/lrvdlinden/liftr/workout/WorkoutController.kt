@@ -139,16 +139,16 @@ object WorkoutController {
     fun startRest(seconds: Int, exerciseName: String = restLabel) {
         restLabel = exerciseName
         restTotal = seconds.toLong()
-        setRestEnd(System.currentTimeMillis() + seconds * 1000L)
+        applyRestEnd(System.currentTimeMillis() + seconds * 1000L)
     }
 
     fun addRest(seconds: Int) {
         val end = restEnd ?: return
         restTotal = maxOf(1L, restTotal + seconds)
-        setRestEnd(maxOf(System.currentTimeMillis(), end) + seconds * 1000L)
+        applyRestEnd(maxOf(System.currentTimeMillis(), end) + seconds * 1000L)
     }
 
-    private fun setRestEnd(end: Long) {
+    private fun applyRestEnd(end: Long) {
         restEnd = end
         Prefs.prefs.edit().putLong(Prefs.REST_END, end).putLong(Prefs.REST_TOTAL, restTotal).apply()
         RestNotifier.show(context, end, restLabel.ifEmpty { tr("Workout", "Training") })
