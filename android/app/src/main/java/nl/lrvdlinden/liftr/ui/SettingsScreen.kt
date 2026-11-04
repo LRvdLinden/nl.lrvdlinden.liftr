@@ -98,7 +98,7 @@ fun SettingsScreen(data: LiftrData) {
             Row(Modifier.padding(horizontal = 12.dp, vertical = 8.dp), verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 Icon(Icons.Filled.AccountCircle, null, tint = LiftrColors.accent, modifier = Modifier.size(28.dp))
-                LiftrTextField(Settings.userName, { Settings.setUserName(it) }, tr("Your name", "Je naam"))
+                LiftrTextField(Settings.userName, { Settings.putUserName(it) }, tr("Your name", "Je naam"))
             }
         }
 
@@ -107,17 +107,17 @@ fun SettingsScreen(data: LiftrData) {
             Text(tr("Unit", "Eenheid"), color = Color.White, fontSize = 16.sp, modifier = Modifier.padding(start = 16.dp, top = 12.dp))
             Box(Modifier.padding(12.dp)) {
                 Segmented(listOf(tr("Kilograms (kg)", "Kilogram (kg)"), tr("Pounds (lb)", "Pond (lb)")), if (Settings.unitRaw == "lb") 1 else 0) {
-                    Settings.setUnit(if (it == 1) "lb" else "kg")
+                    Settings.putUnit(if (it == 1) "lb" else "kg")
                     scope.launch { PhoneWearSync.push(context) }
                 }
             }
             Divider()
             StepperRow(tr("Rest time", "Rusttijd"), LiftrFormat.duration(Settings.restDefault.toLong()),
-                onMinus = { Settings.setRestDefault(maxOf(15, Settings.restDefault - 15)) },
-                onPlus = { Settings.setRestDefault(minOf(600, Settings.restDefault + 15)) })
+                onMinus = { Settings.putRestDefault(maxOf(15, Settings.restDefault - 15)) },
+                onPlus = { Settings.putRestDefault(minOf(600, Settings.restDefault + 15)) })
             Divider()
             RowItem(tr("Start rest timer after each set", "Rusttimer starten na elke set"), trailing = {
-                Switch(Settings.restAuto, { Settings.setRestAuto(it) }, colors = switchColors())
+                Switch(Settings.restAuto, { Settings.putRestAuto(it) }, colors = switchColors())
             })
         }
 
@@ -125,7 +125,7 @@ fun SettingsScreen(data: LiftrData) {
         CardSection(tr("Reminders", "Herinneringen"), tr("Reminders are planned on this device. A day you already trained is skipped.",
             "Herinneringen worden op dit apparaat ingepland. Een dag waarop je al hebt getraind wordt overgeslagen.")) {
             RowItem(tr("Training days", "Vaste trainingsdagen"), trailing = {
-                Switch(Settings.remindDays, { Settings.setRemindDays(it); reminderToggled(it) }, colors = switchColors())
+                Switch(Settings.remindDays, { Settings.putRemindDays(it); reminderToggled(it) }, colors = switchColors())
             })
             if (Settings.remindDays) {
                 val order = listOf(2, 3, 4, 5, 6, 7, 1)
@@ -138,7 +138,7 @@ fun SettingsScreen(data: LiftrData) {
                             .background(gradientOrSolid(on, LiftrColors.cardRaised))
                             .clickable {
                                 val next = if (on) selected - day else selected + day
-                                Settings.setRemindDaysRaw(next.sorted().joinToString(","))
+                                Settings.putRemindDaysRaw(next.sorted().joinToString(","))
                                 replan()
                             }.padding(vertical = 8.dp),
                             color = if (on) Color.White else LiftrColors.muted, fontWeight = FontWeight.Bold, fontSize = 14.sp, textAlign = TextAlign.Center)
@@ -151,21 +151,21 @@ fun SettingsScreen(data: LiftrData) {
                 RowItem(tr("Time", "Tijdstip"), trailing = {
                     Text(String.format("%02d:%02d", t / 60, t % 60), color = LiftrColors.accent, fontWeight = FontWeight.Bold)
                 }) {
-                    TimePickerDialog(context, { _, h, m -> Settings.setRemindTime(h * 60 + m); replan() }, t / 60, t % 60, true).show()
+                    TimePickerDialog(context, { _, h, m -> Settings.putRemindTime(h * 60 + m); replan() }, t / 60, t % 60, true).show()
                 }
             }
             Divider()
             RowItem(tr("When I haven't trained for a while", "Als ik een tijd niet heb getraind"), trailing = {
-                Switch(Settings.remindInactive, { Settings.setRemindInactive(it); reminderToggled(it) }, colors = switchColors())
+                Switch(Settings.remindInactive, { Settings.putRemindInactive(it); reminderToggled(it) }, colors = switchColors())
             })
             if (Settings.remindInactive) {
                 StepperRow(tr("After", "Na"), trf("{1} days", "{1} dagen", Settings.inactiveDays),
-                    onMinus = { Settings.setInactiveDays(maxOf(2, Settings.inactiveDays - 1)); replan() },
-                    onPlus = { Settings.setInactiveDays(minOf(14, Settings.inactiveDays + 1)); replan() })
+                    onMinus = { Settings.putInactiveDays(maxOf(2, Settings.inactiveDays - 1)); replan() },
+                    onPlus = { Settings.putInactiveDays(minOf(14, Settings.inactiveDays + 1)); replan() })
             }
             Divider()
             RowItem(tr("Weekly summary (Sunday 20:00)", "Weekoverzicht (zondag 20:00)"), trailing = {
-                Switch(Settings.remindWeekly, { Settings.setRemindWeekly(it); reminderToggled(it) }, colors = switchColors())
+                Switch(Settings.remindWeekly, { Settings.putRemindWeekly(it); reminderToggled(it) }, colors = switchColors())
             })
         }
 
@@ -191,9 +191,9 @@ fun SettingsScreen(data: LiftrData) {
                         }
                     })
                 Divider()
-                RowItem(tr("Save workouts", "Trainingen opslaan"), trailing = { Switch(Settings.saveWorkouts, { Settings.setSaveWorkouts(it) }, colors = switchColors()) })
+                RowItem(tr("Save workouts", "Trainingen opslaan"), trailing = { Switch(Settings.saveWorkouts, { Settings.putSaveWorkouts(it) }, colors = switchColors()) })
                 Divider()
-                RowItem(tr("Save weight and body fat", "Gewicht en vetpercentage opslaan"), trailing = { Switch(Settings.saveBody, { Settings.setSaveBody(it) }, colors = switchColors()) })
+                RowItem(tr("Save weight and body fat", "Gewicht en vetpercentage opslaan"), trailing = { Switch(Settings.saveBody, { Settings.putSaveBody(it) }, colors = switchColors()) })
             }
             Divider()
             RowItem(tr("Log weight", "Gewicht invoeren"), color = LiftrColors.accent) { Nav.push(Route.BodyEntry) }

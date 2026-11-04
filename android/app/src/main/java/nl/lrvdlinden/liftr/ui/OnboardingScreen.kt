@@ -82,8 +82,8 @@ fun OnboardingScreen() {
     val context = LiftrApp.instance
     val healthAvailable = remember { HealthConnectManager.sdkAvailable(context) }
     fun done() {
-        Settings.setUserName(name)
-        Settings.setOnboardingDone(true)
+        Settings.putUserName(name)
+        Settings.putOnboardingDone(true)
     }
     val permissionLauncher = rememberLauncherForActivityResult(PermissionController.createRequestPermissionResultContract()) {
         HealthConnectManager.markRequested()

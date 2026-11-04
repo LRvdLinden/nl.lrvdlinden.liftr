@@ -44,17 +44,17 @@ object Settings {
         remindWeekly = p.getBoolean(Prefs.REMIND_WEEKLY_ON, false)
     }
 
-    fun setUnit(v: String) { unitRaw = v; p.edit().putString(Prefs.WEIGHT_UNIT, v).apply() }
-    fun setRestDefault(v: Int) { restDefault = v; p.edit().putInt(Prefs.REST_DEFAULT, v).apply() }
-    fun setRestAuto(v: Boolean) { restAuto = v; p.edit().putBoolean(Prefs.REST_AUTO, v).apply() }
-    fun setSaveWorkouts(v: Boolean) { saveWorkouts = v; p.edit().putBoolean(Prefs.HEALTH_SAVE_WORKOUTS, v).apply() }
-    fun setSaveBody(v: Boolean) { saveBody = v; p.edit().putBoolean(Prefs.HEALTH_SAVE_BODY, v).apply() }
-    fun setUserName(v: String) { userName = v; p.edit().putString(Prefs.USER_NAME, v.trim()).apply() }
-    fun setOnboardingDone(v: Boolean) { onboardingDone = v; p.edit().putBoolean(Prefs.ONBOARDING_DONE, v).apply() }
-    fun setRemindDays(v: Boolean) { remindDays = v; p.edit().putBoolean(Prefs.REMIND_DAYS_ON, v).apply() }
-    fun setRemindDaysRaw(v: String) { remindDaysRaw = v; p.edit().putString(Prefs.REMIND_DAYS, v).apply() }
-    fun setRemindTime(v: Int) { remindTime = v; p.edit().putInt(Prefs.REMIND_TIME, v).apply() }
-    fun setRemindInactive(v: Boolean) { remindInactive = v; p.edit().putBoolean(Prefs.REMIND_INACTIVE_ON, v).apply() }
-    fun setInactiveDays(v: Int) { inactiveDays = v; p.edit().putInt(Prefs.REMIND_INACTIVE_DAYS, v).apply() }
-    fun setRemindWeekly(v: Boolean) { remindWeekly = v; p.edit().putBoolean(Prefs.REMIND_WEEKLY_ON, v).apply() }
+    fun putUnit(v: String) { unitRaw = v; p.edit().putString(Prefs.WEIGHT_UNIT, v).apply() }
+    fun putRestDefault(v: Int) { restDefault = v; p.edit().putInt(Prefs.REST_DEFAULT, v).apply() }
+    fun putRestAuto(v: Boolean) { restAuto = v; p.edit().putBoolean(Prefs.REST_AUTO, v).apply() }
+    fun putSaveWorkouts(v: Boolean) { saveWorkouts = v; p.edit().putBoolean(Prefs.HEALTH_SAVE_WORKOUTS, v).apply() }
+    fun putSaveBody(v: Boolean) { saveBody = v; p.edit().putBoolean(Prefs.HEALTH_SAVE_BODY, v).apply() }
+    fun putUserName(v: String) { userName = v; p.edit().putString(Prefs.USER_NAME, v.trim()).apply() }
+    fun putOnboardingDone(v: Boolean) { onboardingDone = v; p.edit().putBoolean(Prefs.ONBOARDING_DONE, v).apply() }
+    fun putRemindDays(v: Boolean) { remindDays = v; p.edit().putBoolean(Prefs.REMIND_DAYS_ON, v).apply() }
+    fun putRemindDaysRaw(v: String) { remindDaysRaw = v; p.edit().putString(Prefs.REMIND_DAYS, v).apply() }
+    fun putRemindTime(v: Int) { remindTime = v; p.edit().putInt(Prefs.REMIND_TIME, v).apply() }
+    fun putRemindInactive(v: Boolean) { remindInactive = v; p.edit().putBoolean(Prefs.REMIND_INACTIVE_ON, v).apply() }
+    fun putInactiveDays(v: Int) { inactiveDays = v; p.edit().putInt(Prefs.REMIND_INACTIVE_DAYS, v).apply() }
+    fun putRemindWeekly(v: Boolean) { remindWeekly = v; p.edit().putBoolean(Prefs.REMIND_WEEKLY_ON, v).apply() }
 }
