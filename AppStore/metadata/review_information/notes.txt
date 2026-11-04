@@ -1,0 +1,30 @@
+Liftr is a gym logbook for iPhone, iPad and Apple Watch. Users log their exercises, sets, reps and weight per workout and follow their progress over time.
+
+NO ACCOUNT NEEDED
+There is no sign-in, no account and no server. All data is stored on the device and syncs through the user's own private iCloud database (CloudKit). No demo account is required.
+
+HOW TO TEST
+1. Open the app, go through the short welcome screens (name is optional) and allow or skip Apple Health.
+2. Today → "Start workout" → "Add exercise" → pick e.g. "Leg press". Enter weight and reps and tap the checkmark: the rest timer starts, shown as a Live Activity on the Lock Screen and in the Dynamic Island.
+3. Tap "Finish" to save the workout. With Health access allowed, it is saved to Apple Health as a strength training workout.
+4. Start a second workout and add the same exercise: the "LAST" column and the "Previous workouts" card show what was done last time.
+5. Progress tab: charts per exercise. History tab: calendar of workouts. Today: badges (tap a badge to flip it).
+6. Gym pass: the round button at the top right of Today. Pick a gym chain or "Another gym", then type any number (e.g. 1234567890) as the code. Tap the card to flip it to the QR code or barcode.
+7. Settings → Import: paste notes such as "Leg press 3x12 40 kg", or pick an Excel/CSV file. A template is at https://liftr.nu/#importsheet. Settings → Manage data deletes one import or all data.
+8. Apple Watch app: start a workout, log sets with heart rate, and show the gym pass.
+
+PERMISSIONS
+- Apple Health (HealthKit): writes finished workouts (strength training, calories) and body weight; reads weight, body fat and heart rate to show progress. Health data never leaves the device through the developer and is not used for advertising. Imported history is never written to Health.
+- Camera / Photos: only used to scan the QR code or barcode of the user's own gym pass, or to read it from a screenshot. Images are not stored or sent.
+- Notifications: local only (rest timer and training reminders). There is no push server.
+
+GYM NAMES AND LOGOS
+In the gym pass section, users can pick the chain their membership card is from, so their own pass shows the name, colour and icon of that chain. These names appear only on the user's own pass and in the picker, for recognition. The icon is the one the chain publishes on its own website. Liftr is not affiliated with or endorsed by any gym chain, and the app does not use these names anywhere else.
+
+MEDICAL
+Liftr is not a medical device. It does not diagnose, prevent, monitor or treat any condition; heart rate and calories are informational only.
+
+PRIVACY
+No analytics, no ads, no tracking, no third-party SDKs. Privacy policy: https://liftr.nu/en/privacy/
+
+Thank you for reviewing Liftr!
