@@ -11,6 +11,9 @@ on:
       - ".github/workflows/android.yml"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 concurrency:
   group: android-${{ github.ref }}
   cancel-in-progress: true
@@ -85,3 +88,20 @@ jobs:
         with:
           name: liftr-wear-apk
           path: android/wear/build/outputs/apk/release/*.apk
+
+      # Artifacts live on storage the build session can't reach, so the APKs are also put on the
+      # branch "android-builds" (overwritten every build), where they can be fetched with git.
+      - name: Publish APKs to branch android-builds
+        run: |
+          OUT="$RUNNER_TEMP/apk"
+          mkdir -p "$OUT"
+          cp android/app/build/outputs/apk/release/*.apk "$OUT/Liftr-android.apk"
+          ls android/wear/build/outputs/apk/release/*.apk >/dev/null 2>&1 && cp android/wear/build/outputs/apk/release/*.apk "$OUT/Liftr-wear.apk" || true
+          echo "Build ${GITHUB_SHA::7} · $(date -u +%Y-%m-%dT%H:%MZ)" > "$OUT/BUILD.txt"
+          cd "$OUT"
+          git init -q -b android-builds
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A
+          git commit -q -m "APK ${GITHUB_SHA::7}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" android-builds
