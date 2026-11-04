@@ -25,6 +25,9 @@
 Liftr toont geen content van derden. Alleen bij een sportschoolpas laat de app het officiële icoon van de website van de gekozen keten zien. Daarnaast toont de app de naam van de keten, alleen op de pas en in de kiezer, zodat de gebruiker zijn eigen pas herkent. Er wordt geen content van derden verspreid of verkocht.
 **Antwoord in ASC:** "No, it does not contain, show, or access third-party content". Vind je de logo's toch derde-partij-content, kies dan "Yes" en vermeld dat het om het merkicoon van de eigen sportschool van de gebruiker gaat, voor herkenning van de pas.
 
+### Regulated Medical Device Declaration
+**No.** Liftr is een trainingslogboek. De app stelt geen diagnose en voorkomt, bewaakt of behandelt geen ziektes of lichamelijke aandoeningen. Hartslag, calorieën en gewicht zijn alleen informatief, uit Apple Health of de Apple Watch.
+
 ### Licentieovereenkomst
 Standaard EULA van Apple.
 
