@@ -10,15 +10,12 @@ import java.time.ZoneOffset
  * Layouts: one row per training day with a column per exercise, or one row per set (like Liftr's CSV export).
  * Dates without a year get their year from the order of the rows.
  */
-object SpreadsheetImporter {
-    typealias Day = NotesImporter.ParsedDay
-    typealias Line = NotesImporter.ParsedLine
-    typealias PSet = NotesImporter.ParsedSet
 
+object SpreadsheetImporter {
     data class Options(val defaultSets: Int = 3, val defaultReps: Int = 10)
     data class Table(val name: String, val rows: List<List<String>>)
     enum class Layout { PerDate, PerSet }
-    data class Result(val days: List<Day>, val layout: Layout, val exerciseColumns: List<String>, val skipped: List<String>)
+    data class Result(val days: List<NotesImporter.ParsedDay>, val layout: Layout, val exerciseColumns: List<String>, val skipped: List<String>)
 
     val unreadableMessage: String
         get() = tr("This file can't be read. Use an Excel file (.xlsx) or a CSV file.",
@@ -142,29 +139,29 @@ object SpreadsheetImporter {
         }
         val dates = resolveYears(raw.map { it.first }, today)
 
-        val days = mutableListOf<Day>()
+        val days = mutableListOf<NotesImporter.ParsedDay>()
         val skipped = mutableListOf<String>()
         raw.forEachIndexed { n, (_, rowIndex) ->
             val row = body[rowIndex]
-            val lines = mutableListOf<Line>()
+            val lines = mutableListOf<NotesImporter.ParsedLine>()
             for (c in exerciseColumns) {
                 if (c >= row.size || row[c].isEmpty()) continue
                 val parsed = parseCell(row[c], options, unit)
                 if (parsed != null) {
-                    lines += Line(name = header[c], sets = parsed.first, original = "${header[c]}: ${row[c]}", note = parsed.second)
+                    lines += NotesImporter.ParsedLine(name = header[c], sets = parsed.first, original = "${header[c]}: ${row[c]}", note = parsed.second)
                 } else {
                     skipped += "${columnName(c)}${headerRow + rowIndex + 2}: ${row[c]}"
                 }
             }
             if (lines.isEmpty()) return@forEachIndexed
             val note = meta.mapNotNull { c -> if (c < row.size && row[c].isNotEmpty()) row[c] else null }.joinToString(" · ")
-            days += Day(date = dates[n], lines = lines, note = note)
+            days += NotesImporter.ParsedDay(date = dates[n], lines = lines, note = note)
         }
         return Result(days, Layout.PerDate, exerciseColumns.map { header[it] }, skipped)
     }
 
     /** One cell: `45`, `27.3`, `27 (rechte 3×10)`, `18 (4×5)`, `25 / 18`, `36/41/45/52`, `23 x 2`, `36 (op)`. */
-    fun parseCell(text: String, options: Options, unit: WeightUnit): Pair<List<PSet>, String>? {
+    fun parseCell(text: String, options: Options, unit: WeightUnit): Pair<List<NotesImporter.ParsedSet>, String>? {
         var s = text.lowercase().replace("×", "x").replace("*", "x")
         val note = mutableListOf<String>()
         var setsCount: Int? = null
@@ -200,7 +197,7 @@ object SpreadsheetImporter {
             if (w != null && count != null && count > 0) {
                 val n = if (count <= 6) count else (setsCount ?: options.defaultSets)
                 val r = if (count <= 6) (reps ?: options.defaultReps) else count
-                return List(n) { PSet(r, toKg(w)) } to note.joinToString(", ")
+                return List(n) { NotesImporter.ParsedSet(r, toKg(w)) } to note.joinToString(", ")
             }
         }
 
@@ -209,9 +206,9 @@ object SpreadsheetImporter {
         if (weights.isEmpty() || weights.size != parts.size) return null
         if (weights.size == 1) {
             val n = setsCount ?: options.defaultSets
-            return List(maxOf(1, n)) { PSet(reps ?: options.defaultReps, toKg(weights[0])) } to note.joinToString(", ")
+            return List(maxOf(1, n)) { NotesImporter.ParsedSet(reps ?: options.defaultReps, toKg(weights[0])) } to note.joinToString(", ")
         }
-        return weights.map { PSet(reps ?: options.defaultReps, toKg(it)) } to note.joinToString(", ")
+        return weights.map { NotesImporter.ParsedSet(reps ?: options.defaultReps, toKg(it)) } to note.joinToString(", ")
     }
 
     // MARK: Per set
@@ -237,7 +234,7 @@ object SpreadsheetImporter {
         }
         val dates = resolveYears(raw.map { it.first }, today)
 
-        val days = mutableListOf<Day>()
+        val days = mutableListOf<NotesImporter.ParsedDay>()
         val skipped = mutableListOf<String>()
         raw.forEachIndexed { n, (_, rowIndex) ->
             val row = body[rowIndex]
@@ -260,13 +257,13 @@ object SpreadsheetImporter {
                 return@forEachIndexed
             }
             val isCardio = repsValue == 0 && (minutes > 0 || km > 0)
-            val one = PSet(if (isCardio) 0 else (if (repsValue > 0) repsValue else options.defaultReps), weight, minutes, km)
+            val one = NotesImporter.ParsedSet(if (isCardio) 0 else (if (repsValue > 0) repsValue else options.defaultReps), weight, minutes, km)
             val sets = List(maxOf(1, minOf(count, 20))) { one }
 
             val sameDay = LiftrFormat.localDate(date)
             var dayIndex = days.indexOfFirst { LiftrFormat.localDate(it.date) == sameDay && it.note == title }
             if (dayIndex < 0) {
-                days += Day(date = date, lines = emptyList(), note = title)
+                days += NotesImporter.ParsedDay(date = date, lines = emptyList(), note = title)
                 dayIndex = days.size - 1
             }
             val day = days[dayIndex]
@@ -275,14 +272,14 @@ object SpreadsheetImporter {
                 val last = lines.last()
                 lines[lines.size - 1] = last.copy(sets = last.sets + sets, original = last.original + " · " + summary(sets))
             } else {
-                lines += Line(name = name, sets = sets, original = summary(sets))
+                lines += NotesImporter.ParsedLine(name = name, sets = sets, original = summary(sets))
             }
             days[dayIndex] = day.copy(lines = lines)
         }
         return Result(days, Layout.PerSet, emptyList(), skipped)
     }
 
-    private fun summary(sets: List<PSet>): String = sets.joinToString(", ") { set ->
+    private fun summary(sets: List<NotesImporter.ParsedSet>): String = sets.joinToString(", ") { set ->
         if (set.reps == 0) "${LiftrFormat.decimal(set.minutes)} min"
         else if (set.weightKg > 0) "${set.reps} × ${LiftrFormat.decimal(set.weightKg, 2)} kg" else "${set.reps} ×"
     }
