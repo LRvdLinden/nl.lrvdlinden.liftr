@@ -4,7 +4,7 @@ name: Build
 on:
   push:
     branches: [main, "feat-**"]
-    paths-ignore: ["**.md", "appstore/**"]
+    paths-ignore: ["**.md", "appstore/**", "AppStore/**", "website/**", "android/**"]
   workflow_dispatch:
 
 permissions:

@@ -2,6 +2,7 @@
 website/ export-ignore
 AppStore/ export-ignore
 tools/ export-ignore
+android/ export-ignore
 .github/ export-ignore
 .gitattributes export-ignore
 .gitignore export-ignore
