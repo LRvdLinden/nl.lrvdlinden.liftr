@@ -75,6 +75,7 @@ dependencies {
     implementation(libs.camerax.lifecycle)
     implementation(libs.camerax.view)
     implementation(libs.mlkit.barcode)
+    implementation(libs.guava)
     implementation(libs.health.connect)
     implementation(libs.play.wearable)
     implementation(libs.coroutines.play.services)

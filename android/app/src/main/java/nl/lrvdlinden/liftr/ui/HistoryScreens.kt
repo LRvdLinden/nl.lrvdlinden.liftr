@@ -184,7 +184,7 @@ fun WorkoutDetailScreen(data: LiftrData, id: String) {
             Text(LiftrFormat.day(workout.startDate).uppercase(), color = LiftrColors.accent, fontSize = 14.sp, fontWeight = FontWeight.SemiBold)
             if (editing) {
                 var title by remember(workout.id) { mutableStateOf(workout.title) }
-                LiftrTextField(title, { title = it; repo.commit { workouts += workout.copy(title = it) } }, tr("Name", "Naam"))
+                LiftrTextField(title, { v -> title = v; repo.commit { workouts += workout.copy(title = v) } }, tr("Name", "Naam"))
             } else {
                 Text(workout.title.uppercase(), style = LiftrType.display(34.sp))
             }
@@ -207,7 +207,7 @@ fun WorkoutDetailScreen(data: LiftrData, id: String) {
                 pickDate = true
             }
             var notes by remember(workout.id) { mutableStateOf(workout.notes) }
-            LiftrTextField(notes, { notes = it; repo.commit { workouts += workout.copy(notes = it) } }, tr("Notes", "Notities"), singleLine = false, minLines = 2)
+            LiftrTextField(notes, { v -> notes = v; repo.commit { workouts += workout.copy(notes = v) } }, tr("Notes", "Notities"), singleLine = false, minLines = 2)
             for (entry in data.sortedEntries(workout)) {
                 key(entry.id) {
                     EntryCard(data, entry, workout, unit) { set ->

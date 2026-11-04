@@ -290,8 +290,8 @@ fun EntryCard(data: LiftrData, entry: WorkoutEntry, workout: Workout, unit: Weig
         }
     }
     if (showNotes) {
-        TextInputDialog(tr("Note", "Notitie"), entry.notes, tr("E.g. seat position 4", "Bijv. stoelstand 4"), onDismiss = { showNotes = false }) {
-            repo.commit { entries += entry.copy(notes = it) }
+        TextInputDialog(tr("Note", "Notitie"), entry.notes, tr("E.g. seat position 4", "Bijv. stoelstand 4"), onDismiss = { showNotes = false }) { v ->
+            repo.commit { entries += entry.copy(notes = v) }
             showNotes = false
         }
     }
