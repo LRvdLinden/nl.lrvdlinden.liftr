@@ -50,7 +50,7 @@ fun SummaryScreen(data: LiftrData, workoutId: String) {
     val workout = data.workouts[workoutId]
     fun close() { Nav.stack.removeAll { it is Route.Summary } }
     BackHandler { close() }
-    if (workout == null) { close(); return }
+    if (workout == null) { androidx.compose.runtime.LaunchedEffect(Unit) { close() }; return }
     val unit = Settings.unit
     val records = remember(workoutId) { WorkoutStats.personalRecords(data, workout) }
     val newBadges = remember(workoutId) { WorkoutStats.badges(data).filter { it.date == workout.startDate } }

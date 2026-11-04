@@ -66,6 +66,12 @@ object PhoneWearSync {
         repo.ensureLoaded()
         if (repo.current.workouts.containsKey(w.id)) return
         WearSync.importWorkout(repo, w)
+        // Like the Apple Watch saving to Health: a watch workout goes to Health Connect from the phone.
+        repo.current.workouts[w.id]?.let { saved ->
+            nl.lrvdlinden.liftr.health.HealthConnectManager.saveWorkout(context, repo.current, saved)?.let { recordId ->
+                repo.commit { workouts += saved.copy(healthRecordId = recordId) }
+            }
+        }
         LiftrApp.afterWorkoutChange()
     }
 }
