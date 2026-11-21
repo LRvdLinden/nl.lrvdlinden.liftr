@@ -6,6 +6,7 @@ from PIL import Image
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 AS = os.path.join(ROOT, "AppStore")
 SIZES = {
+    "iphone-duo-outer": {(1398, 2034), (2034, 1398)}, "iphone-duo-inner": {(2007, 2853), (2853, 2007)},
     "iphone-6.3": {(1206, 2622)}, "iphone-6.1": {(1179, 2556)}, "ipad-13": {(2064, 2752), (2048, 2732)},
     "watch": {(422, 514), (416, 496), (410, 502), (396, 484), (368, 448), (312, 390)},
     "marketing": {(5244, 2950), (3840, 1646), (3840, 2560), (1920, 1280)},
@@ -28,7 +29,7 @@ for base, _, files in os.walk(AS):
         count += 1
 
 for locale in ("nl-NL", "en-US"):
-    for device in ("iphone-6.3", "iphone-6.1", "ipad-13"):
+    for device in ("iphone-6.3", "iphone-6.1", "ipad-13", "iphone-duo-outer", "iphone-duo-inner"):
         d = os.path.join(AS, "screenshots", locale, device)
         sizes = {}
         for f in os.listdir(d):

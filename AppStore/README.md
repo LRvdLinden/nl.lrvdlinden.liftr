@@ -9,6 +9,8 @@ Nagemaakt in HTML/CSS op basis van de SwiftUI-schermen (dezelfde teksten, kleure
 |---|---|---|
 | `screenshots/<taal>/iphone-6.3` | 1206 × 2622 | 7 |
 | `screenshots/<taal>/iphone-6.1` | 1179 × 2556 | 7 |
+| `screenshots/<taal>/iphone-duo-outer` | 1398 × 2034 (buitenscherm, dicht) | 7 |
+| `screenshots/<taal>/iphone-duo-inner` | 2007 × 2853 (binnenscherm, open) | 5 |
 | `screenshots/<taal>/ipad-13` | 2064 × 2752 en 2048 × 2732 | 3 per maat |
 | `screenshots/<taal>/watch/<maat>` | 422×514, 416×496, 410×502, 396×484, 368×448, 312×390 | 5 per maat (alleen het scherm, zonder kader) |
 | `marketing/<taal>` | header 5244×2950 en 3840×1646 · search 5244×2950, 3840×2560 en 1920×1280 | 5 |
@@ -16,6 +18,8 @@ Nagemaakt in HTML/CSS op basis van de SwiftUI-schermen (dezelfde teksten, kleure
 **Talen:** de app zelf ondersteunt 33 talen. Afbeeldingen en store-teksten zijn alleen gemaakt in Nederlands en Engels. App Store Connect toont de Engelse set ook in landen waar je geen eigen screenshots hebt.
 
 Volgorde iPhone: 1 Vandaag · 2 Training loggen · 3 Rusttimer (Live Activity) · 4 Voortgang · 5 Geschiedenis · 6 Sportschoolpassen · 7 Importeren.
+
+**iPhone Duo:** optioneel. Met Duo-screenshots krijgt de productpagina het badge "Made for iPhone Duo". Vanaf april 2027 zijn ze verplicht voor apps die met de iOS 27.1 SDK zijn gebouwd. Het Duo-toestel is getekend zonder officieel kader van Apple; vervang de screenshots door simulatoropnames uit Xcode 27.1 als je die hebt.
 
 ## Teksten
 `metadata/` is opgebouwd zoals fastlane deliver het verwacht: naam, subtitel, promotietekst, beschrijving, trefwoorden, release notes en URL's per taal, plus copyright en categorieën. In `app-info.md` staan de algemene info, het privacylabel, de leeftijdsclassificatie en de toegankelijkheid.

@@ -90,7 +90,7 @@ html,body{margin:0;width:100vw;height:100vh;overflow:hidden;background:#0a0a0c}
 # Shrinks a headline until no word sticks out and the text block stays clear of the device.
 FIT_JS = """<script>
 document.fonts.ready.then(() => {
-  const dev = document.querySelector('.phone2, .ipad2');
+  const dev = document.querySelector('.phone2, .ipad2, .duo');
   const hit = (a, b) => a.right > b.left - 24 && a.left < b.right + 24 && a.bottom > b.top - 24 && a.top < b.bottom + 24;
   for (const h of document.querySelectorAll('.txt h1')) {
     const box = h.closest('.txt');
@@ -141,6 +141,32 @@ def ipad_html(lang, pair, line1, line2, sub, scr):
 <div class="ipad2" style="width:88vw;height:109vw;top:30vw"><div class="glass"><div class="side"><b>LIFTR</b>{side}</div>
 <div class="panel">{scr[pair[0]].replace(' is-on', '')}</div><div class="panel">{scr[pair[1]].replace(' is-on', '')}</div></div></div>"""
     return page(body)
+
+
+DUO_CSS = """
+.duo{position:absolute;left:50%;transform:translateX(-50%);background:#1b1b1d;padding:1.5vw;
+  box-shadow:0 0 0 .45vw #4a4a50,0 0 0 .9vw #141416,0 6vw 12vw rgba(0,0,0,.55)}
+.duo .glass{position:relative;width:100%;height:100%;overflow:hidden;background:#0e0e10;container-type:inline-size}
+.duo .glass .scr{min-height:100%}
+.duo .glass .scr > *{flex-shrink:0}
+.duo .cam{position:absolute;top:2.6vw;left:50%;width:2.4vw;height:2.4vw;margin-left:-1.2vw;border-radius:50%;background:#000;z-index:5;
+  box-shadow:inset 0 0 0 .35vw #1c1c22}
+.duo .fold{position:absolute;left:0;right:0;top:50%;height:2.2vw;margin-top:-1.1vw;z-index:4;pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.05) 45%,rgba(0,0,0,.18) 55%,rgba(255,255,255,0))}
+"""
+
+
+def duo_html(screen, line1, line2, sub, inner):
+    """iPhone Duo: the outer display (1398×2034) or the inner display when open (2007×2853, fold across the middle)."""
+    aspect = "2007/2853" if inner else "1398/2034"
+    radius = "5.4vw" if inner else "7.4vw"
+    extra = '<div class="fold"></div>' if inner else '<div class="cam"></div>'
+    body = f"""{bg()}
+<div class="txt" style="top:7vw;text-align:center"><h1 style="font-size:{8.6 if inner else 10.2}vw">{e(line1)} <span class="outline" style="display:inline">{e(line2)}</span></h1>
+<p style="font-size:{3 if inner else 3.6}vw;margin-top:2.4vw">{e(sub)}</p></div>
+<div class="duo" style="width:{84 if inner else 80}vw;aspect-ratio:{aspect};top:{33 if inner else 39}vw;border-radius:{radius}">
+<div class="glass" style="border-radius:calc({radius} - 1.5vw)">{screen.replace(' is-on', '')}{extra}</div></div>"""
+    return page(body, DUO_CSS)
 
 
 def watch_screens(lang, scr):
@@ -208,6 +234,13 @@ def main():
             slug = "-".join(pair)
             job(f"{locale}-ipad-{i}", doc, 1032, 1376, f"screenshots/{locale}/ipad-13/{i:02d}_{slug}_2064x2752.png", 2)
             job(f"{locale}-ipad2-{i}", doc, 1024, 1366, f"screenshots/{locale}/ipad-13/{i:02d}_{slug}_2048x2732.png", 2)
+        for i, (key, l1, l2, sub) in enumerate(h["iphone"], 1):
+            job(f"{locale}-duo-outer-{i}", duo_html(scr[key], l1, l2, sub, False), 699, 1017,
+                f"screenshots/{locale}/iphone-duo-outer/{i:02d}_{key}_1398x2034.png", 2)
+        for i, key in enumerate(("today", "workout", "progress", "history", "pass"), 1):
+            _, l1, l2, sub = next(x for x in h["iphone"] if x[0] == key)
+            job(f"{locale}-duo-inner-{i}", duo_html(scr[key], l1, l2, sub, True), 2007, 2853,
+                f"screenshots/{locale}/iphone-duo-inner/{i:02d}_{key}_2007x2853.png", 1)
         for i, (key, screen) in enumerate(watch_screens(lang, scr), 1):
             doc = watch_html(screen)
             for w, hh in ((422, 514), (416, 496), (410, 502), (396, 484), (368, 448), (312, 390)):
