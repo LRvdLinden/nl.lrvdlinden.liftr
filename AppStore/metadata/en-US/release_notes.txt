@@ -1,7 +1,3 @@
-The first version of Liftr:
-• Log workouts with sets, reps and weight
-• Rest timer with Live Activity and Dynamic Island
-• Progress charts, records and a training calendar
-• Apple Watch app and Apple Health
-• All your gym passes behind one button
-• Import from notes, Excel and CSV
+We keep improving Liftr for the best training experience. This version brings improvements to speed, reliability and ease of use, so you can focus fully on your workout.
+
+Enjoy your training! 💪

@@ -1,7 +1,3 @@
-De eerste versie van Liftr:
-• Trainingen loggen met sets, herhalingen en gewicht
-• Rusttimer met Live Activity en Dynamic Island
-• Voortgangsgrafieken, records en trainingskalender
-• Apple Watch-app en Apple Gezondheid
-• Al je sportschoolpassen onder één knop
-• Importeren uit notities, Excel en CSV
+We blijven Liftr continu verbeteren voor de beste sportervaring. Deze versie bevat verbeteringen in snelheid, betrouwbaarheid en gebruiksgemak, zodat jij je volledig op je training kunt richten.
+
+Veel trainplezier! 💪
