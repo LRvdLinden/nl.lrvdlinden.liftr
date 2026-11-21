@@ -4,7 +4,7 @@ NO ACCOUNT NEEDED
 There is no sign-in, no account and no server. All data is stored on the device and syncs through the user's own private iCloud database (CloudKit). No demo account is required.
 
 HOW TO TEST
-1. Open the app, go through the short welcome screens (name is optional) and allow or skip Apple Health.
+1. Open the app and go through the short welcome screens (entering a name is optional). The last screen explains what Liftr reads from and writes to Apple Health and has a single "Continue" button that always opens the system HealthKit permission sheet; there is no way to skip or postpone it. In that sheet you can allow or deny each type.
 2. Today → "Start workout" → "Add exercise" → pick e.g. "Leg press". Enter weight and reps and tap the checkmark: the rest timer starts, shown as a Live Activity on the Lock Screen and in the Dynamic Island.
 3. Tap "Finish" to save the workout. With Health access allowed, it is saved to Apple Health as a strength training workout.
 4. Start a second workout and add the same exercise: the "LAST" column and the "Previous workouts" card show what was done last time.
