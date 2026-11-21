@@ -7,6 +7,9 @@ struct OnboardingView: View {
     @State private var connecting = false
     @AppStorage(UserProfile.nameKey) private var name = ""
     @FocusState private var nameFocused: Bool
+    /// Landscape on iPhone (and some iPhone Duo poses) has little height: smaller artwork.
+    @Environment(\.verticalSizeClass) private var verticalSize
+    private var compact: Bool { verticalSize == .compact }
 
     /// The page that asks for your name.
     private let namePage = 1
@@ -32,9 +35,9 @@ struct OnboardingView: View {
                  text: tr("Liftr shows what you did last time, your records and how much stronger you're getting.",
                           "Liftr laat zien wat je vorige keer deed, je records en hoeveel sterker je wordt.")),
             Page(symbol: "heart.fill",
-                 title: tr("Works with Apple Health", "Werkt met Apple Gezondheid"),
-                 text: tr("Workouts, calories and weight go to Apple Health. Train with your Apple Watch for heart rate too.",
-                          "Trainingen, calorieën en gewicht gaan naar Apple Gezondheid. Train met je Apple Watch voor ook je hartslag.")),
+                 title: tr("Apple Health", "Apple Gezondheid"),
+                 text: tr("Liftr can save your workouts and weight in Apple Health and read your weight, body fat and heart rate. On the next screen you choose what to allow. You can change this at any time in the Settings app.",
+                          "Liftr kan je trainingen en gewicht bewaren in Apple Gezondheid en je gewicht, vetpercentage en hartslag lezen. In het volgende scherm kies je zelf wat je toestaat. Je kunt dit altijd wijzigen in de app Instellingen.")),
         ]
     }
 
@@ -57,23 +60,23 @@ struct OnboardingView: View {
 
                 TabView(selection: $page) {
                     ForEach(pages.indices, id: \.self) { i in
-                        VStack(spacing: 28) {
-                            Spacer()
+                        VStack(spacing: compact ? 14 : 28) {
+                            Spacer(minLength: 0)
                             ZStack {
-                                Circle().fill(Theme.accent.opacity(0.15)).frame(width: 190, height: 190)
-                                Circle().fill(Theme.accentGradient).frame(width: 130, height: 130)
+                                Circle().fill(Theme.accent.opacity(0.15)).frame(width: compact ? 96 : 190, height: compact ? 96 : 190)
+                                Circle().fill(Theme.accentGradient).frame(width: compact ? 66 : 130, height: compact ? 66 : 130)
                                 Image(systemName: pages[i].symbol)
-                                    .font(.system(size: 54, weight: .bold))
+                                    .font(.system(size: compact ? 28 : 54, weight: .bold))
                                     .foregroundStyle(.white)
                             }
                             VStack(spacing: 14) {
                                 Text(pages[i].title)
-                                    .font(Theme.display(38))
+                                    .font(Theme.display(compact ? 28 : 38))
                                     .textCase(.uppercase)
                                     .multilineTextAlignment(.center)
                                     .foregroundStyle(.white)
                                 Text(pages[i].text)
-                                    .font(.title3)
+                                    .font(compact ? .body : .title3)
                                     .multilineTextAlignment(.center)
                                     .foregroundStyle(Theme.muted)
                                     .padding(.horizontal, 12)
@@ -96,7 +99,7 @@ struct OnboardingView: View {
                                         .padding(.top, 8)
                                 }
                             }
-                            Spacer()
+                            Spacer(minLength: 0)
                         }
                         .padding(.horizontal, 24)
                         .frame(maxWidth: 560)
@@ -120,14 +123,13 @@ struct OnboardingView: View {
                         } label: {
                             HStack {
                                 if connecting { ProgressView().tint(.white) }
-                                Text(tr("Connect Apple Health", "Koppel Apple Gezondheid"))
+                                Text(tr("Continue", "Doorgaan"))
                             }
                         }
                         .buttonStyle(LiftrButtonStyle())
                         .disabled(connecting)
-
-                        Button(tr("Not now", "Nu niet")) { onDone() }
-                            .buttonStyle(LiftrButtonStyle(filled: false))
+                        // Apple guideline 5.1.1(iv): after this explanation the system permission request always
+                        // follows; there is deliberately no way to skip or postpone it here.
                     } else {
                         Button(page == namePage && name.trimmingCharacters(in: .whitespaces).isEmpty
                                ? tr("Skip for now", "Later invullen") : tr("Next", "Volgende")) {

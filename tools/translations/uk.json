@@ -564,5 +564,6 @@
  "Fresh start": "Новий старт",
  "Train in the first week of January": "Тренуйся на першому тижні січня",
  "{1} km": "{1} км",
- "Cover {1} km on cardio machines": "Пройди {1} км на кардіотренажерах"
+ "Cover {1} km on cardio machines": "Пройди {1} км на кардіотренажерах",
+ "Liftr can save your workouts and weight in Apple Health and read your weight, body fat and heart rate. On the next screen you choose what to allow. You can change this at any time in the Settings app.": "Liftr може зберігати твої тренування й вагу в «Здоров’ї» та зчитувати вагу, відсоток жиру й пульс. На наступному екрані ти сам обираєш, що дозволити. Це можна змінити будь-коли в програмі «Параметри»."
 }

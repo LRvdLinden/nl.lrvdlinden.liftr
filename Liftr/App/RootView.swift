@@ -8,6 +8,7 @@ struct RootView: View {
     @State private var controller = WorkoutController.shared
     @StateObject private var router = AppRouter.shared
     @State private var tab = 0
+    @State private var splashDone = false
 
     var body: some View {
         TabView(selection: $tab) {
@@ -39,11 +40,18 @@ struct RootView: View {
             WorkoutSummaryView(workout: workout)
                 .preferredColorScheme(.dark)
         }
-        .fullScreenCover(isPresented: Binding(get: { !onboardingDone }, set: { if !$0 { onboardingDone = true } })) {
+        .overlay {
+            if !splashDone {
+                SplashView { withAnimation(.easeOut(duration: 0.35)) { splashDone = true } }
+                    .transition(.opacity)
+                    .zIndex(1)
+            }
+        }
+        .fullScreenCover(isPresented: Binding(get: { !onboardingDone && splashDone }, set: { if !$0 { onboardingDone = true } })) {
             OnboardingView { onboardingDone = true }
                 .preferredColorScheme(.dark)
         }
-        .reviewPrompt(isCalm: onboardingDone && !controller.isPresented && controller.finished == nil)
+        .reviewPrompt(isCalm: splashDone && onboardingDone && !controller.isPresented && controller.finished == nil)
         .task {
             ExerciseLibrary.prepare(context)
             controller.restore(context)

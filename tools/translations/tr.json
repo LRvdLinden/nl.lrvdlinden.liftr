@@ -564,5 +564,6 @@
  "Fresh start": "Taze başlangıç",
  "Train in the first week of January": "Ocak ayının ilk haftasında antrenman yap",
  "{1} km": "{1} km",
- "Cover {1} km on cardio machines": "Kardiyo makinelerinde {1} km yap"
+ "Cover {1} km on cardio machines": "Kardiyo makinelerinde {1} km yap",
+ "Liftr can save your workouts and weight in Apple Health and read your weight, body fat and heart rate. On the next screen you choose what to allow. You can change this at any time in the Settings app.": "Liftr antrenmanlarını ve kilonu Sağlık’a kaydedebilir ve kilonu, vücut yağını ve nabzını okuyabilir. Sonraki ekranda neye izin vereceğini sen seçersin. Bunu istediğin zaman Ayarlar uygulamasından değiştirebilirsin."
 }

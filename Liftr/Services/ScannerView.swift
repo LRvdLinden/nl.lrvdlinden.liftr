@@ -82,7 +82,7 @@ struct ScannerSheet: View {
             }
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button(tr("Cancel", "Annuleren")) { dismiss() }
+                    Button { dismiss() } label: { Label(tr("Cancel", "Annuleren"), systemImage: "xmark") }
                 }
             }
         }

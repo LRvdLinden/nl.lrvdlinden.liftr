@@ -66,7 +66,7 @@ struct ExercisePickerView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button(tr("Cancel", "Annuleren")) { dismiss() }
+                    Button { dismiss() } label: { Label(tr("Cancel", "Annuleren"), systemImage: "xmark") }
                 }
                 ToolbarItem(placement: .primaryAction) {
                     Button { creating = true } label: { Image(systemName: "plus") }

@@ -759,7 +759,7 @@
   "key": "Continue",
   "en": "Continue",
   "nl": "Ga verder",
-  "context": "HomeView.swift"
+  "context": "HomeView.swift; OnboardingView.swift"
  },
  {
   "key": "Ready to train?",
@@ -1248,15 +1248,15 @@
   "context": "OnboardingView.swift"
  },
  {
-  "key": "Works with Apple Health",
-  "en": "Works with Apple Health",
-  "nl": "Werkt met Apple Gezondheid",
-  "context": "OnboardingView.swift"
+  "key": "Apple Health",
+  "en": "Apple Health",
+  "nl": "Apple Gezondheid",
+  "context": "OnboardingView.swift; PrivacyView.swift; SettingsView.swift"
  },
  {
-  "key": "Workouts, calories and weight go to Apple Health. Train with your Apple Watch for heart rate too.",
-  "en": "Workouts, calories and weight go to Apple Health. Train with your Apple Watch for heart rate too.",
-  "nl": "Trainingen, calorieën en gewicht gaan naar Apple Gezondheid. Train met je Apple Watch voor ook je hartslag.",
+  "key": "Liftr can save your workouts and weight in Apple Health and read your weight, body fat and heart rate. On the next screen you choose what to allow. You can change this at any time in the Settings app.",
+  "en": "Liftr can save your workouts and weight in Apple Health and read your weight, body fat and heart rate. On the next screen you choose what to allow. You can change this at any time in the Settings app.",
+  "nl": "Liftr kan je trainingen en gewicht bewaren in Apple Gezondheid en je gewicht, vetpercentage en hartslag lezen. In het volgende scherm kies je zelf wat je toestaat. Je kunt dit altijd wijzigen in de app Instellingen.",
   "context": "OnboardingView.swift"
  },
  {
@@ -1270,18 +1270,6 @@
   "en": "Your name",
   "nl": "Je naam",
   "context": "OnboardingView.swift; SettingsView.swift"
- },
- {
-  "key": "Connect Apple Health",
-  "en": "Connect Apple Health",
-  "nl": "Koppel Apple Gezondheid",
-  "context": "OnboardingView.swift"
- },
- {
-  "key": "Not now",
-  "en": "Not now",
-  "nl": "Nu niet",
-  "context": "OnboardingView.swift"
  },
  {
   "key": "Skip for now",
@@ -1306,12 +1294,6 @@
   "en": "Liftr has no account, no server and no advertising. Your workouts, exercises, routines, body measurements and gym pass are stored on your device and in your own private iCloud.",
   "nl": "Liftr heeft geen account, geen server en geen advertenties. Je trainingen, oefeningen, schema's, lichaamsmetingen en sportschoolpas staan op je apparaat en in je eigen privé-iCloud.",
   "context": "PrivacyView.swift"
- },
- {
-  "key": "Apple Health",
-  "en": "Apple Health",
-  "nl": "Apple Gezondheid",
-  "context": "PrivacyView.swift; SettingsView.swift"
  },
  {
   "key": "Only with your permission, Liftr reads your weight, body composition and resting heart rate, and saves workouts, calories, distance and weight. Health data never leaves your devices through Liftr and is never used for advertising. You can change access at any time in the Health app.",

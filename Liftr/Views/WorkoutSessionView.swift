@@ -94,7 +94,7 @@ struct WorkoutSessionView: View {
                         .foregroundStyle(.white)
                 }
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button(tr("Finish", "Afronden")) { confirmFinish = true }
+                    Button { confirmFinish = true } label: { Label(tr("Finish", "Afronden"), systemImage: "flag.checkered").labelStyle(.titleAndIcon) }
                         .font(.headline)
                         .foregroundStyle(Theme.accent)
                         .disabled(finishing)

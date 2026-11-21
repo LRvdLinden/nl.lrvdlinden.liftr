@@ -180,10 +180,10 @@ struct ExerciseEditView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button(tr("Cancel", "Annuleren")) { dismiss() }
+                    Button { dismiss() } label: { Label(tr("Cancel", "Annuleren"), systemImage: "xmark") }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button(tr("Save", "Bewaar")) { save() }
+                    Button { save() } label: { Label(tr("Save", "Bewaar"), systemImage: "checkmark") }
                         .disabled(name.trimmingCharacters(in: .whitespaces).isEmpty)
                         .fontWeight(.bold)
                 }
