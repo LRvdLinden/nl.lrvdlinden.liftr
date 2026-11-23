@@ -1,0 +1,30 @@
+name: Website hosting ZIP
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "website/**"
+      - ".github/workflows/website-zip.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    name: Package ready-to-upload website
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Zip only the website contents
+        run: |
+          cd website
+          zip -q -r "$GITHUB_WORKSPACE/Liftr-website-hosting.zip" . -x "*.DS_Store" "__MACOSX/*"
+      - name: Upload hosting ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: Liftr-website-hosting
+          path: Liftr-website-hosting.zip
+          if-no-files-found: error
+          retention-days: 30

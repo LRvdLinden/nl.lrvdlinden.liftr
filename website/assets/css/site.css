@@ -353,3 +353,12 @@ h3 { margin: 0 0 .4em; font-size: 1.3rem; }
 .scr.watch .vals b { font-family: var(--display); font-weight: 900; font-size: 15cqw; line-height: 1; }
 .scr.watch .go { background: var(--orange); border-radius: 99px; padding: 4.5cqw; font-weight: 800; font-size: 7cqw; }
 .scr.watch .hr { color: var(--pink); font-weight: 700; font-size: 6.5cqw; }
+
+/* Official localized Apple App Store download badges. */
+.app-store-badge { display: inline-flex; align-items: center; flex: 0 0 auto; text-decoration: none; transition: transform .2s ease, filter .2s ease; }
+.app-store-badge:hover { transform: translateY(-2px); filter: brightness(1.08); }
+.app-store-badge:focus-visible { outline: 3px solid #fff; outline-offset: 4px; border-radius: 7px; }
+.app-store-badge img { display: block; width: 246px; height: 82px; max-width: 100%; object-fit: contain; border: 0; }
+.nav .app-store-badge img { width: 150px; height: 50px; }
+.final .app-store-badge img { width: 246px; height: 82px; max-width: 100%; margin: 0; border-radius: 0; box-shadow: none; }
+@media (max-width: 860px) { .nav > .app-store-badge { display: none; } }

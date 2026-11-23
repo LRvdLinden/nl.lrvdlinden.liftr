@@ -11,9 +11,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "website")
 DOMAIN = "https://liftr.nu"
 TODAY = datetime.date.today().isoformat()
-# Fill in once Liftr is live, e.g. "https://apps.apple.com/nl/app/liftr/id1234567890".
-# While empty, the site shows "Coming soon to the App Store" (never on the og-images).
-APP_STORE_URL = ""
+# Official App Store link and localized Apple Marketing Tools badges.
+APP_STORE_URL = "https://apps.apple.com/us/app/liftr-gym-workout-log/id6830198247?itscg=30200&itsct=apps_box_badge&mttnsubad=6830198247"
+APP_STORE_BADGE_BASE = "https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black"
+APP_STORE_RELEASE_DATE = "1795392000"
 
 lib = open(os.path.join(ROOT, "Shared/ExerciseLibrary.swift"), encoding="utf-8").read()
 SEEDS = [dict(id=m[0], en=m[1], nl=m[2], muscle=m[3], kind=m[4]) for m in
@@ -37,7 +38,7 @@ T = {
         desc="Houd elke training bij: oefeningen, sets, herhalingen en gewicht. Met rusttimer, voortgangsgrafieken, sportschoolpas en Apple Gezondheid.",
         og_alt="Liftr – elke herhaling telt. Sportschool-logboek voor iPhone, iPad en Apple Watch.",
         nav=[("#functies", "Functies"), ("#apparaten", "Apparaten"), ("#gezondheid", "Gezondheid"), ("#privacy", "Privacy")],
-        soon="Download in de App Store", soon_pre="Binnenkort in de App Store", features_btn="Bekijk de functies", nav_cta="Bekijk de app",
+        soon="Download in de App Store", features_btn="Bekijk de functies", nav_cta="Bekijk de app",
         eyebrow="Sportschool-logboek voor iPhone, iPad & Apple Watch",
         h1='Elke herhaling. <span class="outline">Telt.</span>',
         lead="Weg met de notities-app. Liftr houdt per training bij wat je deed – oefening, sets, herhalingen en gewicht – en laat zien hoe je sterker wordt. Met rusttimer, je sportschoolpas en Apple Gezondheid.",
@@ -76,7 +77,7 @@ T = {
                  ("🔐", "Versleuteld", "De code van je sportschoolpas is end-to-end versleuteld in iCloud.")],
         privacy_link="Lees de privacyverklaring",
         l_kicker="Talen", l_h2=f'{N_LANGS} talen.<br>Heel <span class="grad">Europa</span>.',
-        final_h2='Klaar voor<br>je volgende set?', final_p="Liftr komt binnenkort naar de App Store voor iPhone, iPad en Apple Watch – in 33 talen.",
+        final_h2='Klaar voor<br>je volgende set?', final_p="Liftr is nu beschikbaar in de App Store voor iPhone, iPad en Apple Watch – in 33 talen.",
         footer_privacy="Privacy", footer_more="Meer apps", footer_sheet="Importsheet",
         sh_kicker="Overstappen", sh_h2='Je oude logboek<br><span class="grad">gaat mee</span>.',
         sh_sub="Hield je je trainingen bij in Excel, Numbers of Google Sheets? Download de importsheet, vul hem in (of zet je eigen overzicht in deze vorm) en importeer hem in Liftr.",
@@ -101,7 +102,7 @@ T = {
         desc="Track every workout: exercises, sets, reps and weight. Rest timer, progress charts, gym pass and Apple Health. For iPhone, iPad and Apple Watch.",
         og_alt="Liftr – every rep counts. Gym logbook for iPhone, iPad and Apple Watch.",
         nav=[("#features", "Features"), ("#devices", "Devices"), ("#health", "Health"), ("#privacy", "Privacy")],
-        soon="Download on the App Store", soon_pre="Coming soon to the App Store", features_btn="See the features", nav_cta="See the app",
+        soon="Download on the App Store", features_btn="See the features", nav_cta="See the app",
         eyebrow="Gym logbook for iPhone, iPad & Apple Watch",
         h1='Every rep. <span class="outline">Counts.</span>',
         lead="Ditch the notes app. Liftr logs what you did in every workout – exercise, sets, reps and weight – and shows how you're getting stronger. With a rest timer, your gym pass and Apple Health.",
@@ -140,7 +141,7 @@ T = {
                  ("🔐", "Encrypted", "Your gym pass code is end-to-end encrypted in iCloud.")],
         privacy_link="Read the privacy policy",
         l_kicker="Languages", l_h2=f'{N_LANGS} languages.<br>All of <span class="grad">Europe</span>.',
-        final_h2='Ready for<br>your next set?', final_p="Liftr is coming soon to the App Store for iPhone, iPad and Apple Watch – in 33 languages.",
+        final_h2='Ready for<br>your next set?', final_p="Liftr is now available on the App Store for iPhone, iPad and Apple Watch – in 33 languages.",
         footer_privacy="Privacy", footer_more="More apps", footer_sheet="Import sheet",
         sh_kicker="Switching", sh_h2='Bring your old<br><span class="grad">log along</span>.',
         sh_sub="Kept your workouts in Excel, Numbers or Google Sheets? Download the import sheet, fill it in (or put your own log in this layout) and import it into Liftr.",
@@ -353,9 +354,18 @@ def page_head(lang, t, path, title, desc, og_slug, jsonld):
 <link rel="apple-touch-icon" href="/assets/img/appicon-180.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/overpass-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=14">
+<link rel="stylesheet" href="/assets/css/site.css?v=15">
 {LANG_REDIRECT if lang == "nl" else ""}<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>
 </head>'''
+
+
+def store_badge(t, lang):
+    """Official App Store badge localized to the page language."""
+    locale = "nl-nl" if lang == "nl" else "en-us"
+    label = e(t["soon"])
+    return (f'<a class="app-store-badge" href="{APP_STORE_URL}" aria-label="{label}">'
+            f'<img src="{APP_STORE_BADGE_BASE}/{locale}?releaseDate={APP_STORE_RELEASE_DATE}" '
+            f'alt="{label}" width="246" height="82"></a>')
 
 
 def nav_html(t, lang, home_rel, other=None):
@@ -364,7 +374,7 @@ def nav_html(t, lang, home_rel, other=None):
     return f'''<header class="nav" id="nav">
   <a class="brand" href="{home_rel or './'}" aria-label="Liftr"><img src="/assets/img/appicon-180.png" alt="" width="36" height="36"><b>LIFTR</b></a>
   <nav class="links" aria-label="Menu">{links}<a class="lang" data-setlang="{"en" if lang == "nl" else "nl"}" href="{other}" hreflang="{"en" if lang == "nl" else "nl"}" lang="{"en" if lang == "nl" else "nl"}">{t["other_label"]}</a></nav>
-  <a class="btn btn-orange btn-sm" href="{APP_STORE_URL or home_rel + '#download'}">{e(t["soon"] if APP_STORE_URL else t["soon_pre"])}</a>
+  {store_badge(t, lang)}
 </header>'''
 
 
@@ -419,11 +429,6 @@ def build_home(lang):
     langs = "".join(f"<span>{e(n)}</span>" for n in LANG_NAMES)
     pr_link = "/privacy/" if lang == "nl" else "/en/privacy/"
     notes_js = json.dumps([{"icon": "/assets/img/appicon-180.png", "title": a, "body": b} for a, b in t["notes"]], ensure_ascii=False)
-    apple = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.3.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.8-4.1zM13.9 5.1c.7-.8 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>'
-    def store_btn(cls):
-        if APP_STORE_URL:
-            return f'<a class="btn {cls}" href="{APP_STORE_URL}">{apple}<span>{e(t["soon"])}</span></a>'
-        return f'<a class="btn {cls}" href="#download">{apple}<span>{e(t["soon_pre"])}</span></a>'
     body = f'''
 <body>
 <a class="skip" href="#main">{"Naar inhoud" if lang == "nl" else "Skip to content"}</a>
@@ -436,7 +441,7 @@ def build_home(lang):
         <p class="eyebrow"><span class="dot"></span>{e(t["eyebrow"])}</p>
         <h1>{t["h1"]}</h1>
         <p class="lead">{e(t["lead"])}</p>
-        <div class="cta">{store_btn("btn-white")}<a class="btn btn-ghost" href="#{ids["features"]}">{e(t["features_btn"])}</a></div>
+        <div class="cta">{store_badge(t, lang)}<a class="btn btn-ghost" href="#{ids["features"]}">{e(t["features_btn"])}</a></div>
         <dl class="stats">{stats}</dl>
       </div>
       <div class="hero-device">
@@ -506,7 +511,7 @@ def build_home(lang):
   <section class="final" id="download">
     <img src="/assets/img/appicon-512.png" alt="Liftr app icon" width="128" height="128" loading="lazy">
     <h2>{t["final_h2"]}</h2><p>{e(t["final_p"])}</p>
-    <div class="cta center">{store_btn("btn-orange")}</div>
+    <div class="cta center">{store_badge(t, lang)}</div>
   </section>
 </main>
 {footer_html(t, lang)}
@@ -604,7 +609,7 @@ def build_meta():
     write("404.html", '''<!doctype html>
 <html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Niet gevonden | Liftr</title><meta name="robots" content="noindex"><link rel="icon" href="/favicon.ico">
-<link rel="stylesheet" href="/assets/css/site.css?v=14"></head>
+<link rel="stylesheet" href="/assets/css/site.css?v=15"></head>
 <body><main class="legal" style="text-align:center"><h1>404</h1><p class="lead">Deze pagina bestaat niet. · This page doesn't exist.</p>
 <p><a class="btn btn-orange" href="/">liftr.nu</a></p></main></body></html>
 ''')

@@ -59,7 +59,7 @@ tools/               gen_xcodeproj.py, make_icon.py
 Statische site in `website/` (Nederlands op `/`, Engels op `/en/`, privacy op `/privacy/` en `/en/privacy/`). Nederlands is standaard; een browser zonder Nederlands als taal gaat automatisch naar de Engelse pagina (kiest iemand zelf NL, dan blijft dat zo – opgeslagen in localStorage, geen cookie; zoekmachines worden niet doorgestuurd), met sitemap, robots.txt, manifest, 404 en `.htaccess` (https + zonder www). Upload de inhoud van `website/` naar de webroot.
 
 - Teksten en opbouw: `tools/build_website.py` → `python3 tools/build_website.py`
-- App Store-knoppen: vul `APP_STORE_URL` bovenin `tools/build_website.py` zodra Liftr live staat; leeg = "Binnenkort in de App Store" (alleen op de site, nooit op de og:images)
+- App Store-knoppen: officiële Apple Marketing Tools-badges met de live App Store-link in `tools/build_website.py`, in Nederlands (`nl-nl`) of Engels (`en-us`), op de menubalk, in de hero en in de downloadsectie.
 - Stijl en script: `website/assets/css/site.css`, `website/assets/js/site.js`
 - og:images (NL + EN): `tools/og/` → `python3 tools/og/make_og_html.py` en `node tools/og/render.js` (site lokaal op poort 8765)
 
@@ -83,3 +83,5 @@ Het Xcode-project wordt gegenereerd met `python3 tools/gen_xcodeproj.py` (alleen
 
 - "Meer apps van de ontwikkelaar"-kaart en app-info-footer onderaan Instellingen.
 - Review-vraag: eerste keer 4 uur na eerste gebruik, daarna hooguit 1× per week, alleen op een rustig moment (niet tijdens welkom of een training).
+
+- Hosting-ZIP: GitHub Actions maakt met `.github/workflows/website-zip.yml` na een websitewijziging een ZIP van de complete `website/`-inhoud op webrootniveau. Upload de inhoud van de ZIP naar de webroot van je hosting.
